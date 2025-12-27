@@ -209,6 +209,7 @@
       margin-top: 72px;
     }
 
+    /* ==================== HERO WITH SLIDER ==================== */
     .tour-hero {
       position: relative;
       min-height: 65vh;
@@ -220,13 +221,40 @@
       overflow: hidden;
     }
 
-    .tour-hero::before {
-      content: '';
+    .hero-slider {
       position: absolute;
       inset: 0;
-      background: url('https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=1600') center/cover;
-      filter: brightness(0.4);
       z-index: 1;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.4);
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-slide-1 {
+      background-image: url('https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=1600');
+    }
+
+    .hero-slide-2 {
+      background-image: url('https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=1600');
+    }
+
+    .hero-slide-3 {
+      background-image: url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1600');
+    }
+
+    .hero-slide-4 {
+      background-image: url('https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=1600');
     }
 
     .tour-hero::after {
@@ -326,6 +354,51 @@
       font-weight: 800;
     }
 
+    /* ==================== SCROLL ANIMATIONS ==================== */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .scroll-animate.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-animate-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .scroll-animate-left.animated {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scroll-animate-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .scroll-animate-right.animated {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scroll-animate-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .scroll-animate-scale.animated {
+      opacity: 1;
+      transform: scale(1);
+    }
+
     .tour-content {
       max-width: 1200px;
       margin: 0 auto;
@@ -392,30 +465,6 @@
       position: relative;
       padding-left: 80px;
       margin-bottom: var(--spacing-2xl);
-      opacity: 0;
-      transform: translateX(-20px);
-      animation: slideIn 0.6s ease forwards;
-    }
-
-    .timeline-item:nth-child(1) { animation-delay: 0.1s; }
-    .timeline-item:nth-child(2) { animation-delay: 0.2s; }
-    .timeline-item:nth-child(3) { animation-delay: 0.3s; }
-    .timeline-item:nth-child(4) { animation-delay: 0.4s; }
-    .timeline-item:nth-child(5) { animation-delay: 0.5s; }
-    .timeline-item:nth-child(6) { animation-delay: 0.6s; }
-    .timeline-item:nth-child(7) { animation-delay: 0.7s; }
-    .timeline-item:nth-child(8) { animation-delay: 0.8s; }
-    .timeline-item:nth-child(9) { animation-delay: 0.9s; }
-    .timeline-item:nth-child(10) { animation-delay: 1s; }
-    .timeline-item:nth-child(11) { animation-delay: 1.1s; }
-    .timeline-item:nth-child(12) { animation-delay: 1.2s; }
-    .timeline-item:nth-child(13) { animation-delay: 1.3s; }
-
-    @keyframes slideIn {
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
     }
 
     .timeline-icon {
@@ -516,7 +565,7 @@
       margin-left: var(--spacing-xs);
     }
 
-    /* GALLERIA */
+    /* ==================== GALLERIA ==================== */
     .gallery-section {
       background: white;
       padding: var(--spacing-2xl);
@@ -932,8 +981,15 @@
 
   <!-- MAIN CONTENT -->
   <main>
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION CON SLIDER -->
     <section class="tour-hero">
+      <div class="hero-slider">
+        <div class="hero-slide hero-slide-1 active"></div>
+        <div class="hero-slide hero-slide-2"></div>
+        <div class="hero-slide hero-slide-3"></div>
+        <div class="hero-slide hero-slide-4"></div>
+      </div>
+
       <div class="tour-hero-content">
         <span class="tour-badge" data-translate="tour.badge">Tour Privato</span>
         <h1 class="tour-hero-title" data-translate="tour.title">Tour Capri</h1>
@@ -972,57 +1028,14 @@
         <div class="tour-main">
 
           <!-- DESCRIZIONE -->
-          <div class="tour-section">
+          <div class="tour-section scroll-animate">
             <h2><i class="bi bi-info-circle"></i> <span data-translate="section.description">Descrizione del Tour</span></h2>
             <p data-translate="content.desc1">Durante questo tour avrai l'opportunità di immergerti nella bellezza naturale della così detta "isola azzurra", la quale è caratterizzata dalla presenza di varie grotte, le cui pareti assumono sfumature di colore uniche grazie alla luce del sole che filtra attraverso l'acqua.</p>
             <p data-translate="content.desc2">Questa strabiliante esperienza ti porterà a navigare attraverso le acque cristalline del Mar Tirreno, rivelando i tesori naturali e le meraviglie nascoste dell'Isola più affascinante del Golfo di Napoli.</p>
           </div>
 
-          <!-- GALLERIA FOTOGRAFICA -->
-          <div class="gallery-section">
-            <h2><i class="bi bi-images"></i> <span data-translate="section.gallery">Galleria Fotografica</span></h2>
-            <div class="gallery-grid">
-              <div class="gallery-item" onclick="openLightbox(0)">
-                <img src="https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=600" alt="Faraglioni di Capri">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">I Faraglioni</span>
-                </div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox(1)">
-                <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=600" alt="Grotta Azzurra">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Grotta Azzurra</span>
-                </div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox(2)">
-                <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600" alt="Costa di Capri">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Costa di Capri</span>
-                </div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox(3)">
-                <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=600" alt="Vista mare">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Acque cristalline</span>
-                </div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox(4)">
-                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600" alt="Barca a Capri">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Tour in barca</span>
-                </div>
-              </div>
-              <div class="gallery-item" onclick="openLightbox(5)">
-                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600" alt="Tramonto a Capri">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Tramonto magico</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- TIMELINE UNIFICATA -->
-          <div class="tour-section">
+          <div class="tour-section scroll-animate">
             <h2><i class="bi bi-compass"></i> <span data-translate="section.itinerary">Itinerario dell'Escursione</span></h2>
             <p data-translate="content.itinerary.intro">Scopri il percorso completo della tua giornata a Capri, dalle partenza fino al rientro al porto, attraverso tutte le meraviglie naturali dell'isola azzurra.</p>
 
@@ -1030,7 +1043,7 @@
               <div class="timeline-line"></div>
 
               <!-- PARTENZA -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon highlight">
                   <i class="bi bi-geo-alt-fill"></i>
                 </div>
@@ -1042,7 +1055,7 @@
               </div>
 
               <!-- COSTA SORRENTINA -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon">
                   <i class="bi bi-water"></i>
                 </div>
@@ -1054,7 +1067,7 @@
               </div>
 
               <!-- NAVIGAZIONE -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon">
                   <i class="bi bi-compass"></i>
                 </div>
@@ -1066,7 +1079,7 @@
               </div>
 
               <!-- FARAGLIONI -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon highlight">
                   <i class="bi bi-stars"></i>
                 </div>
@@ -1078,7 +1091,7 @@
               </div>
 
               <!-- PUNTA TRAGARA -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon">
                   <i class="bi bi-eye"></i>
                 </div>
@@ -1090,7 +1103,7 @@
               </div>
 
               <!-- ARCO NATURALE -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon">
                   <i class="bi bi-brightness-high"></i>
                 </div>
@@ -1102,7 +1115,7 @@
               </div>
 
               <!-- GROTTE -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon highlight">
                   <i class="bi bi-brightness-alt-high"></i>
                 </div>
@@ -1119,7 +1132,7 @@
               </div>
 
               <!-- BAGNO -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon highlight">
                   <i class="bi bi-droplet"></i>
                 </div>
@@ -1131,7 +1144,7 @@
               </div>
 
               <!-- PRANZO OPZIONALE -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon optional">
                   <i class="bi bi-cup-straw"></i>
                 </div>
@@ -1146,7 +1159,7 @@
               </div>
 
               <!-- TEMPO LIBERO OPZIONALE -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon optional">
                   <i class="bi bi-clock-history"></i>
                 </div>
@@ -1161,7 +1174,7 @@
               </div>
 
               <!-- COSTRUZIONI STORICHE -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon">
                   <i class="bi bi-buildings"></i>
                 </div>
@@ -1173,7 +1186,7 @@
               </div>
 
               <!-- RITORNO -->
-              <div class="timeline-item">
+              <div class="timeline-item scroll-animate-left">
                 <div class="timeline-icon highlight">
                   <i class="bi bi-house-door"></i>
                 </div>
@@ -1187,13 +1200,56 @@
             </div>
           </div>
 
+          <!-- GALLERIA FOTOGRAFICA (SPOSTATA ALLA FINE) -->
+          <div class="gallery-section scroll-animate-scale">
+            <h2><i class="bi bi-images"></i> <span data-translate="section.gallery">Galleria Fotografica</span></h2>
+            <div class="gallery-grid">
+              <div class="gallery-item scroll-animate" onclick="openLightbox(0)">
+                <img src="https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=600" alt="Faraglioni di Capri">
+                <div class="gallery-overlay">
+                  <span class="gallery-caption">I Faraglioni</span>
+                </div>
+              </div>
+              <div class="gallery-item scroll-animate" onclick="openLightbox(1)">
+                <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=600" alt="Grotta Azzurra">
+                <div class="gallery-overlay">
+                  <span class="gallery-caption">Grotta Azzurra</span>
+                </div>
+              </div>
+              <div class="gallery-item scroll-animate" onclick="openLightbox(2)">
+                <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600" alt="Costa di Capri">
+                <div class="gallery-overlay">
+                  <span class="gallery-caption">Costa di Capri</span>
+                </div>
+              </div>
+              <div class="gallery-item scroll-animate" onclick="openLightbox(3)">
+                <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=600" alt="Vista mare">
+                <div class="gallery-overlay">
+                  <span class="gallery-caption">Acque cristalline</span>
+                </div>
+              </div>
+              <div class="gallery-item scroll-animate" onclick="openLightbox(4)">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600" alt="Barca a Capri">
+                <div class="gallery-overlay">
+                  <span class="gallery-caption">Tour in barca</span>
+                </div>
+              </div>
+              <div class="gallery-item scroll-animate" onclick="openLightbox(5)">
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600" alt="Tramonto a Capri">
+                <div class="gallery-overlay">
+                  <span class="gallery-caption">Tramonto magico</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- SIDEBAR -->
         <div class="tour-sidebar">
 
           <!-- PREZZO E PRENOTAZIONE -->
-          <div class="price-card">
+          <div class="price-card scroll-animate-right">
             <div class="price-header">
               <div class="price-label" data-translate="price.from">A partire da</div>
               <div class="price-amount">799€</div>
@@ -1207,13 +1263,16 @@
               <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.private">Tour privato</span></li>
             </ul>
 
-            <button class="cta-button" onclick="scrollToContact()">
-              <i class="bi bi-calendar-check"></i> <span data-translate="button.book">Prenota Ora</span>
-            </button>
+            <a href="https://wa.me/393316166512?text=Ciao!%20Vorrei%20prenotare%20il%20tour%20di%20Capri" 
+               class="cta-button"
+               target="_blank"
+               rel="noopener noreferrer">
+              <i class="bi bi-whatsapp"></i> <span data-translate="button.book">Prenota Ora</span>
+            </a>
           </div>
 
           <!-- SERVIZI NON INCLUSI -->
-          <div class="info-card">
+          <div class="info-card scroll-animate-right">
             <h3><i class="bi bi-exclamation-circle"></i> <span data-translate="notincluded.title">Non Incluso</span></h3>
             <ul>
               <li><i class="bi bi-x-circle"></i> <span data-translate="notincluded.tax">Tasse di sbarco a Capri</span></li>
@@ -1223,7 +1282,7 @@
           </div>
 
           <!-- COSA PORTARE -->
-          <div class="info-card">
+          <div class="info-card scroll-animate-right">
             <h3><i class="bi bi-backpack"></i> <span data-translate="tobring.title">Cosa Portare</span></h3>
             <ul>
               <li><i class="bi bi-check2"></i> <span data-translate="tobring.swimsuit">Costume da bagno</span></li>
@@ -1266,7 +1325,42 @@
   </a>
 
   <script>
-    // Multilanguage system (abbreviato per spazio)
+    // ==================== HERO SLIDER ==================== 
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const totalSlides = slides.length;
+
+    function changeSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides[currentSlide].classList.add('active');
+    }
+
+    // Cambio slide ogni 5 secondi
+    setInterval(changeSlide, 5000);
+
+    // ==================== SCROLL ANIMATIONS ====================
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          // Opzionale: smetti di osservare dopo l'animazione
+          // scrollObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Osserva tutti gli elementi con classi di animazione
+    document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale').forEach(el => {
+      scrollObserver.observe(el);
+    });
+
+    // ==================== MULTILANGUAGE SYSTEM ====================
     const translations = {
       it: {
         'nav.tours': 'Tour',
@@ -1275,10 +1369,32 @@
         'tour.badge': 'Tour Privato',
         'tour.title': 'Tour Capri',
         'tour.subtitle': 'Le grotte sono bocche spalancate che raccontano storie solo a chi si avventura ad esplorarle',
+        'tour.duration': 'Durata',
+        'tour.maxpeople': 'Max persone',
+        'tour.departure': 'Partenza',
+        'section.description': 'Descrizione del Tour',
+        'section.gallery': 'Galleria Fotografica',
         'section.itinerary': 'Itinerario dell\'Escursione',
+        'content.desc1': 'Durante questo tour avrai l\'opportunità di immergerti nella bellezza naturale della così detta "isola azzurra", la quale è caratterizzata dalla presenza di varie grotte, le cui pareti assumono sfumature di colore uniche grazie alla luce del sole che filtra attraverso l\'acqua.',
+        'content.desc2': 'Questa strabiliante esperienza ti porterà a navigare attraverso le acque cristalline del Mar Tirreno, rivelando i tesori naturali e le meraviglie nascoste dell\'Isola più affascinante del Golfo di Napoli.',
         'content.itinerary.intro': 'Scopri il percorso completo della tua giornata a Capri, dalle partenza fino al rientro al porto, attraverso tutte le meraviglie naturali dell\'isola azzurra.',
         'price.from': 'A partire da',
-        'button.book': 'Prenota Ora'
+        'button.book': 'Prenota Ora',
+        'included.drinks': 'Bevande fredde incluse',
+        'included.snacks': 'Snack a bordo',
+        'included.towels': 'Teli mare personalizzati',
+        'included.skipper': 'Skipper professionista',
+        'included.private': 'Tour privato',
+        'notincluded.title': 'Non Incluso',
+        'notincluded.tax': 'Tasse di sbarco a Capri',
+        'notincluded.bluegrotto': 'Biglietto Grotta Azzurra',
+        'notincluded.lunch': 'Pranzo',
+        'tobring.title': 'Cosa Portare',
+        'tobring.swimsuit': 'Costume da bagno',
+        'tobring.camera': 'Macchina fotografica',
+        'tobring.hat': 'Cappello',
+        'tobring.sunglasses': 'Occhiali da sole',
+        'tobring.sunscreen': 'Crema solare'
       },
       en: {
         'nav.tours': 'Tours',
@@ -1287,7 +1403,14 @@
         'tour.badge': 'Private Tour',
         'tour.title': 'Capri Tour',
         'tour.subtitle': 'The caves are wide-open mouths that tell stories only to those who venture to explore them',
+        'tour.duration': 'Duration',
+        'tour.maxpeople': 'Max people',
+        'tour.departure': 'Departure',
+        'section.description': 'Tour Description',
+        'section.gallery': 'Photo Gallery',
         'section.itinerary': 'Tour Itinerary',
+        'content.desc1': 'During this tour you will have the opportunity to immerse yourself in the natural beauty of the so-called "blue island", which is characterized by the presence of various caves, whose walls take on unique shades of color thanks to the sunlight filtering through the water.',
+        'content.desc2': 'This amazing experience will take you sailing through the crystal-clear waters of the Tyrrhenian Sea, revealing the natural treasures and hidden wonders of the most fascinating island in the Gulf of Naples.',
         'content.itinerary.intro': 'Discover the complete route of your day in Capri, from departure to return to the port, through all the natural wonders of the blue island.',
         'price.from': 'From',
         'button.book': 'Book Now'
@@ -1299,7 +1422,14 @@
         'tour.badge': 'Tour Privado',
         'tour.title': 'Tour Capri',
         'tour.subtitle': 'Las cuevas son bocas abiertas que cuentan historias solo a quienes se aventuran a explorarlas',
+        'tour.duration': 'Duración',
+        'tour.maxpeople': 'Máx personas',
+        'tour.departure': 'Salida',
+        'section.description': 'Descripción del Tour',
+        'section.gallery': 'Galería Fotográfica',
         'section.itinerary': 'Itinerario de la Excursión',
+        'content.desc1': 'Durante este tour tendrás la oportunidad de sumergirte en la belleza natural de la llamada "isla azul", que se caracteriza por la presencia de varias cuevas, cuyas paredes adquieren matices de color únicos gracias a la luz del sol que se filtra a través del agua.',
+        'content.desc2': 'Esta increíble experiencia te llevará a navegar por las aguas cristalinas del Mar Tirreno, revelando los tesoros naturales y las maravillas ocultas de la isla más fascinante del Golfo de Nápoles.',
         'content.itinerary.intro': 'Descubre el recorrido completo de tu día en Capri, desde la salida hasta el regreso al puerto, a través de todas las maravillas naturales de la isla azul.',
         'price.from': 'Desde',
         'button.book': 'Reservar Ahora'
@@ -1338,6 +1468,7 @@
       changeLanguage(savedLang);
     }
 
+    // ==================== HAMBURGER MENU ====================
     const hamburger = document.querySelector('.hamburger');
     const navUl = document.querySelector('nav ul');
     if (hamburger && navUl) {
@@ -1346,11 +1477,7 @@
       });
     }
 
-    function scrollToContact() {
-      window.location.href = '/#contact';
-    }
-
-    // Lightbox gallery
+    // ==================== LIGHTBOX GALLERY ====================
     const galleryImages = [
       'https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=1200',
       'https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=1200',
@@ -1390,6 +1517,7 @@
       document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
     }
 
+    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       const lightbox = document.getElementById('lightbox');
       if (lightbox.classList.contains('active')) {
