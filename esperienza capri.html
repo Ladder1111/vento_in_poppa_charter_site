@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capri – Vento in Poppa Charter</title>
+
+  <style>
+    /* Reset e stile identico alla homepage */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      line-height:1.7;
+      color:#1f2933;
+      background:#f5f7fb;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* HEADER identico alla homepage */
+    header{
+      position:fixed;
+      top:0;left:0;
+      width:100%;
+      background:rgba(255,255,255,.98);
+      border-bottom:1px solid #e1e7f0;
+      backdrop-filter:blur(16px);
+      z-index:1000;
+    }
+    .nav-wrapper{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0.75rem 1.5rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1.5rem;
+    }
+    .logo{
+      font-size:1.6rem;
+      font-weight:700;
+      color:#164ab9;
+      white-space:nowrap;
+    }
+    .lang-switcher{
+      display:flex;
+      gap:.5rem;
+      margin-right:.5rem;
+    }
+    .lang-btn{
+      border:1px solid #d1d9e8;
+      background:#fff;
+      padding:0.25rem .7rem;
+      border-radius:999px;
+      font-size:.8rem;
+      cursor:pointer;
+      color:#4b5563;
+      transition:all .2s;
+    }
+    .lang-btn.active,
+    .lang-btn:hover{
+      background:#164ab9;
+      color:#fff;
+      border-color:#164ab9;
+    }
+    .back-link{
+      font-size:.95rem;
+      font-weight:500;
+      color:#4b5563;
+      transition:color .2s;
+      display:flex;
+      align-items:center;
+      gap:.4rem;
+    }
+    .back-link:hover{color:#164ab9}
+
+    main{margin-top:72px}
+
+    /* HERO SEZIONE UNICA COERENTE */
+    .page-hero{
+      max-width:1200px;
+      margin:0 auto;
+      padding:4rem 1.5rem;
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+      gap:3rem;
+      align-items:flex-start;
+    }
+    .hero-text-kicker{
+      font-size:.8rem;
+      letter-spacing:.21em;
+      text-transform:uppercase;
+      color:#9ca3af;
+      margin-bottom:.75rem;
+    }
+    .page-title{
+      font-size:clamp(2.5rem,5vw,3.5rem);
+      font-weight:800;
+      color:#0f172a;
+      margin-bottom:1rem;
+      line-height:1.15;
+    }
+    .page-sub{
+      font-size:1.1rem;
+      font-weight:500;
+      color:#1f2937;
+      margin-bottom:1.5rem;
+      max-width:550px;
+      line-height:1.4;
+    }
+    .page-meta-line{
+      font-size:.9rem;
+      color:#6b7280;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      margin-bottom:2rem;
+      font-weight:500;
+    }
+    .page-meta-line span:nth-child(2n){opacity:.8}
+    .hero-cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      align-items:center;
+    }
+    .btn-primary,
+    .btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      padding:.8rem 2rem;
+      font-size:.95rem;
+      font-weight:600;
+      border:1px solid transparent;
+      cursor:pointer;
+      transition:all .2s;
+      white-space:nowrap;
+    }
+    .btn-primary{
+      background:#1d4ed8;
+      border-color:#1d4ed8;
+      color:#ffffff;
+      box-shadow:0 8px 25px rgba(29,78,216,.3);
+    }
+    .btn-primary:hover{
+      background:#163ab0;
+      border-color:#163ab0;
+      transform:translateY(-2px);
+      box-shadow:0 12px 35px rgba(29,78,216,.4);
+    }
+    .btn-secondary{
+      background:#f9fafb;
+      border-color:#e5e7eb;
+      color:#1f2933;
+    }
+    .btn-secondary:hover{
+      background:#e5e7eb;
+    }
+
+    .hero-media{
+      width:100%;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 20px 55px rgba(15,23,42,.2);
+    }
+    .hero-media img{
+      width:100%;
+      height:500px;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* SEZIONE PRINCIPALE */
+    .page-section{
+      max-width:1200px;
+      margin:0 auto;
+      padding:4rem 1.5rem;
+      display:grid;
+      grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);
+      gap:3rem;
+      align-items:flex-start;
+    }
+    .section-kicker{
+      font-size:.8rem;
+      letter-spacing:.21em;
+      text-transform:uppercase;
+      color:#9ca3af;
+      margin-bottom:.75rem;
+    }
+    .section-title{
+      font-size:clamp(1.8rem,2.5vw,2.2rem);
+      font-weight:800;
+      color:#0f172a;
+      margin-bottom:1.25rem;
+    }
+    .section-text p{
+      font-size:.96rem;
+      color:#4b5563;
+      margin-bottom:.85rem;
+      max-width:650px;
+    }
+
+    /* BOX PREZZO MIGLIORATO E STICKY */
+    .info-panel{
+      background:#ffffff;
+      border-radius:18px;
+      border:1px solid #e5e7eb;
+      box-shadow:0 12px 35px rgba(15,23,42,.08);
+      padding:2.5rem 2rem;
+      display:flex;
+      flex-direction:column;
+      gap:1.8rem;
+      position:sticky;
+      top:100px;
+      align-self:start;
+    }
+    .info-price-main{
+      text-align:center;
+      padding:1.5rem 0;
+      background:linear-gradient(135deg,#f9fafb 0%,#f1f5f9 100%);
+      border-radius:16px;
+      border:1px solid #e5e7eb;
+    }
+    .info-price-label{
+      font-size:.85rem;
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      color:#9ca3af;
+      margin-bottom:.5rem;
+    }
+    .info-price-value{
+      font-size:2.8rem;
+      font-weight:800;
+      color:#dc2626;
+      line-height:1;
+    }
+    .info-price-note{
+      font-size:.9rem;
+      color:#6b7280;
+      font-weight:500;
+      margin-top:.4rem;
+    }
+    .info-meta-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
+      gap:1rem;
+      margin:1.2rem 0;
+    }
+    .info-meta-item{
+      font-size:.85rem;
+      color:#6b7280;
+      text-align:center;
+      padding:.7rem 1rem;
+      background:#f9fafb;
+      border-radius:12px;
+      font-weight:500;
+    }
+
+    .info-block{
+      display:flex;
+      flex-direction:column;
+      gap:.8rem;
+    }
+    .info-block-title{
+      font-size:1rem;
+      font-weight:600;
+      color:#111827;
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.6rem;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      padding:.5rem .9rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      font-size:.86rem;
+      color:#374151;
+    }
+    .list-compact{
+      list-style:none;
+      font-size:.88rem;
+      color:#4b5563;
+    }
+    .list-compact li{
+      margin-bottom:.45rem;
+      display:flex;
+      gap:.5rem;
+      align-items:flex-start;
+    }
+    .list-compact li span:first-child{
+      font-size:.95rem;
+      margin-top:.08rem;
+      min-width:16px;
+    }
+
+    /* SEZIONI WIDE */
+    .section-wide{
+      max-width:1200px;
+      margin:0 auto;
+      padding:4rem 1.5rem;
+    }
+    .section-wide-inner{
+      background:#ffffff;
+      border-radius:18px;
+      border:1px solid #e5e7eb;
+      box-shadow:0 10px 28px rgba(15,23,42,.06);
+      padding:2.5rem 2rem;
+    }
+
+    /* TIMELINE */
+    .timeline{
+      margin-top:1.5rem;
+      position:relative;
+    }
+    .timeline::before{
+      content:'';
+      position:absolute;
+      left:20px;
+      top:0;
+      bottom:0;
+      width:2px;
+      background:linear-gradient(to bottom,#e5e7eb,#164ab9);
+    }
+    .timeline-item{
+      position:relative;
+      margin-bottom:2rem;
+      padding-left:60px;
+      display:flex;
+      align-items:flex-start;
+      gap:1rem;
+    }
+    .timeline-item.last{
+      margin-bottom:0;
+    }
+    .timeline-icon{
+      position:absolute;
+      left:12px;
+      top:4px;
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      background:#e0edff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.1rem;
+      color:#1d4ed8;
+      flex-shrink:0;
+      z-index:2;
+    }
+    .timeline-content{
+      background:#f9fafb;
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:1.2rem 1.3rem;
+      flex:1;
+    }
+    .timeline-step{
+      font-size:1rem;
+      font-weight:600;
+      color:#111827;
+      margin-bottom:.3rem;
+    }
+    .timeline-content p{
+      font-size:.9rem;
+      color:#6b7280;
+      margin:0;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#111827;
+      color:#9ca3af;
+      padding:3rem 1.5rem 2rem;
+      margin-top:3rem;
+    }
+    .footer-inner{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:2.5rem;
+    }
+    .footer-col h3{
+      color:#f9fafb;
+      margin-bottom:1rem;
+      font-size:1.05rem;
+    }
+    .footer-bottom{
+      max-width:1200px;
+      margin:2rem auto 0;
+      border-top:1px solid #1f2937;
+      padding-top:1.3rem;
+      text-align:center;
+      font-size:.8rem;
+      color:#6b7280;
+    }
+
+    /* WHATSAPP */
+    .whatsapp{
+      position:fixed;
+      bottom:24px;
+      right:24px;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:#25D366;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      box-shadow:0 12px 30px rgba(37,211,102,.45);
+      animation:pulse 2s infinite;
+      z-index:1100;
+    }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
+      70%{box-shadow:0 0 0 22px rgba(37,211,102,0)}
+      100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:900px){
+      .page-hero,
+      .page-section{
+        grid-template-columns:1fr;
+        gap:2.5rem;
+      }
+      .info-panel{
+        position:static;
+        top:auto;
+      }
+      .hero-media{height:380px}
+      .section-wide{padding:3.5rem 1.25rem}
+      .timeline{padding-left:0}
+      .timeline::before{left:12px}
+      .timeline-item{padding-left:48px;margin-bottom:1.5rem}
+      .timeline-icon{left:2px;width:28px;height:28px;font-size:1rem}
+    }
+    @media (max-width:768px){
+      .nav-wrapper{flex-wrap:wrap;gap:1rem}
+      .page-hero,
+      .page-section,
+      .section-wide{padding:3rem 1.25rem}
+      .info-meta-grid{grid-template-columns:1fr}
+      .page-title{font-size:2.5rem}
+      .info-price-value{font-size:2.4rem}
+      .hero-cta-row{flex-direction:column;align-items:stretch}
+      .btn-primary,.btn-secondary{width:100%;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="nav-wrapper">
+      <div class="logo">Vento in Poppa Charter</div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="it" onclick="setLang(event,'it')">IT</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang(event,'en')">EN</button>
+      </div>
+
+      <a href="index.html#tour" class="back-link">
+        ← Torna ai tour
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SEZIONE UNICA PULITA -->
+    <section class="page-hero">
+      <div>
+        <p class="hero-text-kicker">TOUR PRIVATO • CAPRI</p>
+        <h1 class="page-title">Capri</h1>
+        <p class="page-sub">
+          Le grotte sono bocche spalancate che raccontano storie solo a chi si avventura ad esplorarle
+        </p>
+        <div class="page-meta-line">
+          <span>799 €</span>
+          <span>• 7/8 ore</span>
+          <span>• Max 7 persone</span>
+        </div>
+        <div class="hero-cta-row">
+          <a href="https://wa.me/393316166512" target="_blank" class="btn-primary">Prenota su WhatsApp</a>
+          <a href="#dettagli" class="btn-secondary">Scopri il programma</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="https://ventoinpoppacharter.com/wp-content/uploads/elementor/thumbs/pexels-tibor-szabo-18782344-scaled-qj6cwiiokb63q6up7rl8kxdey9cyh5qtihm1fw8ilc.jpg" alt="Tour Capri">
+      </div>
+    </section>
+
+    <!-- DESCRIZIONE + INFO -->
+    <section class="page-section" id="dettagli">
+      <div class="section-text">
+        <p class="section-kicker">DESCRIZIONE DEL PERCORSO</p>
+        <h2 class="section-title">Esplorazione completa dell'isola azzurra</h2>
+        <p>
+          Durante questo tour avrai l'opportunità di immergerti nella bellezza naturale della così detta "isola azzurra", caratterizzata dalla presenza di varie grotte, le cui pareti assumono sfumature di colore uniche grazie alla luce del sole che filtra attraverso l'acqua.
+        </p>
+        <p>
+          Navigherai lungo i Faraglioni, Punta Tragara, l'Arco Naturale, la Grotta Rossa (del Corallo), la Grotta Verde con riflessi smeraldo e la Grotta Bianca per il colore delle sue pareti di tufo. Visita facoltativa alla Grotta Azzurra (non inclusa).
+        </p>
+      </div>
+
+      <aside class="info-panel">
+        <div class="info-price-main">
+          <div class="info-price-label">Prezzo Tour Privato</div>
+          <div class="info-price-value">799 €</div>
+          <div class="info-price-note">Fino a 7 persone</div>
+        </div>
+
+        <div class="info-meta-grid">
+          <div class="info-meta-item">7/8 ore</div>
+          <div class="info-meta-item">Max 7 persone</div>
+          <div class="info-meta-item">Skipper incluso</div>
+        </div>
+
+        <div class="info-block">
+          <div class="pill-row">
+            <div class="pill">⛵ Tour privato</div>
+            <div class="pill">📍 Sorrento / Penisola Sorrentina</div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <h3 class="info-block-title">Include</h3>
+          <ul class="list-compact">
+            <li><span>•</span>Bevande fredde</li>
+            <li><span>•</span>Snack a bordo</li>
+            <li><span>•</span>Teli mare personalizzati</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3 class="info-block-title">Non Include</h3>
+          <ul class="list-compact">
+            <li><span>•</span>Tasse sbarco Capri</li>
+            <li><span>•</span>Grotta Azzurra</li>
+            <li><span>•</span>Pranzo (su richiesta)</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PROGRAMMA TIMELINE -->
+    <section class="section-wide">
+      <div class="section-wide-inner">
+        <p class="section-kicker">PROGRAMMA</p>
+        <h2 class="section-title">Itinerario indicativo</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">📍</div>
+            <div class="timeline-content">
+              <h3 class="timeline-step">Partenza dal porto concordato</h3>
+              <p>Sorrento, Castellammare, Massa Lubrense, Nerano, Positano o Amalfi</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">🌊</div>
+            <div class="timeline-content">
+              <h3 class="timeline-step">Navigazione Costa Sorrentina</h3>
+              <p>Insenature, borghi e scogliere della Penisola Sorrentina</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">⛵</div>
+            <div class="timeline-content">
+              <h3 class="timeline-step">Giro completo Capri</h3>
+              <p>Faraglioni, Punta Tragara, Arco Naturale, grotte marine</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">🏊</div>
+            <div class="timeline-content">
+              <h3 class="timeline-step">Soste bagno nelle baie</h3>
+              <p>Acque cristalline per nuotare e rilassarsi</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">🌅</div>
+            <div class="timeline-content">
+              <h3 class="timeline-step">Opzionale: Capri a terra</h3>
+              <p>Piazzetta, Giardini di Augusto, Anacapri (tassa sbarco extra)</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">🍽️</div>
+            <div class="timeline-content">
+              <h3 class="timeline-step">Pranzo su richiesta</h3>
+              <p>Ristorante accessibile solo via mare</p>
+            </div>
+          </div>
+
+          <div class="timeline-item last">
+            <div class="timeline-icon">🏠</div>
+            <div class="timeline-content">
+              <h3 class="timeline-step">Rientro al porto</h3>
+              <p>Tardo pomeriggio al porto di imbarco</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>Vento in Poppa Charter</h3>
+        <p>Via Marina Piccola, 80067 Sorrento NA</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contatti</h3>
+        <a href="tel:+393316166512">+39 331 616 6512</a>
+        <a href="mailto:info@ventoinpoppacharter.com">info@ventoinpoppacharter.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Vento in Poppa Charter – Tutti i diritti riservati
+    </div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/393316166512" class="whatsapp" target="_blank">💬</a>
+
+  <script>
+    function setLang(e,lang){
+      document.querySelectorAll('.lang-btn').forEach(btn=>btn.classList.remove('active'));
+      e.target.classList.add('active');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>

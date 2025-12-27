@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Vento in Poppa Charter | Escursioni in barca Sorrento, Capri e Costiera Amalfitana</title>
+  <meta id="metaDescription" name="description" content="Tour in barca da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana. Piccoli gruppi, skipper locali esperti e assistenza dedicata. Prenota la tua escursione.">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    :root{
+      --primary:#1d4ed8;
+      --primary-hover:#163ab0;
+      --bg-soft:#f5f7fb;
+      --text-dark:#1f2933;
+      --text-medium:#4b5563;
+      --text-light:#6b7280;
+      --border-light:#e5e7eb;
+      --radius-lg:20px;
+      --radius-md:14px;
+      --shadow-sm:0 4px 14px rgba(15,23,42,.04);
+      --shadow-md:0 8px 26px rgba(15,23,42,.08);
+      --font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:var(--font-family);
+      line-height:1.7;
+      color:var(--text-dark);
+      background:var(--bg-soft);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;height:auto;display:block;}
+
+    /* HEADER */
+    header{
+      position:fixed;top:0;left:0;width:100%;
+      background:rgba(255,255,255,.98);
+      border-bottom:1px solid #e1e7f0;
+      backdrop-filter:blur(16px);
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.03);
+    }
+    .nav-wrapper{
+      max-width:1200px;margin:0 auto;
+      padding:0.75rem 1.5rem;
+      display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+    }
+    .logo{
+      height:42px;max-width:180px;display:flex;align-items:center;
+    }
+    .logo img{height:100%;width:auto;object-fit:contain;}
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:1.5rem;
+      align-items:center;
+    }
+    nav a{
+      font-size:.95rem;font-weight:500;
+      color:var(--text-medium);
+      position:relative;
+      transition:color .2s;
+    }
+    nav a:hover{color:var(--primary);}
+    nav a::after{
+      content:'';position:absolute;left:0;bottom:-4px;
+      width:0;height:2px;background:var(--primary);
+      transition:width .25s ease;
+    }
+    nav a:hover::after{width:100%;}
+
+    /* SWITCH LINGUA (toggle) */
+    .lang-switcher{display:flex;align-items:center;justify-content:center;}
+    .lang-toggle{
+      position:relative;width:90px;height:30px;
+      background:#e5e7eb;border-radius:999px;padding:3px;
+      display:flex;align-items:center;justify-content:space-between;
+      cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.08);
+    }
+    .lang-pill{
+      position:absolute;top:3px;left:3px;
+      width:44px;height:24px;border-radius:999px;
+      background:#ffffff;box-shadow:0 2px 6px rgba(0,0,0,.2);
+      transition:transform .22s ease;
+    }
+    .lang-toggle[data-lang="en"] .lang-pill{transform:translateX(46px);}
+    .lang-label{
+      flex:1;text-align:center;
+      font-size:.7rem;font-weight:700;
+      letter-spacing:.12em;text-transform:uppercase;
+      color:#4b5563;z-index:1;user-select:none;
+    }
+    .lang-toggle[data-lang="it"] .lang-label[data-code="it"],
+    .lang-toggle[data-lang="en"] .lang-label[data-code="en"]{
+      color:var(--primary);
+    }
+
+    /* HAMBURGER */
+    .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;}
+    .hamburger span{width:24px;height:3px;background:var(--primary);border-radius:2px;}
+    .nav-mobile{
+      display:none;flex-direction:column;gap:1rem;
+      padding:1rem 1.5rem 1.25rem;
+      border-top:1px solid #e1e7f0;background:#fff;
+    }
+    .nav-mobile a{font-size:.95rem;color:var(--text-medium);}
+
+    main{margin-top:72px;}
+
+    /* HERO */
+    .hero{
+      position:relative;min-height:80vh;
+      display:flex;align-items:center;justify-content:center;
+      text-align:center;padding:3.5rem 1.5rem 4rem;
+      overflow:hidden;
+    }
+    .slider{position:absolute;inset:0;z-index:1;}
+    .hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(135deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+      backdrop-filter:blur(3px);z-index:2;
+    }
+    .slide{
+      position:absolute;inset:0;
+      background-size:cover;background-position:center;
+      opacity:0;transition:opacity 1s ease;
+    }
+    .slide.active{opacity:1;}
+    .slide.fade-out{opacity:0;}
+    .hero-content{
+      position:relative;z-index:3;
+      max-width:900px;padding:1.5rem;
+    }
+    .hero-title{
+      font-size:clamp(2.3rem,5vw,3.6rem);
+      font-weight:800;color:#ffffff;
+      margin-bottom:1.1rem;text-shadow:0 4px 18px rgba(0,0,0,.55);
+    }
+    .hero-sub{
+      font-size:clamp(1.05rem,2.3vw,1.25rem);
+      color:#f9fafb;max-width:650px;
+      margin:0 auto 2.3rem;text-shadow:0 2px 10px rgba(0,0,0,.6);
+    }
+    .hero-cta{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:1rem 2.6rem;border-radius:999px;
+      background:#fff;color:var(--primary);
+      font-weight:600;font-size:1rem;
+      box-shadow:0 12px 40px rgba(0,0,0,.35);
+      transition:all .3s;
+    }
+    .hero-cta:hover{
+      background:var(--primary);color:#fff;
+      transform:translateY(-4px);
+      box-shadow:0 18px 50px rgba(22,74,185,.6);
+    }
+
+    /* SEZIONI */
+    .section{
+      max-width:1200px;margin:0 auto;
+      padding:4rem 1.5rem;text-align:center;
+    }
+    .section-title{
+      font-size:clamp(1.8rem,3.5vw,2.4rem);
+      font-weight:800;color:#102a43;margin-bottom:1.1rem;
+    }
+    .section-sub{
+      max-width:650px;margin:0 auto 3rem;
+      color:var(--text-light);font-size:.96rem;
+    }
+    .section-divider{
+      max-width:1200px;margin:0 auto;padding:0 1.5rem;
+    }
+    .section-divider-line{
+      border:0;height:1px;width:100%;
+      background:linear-gradient(to right,transparent,#d1d5db,transparent);
+    }
+
+    /* ANIMAZIONE SCROLL */
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* TOUR */
+    .tour-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.75rem;
+    }
+    .tour-card{
+      border-radius:var(--radius-lg);
+      overflow:hidden;background:#fff;
+      box-shadow:var(--shadow-md);
+      display:flex;flex-direction:column;text-align:left;
+      transition:transform .25s,box-shadow .25s;
+    }
+    .tour-card:hover{transform:translateY(-4px);box-shadow:0 16px 45px rgba(15,23,42,.14);}
+    .tour-card-image{position:relative;height:210px;overflow:hidden;}
+    .tour-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+    .tour-card:hover .tour-card-image img{transform:scale(1.06);}
+    .tour-badge{
+      position:absolute;top:12px;left:12px;
+      background:var(--primary);color:#fff;
+      padding:6px 12px;border-radius:999px;
+      font-size:.75rem;font-weight:600;
+    }
+    .tour-card-body{padding:16px 18px 14px;display:flex;flex-direction:column;gap:6px;}
+    .tour-title{font-size:1.05rem;font-weight:700;color:#111827;}
+    .tour-meta{font-size:.83rem;color:var(--text-light);display:flex;flex-wrap:wrap;gap:4px;}
+    .tour-desc{font-size:.9rem;color:var(--text-medium);margin-top:6px;}
+    .tour-footer{
+      margin-top:10px;padding-top:10px;
+      border-top:1px solid #e5e7eb;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .tour-cta{
+      font-size:.86rem;font-weight:600;
+      color:var(--primary);
+      padding:.45rem 1.1rem;border-radius:999px;
+      border:1px solid #c7d2fe;background:#f9fafb;
+      cursor:pointer;transition:all .2s;
+    }
+    .tour-cta:hover{
+      background:var(--primary);color:#fff;
+      border-color:var(--primary);transform:translateY(-2px);
+    }
+    .price-new{color:#dc2626;font-weight:700;font-size:1rem;}
+    .price-label{font-size:.82rem;color:var(--text-light);margin-right:4px;}
+
+    /* PERCHÉ NOI */
+    .features{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.25rem;
+    }
+    .feature{
+      display:flex;align-items:flex-start;gap:.85rem;
+      padding:1.2rem 1.2rem;background:#fff;
+      border-radius:var(--radius-md);
+      border:1px solid var(--border-light);
+      box-shadow:var(--shadow-sm);text-align:left;
+    }
+    .feature-icon{
+      flex-shrink:0;width:40px;height:40px;
+      border-radius:999px;background:#e0edff;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.35rem;color:var(--primary);
+    }
+    .feature-body h3{font-size:.98rem;font-weight:700;color:#111827;margin-bottom:2px;}
+    .feature-body p{font-size:.9rem;color:var(--text-light);}
+
+    /* CHI SIAMO */
+    .about-two-col{
+      max-width:1200px;margin:0 auto;
+      display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
+      gap:3.5rem;align-items:center;text-align:left;
+    }
+    .about-two-col-media{display:flex;justify-content:center;}
+    .about-photo{
+      width:100%;max-width:380px;border-radius:26px;
+      overflow:hidden;box-shadow:0 18px 50px rgba(15,23,42,.2);
+    }
+    .about-kicker{
+      font-size:.78rem;letter-spacing:.22em;
+      text-transform:uppercase;color:#9ca3af;margin-bottom:.7rem;
+    }
+    .about-title{
+      font-size:clamp(2rem,3.3vw,2.7rem);
+      font-weight:800;color:#0f172a;margin-bottom:1.2rem;
+    }
+    .about-text{font-size:.96rem;color:var(--text-medium);margin-bottom:.8rem;max-width:620px;}
+    .about-list{list-style:none;margin-top:1.1rem;padding-left:0;font-size:.9rem;color:var(--text-medium);}
+    .about-list li{margin-bottom:.45rem;padding-left:1.4rem;position:relative;}
+    .about-list li::before{content:'✓';position:absolute;left:0;color:var(--primary);font-weight:700;}
+
+    /* FAQ */
+    .faq-list{
+      max-width:900px;margin:0 auto;
+      display:flex;flex-direction:column;gap:.9rem;
+    }
+    .faq-item{
+      background:#fff;border-radius:var(--radius-md);
+      border:1px solid var(--border-light);
+      box-shadow:var(--shadow-sm);overflow:hidden;text-align:left;
+    }
+    .faq-question{
+      width:100%;padding:1rem 1.2rem;
+      background:#fff;border:none;
+      display:flex;justify-content:space-between;align-items:center;
+      font-size:.95rem;font-weight:600;color:#111827;
+      cursor:pointer;
+    }
+    .faq-toggle{font-size:1.3rem;color:var(--text-light);margin-left:1rem;transition:transform .2s;}
+    .faq-answer{
+      max-height:0;overflow:hidden;
+      padding:0 1.2rem;
+      transition:max-height .3s ease,padding .3s ease;
+    }
+    .faq-answer p{padding-bottom:1rem;font-size:.9rem;color:var(--text-medium);}
+    .faq-item.open .faq-answer{max-height:260px;padding-top:.4rem;}
+    .faq-item.open .faq-toggle{transform:rotate(45deg);}
+
+    /* CONTATTI – UN SOLO PANNELLO */
+    .contact-panel{
+      max-width:900px;margin:0 auto;
+      padding:2.2rem 2rem;
+      background:#fff;border-radius:var(--radius-lg);
+      border:1px solid var(--border-light);
+      box-shadow:var(--shadow-md);
+      text-align:left;
+      display:grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,0.9fr);
+      gap:2rem;
+    }
+    .contact-left-header{
+      display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1rem;
+    }
+    .contact-icon-main{
+      font-size:2rem;color:var(--primary);margin-top:.15rem;
+    }
+    .contact-main-title{
+      font-size:1.1rem;font-weight:700;color:#111827;margin-bottom:.25rem;
+    }
+    .contact-main-text{
+      font-size:.92rem;color:var(--text-medium);
+    }
+    .contact-row{
+      margin-top:1.2rem;display:flex;flex-direction:column;gap:.6rem;
+    }
+    .contact-line{
+      display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--text-medium);
+    }
+    .contact-line i{color:var(--primary);}
+    .contact-emphasis{font-weight:600;color:#111827;}
+
+    .contact-cta-row{
+      margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.6rem;
+    }
+    .contact-chip{
+      display:inline-flex;align-items:center;gap:.4rem;
+      padding:.5rem 1rem;border-radius:999px;
+      font-size:.82rem;font-weight:600;
+      border:1px solid #dbe2ff;background:#eef2ff;
+      color:#1d4ed8;cursor:pointer;transition:all .2s;
+    }
+    .contact-chip.primary{
+      background:#1d4ed8;border-color:#1d4ed8;color:#fff;
+    }
+    .contact-chip:hover{
+      background:#1d4ed8;color:#fff;border-color:#1d4ed8;
+    }
+
+    .contact-right{
+      border-left:1px solid #e5e7eb;
+      padding-left:1.6rem;
+    }
+    .contact-right-title{
+      font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem;
+    }
+    .contact-right-text{
+      font-size:.88rem;color:var(--text-medium);margin-bottom:1rem;
+    }
+    .social-row{
+      display:flex;gap:.6rem;margin-bottom:.9rem;flex-wrap:wrap;
+    }
+    .social-pill{
+      width:40px;height:40px;border-radius:999px;
+      border:1px solid #e5e7eb;
+      display:flex;align-items:center;justify-content:center;
+      color:#6b7280;font-size:1.15rem;background:#f9fafb;
+      transition:all .2s;
+    }
+    .social-pill:hover{
+      background:var(--primary);color:#fff;border-color:var(--primary);transform:translateY(-2px);
+    }
+    .contact-meta{
+      font-size:.83rem;color:var(--text-light);
+    }
+
+    /* FOOTER */
+    footer{
+      background:#111827;color:#9ca3af;
+      padding:3rem 1.5rem 2rem;margin-top:3rem;
+    }
+    .footer-inner{
+      max-width:1200px;margin:0 auto;
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:2.5rem;
+    }
+    .footer-col h3{color:#f9fafb;margin-bottom:1rem;font-size:1.05rem;}
+    .footer-col p{font-size:.9rem;}
+    .footer-link{
+      display:block;font-size:.9rem;margin-bottom:.45rem;
+      color:#9ca3af;transition:color .2s;
+    }
+    .footer-link:hover{color:#e5e7eb;}
+    .footer-bottom{
+      max-width:1200px;margin:2rem auto 0;
+      border-top:1px solid #1f2937;padding-top:1.3rem;
+      text-align:center;font-size:.8rem;color:#6b7280;
+    }
+
+    /* WHATSAPP */
+    .whatsapp{
+      position:fixed;bottom:24px;right:24px;
+      width:60px;height:60px;border-radius:50%;
+      background:#25D366;color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      font-size:2rem;box-shadow:0 12px 30px rgba(37,211,102,.45);
+      z-index:1100;
+    }
+
+    /* COOKIE */
+    .cookie-banner{
+      position:fixed;left:0;right:0;bottom:0;
+      background:rgba(17,24,39,.97);color:#e5e7eb;
+      padding:1.5rem 1.5rem 1.75rem;z-index:1050;
+      transform:translateY(100%);transition:transform .35s ease-out;
+    }
+    .cookie-banner.active{transform:translateY(0);}
+    .cookie-inner{
+      max-width:1200px;margin:0 auto;
+      display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+    }
+    .cookie-text{font-size:.85rem;max-width:650px;}
+    .cookie-text a{color:#60a5fa;text-decoration:underline;}
+    .cookie-actions{display:flex;gap:.75rem;flex-wrap:wrap;}
+    .cookie-btn{
+      border-radius:999px;padding:.55rem 1.6rem;
+      border:none;cursor:pointer;font-size:.85rem;font-weight:500;
+    }
+    .cookie-accept{background:#22c55e;color:#fff;}
+    .cookie-decline{background:transparent;border:1px solid #6b7280;color:#e5e7eb;}
+
+    /* RESPONSIVE */
+    @media (max-width:900px){
+      .about-two-col{grid-template-columns:1fr;gap:2.5rem;}
+      .about-two-col-media{order:-1;}
+      .about-photo{margin:0 auto;}
+      .contact-panel{
+        grid-template-columns:1fr;
+        padding:2rem 1.5rem;
+      }
+      .contact-right{
+        border-left:none;border-top:1px solid #e5e7eb;
+        padding-left:0;padding-top:1.5rem;margin-top:1rem;
+      }
+    }
+    @media (max-width:768px){
+      .nav-wrapper{flex-wrap:wrap;}
+      nav ul{display:none;}
+      .hamburger{display:flex;}
+      .section{padding:3.5rem 1.25rem;}
+      .hero{padding:3rem 1.25rem 3.5rem;}
+      .cookie-inner{flex-direction:column;align-items:flex-start;}
+    }
+  </style>
+</head>
+<body>
+  <!-- COOKIE -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-inner">
+      <p class="cookie-text" id="cookieText">
+        Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico sul sito.
+        <a href="#">Maggiori informazioni</a>
+      </p>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-accept" onclick="handleCookie(true)" id="cookieAccept">Accetta</button>
+        <button class="cookie-btn cookie-decline" onclick="handleCookie(false)" id="cookieDecline">Rifiuta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-wrapper">
+      <div class="logo">
+        <img src="immagini/logo-vento-in-poppa-charter.jpg" alt="Vento in Poppa Charter">
+      </div>
+
+      <div class="lang-switcher">
+        <div class="lang-toggle" id="langToggle" data-lang="it">
+          <div class="lang-pill"></div>
+          <span class="lang-label" data-code="it">IT</span>
+          <span class="lang-label" data-code="en">EN</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul id="navDesktop">
+          <li><a href="#tour" id="navTour">Tour</a></li>
+          <li><a href="#perche" id="navWhy">Perché noi</a></li>
+          <li><a href="#chi-siamo" id="navAbout">Chi siamo</a></li>
+          <li><a href="#faq" id="navFaq">FAQ</a></li>
+          <li><a href="#contatti" id="navContact">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="nav-mobile" id="navMobile">
+      <a href="#tour" onclick="toggleMenu()" id="navTourMobile">Tour</a>
+      <a href="#perche" onclick="toggleMenu()" id="navWhyMobile">Perché noi</a>
+      <a href="#chi-siamo" onclick="toggleMenu()" id="navAboutMobile">Chi siamo</a>
+      <a href="#faq" onclick="toggleMenu()" id="navFaqMobile">FAQ</a>
+      <a href="#contatti" onclick="toggleMenu()" id="navContactMobile">Contatti</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="slider">
+        <div class="slide active" style="background-image:url('immagini/vento_in_poppa_boat.jpg');"></div>
+        <div class="slide" style="background-image:url('immagini/sorrento-geda1aa76b_1920.jpg');"></div>
+        <div class="slide" style="background-image:url('immagini/amalfi-coast.jpg');"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title" id="heroTitle">Scopri le meraviglie della Costiera in barca</h1>
+        <p class="hero-sub" id="heroText">
+          Escursioni da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana con piccoli gruppi e skipper locali.
+        </p>
+        <a href="#tour" class="hero-cta" id="heroBtn">Vedi i tour</a>
+      </div>
+    </section>
+
+    <!-- TOUR -->
+    <section class="section reveal" id="tour">
+      <h2 class="section-title" id="tourTitle"><i class="bi bi-tsunami"></i> I nostri tour più amati</h2>
+      <p class="section-sub" id="tourSub">
+        Piccoli gruppi, partenze giornaliere e assistenza dedicata per tutta la durata dell'escursione.
+      </p>
+
+      <div class="tour-grid">
+        <article class="tour-card">
+          <div class="tour-card-image">
+            <img src="immagini/capri_tour_faraglioni.jpg" alt="Tour Capri da Sorrento con Faraglioni">
+            <span class="tour-badge" id="tourBadge">Più venduto</span>
+          </div>
+          <div class="tour-card-body">
+            <h3 class="tour-title" id="tour1Title">Esperienza a Capri</h3>
+            <p class="tour-meta" id="tour1Meta">
+              <span><i class="bi bi-clock"></i> 7/8 ore</span><span>•</span>
+              <span><i class="bi bi-people"></i> Max 7 persone</span>
+            </p>
+            <p class="tour-desc" id="tour1Desc">
+              Tour completo con bagno ai Faraglioni, sosta ad Anacapri e tempo libero in Piazzetta.
+            </p>
+            <div class="tour-footer">
+              <button class="tour-cta" type="button" onclick="vaiAPagina('esperienza-capri.html')" id="tourDetails1">Dettagli tour</button>
+              <div class="tour-price"><span class="price-new">69 €</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <div class="tour-card-image">
+            <img src="immagini/sunset-sorrento.jpg" alt="Tour in barca al tramonto Sorrento">
+          </div>
+          <div class="tour-card-body">
+            <h3 class="tour-title" id="tour2Title">Sunset Experience</h3>
+            <p class="tour-meta" id="tour2Meta">
+              <span><i class="bi bi-clock"></i> 2/3 ore</span><span>•</span>
+              <span><i class="bi bi-people"></i> Max 7 persone</span>
+            </p>
+            <p class="tour-desc" id="tour2Desc">
+              Navigazione al tramonto con prosecco, musica e vista sul Vesuvio.
+            </p>
+            <div class="tour-footer">
+              <button class="tour-cta" type="button" onclick="vaiAPagina('sunset-experience.html')" id="tourDetails2">Dettagli tour</button>
+              <div class="tour-price"><span class="price-new">299 €</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tour-card">
+          <div class="tour-card-image">
+            <img src="immagini/amalfi-coast.jpg" alt="Escursione Costiera Amalfitana da Sorrento">
+          </div>
+          <div class="tour-card-body">
+            <h3 class="tour-title" id="tour3Title">Esperienza Amalfi e Positano</h3>
+            <p class="tour-meta" id="tour3Meta">
+              <span><i class="bi bi-clock"></i> 7/8 ore</span><span>•</span>
+              <span><i class="bi bi-people"></i> Max 7 persone</span>
+            </p>
+            <p class="tour-desc" id="tour3Desc">
+              Soste bagno a Furore e Praiano, tempo libero a Positano e pranzo a bordo opzionale.
+            </p>
+            <div class="tour-footer">
+              <button class="tour-cta" type="button" onclick="vaiAPagina('amalfi-positano.html')" id="tourDetails3">Dettagli tour</button>
+              <div class="tour-price">
+                <span class="price-label" id="tour3From">Da</span>
+                <span class="price-new">899 €</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr class="section-divider-line"></div>
+
+    <!-- PERCHÉ NOI -->
+    <section class="section reveal" id="perche">
+      <h2 class="section-title" id="whyTitle"><i class="bi bi-trophy"></i> Perché scegliere Vento in Poppa</h2>
+      <p class="section-sub" id="whySub">
+        Un team locale, barche curate e attenzione ai dettagli per farti vivere il mare senza pensieri.
+      </p>
+
+      <div class="features">
+        <article class="feature">
+          <div class="feature-icon"><i class="bi bi-person-badge-fill"></i></div>
+          <div class="feature-body">
+            <h3 id="why1Title">Skipper locali esperti</h3>
+            <p id="why1Text">Conosciamo il golfo, le correnti e i punti migliori per nuotare o scattare foto.</p>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="feature-icon"><i class="bi bi-boat-fill"></i></div>
+          <div class="feature-body">
+            <h3 id="why2Title">Barche curate e confortevoli</h3>
+            <p id="why2Text">Imbarcazioni mantenute con cura, gruppi ridotti e spazio per tutti gli ospiti.</p>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
+          <div class="feature-body">
+            <h3 id="why3Title">Tempo ben organizzato</h3>
+            <p id="why3Text">Itinerari pensati per vedere i luoghi iconici senza fretta, con soste bagno e relax.</p>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="feature-icon"><i class="bi bi-headset"></i></div>
+          <div class="feature-body">
+            <h3 id="why4Title">Assistenza dedicata</h3>
+            <p id="why4Text">Supporto via WhatsApp per domande su meteo, imbarco e richieste speciali.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr class="section-divider-line"></div>
+
+    <!-- CHI SIAMO -->
+    <section class="section reveal" id="chi-siamo">
+      <div class="about-two-col">
+        <div class="about-two-col-media">
+          <div class="about-photo">
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"
+                 alt="Vista dalla barca sulla Costiera Amalfitana">
+          </div>
+        </div>
+
+        <div class="about-two-col-text">
+          <p class="about-kicker" id="aboutKicker">La nostra storia</p>
+          <h2 class="about-title" id="aboutTitle"><i class="bi bi-book"></i> Vento in Poppa Charter</h2>
+          <p class="about-text" id="aboutText1">
+            Vento in Poppa Charter nasce nel 2023 da un gruppo di persone legate al mare e alla tradizione marinara sorrentina.
+          </p>
+          <p class="about-text" id="aboutText2">
+            Organizziamo escursioni in barca verso Capri e Costiera Amalfitana con un approccio familiare e attento ai dettagli.
+          </p>
+          <ul class="about-list">
+            <li id="aboutLi1">Skipper locali con anni di esperienza nel Golfo di Napoli.</li>
+            <li id="aboutLi2">Gruppi ridotti per vivere il mare in modo autentico.</li>
+            <li id="aboutLi3">Supporto dedicato prima, durante e dopo ogni tour.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr class="section-divider-line"></div>
+
+    <!-- FAQ -->
+    <section class="section reveal" id="faq">
+      <h2 class="section-title" id="faqTitle"><i class="bi bi-patch-question"></i> Domande frequenti</h2>
+      <p class="section-sub" id="faqSub">
+        Alcune risposte rapide sulle nostre escursioni in barca da Sorrento verso Capri e Costiera Amalfitana.
+      </p>
+
+      <div class="faq-list">
+        <article class="faq-item">
+          <button class="faq-question">
+            <span id="faqQ1"><i class="bi bi-people-fill" style="margin-right:.4rem;"></i>Quante persone ci sono in barca?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p id="faqA1">
+              I tour condivisi sono pensati per piccoli gruppi (massimo 7 persone), così da garantire comfort a bordo e un'esperienza più autentica.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question">
+            <span id="faqQ2"><i class="bi bi-cloud-rain-heavy" style="margin-right:.4rem;"></i>Cosa succede in caso di maltempo?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p id="faqA2">
+              In caso di mare mosso o condizioni meteo non adatte proponiamo cambio data, itinerario alternativo o rimborso secondo le nostre policy.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr class="section-divider-line"></div>
+
+    <!-- CONTATTI – PANNELLO UNICO -->
+    <section class="section reveal" id="contatti">
+      <h2 class="section-title" id="contactTitle"><i class="bi bi-person-vcard"></i> Contatti & Social</h2>
+      <p class="section-sub" id="contactSub">
+        Scrivici per preventivi, tour privati o informazioni su partenze e disponibilità.
+      </p>
+
+      <div class="contact-panel">
+        <!-- Sinistra -->
+        <div class="contact-left">
+          <div class="contact-left-header">
+            <i class="bi bi-telephone-fill contact-icon-main"></i>
+            <div>
+              <h3 class="contact-main-title" id="contactMainTitle">Contatta il nostro team</h3>
+              <p class="contact-main-text" id="contactMainText">
+                Ti aiutiamo a scegliere il tour perfetto e rispondiamo di solito entro poche ore.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-line">
+              <i class="bi bi-telephone"></i>
+              <span><span class="contact-emphasis">+39 123 456 789</span> — <span id="labelPhone">Telefono</span></span>
+            </div>
+            <div class="contact-line">
+              <i class="bi bi-whatsapp"></i>
+              <span><span class="contact-emphasis">+39 123 456 789</span> — <span id="labelWhatsapp">WhatsApp</span></span>
+            </div>
+            <div class="contact-line">
+              <i class="bi bi-envelope"></i>
+              <span><span class="contact-emphasis">info@ventoinpoppa.com</span> — <span id="labelEmail">Email</span></span>
+            </div>
+            <div class="contact-line">
+              <i class="bi bi-geo-alt"></i>
+              <span class="contact-emphasis" id="harborValue">Porto di Sorrento (NA)</span>
+            </div>
+          </div>
+
+          <div class="contact-cta-row">
+            <a href="https://wa.me/39123456789" target="_blank" class="contact-chip primary">
+              <i class="bi bi-whatsapp"></i><span id="btnWhatsappText">Apri chat</span>
+            </a>
+            <a href="tel:+39123456789" class="contact-chip">
+              <i class="bi bi-telephone"></i><span id="btnCallText">Chiama</span>
+            </a>
+            <a href="mailto:info@ventoinpoppa.com" class="contact-chip">
+              <i class="bi bi-envelope"></i><span id="btnEmailText">Invia email</span>
+            </a>
+            <a href="https://maps.google.com" target="_blank" class="contact-chip">
+              <i class="bi bi-geo-alt-fill"></i><span id="btnMapsText">Apri Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Destra -->
+        <div class="contact-right">
+          <h3 class="contact-right-title" id="socialTitle">Seguici sui social</h3>
+          <p class="contact-right-text" id="socialText">
+            Foto, video e aggiornamenti in tempo reale dai nostri tour in barca.
+          </p>
+          <div class="social-row">
+            <a href="#" class="social-pill" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-pill" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-pill" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+          <p class="contact-meta" id="contactMeta">
+            Orari risposta: 09:00 - 20:00 • Tempo medio di risposta: 1-2 ore
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3 id="footerBrandTitle"><i class="bi bi-sail-boat me-2"></i>Vento in Poppa Charter</h3>
+        <p id="footerBrandText">
+          Escursioni di gruppo e tour privati in barca da Sorrento verso Capri e Costiera Amalfitana, con skipper locali e assistenza dedicata.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h3 id="footerToursTitle"><i class="bi bi-compass me-2"></i>Tour</h3>
+        <a href="#tour" class="footer-link" id="footerTour1">Costiera Amalfitana</a>
+        <a href="#tour" class="footer-link" id="footerTour2">Capri classica</a>
+        <a href="#tour" class="footer-link" id="footerTour3">Tramonto a Sorrento</a>
+        <a href="#tour" class="footer-link" id="footerTour4">Barca privata</a>
+      </div>
+      <div class="footer-col">
+        <h3 id="footerContactTitle"><i class="bi bi-telephone me-2"></i>Contatti</h3>
+        <a href="tel:+39123456789" class="footer-link"><i class="bi bi-telephone me-1"></i>+39 123 456 789</a>
+        <a href="mailto:info@ventoinpoppa.com" class="footer-link"><i class="bi bi-envelope me-1"></i>info@ventoinpoppa.com</a>
+        <span class="footer-link" id="footerAddress"><i class="bi bi-geo-alt me-1"></i>Porto di Sorrento (NA)</span>
+      </div>
+      <div class="footer-col">
+        <h3 id="footerFollowTitle"><i class="bi bi-share me-2"></i>Seguici</h3>
+        <a href="#" class="footer-link"><i class="bi bi-facebook me-2"></i>Facebook</a>
+        <a href="#" class="footer-link"><i class="bi bi-instagram me-2"></i>Instagram</a>
+        <a href="#" class="footer-link"><i class="bi bi-tiktok me-2"></i>TikTok</a>
+      </div>
+    </div>
+    <div class="footer-bottom" id="footerBottom">
+      © 2025 Vento in Poppa Charter – Tutti i diritti riservati • P.IVA 12345678901
+    </div>
+  </footer>
+
+  <!-- WHATSAPP STICKY -->
+  <a href="https://wa.me/39123456789" class="whatsapp" target="_blank" aria-label="Chat WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script>
+    /* SLIDER HERO */
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    function nextSlide() {
+      const old = slides[currentSlide];
+      old.classList.remove('active');
+      old.classList.add('fade-out');
+      currentSlide = (currentSlide + 1) % slides.length;
+      const next = slides[currentSlide];
+      setTimeout(()=>{next.classList.add('active');next.classList.remove('fade-out');},100);
+    }
+    setInterval(nextSlide,5000);
+
+    /* MENU MOBILE */
+    function toggleMenu(){
+      const mobile = document.getElementById('navMobile');
+      mobile.style.display = mobile.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    /* COOKIE */
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieKey = 'vp_cookie_choice';
+    function showCookieBanner(){
+      if(!localStorage.getItem(cookieKey)){
+        setTimeout(()=>cookieBanner.classList.add('active'),1200);
+      }
+    }
+    function handleCookie(accepted){
+      localStorage.setItem(cookieKey, accepted ? 'accepted' : 'declined');
+      cookieBanner.classList.remove('active');
+    }
+    showCookieBanner();
+
+    /* SCROLL REVEAL */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    },{threshold:0.15});
+    revealEls.forEach(el=>observer.observe(el));
+
+    /* FAQ TOGGLE */
+    document.querySelectorAll('.faq-item').forEach(item=>{
+      const btn = item.querySelector('.faq-question');
+      btn.addEventListener('click',()=>{
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+        if(!open) item.classList.add('open');
+      });
+    });
+
+    /* NAVIGAZIONE PAGINE TOUR */
+    function vaiAPagina(p){window.location.href = p;}
+
+    /* TRADUZIONI */
+    const langToggle = document.getElementById('langToggle');
+
+    const translations = {
+      it:{
+        pageTitle:"Vento in Poppa Charter | Escursioni in barca Sorrento, Capri e Costiera Amalfitana",
+        metaDescription:"Tour in barca da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana. Piccoli gruppi, skipper locali esperti e assistenza dedicata. Prenota la tua escursione.",
+        navTour:"Tour",
+        navWhy:"Perché noi",
+        navAbout:"Chi siamo",
+        navFaq:"FAQ",
+        navContact:"Contatti",
+        heroTitle:"Scopri le meraviglie della Costiera in barca",
+        heroText:"Escursioni da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana con piccoli gruppi e skipper locali.",
+        heroBtn:"Vedi i tour",
+        tourTitle:"I nostri tour più amati",
+        tourSub:"Piccoli gruppi, partenze giornaliere e assistenza dedicata per tutta la durata dell'escursione.",
+        tourBadge:"Più venduto",
+        tour1Title:"Esperienza a Capri",
+        tour1Desc:"Tour completo con bagno ai Faraglioni, sosta ad Anacapri e tempo libero in Piazzetta.",
+        tour2Title:"Sunset Experience",
+        tour2Desc:"Navigazione al tramonto con prosecco, musica e vista sul Vesuvio.",
+        tour3Title:"Esperienza Amalfi e Positano",
+        tour3From:"Da",
+        tour3Desc:"Soste bagno a Furore e Praiano, tempo libero a Positano e pranzo a bordo opzionale.",
+        tourDetails:"Dettagli tour",
+        whyTitle:"Perché scegliere Vento in Poppa",
+        whySub:"Un team locale, barche curate e attenzione ai dettagli per farti vivere il mare senza pensieri.",
+        why1Title:"Skipper locali esperti",
+        why1Text:"Conosciamo il golfo, le correnti e i punti migliori per nuotare o scattare foto.",
+        why2Title:"Barche curate e confortevoli",
+        why2Text:"Imbarcazioni mantenute con cura, gruppi ridotti e spazio per tutti gli ospiti.",
+        why3Title:"Tempo ben organizzato",
+        why3Text:"Itinerari pensati per vedere i luoghi iconici senza fretta, con soste bagno e relax.",
+        why4Title:"Assistenza dedicata",
+        why4Text:"Supporto via WhatsApp per domande su meteo, imbarco e richieste speciali.",
+        aboutKicker:"La nostra storia",
+        aboutTitle:"Vento in Poppa Charter",
+        aboutText1:"Vento in Poppa Charter nasce nel 2023 da un gruppo di persone legate al mare e alla tradizione marinara sorrentina.",
+        aboutText2:"Organizziamo escursioni in barca verso Capri e Costiera Amalfitana con un approccio familiare e attento ai dettagli.",
+        aboutLi1:"Skipper locali con anni di esperienza nel Golfo di Napoli.",
+        aboutLi2:"Gruppi ridotti per vivere il mare in modo autentico.",
+        aboutLi3:"Supporto dedicato prima, durante e dopo ogni tour.",
+        faqTitle:"Domande frequenti",
+        faqSub:"Alcune risposte rapide sulle nostre escursioni in barca da Sorrento verso Capri e Costiera Amalfitana.",
+        faqQ1:"Quante persone ci sono in barca?",
+        faqA1:"I tour condivisi sono pensati per piccoli gruppi (massimo 7 persone), così da garantire comfort a bordo e un'esperienza più autentica.",
+        faqQ2:"Cosa succede in caso di maltempo?",
+        faqA2:"In caso di mare mosso o condizioni meteo non adatte proponiamo cambio data, itinerario alternativo o rimborso secondo le nostre policy.",
+        contactTitle:"Contatti & Social",
+        contactSub:"Scrivici per preventivi, tour privati o informazioni su partenze e disponibilità.",
+        contactMainTitle:"Contatta il nostro team",
+        contactMainText:"Ti aiutiamo a scegliere il tour perfetto e rispondiamo di solito entro poche ore.",
+        labelPhone:"Telefono",
+        labelWhatsapp:"WhatsApp",
+        labelEmail:"Email",
+        btnCallText:"Chiama",
+        btnWhatsappText:"Apri chat",
+        btnEmailText:"Invia email",
+        btnMapsText:"Apri Maps",
+        harborValue:"Porto di Sorrento (NA)",
+        socialTitle:"Seguici sui social",
+        socialText:"Foto, video e aggiornamenti in tempo reale dai nostri tour in barca.",
+        contactMeta:"Orari risposta: 09:00 - 20:00 • Tempo medio di risposta: 1-2 ore",
+        cookieText:"Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico sul sito.",
+        cookieAccept:"Accetta",
+        cookieDecline:"Rifiuta",
+        footerBrandTitle:"Vento in Poppa Charter",
+        footerBrandText:"Escursioni di gruppo e tour privati in barca da Sorrento verso Capri e Costiera Amalfitana, con skipper locali e assistenza dedicata.",
+        footerToursTitle:"Tour",
+        footerTour1:"Costiera Amalfitana",
+        footerTour2:"Capri classica",
+        footerTour3:"Tramonto a Sorrento",
+        footerTour4:"Barca privata",
+        footerContactTitle:"Contatti",
+        footerAddress:"Porto di Sorrento (NA)",
+        footerFollowTitle:"Seguici",
+        footerBottom:"© 2025 Vento in Poppa Charter – Tutti i diritti riservati • P.IVA 12345678901"
+      },
+      en:{
+        pageTitle:"Vento in Poppa Charter | Boat tours from Sorrento to Capri and Amalfi Coast",
+        metaDescription:"Boat tours from Sorrento, Naples and the Sorrento Peninsula to Capri and the Amalfi Coast. Small groups, local skippers and dedicated assistance.",
+        navTour:"Tours",
+        navWhy:"Why us",
+        navAbout:"About us",
+        navFaq:"FAQ",
+        navContact:"Contacts",
+        heroTitle:"Discover the Amalfi Coast by boat",
+        heroText:"Boat excursions from Sorrento, Naples and the Sorrento Peninsula to Capri and the Amalfi Coast with small groups and local skippers.",
+        heroBtn:"View tours",
+        tourTitle:"Our most popular tours",
+        tourSub:"Small groups, daily departures and dedicated assistance throughout the experience.",
+        tourBadge:"Best seller",
+        tour1Title:"Capri Experience",
+        tour1Desc:"Full tour with swim stop at the Faraglioni and free time in Anacapri and in the Piazzetta.",
+        tour2Title:"Sunset Experience",
+        tour2Desc:"Sunset cruise with prosecco, music and panoramic views of Sorrento bay.",
+        tour3Title:"Amalfi & Positano Experience",
+        tour3From:"From",
+        tour3Desc:"Swim stops in Furore and Praiano, free time in Positano and optional lunch on board.",
+        tourDetails:"View details",
+        whyTitle:"Why choose Vento in Poppa",
+        whySub:"A local team, well-kept boats and attention to detail to let you enjoy the sea without worries.",
+        why1Title:"Local expert skippers",
+        why1Text:"We truly know the gulf, currents and the best spots for swimming and photos.",
+        why2Title:"Comfortable, well-kept boats",
+        why2Text:"Well maintained boats, small groups and plenty of space on board.",
+        why3Title:"Time well organized",
+        why3Text:"Itineraries designed to see iconic places without rush, with swim and relax stops.",
+        why4Title:"Dedicated assistance",
+        why4Text:"WhatsApp support for questions about weather, boarding and special requests.",
+        aboutKicker:"Our story",
+        aboutTitle:"Vento in Poppa Charter",
+        aboutText1:"Vento in Poppa Charter was born in 2023 from a team deeply connected to the sea and Sorrento’s maritime tradition.",
+        aboutText2:"We organize boat tours to Capri and the Amalfi Coast with a friendly approach and attention to every detail.",
+        aboutLi1:"Local skippers with years of experience in the Gulf of Naples.",
+        aboutLi2:"Small groups to enjoy the sea in an authentic way.",
+        aboutLi3:"Dedicated support before, during and after each tour.",
+        faqTitle:"Frequently asked questions",
+        faqSub:"Quick answers about our boat tours from Sorrento to Capri and the Amalfi Coast.",
+        faqQ1:"How many people are on board?",
+        faqA1:"Shared tours are designed for small groups (maximum 7 guests) to guarantee comfort and a more authentic experience.",
+        faqQ2:"What happens in case of bad weather?",
+        faqA2:"In case of rough sea or unsafe conditions, we offer a new date, an alternative itinerary or a refund according to our policy.",
+        contactTitle:"Contacts & Social",
+        contactSub:"Write us for quotes, private tours or information about departures and availability.",
+        contactMainTitle:"Contact our team",
+        contactMainText:"We help you choose the perfect tour and usually reply within a few hours.",
+        labelPhone:"Phone",
+        labelWhatsapp:"WhatsApp",
+        labelEmail:"Email",
+        btnCallText:"Call",
+        btnWhatsappText:"Open chat",
+        btnEmailText:"Send email",
+        btnMapsText:"Open Maps",
+        harborValue:"Sorrento Harbour (NA)",
+        socialTitle:"Follow us on social",
+        socialText:"Photos, videos and live updates from our boat tours.",
+        contactMeta:"Reply hours: 09:00 - 20:00 • Average response time: 1–2 hours",
+        cookieText:"We use cookies to improve your browsing experience and analyze website traffic.",
+        cookieAccept:"Accept",
+        cookieDecline:"Decline",
+        footerBrandTitle:"Vento in Poppa Charter",
+        footerBrandText:"Group excursions and private boat tours from Sorrento to Capri and the Amalfi Coast, with local skippers and dedicated assistance.",
+        footerToursTitle:"Tours",
+        footerTour1:"Amalfi Coast",
+        footerTour2:"Classic Capri",
+        footerTour3:"Sorrento Sunset",
+        footerTour4:"Private boat",
+        footerContactTitle:"Contacts",
+        footerAddress:"Sorrento Harbour (NA)",
+        footerFollowTitle:"Follow us",
+        footerBottom:"© 2025 Vento in Poppa Charter – All rights reserved • VAT 12345678901"
+      }
+    };
+
+    function applyLang(lang){
+      const t = translations[lang];
+      document.documentElement.lang = lang;
+      pageTitle.textContent = t.pageTitle;
+      metaDescription.setAttribute('content', t.metaDescription);
+
+      // NAV
+      navTour.textContent = t.navTour;
+      navWhy.textContent = t.navWhy;
+      navAbout.textContent = t.navAbout;
+      navFaq.textContent = t.navFaq;
+      navContact.textContent = t.navContact;
+      navTourMobile.textContent = t.navTour;
+      navWhyMobile.textContent = t.navWhy;
+      navAboutMobile.textContent = t.navAbout;
+      navFaqMobile.textContent = t.navFaq;
+      navContactMobile.textContent = t.navContact;
+
+      // HERO
+      heroTitle.textContent = t.heroTitle;
+      heroText.textContent = t.heroText;
+      heroBtn.textContent = t.heroBtn;
+
+      // TOUR
+      tourTitle.innerHTML = '<i class="bi bi-tsunami"></i> ' + t.tourTitle;
+      tourSub.textContent = t.tourSub;
+      tourBadge.textContent = t.tourBadge;
+      tour1Title.textContent = t.tour1Title;
+      tour1Desc.textContent = t.tour1Desc;
+      tour2Title.textContent = t.tour2Title;
+      tour2Desc.textContent = t.tour2Desc;
+      tour3Title.textContent = t.tour3Title;
+      tour3Desc.textContent = t.tour3Desc;
+      tour3From.textContent = t.tour3From;
+      tourDetails1.textContent = t.tourDetails;
+      tourDetails2.textContent = t.tourDetails;
+      tourDetails3.textContent = t.tourDetails;
+
+      // WHY
+      whyTitle.innerHTML = '<i class="bi bi-trophy"></i> ' + t.whyTitle;
+      whySub.textContent = t.whySub;
+      why1Title.textContent = t.why1Title;
+      why1Text.textContent = t.why1Text;
+      why2Title.textContent = t.why2Title;
+      why2Text.textContent = t.why2Text;
+      why3Title.textContent = t.why3Title;
+      why3Text.textContent = t.why3Text;
+      why4Title.textContent = t.why4Title;
+      why4Text.textContent = t.why4Text;
+
+      // ABOUT
+      aboutKicker.textContent = t.aboutKicker;
+      aboutTitle.innerHTML = '<i class="bi bi-book"></i> ' + t.aboutTitle;
+      aboutText1.textContent = t.aboutText1;
+      aboutText2.textContent = t.aboutText2;
+      aboutLi1.textContent = t.aboutLi1;
+      aboutLi2.textContent = t.aboutLi2;
+      aboutLi3.textContent = t.aboutLi3;
+
+      // FAQ
+      faqTitle.innerHTML = '<i class="bi bi-patch-question"></i> ' + t.faqTitle;
+      faqSub.textContent = t.faqSub;
+      faqQ1.innerHTML = '<i class="bi bi-people-fill" style="margin-right:.4rem;"></i>' + t.faqQ1;
+      faqA1.textContent = t.faqA1;
+      faqQ2.innerHTML = '<i class="bi bi-cloud-rain-heavy" style="margin-right:.4rem;"></i>' + t.faqQ2;
+      faqA2.textContent = t.faqA2;
+
+      // CONTACT
+      contactTitle.innerHTML = '<i class="bi bi-person-vcard"></i> ' + t.contactTitle;
+      contactSub.textContent = t.contactSub;
+      contactMainTitle.textContent = t.contactMainTitle;
+      contactMainText.textContent = t.contactMainText;
+      labelPhone.textContent = t.labelPhone;
+      labelWhatsapp.textContent = t.labelWhatsapp;
+      labelEmail.textContent = t.labelEmail;
+      btnCallText.textContent = t.btnCallText;
+      btnWhatsappText.textContent = t.btnWhatsappText;
+      btnEmailText.textContent = t.btnEmailText;
+      btnMapsText.textContent = t.btnMapsText;
+      harborValue.textContent = t.harborValue;
+      socialTitle.textContent = t.socialTitle;
+      socialText.textContent = t.socialText;
+      contactMeta.textContent = t.contactMeta;
+
+      // COOKIE
+      cookieText.firstChild.textContent = t.cookieText + " ";
+      cookieAccept.textContent = t.cookieAccept;
+      cookieDecline.textContent = t.cookieDecline;
+
+      // FOOTER
+      footerBrandTitle.innerHTML = '<i class="bi bi-sail-boat me-2"></i>' + t.footerBrandTitle;
+      footerBrandText.textContent = t.footerBrandText;
+      footerToursTitle.innerHTML = '<i class="bi bi-compass me-2"></i>' + t.footerToursTitle;
+      footerTour1.textContent = t.footerTour1;
+      footerTour2.textContent = t.footerTour2;
+      footerTour3.textContent = t.footerTour3;
+      footerTour4.textContent = t.footerTour4;
+      footerContactTitle.innerHTML = '<i class="bi bi-telephone me-2"></i>' + t.footerContactTitle;
+      footerAddress.innerHTML = '<i class="bi bi-geo-alt me-1"></i>' + t.footerAddress;
+      footerFollowTitle.innerHTML = '<i class="bi bi-share me-2"></i>' + t.footerFollowTitle;
+      footerBottom.textContent = t.footerBottom;
+    }
+
+    langToggle.addEventListener('click',()=>{
+      const current = langToggle.getAttribute('data-lang') || 'it';
+      const next = current === 'it' ? 'en' : 'it';
+      langToggle.setAttribute('data-lang', next);
+      applyLang(next);
+    });
+
+    // Inizializza IT
+    applyLang('it');
+  </script>
+</body>
+</html>
