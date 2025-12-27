@@ -3,601 +3,1722 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="pageTitle">Vento in Poppa Charter | Escursioni in barca Sorrento, Capri e Costiera Amalfitana</title>
-  <meta id="metaDescription" name="description" content="Tour in barca da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana. Piccoli gruppi, skipper locali esperti e assistenza dedicata. Prenota la tua escursione.">
-
-  <!-- Bootstrap Icons -->
+  
+  <!-- SEO Meta Tags -->
+  <title>Vento in Poppa Charter | Escursioni in Barca Sorrento, Capri e Costiera Amalfitana</title>
+  <meta name="description" content="Tour in barca da Sorrento verso Capri e Costiera Amalfitana. Piccoli gruppi, skipper esperti, partenze giornaliere. Prenota la tua escursione sul Golfo di Napoli." />
+  <meta name="keywords" content="escursioni barca Sorrento, tour Capri, Costiera Amalfitana boat tour, gite in barca Napoli, charter Penisola Sorrentina" />
+  <meta name="author" content="Vento in Poppa Charter" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.ventoinpoppacharter.com/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ventoinpoppacharter.com/" />
+  <meta property="og:title" content="Vento in Poppa Charter - Escursioni in Barca Sorrento e Capri" />
+  <meta property="og:description" content="Tour in barca da Sorrento verso Capri e Costiera Amalfitana con piccoli gruppi e skipper locali esperti." />
+  <meta property="og:image" content="https://www.ventoinpoppacharter.com/immagini/vento_in_poppa_boat.jpg" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.ventoinpoppacharter.com/" />
+  <meta property="twitter:title" content="Vento in Poppa Charter - Escursioni in Barca Sorrento" />
+  <meta property="twitter:description" content="Tour in barca da Sorrento verso Capri e Costiera Amalfitana." />
+  <meta property="twitter:image" content="https://www.ventoinpoppacharter.com/immagini/vento_in_poppa_boat.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  
+  <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
+  <!-- Structured Data / Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Vento in Poppa Charter",
+    "description": "Escursioni in barca da Sorrento verso Capri e Costiera Amalfitana",
+    "url": "https://www.ventoinpoppacharter.com",
+    "telephone": "+39-123-456-789",
+    "email": "info@ventoinpoppa.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Porto di Sorrento",
+      "addressLocality": "Sorrento",
+      "addressRegion": "Campania",
+      "postalCode": "80067",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.6262",
+      "longitude": "14.3757"
+    },
+    "priceRange": "€€",
+    "image": "https://www.ventoinpoppacharter.com/immagini/vento_in_poppa_boat.jpg"
+  }
+  </script>
 
   <style>
-    :root{
-      --primary:#1d4ed8;
-      --primary-hover:#163ab0;
-      --bg-soft:#f5f7fb;
-      --text-dark:#1f2933;
-      --text-medium:#4b5563;
-      --text-light:#6b7280;
-      --border-light:#e5e7eb;
-      --radius-lg:20px;
-      --radius-md:14px;
-      --shadow-sm:0 4px 14px rgba(15,23,42,.04);
-      --shadow-md:0 8px 26px rgba(15,23,42,.08);
-      --font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    /* ==================== DESIGN SYSTEM ==================== */
+    :root {
+      /* Colori primari coerenti */
+      --primary-blue: #164ab9;
+      --primary-blue-dark: #0d3a8f;
+      --primary-blue-light: #e0edff;
+      --secondary-blue: #0ea5e9;
+      
+      /* Colori neutrali */
+      --gray-50: #f9fafb;
+      --gray-100: #f5f7fb;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      
+      /* Colori accento */
+      --accent-green: #16a34a;
+      --accent-red: #dc2626;
+      --whatsapp: #25D366;
+      
+      /* Spaziature consistenti */
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 0.75rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 1.5rem;
+      --spacing-xl: 2rem;
+      --spacing-2xl: 3rem;
+      --spacing-3xl: 4rem;
+      
+      /* Border radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 999px;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 8px 26px rgba(15, 23, 42, 0.1);
+      --shadow-xl: 0 12px 35px rgba(15, 23, 42, 0.15);
+      
+      /* Typography */
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-size-xs: 0.8rem;
+      --font-size-sm: 0.875rem;
+      --font-size-base: 1rem;
+      --font-size-lg: 1.125rem;
+      --font-size-xl: 1.25rem;
+      --font-size-2xl: 1.5rem;
+      --font-size-3xl: 2rem;
+      --font-size-4xl: 2.5rem;
+      
+      /* Transitions */
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.2s ease;
+      --transition-slow: 0.3s ease;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{
-      font-family:var(--font-family);
-      line-height:1.7;
-      color:var(--text-dark);
-      background:var(--bg-soft);
-      overflow-x:hidden;
+    /* ==================== BASE STYLES ==================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    a{text-decoration:none;color:inherit;}
-    img{max-width:100%;height:auto;display:block;}
-
-    /* HEADER */
-    header{
-      position:fixed;top:0;left:0;width:100%;
-      background:rgba(255,255,255,.98);
-      border-bottom:1px solid #e1e7f0;
-      backdrop-filter:blur(16px);
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,.03);
+    
+    body {
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      color: var(--gray-800);
+      background: var(--gray-100);
+      overflow-x: hidden;
     }
-    .nav-wrapper{
-      max-width:1200px;margin:0 auto;
-      padding:0.75rem 1.5rem;
-      display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+    
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    .logo{
-      height:42px;max-width:180px;display:flex;align-items:center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
-    .logo img{height:100%;width:auto;object-fit:contain;}
-
-    nav ul{
-      list-style:none;
-      display:flex;
-      gap:1.5rem;
-      align-items:center;
-    }
-    nav a{
-      font-size:.95rem;font-weight:500;
-      color:var(--text-medium);
-      position:relative;
-      transition:color .2s;
-    }
-    nav a:hover{color:var(--primary);}
-    nav a::after{
-      content:'';position:absolute;left:0;bottom:-4px;
-      width:0;height:2px;background:var(--primary);
-      transition:width .25s ease;
-    }
-    nav a:hover::after{width:100%;}
-
-    /* SWITCH LINGUA (toggle) */
-    .lang-switcher{display:flex;align-items:center;justify-content:center;}
-    .lang-toggle{
-      position:relative;width:90px;height:30px;
-      background:#e5e7eb;border-radius:999px;padding:3px;
-      display:flex;align-items:center;justify-content:space-between;
-      cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.08);
-    }
-    .lang-pill{
-      position:absolute;top:3px;left:3px;
-      width:44px;height:24px;border-radius:999px;
-      background:#ffffff;box-shadow:0 2px 6px rgba(0,0,0,.2);
-      transition:transform .22s ease;
-    }
-    .lang-toggle[data-lang="en"] .lang-pill{transform:translateX(46px);}
-    .lang-label{
-      flex:1;text-align:center;
-      font-size:.7rem;font-weight:700;
-      letter-spacing:.12em;text-transform:uppercase;
-      color:#4b5563;z-index:1;user-select:none;
-    }
-    .lang-toggle[data-lang="it"] .lang-label[data-code="it"],
-    .lang-toggle[data-lang="en"] .lang-label[data-code="en"]{
-      color:var(--primary);
+    
+    button {
+      font-family: inherit;
+      cursor: pointer;
     }
 
-    /* HAMBURGER */
-    .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;}
-    .hamburger span{width:24px;height:3px;background:var(--primary);border-radius:2px;}
-    .nav-mobile{
-      display:none;flex-direction:column;gap:1rem;
-      padding:1rem 1.5rem 1.25rem;
-      border-top:1px solid #e1e7f0;background:#fff;
+    /* ==================== HEADER ==================== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid var(--gray-200);
+      backdrop-filter: blur(16px);
+      z-index: 1000;
+      box-shadow: var(--shadow-sm);
     }
-    .nav-mobile a{font-size:.95rem;color:var(--text-medium);}
-
-    main{margin-top:72px;}
-
-    /* HERO */
-    .hero{
-      position:relative;min-height:80vh;
-      display:flex;align-items:center;justify-content:center;
-      text-align:center;padding:3.5rem 1.5rem 4rem;
-      overflow:hidden;
+    
+    .nav-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-md) var(--spacing-lg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacing-lg);
     }
-    .slider{position:absolute;inset:0;z-index:1;}
-    .hero-overlay{
-      position:absolute;inset:0;
-      background:linear-gradient(135deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
-      backdrop-filter:blur(3px);z-index:2;
+    
+    .logo {
+      height: 42px;
+      width: auto;
+      max-width: 180px;
+      display: flex;
+      align-items: center;
     }
-    .slide{
-      position:absolute;inset:0;
-      background-size:cover;background-position:center;
-      opacity:0;transition:opacity 1s ease;
+    
+    .logo img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: left center;
     }
-    .slide.active{opacity:1;}
-    .slide.fade-out{opacity:0;}
-    .hero-content{
-      position:relative;z-index:3;
-      max-width:900px;padding:1.5rem;
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: var(--spacing-lg);
+      align-items: center;
     }
-    .hero-title{
-      font-size:clamp(2.3rem,5vw,3.6rem);
-      font-weight:800;color:#ffffff;
-      margin-bottom:1.1rem;text-shadow:0 4px 18px rgba(0,0,0,.55);
+    
+    nav a {
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      color: var(--gray-600);
+      transition: color var(--transition-base);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: var(--radius-sm);
     }
-    .hero-sub{
-      font-size:clamp(1.05rem,2.3vw,1.25rem);
-      color:#f9fafb;max-width:650px;
-      margin:0 auto 2.3rem;text-shadow:0 2px 10px rgba(0,0,0,.6);
-    }
-    .hero-cta{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:1rem 2.6rem;border-radius:999px;
-      background:#fff;color:var(--primary);
-      font-weight:600;font-size:1rem;
-      box-shadow:0 12px 40px rgba(0,0,0,.35);
-      transition:all .3s;
-    }
-    .hero-cta:hover{
-      background:var(--primary);color:#fff;
-      transform:translateY(-4px);
-      box-shadow:0 18px 50px rgba(22,74,185,.6);
-    }
-
-    /* SEZIONI */
-    .section{
-      max-width:1200px;margin:0 auto;
-      padding:4rem 1.5rem;text-align:center;
-    }
-    .section-title{
-      font-size:clamp(1.8rem,3.5vw,2.4rem);
-      font-weight:800;color:#102a43;margin-bottom:1.1rem;
-    }
-    .section-sub{
-      max-width:650px;margin:0 auto 3rem;
-      color:var(--text-light);font-size:.96rem;
-    }
-    .section-divider{
-      max-width:1200px;margin:0 auto;padding:0 1.5rem;
-    }
-    .section-divider-line{
-      border:0;height:1px;width:100%;
-      background:linear-gradient(to right,transparent,#d1d5db,transparent);
+    
+    nav a:hover,
+    nav a:focus {
+      color: var(--primary-blue);
+      background: var(--primary-blue-light);
     }
 
-    /* ANIMAZIONE SCROLL */
-    .reveal{opacity:0;transform:translateY(32px);transition:opacity .6s ease,transform .6s ease;}
-    .reveal.visible{opacity:1;transform:translateY(0);}
-
-    /* TOUR */
-    .tour-grid{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:1.75rem;
+    /* Selettore lingua */
+    .lang-switcher {
+      display: flex;
+      gap: var(--spacing-xs);
+      background: var(--gray-50);
+      padding: 4px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--gray-200);
     }
-    .tour-card{
-      border-radius:var(--radius-lg);
-      overflow:hidden;background:#fff;
-      box-shadow:var(--shadow-md);
-      display:flex;flex-direction:column;text-align:left;
-      transition:transform .25s,box-shadow .25s;
+    
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      color: var(--gray-600);
+      transition: all var(--transition-base);
     }
-    .tour-card:hover{transform:translateY(-4px);box-shadow:0 16px 45px rgba(15,23,42,.14);}
-    .tour-card-image{position:relative;height:210px;overflow:hidden;}
-    .tour-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
-    .tour-card:hover .tour-card-image img{transform:scale(1.06);}
-    .tour-badge{
-      position:absolute;top:12px;left:12px;
-      background:var(--primary);color:#fff;
-      padding:6px 12px;border-radius:999px;
-      font-size:.75rem;font-weight:600;
-    }
-    .tour-card-body{padding:16px 18px 14px;display:flex;flex-direction:column;gap:6px;}
-    .tour-title{font-size:1.05rem;font-weight:700;color:#111827;}
-    .tour-meta{font-size:.83rem;color:var(--text-light);display:flex;flex-wrap:wrap;gap:4px;}
-    .tour-desc{font-size:.9rem;color:var(--text-medium);margin-top:6px;}
-    .tour-footer{
-      margin-top:10px;padding-top:10px;
-      border-top:1px solid #e5e7eb;
-      display:flex;align-items:center;justify-content:space-between;
-    }
-    .tour-cta{
-      font-size:.86rem;font-weight:600;
-      color:var(--primary);
-      padding:.45rem 1.1rem;border-radius:999px;
-      border:1px solid #c7d2fe;background:#f9fafb;
-      cursor:pointer;transition:all .2s;
-    }
-    .tour-cta:hover{
-      background:var(--primary);color:#fff;
-      border-color:var(--primary);transform:translateY(-2px);
-    }
-    .price-new{color:#dc2626;font-weight:700;font-size:1rem;}
-    .price-label{font-size:.82rem;color:var(--text-light);margin-right:4px;}
-
-    /* PERCHÉ NOI */
-    .features{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:1.25rem;
-    }
-    .feature{
-      display:flex;align-items:flex-start;gap:.85rem;
-      padding:1.2rem 1.2rem;background:#fff;
-      border-radius:var(--radius-md);
-      border:1px solid var(--border-light);
-      box-shadow:var(--shadow-sm);text-align:left;
-    }
-    .feature-icon{
-      flex-shrink:0;width:40px;height:40px;
-      border-radius:999px;background:#e0edff;
-      display:flex;align-items:center;justify-content:center;
-      font-size:1.35rem;color:var(--primary);
-    }
-    .feature-body h3{font-size:.98rem;font-weight:700;color:#111827;margin-bottom:2px;}
-    .feature-body p{font-size:.9rem;color:var(--text-light);}
-
-    /* CHI SIAMO */
-    .about-two-col{
-      max-width:1200px;margin:0 auto;
-      display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
-      gap:3.5rem;align-items:center;text-align:left;
-    }
-    .about-two-col-media{display:flex;justify-content:center;}
-    .about-photo{
-      width:100%;max-width:380px;border-radius:26px;
-      overflow:hidden;box-shadow:0 18px 50px rgba(15,23,42,.2);
-    }
-    .about-kicker{
-      font-size:.78rem;letter-spacing:.22em;
-      text-transform:uppercase;color:#9ca3af;margin-bottom:.7rem;
-    }
-    .about-title{
-      font-size:clamp(2rem,3.3vw,2.7rem);
-      font-weight:800;color:#0f172a;margin-bottom:1.2rem;
-    }
-    .about-text{font-size:.96rem;color:var(--text-medium);margin-bottom:.8rem;max-width:620px;}
-    .about-list{list-style:none;margin-top:1.1rem;padding-left:0;font-size:.9rem;color:var(--text-medium);}
-    .about-list li{margin-bottom:.45rem;padding-left:1.4rem;position:relative;}
-    .about-list li::before{content:'✓';position:absolute;left:0;color:var(--primary);font-weight:700;}
-
-    /* FAQ */
-    .faq-list{
-      max-width:900px;margin:0 auto;
-      display:flex;flex-direction:column;gap:.9rem;
-    }
-    .faq-item{
-      background:#fff;border-radius:var(--radius-md);
-      border:1px solid var(--border-light);
-      box-shadow:var(--shadow-sm);overflow:hidden;text-align:left;
-    }
-    .faq-question{
-      width:100%;padding:1rem 1.2rem;
-      background:#fff;border:none;
-      display:flex;justify-content:space-between;align-items:center;
-      font-size:.95rem;font-weight:600;color:#111827;
-      cursor:pointer;
-    }
-    .faq-toggle{font-size:1.3rem;color:var(--text-light);margin-left:1rem;transition:transform .2s;}
-    .faq-answer{
-      max-height:0;overflow:hidden;
-      padding:0 1.2rem;
-      transition:max-height .3s ease,padding .3s ease;
-    }
-    .faq-answer p{padding-bottom:1rem;font-size:.9rem;color:var(--text-medium);}
-    .faq-item.open .faq-answer{max-height:260px;padding-top:.4rem;}
-    .faq-item.open .faq-toggle{transform:rotate(45deg);}
-
-    /* CONTATTI – UN SOLO PANNELLO */
-    .contact-panel{
-      max-width:900px;margin:0 auto;
-      padding:2.2rem 2rem;
-      background:#fff;border-radius:var(--radius-lg);
-      border:1px solid var(--border-light);
-      box-shadow:var(--shadow-md);
-      text-align:left;
-      display:grid;
-      grid-template-columns: minmax(0,1.1fr) minmax(0,0.9fr);
-      gap:2rem;
-    }
-    .contact-left-header{
-      display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1rem;
-    }
-    .contact-icon-main{
-      font-size:2rem;color:var(--primary);margin-top:.15rem;
-    }
-    .contact-main-title{
-      font-size:1.1rem;font-weight:700;color:#111827;margin-bottom:.25rem;
-    }
-    .contact-main-text{
-      font-size:.92rem;color:var(--text-medium);
-    }
-    .contact-row{
-      margin-top:1.2rem;display:flex;flex-direction:column;gap:.6rem;
-    }
-    .contact-line{
-      display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--text-medium);
-    }
-    .contact-line i{color:var(--primary);}
-    .contact-emphasis{font-weight:600;color:#111827;}
-
-    .contact-cta-row{
-      margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.6rem;
-    }
-    .contact-chip{
-      display:inline-flex;align-items:center;gap:.4rem;
-      padding:.5rem 1rem;border-radius:999px;
-      font-size:.82rem;font-weight:600;
-      border:1px solid #dbe2ff;background:#eef2ff;
-      color:#1d4ed8;cursor:pointer;transition:all .2s;
-    }
-    .contact-chip.primary{
-      background:#1d4ed8;border-color:#1d4ed8;color:#fff;
-    }
-    .contact-chip:hover{
-      background:#1d4ed8;color:#fff;border-color:#1d4ed8;
+    
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: var(--primary-blue);
+      color: white;
     }
 
-    .contact-right{
-      border-left:1px solid #e5e7eb;
-      padding-left:1.6rem;
+    /* Hamburger mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      padding: var(--spacing-xs);
     }
-    .contact-right-title{
-      font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.4rem;
+    
+    .hamburger span {
+      width: 24px;
+      height: 3px;
+      background: var(--primary-blue);
+      border-radius: 2px;
+      transition: var(--transition-base);
     }
-    .contact-right-text{
-      font-size:.88rem;color:var(--text-medium);margin-bottom:1rem;
+    
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      padding: var(--spacing-lg);
+      border-top: 1px solid var(--gray-200);
+      background: white;
     }
-    .social-row{
-      display:flex;gap:.6rem;margin-bottom:.9rem;flex-wrap:wrap;
+    
+    .nav-mobile a {
+      font-size: var(--font-size-base);
+      color: var(--gray-600);
+      padding: var(--spacing-sm);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-base);
     }
-    .social-pill{
-      width:40px;height:40px;border-radius:999px;
-      border:1px solid #e5e7eb;
-      display:flex;align-items:center;justify-content:center;
-      color:#6b7280;font-size:1.15rem;background:#f9fafb;
-      transition:all .2s;
-    }
-    .social-pill:hover{
-      background:var(--primary);color:#fff;border-color:var(--primary);transform:translateY(-2px);
-    }
-    .contact-meta{
-      font-size:.83rem;color:var(--text-light);
-    }
-
-    /* FOOTER */
-    footer{
-      background:#111827;color:#9ca3af;
-      padding:3rem 1.5rem 2rem;margin-top:3rem;
-    }
-    .footer-inner{
-      max-width:1200px;margin:0 auto;
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:2.5rem;
-    }
-    .footer-col h3{color:#f9fafb;margin-bottom:1rem;font-size:1.05rem;}
-    .footer-col p{font-size:.9rem;}
-    .footer-link{
-      display:block;font-size:.9rem;margin-bottom:.45rem;
-      color:#9ca3af;transition:color .2s;
-    }
-    .footer-link:hover{color:#e5e7eb;}
-    .footer-bottom{
-      max-width:1200px;margin:2rem auto 0;
-      border-top:1px solid #1f2937;padding-top:1.3rem;
-      text-align:center;font-size:.8rem;color:#6b7280;
+    
+    .nav-mobile a:hover {
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
     }
 
-    /* WHATSAPP */
-    .whatsapp{
-      position:fixed;bottom:24px;right:24px;
-      width:60px;height:60px;border-radius:50%;
-      background:#25D366;color:#fff;
-      display:flex;align-items:center;justify-content:center;
-      font-size:2rem;box-shadow:0 12px 30px rgba(37,211,102,.45);
-      z-index:1100;
+    /* ==================== HERO SECTION ==================== */
+    main {
+      margin-top: 72px;
+    }
+    
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--spacing-3xl) var(--spacing-lg);
+      overflow: hidden;
+    }
+    
+    .slider {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.65) 100%);
+      z-index: 2;
+    }
+    
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.05);
+      transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    .slide.fade-out {
+      opacity: 0;
+      transform: scale(1.08);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 900px;
+      padding: var(--spacing-lg);
+    }
+    
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      font-weight: 800;
+      color: white;
+      margin-bottom: var(--spacing-lg);
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      letter-spacing: -0.02em;
+    }
+    
+    .hero-sub {
+      font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 650px;
+      margin: 0 auto var(--spacing-2xl);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+      line-height: 1.7;
+    }
+    
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-xs);
+      padding: 1rem 2.5rem;
+      border-radius: var(--radius-full);
+      background: white;
+      color: var(--primary-blue);
+      font-weight: 700;
+      font-size: var(--font-size-lg);
+      box-shadow: var(--shadow-xl);
+      transition: all var(--transition-slow);
+      border: 2px solid transparent;
+    }
+    
+    .hero-cta:hover,
+    .hero-cta:focus {
+      background: var(--primary-blue);
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(22, 74, 185, 0.5);
     }
 
-    /* COOKIE */
-    .cookie-banner{
-      position:fixed;left:0;right:0;bottom:0;
-      background:rgba(17,24,39,.97);color:#e5e7eb;
-      padding:1.5rem 1.5rem 1.75rem;z-index:1050;
-      transform:translateY(100%);transition:transform .35s ease-out;
+    /* ==================== SECTION LAYOUT ==================== */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-3xl) var(--spacing-lg);
     }
-    .cookie-banner.active{transform:translateY(0);}
-    .cookie-inner{
-      max-width:1200px;margin:0 auto;
-      display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      text-align: center;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-md);
+      letter-spacing: -0.02em;
     }
-    .cookie-text{font-size:.85rem;max-width:650px;}
-    .cookie-text a{color:#60a5fa;text-decoration:underline;}
-    .cookie-actions{display:flex;gap:.75rem;flex-wrap:wrap;}
-    .cookie-btn{
-      border-radius:999px;padding:.55rem 1.6rem;
-      border:none;cursor:pointer;font-size:.85rem;font-weight:500;
+    
+    .section-title i {
+      color: var(--primary-blue);
+      margin-right: var(--spacing-sm);
     }
-    .cookie-accept{background:#22c55e;color:#fff;}
-    .cookie-decline{background:transparent;border:1px solid #6b7280;color:#e5e7eb;}
+    
+    .section-sub {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--spacing-2xl);
+      color: var(--gray-600);
+      font-size: var(--font-size-lg);
+      line-height: 1.7;
+    }
+    
+    .section-divider {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-lg);
+    }
+    
+    .section-divider-line {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gray-300), transparent);
+      margin: var(--spacing-3xl) 0;
+    }
 
-    /* RESPONSIVE */
-    @media (max-width:900px){
-      .about-two-col{grid-template-columns:1fr;gap:2.5rem;}
-      .about-two-col-media{order:-1;}
-      .about-photo{margin:0 auto;}
-      .contact-panel{
-        grid-template-columns:1fr;
-        padding:2rem 1.5rem;
+    /* ==================== TOUR CARDS ==================== */
+    .tour-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-xl);
+    }
+    
+    .tour-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: white;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-slow);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .tour-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(15, 23, 42, 0.15);
+    }
+    
+    .tour-card-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+    }
+    
+    .tour-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .tour-card:hover .tour-card-image img {
+      transform: scale(1.08);
+    }
+    
+    .tour-badge {
+      position: absolute;
+      top: var(--spacing-md);
+      left: var(--spacing-md);
+      background: var(--primary-blue);
+      color: white;
+      padding: var(--spacing-xs) var(--spacing-md);
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-xs);
+      font-weight: 700;
+      box-shadow: var(--shadow-md);
+      letter-spacing: 0.02em;
+    }
+    
+    .tour-card-body {
+      padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      flex: 1;
+    }
+    
+    .tour-title {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-xs);
+      letter-spacing: -0.01em;
+    }
+    
+    .tour-meta {
+      font-size: var(--font-size-sm);
+      color: var(--gray-500);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      align-items: center;
+    }
+    
+    .tour-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .tour-desc {
+      font-size: var(--font-size-base);
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin: var(--spacing-sm) 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .tour-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: var(--spacing-md);
+      border-top: 1px solid var(--gray-200);
+    }
+    
+    .tour-cta {
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--primary-blue);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border-radius: var(--radius-full);
+      border: 2px solid var(--primary-blue);
+      background: var(--primary-blue-light);
+      transition: all var(--transition-base);
+      white-space: nowrap;
+    }
+    
+    .tour-cta:hover,
+    .tour-cta:focus {
+      background: var(--primary-blue);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .tour-price {
+      text-align: right;
+      font-size: var(--font-size-lg);
+    }
+    
+    .price-label {
+      font-size: var(--font-size-sm);
+      color: var(--gray-500);
+      margin-right: 4px;
+    }
+    
+    .price-new {
+      color: var(--primary-blue);
+      font-weight: 800;
+      font-size: var(--font-size-2xl);
+    }
+
+    /* ==================== FEATURES ==================== */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-xl);
+    }
+    
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-lg);
+      padding: var(--spacing-xl);
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-base);
+    }
+    
+    .feature:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-blue-light);
+    }
+    
+    .feature-icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      background: var(--primary-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--primary-blue);
+    }
+    
+    .feature-body h3 {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .feature-body p {
+      font-size: var(--font-size-base);
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* ==================== ABOUT SECTION ==================== */
+    .about-section {
+      background: linear-gradient(180deg, var(--gray-50) 0%, white 100%);
+      padding: var(--spacing-3xl) 0;
+      margin: var(--spacing-3xl) 0;
+    }
+    
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-lg);
+    }
+    
+    .about-two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--spacing-3xl);
+      align-items: center;
+    }
+    
+    .about-two-col-media {
+      position: relative;
+    }
+    
+    .about-photo-wrapper {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .about-photo-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: 20px;
+      bottom: 20px;
+      background: var(--primary-blue-light);
+      border-radius: var(--radius-xl);
+      z-index: -1;
+    }
+    
+    .about-photo {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+    
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    
+    .about-photo:hover img {
+      transform: scale(1.05);
+    }
+    
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .stat-card {
+      background: white;
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-md);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--gray-200);
+      transition: all var(--transition-base);
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-blue-light);
+    }
+    
+    .stat-number {
+      font-size: var(--font-size-4xl);
+      font-weight: 800;
+      color: var(--primary-blue);
+      line-height: 1;
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .stat-label {
+      font-size: var(--font-size-sm);
+      color: var(--gray-600);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .about-two-col-text {
+      text-align: left;
+    }
+    
+    .about-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      padding: var(--spacing-xs) var(--spacing-lg);
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-sm);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .about-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-xl);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    
+    .about-text {
+      font-size: var(--font-size-lg);
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-md);
+      padding: var(--spacing-md);
+      background: var(--gray-50);
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--primary-blue);
+    }
+    
+    .highlight-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      background: var(--primary-blue-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-blue);
+      font-size: 1.3rem;
+    }
+    
+    .highlight-text {
+      flex: 1;
+    }
+    
+    .highlight-text strong {
+      display: block;
+      font-size: var(--font-size-base);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 4px;
+    }
+    
+    .highlight-text span {
+      font-size: var(--font-size-sm);
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* ==================== SCROLL ANIMATIONS ==================== */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .scroll-reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .scroll-reveal-left.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .scroll-reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .scroll-reveal-right.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .scroll-reveal-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .scroll-reveal-scale.revealed {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ==================== CONTACT SECTION ==================== */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-xl);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .contact-hero {
+      text-align: center;
+      padding: var(--spacing-2xl);
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+      border-radius: var(--radius-xl);
+      color: white;
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .contact-hero-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto var(--spacing-lg);
+      backdrop-filter: blur(10px);
+    }
+    
+    .contact-hero h3 {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .contact-hero p {
+      font-size: var(--font-size-lg);
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-lg);
+    }
+    
+    .contact-card {
+      background: white;
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-xl);
+      border: 2px solid var(--gray-200);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-base);
+      text-align: center;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-blue-light);
+    }
+    
+    .contact-card-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--primary-blue-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--primary-blue);
+      margin: 0 auto var(--spacing-lg);
+    }
+    
+    .contact-card h4 {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .contact-card p {
+      font-size: var(--font-size-base);
+      color: var(--gray-600);
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .contact-card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-xs);
+      width: 100%;
+      padding: var(--spacing-md) var(--spacing-xl);
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-base);
+      font-weight: 700;
+      border: 2px solid;
+      transition: all var(--transition-base);
+      text-decoration: none;
+    }
+    
+    .contact-card-btn.btn-phone {
+      background: var(--secondary-blue);
+      border-color: var(--secondary-blue);
+      color: white;
+    }
+    
+    .contact-card-btn.btn-phone:hover {
+      background: #0284c7;
+      border-color: #0284c7;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .contact-card-btn.btn-whatsapp {
+      background: var(--whatsapp);
+      border-color: var(--whatsapp);
+      color: white;
+    }
+    
+    .contact-card-btn.btn-whatsapp:hover {
+      background: #20ba5a;
+      border-color: #20ba5a;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .contact-card-btn.btn-email {
+      background: var(--primary-blue);
+      border-color: var(--primary-blue);
+      color: white;
+    }
+    
+    .contact-card-btn.btn-email:hover {
+      background: var(--primary-blue-dark);
+      border-color: var(--primary-blue-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .social-section {
+      background: white;
+      padding: var(--spacing-2xl);
+      border-radius: var(--radius-xl);
+      border: 2px solid var(--gray-200);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+    
+    .social-section h3 {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-sm);
+    }
+    
+    .social-section p {
+      font-size: var(--font-size-lg);
+      color: var(--gray-600);
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-lg);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .social-card {
+      padding: var(--spacing-xl);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-base);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+    
+    .social-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .social-card.facebook {
+      border-color: #1877f2;
+    }
+    
+    .social-card.facebook:hover {
+      background: #1877f2;
+      color: white;
+    }
+    
+    .social-card.facebook:hover .social-card-icon {
+      background: white;
+      color: #1877f2;
+    }
+    
+    .social-card.instagram {
+      border-color: #e4405f;
+    }
+    
+    .social-card.instagram:hover {
+      background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+      color: white;
+    }
+    
+    .social-card.instagram:hover .social-card-icon {
+      background: white;
+      color: #e4405f;
+    }
+    
+    .social-card.tiktok {
+      border-color: #000000;
+    }
+    
+    .social-card.tiktok:hover {
+      background: #000000;
+      color: white;
+    }
+    
+    .social-card.tiktok:hover .social-card-icon {
+      background: white;
+      color: #000000;
+    }
+    
+    .social-card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      transition: all var(--transition-base);
+    }
+    
+    .social-card.facebook .social-card-icon {
+      background: #e7f3ff;
+      color: #1877f2;
+    }
+    
+    .social-card.instagram .social-card-icon {
+      background: #ffe7ef;
+      color: #e4405f;
+    }
+    
+    .social-card.tiktok .social-card-icon {
+      background: #f3f4f6;
+      color: #000000;
+    }
+    
+    .social-card span {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      color: var(--gray-900);
+      transition: color var(--transition-base);
+    }
+    
+    .social-card:hover span {
+      color: inherit;
+    }
+    
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-lg);
+    }
+    
+    .info-card {
+      background: white;
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .info-card h4 {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+    
+    .info-card p {
+      font-size: var(--font-size-base);
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* ==================== FAQ ==================== */
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+    
+    .faq-item {
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: all var(--transition-base);
+      border: 1px solid var(--gray-200);
+    }
+    
+    .faq-item.open {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-blue-light);
+    }
+    
+    .faq-question {
+      width: 100%;
+      padding: var(--spacing-lg) var(--spacing-xl);
+      background: white;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--spacing-md);
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      color: var(--gray-900);
+      cursor: pointer;
+      text-align: left;
+      transition: background var(--transition-base);
+    }
+    
+    .faq-question:hover {
+      background: var(--gray-50);
+    }
+    
+    .faq-question span:first-child {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+    
+    .faq-toggle {
+      font-size: 1.8rem;
+      color: var(--primary-blue);
+      flex-shrink: 0;
+      transition: transform var(--transition-base);
+      font-weight: 300;
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 var(--spacing-xl);
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    
+    .faq-answer p {
+      padding-bottom: var(--spacing-lg);
+      font-size: var(--font-size-base);
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-top: var(--spacing-sm);
+    }
+    
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-xl);
+      margin-top: var(--spacing-3xl);
+    }
+    
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-2xl);
+    }
+    
+    .footer-col h3 {
+      color: white;
+      margin-bottom: var(--spacing-lg);
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+    
+    .footer-col p {
+      font-size: var(--font-size-base);
+      line-height: 1.7;
+    }
+    
+    .footer-link {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      font-size: var(--font-size-base);
+      margin-bottom: var(--spacing-sm);
+      color: var(--gray-400);
+      transition: color var(--transition-base);
+      padding: var(--spacing-xs) 0;
+    }
+    
+    .footer-link:hover {
+      color: white;
+    }
+    
+    .footer-bottom {
+      max-width: 1200px;
+      margin: var(--spacing-2xl) auto 0;
+      border-top: 1px solid var(--gray-800);
+      padding-top: var(--spacing-lg);
+      text-align: center;
+      font-size: var(--font-size-sm);
+      color: var(--gray-500);
+    }
+
+    /* ==================== WHATSAPP BUTTON ==================== */
+    .whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-full);
+      background: var(--whatsapp);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      animation: pulse 2s infinite;
+      z-index: 1100;
+      transition: all var(--transition-base);
+    }
+    
+    .whatsapp:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
       }
-      .contact-right{
-        border-left:none;border-top:1px solid #e5e7eb;
-        padding-left:0;padding-top:1.5rem;margin-top:1rem;
+      70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
       }
     }
-    @media (max-width:768px){
-      .nav-wrapper{flex-wrap:wrap;}
-      nav ul{display:none;}
-      .hamburger{display:flex;}
-      .section{padding:3.5rem 1.25rem;}
-      .hero{padding:3rem 1.25rem 3.5rem;}
-      .cookie-inner{flex-direction:column;align-items:flex-start;}
+
+    /* ==================== COOKIE BANNER ==================== */
+    .cookie-banner {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(17, 24, 39, 0.98);
+      color: var(--gray-200);
+      padding: var(--spacing-xl) var(--spacing-lg);
+      z-index: 1050;
+      transform: translateY(100%);
+      transition: transform 0.4s ease-out;
+      box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.3);
     }
+    
+    .cookie-banner.active {
+      transform: translateY(0);
+    }
+    
+    .cookie-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-lg);
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .cookie-text {
+      font-size: var(--font-size-base);
+      max-width: 700px;
+      line-height: 1.6;
+    }
+    
+    .cookie-text a {
+      color: #60a5fa;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    
+    .cookie-actions {
+      display: flex;
+      gap: var(--spacing-md);
+      flex-wrap: wrap;
+    }
+    
+    .cookie-btn {
+      border-radius: var(--radius-full);
+      padding: var(--spacing-md) var(--spacing-xl);
+      border: none;
+      cursor: pointer;
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      transition: all var(--transition-base);
+    }
+    
+    .cookie-accept {
+      background: var(--accent-green);
+      color: white;
+    }
+    
+    .cookie-accept:hover {
+      background: #15803d;
+      transform: translateY(-2px);
+    }
+    
+    .cookie-decline {
+      background: transparent;
+      border: 2px solid var(--gray-500);
+      color: var(--gray-200);
+    }
+    
+    .cookie-decline:hover {
+      background: var(--gray-800);
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 900px) {
+      .about-two-col {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+      }
+      
+      .about-two-col-media {
+        order: -1;
+      }
+      
+      .about-photo-wrapper::before {
+        display: none;
+      }
+      
+      .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .contact-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-wrapper {
+        flex-wrap: wrap;
+      }
+      
+      nav ul {
+        display: none;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      .section {
+        padding: var(--spacing-2xl) var(--spacing-lg);
+      }
+      
+      .hero {
+        min-height: 75vh;
+        padding: var(--spacing-2xl) var(--spacing-md);
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-sub {
+        font-size: 1rem;
+      }
+      
+      .tour-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+      }
+      
+      .features {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+      }
+      
+      .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .contact-card-btn {
+        width: 100%;
+      }
+      
+      .info-cards {
+        grid-template-columns: 1fr;
+      }
+      
+      .cookie-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .cookie-actions {
+        width: 100%;
+      }
+      
+      .cookie-btn {
+        flex: 1;
+      }
+      
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .section-divider-line {
+        margin: var(--spacing-xl) 0;
+      }
+      
+      .whatsapp {
+        width: 56px;
+        height: 56px;
+        font-size: 1.8rem;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    /* ==================== ACCESSIBILITY ==================== */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-blue);
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-decoration: none;
+      z-index: 100;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    *:focus-visible {
+      outline: 3px solid var(--primary-blue);
+      outline-offset: 2px;
+    }
+
+    /* ==================== UTILITIES ==================== */
+    .me-1 { margin-right: 0.25rem; }
+    .me-2 { margin-right: 0.5rem; }
+    .mb-3 { margin-bottom: 0.75rem; }
+    .text-primary { color: var(--primary-blue); }
   </style>
 </head>
 <body>
-  <!-- COOKIE -->
-  <div class="cookie-banner" id="cookieBanner">
+  <!-- Skip Link per accessibilità -->
+  <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
+
+  <!-- BANNER COOKIE -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
     <div class="cookie-inner">
-      <p class="cookie-text" id="cookieText">
+      <p class="cookie-text">
         Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico sul sito.
-        <a href="#">Maggiori informazioni</a>
+        <a href="#privacy">Maggiori informazioni</a>
       </p>
       <div class="cookie-actions">
-        <button class="cookie-btn cookie-accept" onclick="handleCookie(true)" id="cookieAccept">Accetta</button>
-        <button class="cookie-btn cookie-decline" onclick="handleCookie(false)" id="cookieDecline">Rifiuta</button>
+        <button class="cookie-btn cookie-accept" onclick="handleCookie(true)" aria-label="Accetta cookie">Accetta</button>
+        <button class="cookie-btn cookie-decline" onclick="handleCookie(false)" aria-label="Rifiuta cookie">Rifiuta</button>
       </div>
     </div>
   </div>
 
   <!-- HEADER -->
-  <header>
+  <header role="banner">
     <div class="nav-wrapper">
-      <div class="logo">
-        <img src="immagini/logo-vento-in-poppa-charter.jpg" alt="Vento in Poppa Charter">
+      <a href="#home" class="logo" aria-label="Vento in Poppa Charter - Homepage">
+        <img src="immagini/logo-vento-in-poppa-charter.jpg" alt="Logo Vento in Poppa Charter" width="180" height="42">
+      </a>
+
+      <div class="lang-switcher" role="group" aria-label="Selezione lingua">
+        <button class="lang-btn active" data-lang="it" onclick="setLang(event,'it')" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang(event,'en')" aria-label="English">EN</button>
       </div>
 
-      <div class="lang-switcher">
-        <div class="lang-toggle" id="langToggle" data-lang="it">
-          <div class="lang-pill"></div>
-          <span class="lang-label" data-code="it">IT</span>
-          <span class="lang-label" data-code="en">EN</span>
-        </div>
-      </div>
-
-      <nav>
+      <nav role="navigation" aria-label="Navigazione principale">
         <ul id="navDesktop">
-          <li><a href="#tour" id="navTour">Tour</a></li>
-          <li><a href="#perche" id="navWhy">Perché noi</a></li>
-          <li><a href="#chi-siamo" id="navAbout">Chi siamo</a></li>
-          <li><a href="#faq" id="navFaq">FAQ</a></li>
-          <li><a href="#contatti" id="navContact">Contatti</a></li>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#perche">Perché noi</a></li>
+          <li><a href="#chi-siamo">Chi siamo</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contatti">Contatti</a></li>
         </ul>
       </nav>
 
-      <div class="hamburger" onclick="toggleMenu()">
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu mobile" aria-expanded="false">
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </div>
 
-    <div class="nav-mobile" id="navMobile">
-      <a href="#tour" onclick="toggleMenu()" id="navTourMobile">Tour</a>
-      <a href="#perche" onclick="toggleMenu()" id="navWhyMobile">Perché noi</a>
-      <a href="#chi-siamo" onclick="toggleMenu()" id="navAboutMobile">Chi siamo</a>
-      <a href="#faq" onclick="toggleMenu()" id="navFaqMobile">FAQ</a>
-      <a href="#contatti" onclick="toggleMenu()" id="navContactMobile">Contatti</a>
-    </div>
+    <nav class="nav-mobile" id="navMobile" aria-label="Menu mobile">
+      <a href="#tour" onclick="toggleMenu()">Tour</a>
+      <a href="#perche" onclick="toggleMenu()">Perché noi</a>
+      <a href="#chi-siamo" onclick="toggleMenu()">Chi siamo</a>
+      <a href="#faq" onclick="toggleMenu()">FAQ</a>
+      <a href="#contatti" onclick="toggleMenu()">Contatti</a>
+    </nav>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="slider">
+  <main id="main-content">
+    <!-- HERO CON SLIDER -->
+    <section class="hero" id="home" aria-label="Banner principale">
+      <div class="slider" aria-hidden="true">
         <div class="slide active" style="background-image:url('immagini/vento_in_poppa_boat.jpg');"></div>
         <div class="slide" style="background-image:url('immagini/sorrento-geda1aa76b_1920.jpg');"></div>
         <div class="slide" style="background-image:url('immagini/amalfi-coast.jpg');"></div>
       </div>
-      <div class="hero-overlay"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content">
         <h1 class="hero-title" id="heroTitle">Scopri le meraviglie della Costiera in barca</h1>
         <p class="hero-sub" id="heroText">
-          Escursioni da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana con piccoli gruppi e skipper locali.
+          Escursioni da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana con piccoli gruppi e skipper locali esperti.
         </p>
-        <a href="#tour" class="hero-cta" id="heroBtn">Vedi i tour</a>
+        <a href="#tour" class="hero-cta" id="heroBtn">
+          <i class="bi bi-compass"></i> Scopri i tour
+        </a>
       </div>
     </section>
 
     <!-- TOUR -->
-    <section class="section reveal" id="tour">
-      <h2 class="section-title" id="tourTitle"><i class="bi bi-tsunami"></i> I nostri tour più amati</h2>
-      <p class="section-sub" id="tourSub">
-        Piccoli gruppi, partenze giornaliere e assistenza dedicata per tutta la durata dell'escursione.
+    <section class="section" id="tour">
+      <h2 class="section-title" id="tourTitle">
+        <i class="bi bi-tsunami"></i> I nostri tour più amati
+      </h2>
+      <p class="section-sub">
+        Piccoli gruppi, partenze giornaliere, prelievo disponibile e assistenza dedicata per tutta la durata dell'escursione.
       </p>
 
       <div class="tour-grid">
-        <article class="tour-card">
+        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/TouristTrip">
           <div class="tour-card-image">
-            <img src="immagini/capri_tour_faraglioni.jpg" alt="Tour Capri da Sorrento con Faraglioni">
-            <span class="tour-badge" id="tourBadge">Più venduto</span>
+            <img src="immagini/capri_tour_faraglioni.jpg" alt="Tour in barca a Capri con vista sui Faraglioni" loading="lazy" width="400" height="300" itemprop="image">
+            <span class="tour-badge">Più venduto</span>
           </div>
           <div class="tour-card-body">
-            <h3 class="tour-title" id="tour1Title">Esperienza a Capri</h3>
-            <p class="tour-meta" id="tour1Meta">
-              <span><i class="bi bi-clock"></i> 7/8 ore</span><span>•</span>
+            <h3 class="tour-title" itemprop="name">Esperienza a Capri</h3>
+            <div class="tour-meta">
+              <span><i class="bi bi-clock"></i> 7-8 ore</span>
+              <span>•</span>
               <span><i class="bi bi-people"></i> Max 7 persone</span>
-            </p>
-            <p class="tour-desc" id="tour1Desc">
-              Tour completo con bagno ai Faraglioni, sosta ad Anacapri e tempo libero in Piazzetta.
-            </p>
-            <div class="tour-footer">
-              <button class="tour-cta" type="button" onclick="vaiAPagina('esperienza-capri.html')" id="tourDetails1">Dettagli tour</button>
-              <div class="tour-price"><span class="price-new">69 €</span></div>
             </div>
-          </div>
-        </article>
-
-        <article class="tour-card">
-          <div class="tour-card-image">
-            <img src="immagini/sunset-sorrento.jpg" alt="Tour in barca al tramonto Sorrento">
-          </div>
-          <div class="tour-card-body">
-            <h3 class="tour-title" id="tour2Title">Sunset Experience</h3>
-            <p class="tour-meta" id="tour2Meta">
-              <span><i class="bi bi-clock"></i> 2/3 ore</span><span>•</span>
-              <span><i class="bi bi-people"></i> Max 7 persone</span>
-            </p>
-            <p class="tour-desc" id="tour2Desc">
-              Navigazione al tramonto con prosecco, musica e vista sul Vesuvio.
+            <p class="tour-desc" itemprop="description">
+              Tour completo con bagno ai Faraglioni, sosta ad Anacapri e tempo libero nella famosa Piazzetta.
             </p>
             <div class="tour-footer">
-              <button class="tour-cta" type="button" onclick="vaiAPagina('sunset-experience.html')" id="tourDetails2">Dettagli tour</button>
-              <div class="tour-price"><span class="price-new">299 €</span></div>
-            </div>
-          </div>
-        </article>
-
-        <article class="tour-card">
-          <div class="tour-card-image">
-            <img src="immagini/amalfi-coast.jpg" alt="Escursione Costiera Amalfitana da Sorrento">
-          </div>
-          <div class="tour-card-body">
-            <h3 class="tour-title" id="tour3Title">Esperienza Amalfi e Positano</h3>
-            <p class="tour-meta" id="tour3Meta">
-              <span><i class="bi bi-clock"></i> 7/8 ore</span><span>•</span>
-              <span><i class="bi bi-people"></i> Max 7 persone</span>
-            </p>
-            <p class="tour-desc" id="tour3Desc">
-              Soste bagno a Furore e Praiano, tempo libero a Positano e pranzo a bordo opzionale.
-            </p>
-            <div class="tour-footer">
-              <button class="tour-cta" type="button" onclick="vaiAPagina('amalfi-positano.html')" id="tourDetails3">Dettagli tour</button>
+              <button class="tour-cta" type="button" onclick="vaiAPagina('esperienza-capri.html')" aria-label="Vedi dettagli tour Capri">
+                Dettagli tour
+              </button>
               <div class="tour-price">
-                <span class="price-label" id="tour3From">Da</span>
-                <span class="price-new">899 €</span>
+                <span class="price-label">Da</span>
+                <span class="price-new" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="price" content="69">
+                  <meta itemprop="priceCurrency" content="EUR">
+                  69 €
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/TouristTrip">
+          <div class="tour-card-image">
+            <img src="immagini/sunset-sorrento.jpg" alt="Tour al tramonto nella baia di Sorrento" loading="lazy" width="400" height="300" itemprop="image">
+          </div>
+          <div class="tour-card-body">
+            <h3 class="tour-title" itemprop="name">Sunset Experience</h3>
+            <div class="tour-meta">
+              <span><i class="bi bi-clock"></i> 2-3 ore</span>
+              <span>•</span>
+              <span><i class="bi bi-people"></i> Max 7 persone</span>
+            </div>
+            <p class="tour-desc" itemprop="description">
+              Navigazione romantica al tramonto con prosecco, musica e foto panoramiche sulla baia di Sorrento.
+            </p>
+            <div class="tour-footer">
+              <button class="tour-cta" type="button" aria-label="Vedi dettagli sunset tour">
+                Dettagli tour
+              </button>
+              <div class="tour-price">
+                <span class="price-label">Da</span>
+                <span class="price-new" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="price" content="299">
+                  <meta itemprop="priceCurrency" content="EUR">
+                  299 €
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/TouristTrip">
+          <div class="tour-card-image">
+            <img src="immagini/amalfi-coast.jpg" alt="Tour Costiera Amalfitana con vista su Positano e Amalfi" loading="lazy" width="400" height="300" itemprop="image">
+          </div>
+          <div class="tour-card-body">
+            <h3 class="tour-title" itemprop="name">Esperienza Amalfi e Positano</h3>
+            <div class="tour-meta">
+              <span><i class="bi bi-clock"></i> 7-8 ore</span>
+              <span>•</span>
+              <span><i class="bi bi-people"></i> Max 7 persone</span>
+            </div>
+            <p class="tour-desc" itemprop="description">
+              Soste bagno a Furore e Praiano, tempo libero a Positano e pranzo a bordo opzionale con prodotti locali.
+            </p>
+            <div class="tour-footer">
+              <button class="tour-cta" type="button" aria-label="Vedi dettagli tour Costiera Amalfitana">
+                Dettagli tour
+              </button>
+              <div class="tour-price">
+                <span class="price-label">Da</span>
+                <span class="price-new" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="price" content="899">
+                  <meta itemprop="priceCurrency" content="EUR">
+                  899 €
+                </span>
               </div>
             </div>
           </div>
@@ -605,555 +1726,640 @@
       </div>
     </section>
 
-    <div class="section-divider"><hr class="section-divider-line"></div>
+    <div class="section-divider">
+      <hr class="section-divider-line" aria-hidden="true">
+    </div>
 
-    <!-- PERCHÉ NOI -->
-    <section class="section reveal" id="perche">
-      <h2 class="section-title" id="whyTitle"><i class="bi bi-trophy"></i> Perché scegliere Vento in Poppa</h2>
-      <p class="section-sub" id="whySub">
-        Un team locale, barche curate e attenzione ai dettagli per farti vivere il mare senza pensieri.
+    <!-- PERCHÉ SCEGLIERE NOI -->
+    <section class="section" id="perche">
+      <h2 class="section-title" id="whyTitle">
+        <i class="bi bi-trophy"></i> Perché scegliere Vento in Poppa
+      </h2>
+      <p class="section-sub">
+        Un team locale, barche curate e attenzione ai dettagli per farti vivere il mare in modo rilassato, senza pensieri.
       </p>
 
       <div class="features">
-        <article class="feature">
-          <div class="feature-icon"><i class="bi bi-person-badge-fill"></i></div>
+        <article class="feature scroll-reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="bi bi-person-badge-fill"></i>
+          </div>
           <div class="feature-body">
-            <h3 id="why1Title">Skipper locali esperti</h3>
-            <p id="why1Text">Conosciamo il golfo, le correnti e i punti migliori per nuotare o scattare foto.</p>
+            <h3>Skipper locali esperti</h3>
+            <p>Persone che conoscono davvero il golfo, le correnti e i punti migliori per nuotare o scattare foto indimenticabili.</p>
           </div>
         </article>
-        <article class="feature">
-          <div class="feature-icon"><i class="bi bi-boat-fill"></i></div>
+
+        <article class="feature scroll-reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="bi bi-boat-fill"></i>
+          </div>
           <div class="feature-body">
-            <h3 id="why2Title">Barche curate e confortevoli</h3>
-            <p id="why2Text">Imbarcazioni mantenute con cura, gruppi ridotti e spazio per tutti gli ospiti.</p>
+            <h3>Barche curate e confortevoli</h3>
+            <p>Imbarcazioni mantenute con cura, posti comodi e gruppi ridotti per goderti lo spazio a bordo in totale relax.</p>
           </div>
         </article>
-        <article class="feature">
-          <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
+
+        <article class="feature scroll-reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="bi bi-clock-history"></i>
+          </div>
           <div class="feature-body">
-            <h3 id="why3Title">Tempo ben organizzato</h3>
-            <p id="why3Text">Itinerari pensati per vedere i luoghi iconici senza fretta, con soste bagno e relax.</p>
+            <h3>Itinerari ben organizzati</h3>
+            <p>Percorsi pensati per vedere i luoghi iconici senza correre, con soste bagno e momenti di relax in acqua cristallina.</p>
           </div>
         </article>
-        <article class="feature">
-          <div class="feature-icon"><i class="bi bi-headset"></i></div>
+
+        <article class="feature scroll-reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <i class="bi bi-headset"></i>
+          </div>
           <div class="feature-body">
-            <h3 id="why4Title">Assistenza dedicata</h3>
-            <p id="why4Text">Supporto via WhatsApp per domande su meteo, imbarco e richieste speciali.</p>
+            <h3>Assistenza completa</h3>
+            <p>Supporto via WhatsApp per domande su meteo, imbarco e richieste speciali, dalla prenotazione al rientro.</p>
           </div>
         </article>
       </div>
     </section>
 
-    <div class="section-divider"><hr class="section-divider-line"></div>
+    <div class="section-divider">
+      <hr class="section-divider-line" aria-hidden="true">
+    </div>
 
     <!-- CHI SIAMO -->
-    <section class="section reveal" id="chi-siamo">
-      <div class="about-two-col">
-        <div class="about-two-col-media">
-          <div class="about-photo">
-            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"
-                 alt="Vista dalla barca sulla Costiera Amalfitana">
+    <section class="about-section" id="chi-siamo">
+      <div class="about-content">
+        <div class="about-two-col">
+          <div class="about-two-col-media scroll-reveal-left">
+            <div>
+              <div class="about-photo-wrapper">
+                <div class="about-photo">
+                  <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Vista panoramica dal mare della Costiera Amalfitana" loading="lazy" width="600" height="700">
+                </div>
+              </div>
+              
+              <div class="about-stats">
+                <div class="stat-card">
+                  <div class="stat-number">2023</div>
+                  <div class="stat-label">Anno Fondazione</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">1000+</div>
+                  <div class="stat-label">Clienti Felici</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">Passione Mare</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">7</div>
+                  <div class="stat-label">Max Persone</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="about-two-col-text">
-          <p class="about-kicker" id="aboutKicker">La nostra storia</p>
-          <h2 class="about-title" id="aboutTitle"><i class="bi bi-book"></i> Vento in Poppa Charter</h2>
-          <p class="about-text" id="aboutText1">
-            Vento in Poppa Charter nasce nel 2023 da un gruppo di persone legate al mare e alla tradizione marinara sorrentina.
-          </p>
-          <p class="about-text" id="aboutText2">
-            Organizziamo escursioni in barca verso Capri e Costiera Amalfitana con un approccio familiare e attento ai dettagli.
-          </p>
-          <ul class="about-list">
-            <li id="aboutLi1">Skipper locali con anni di esperienza nel Golfo di Napoli.</li>
-            <li id="aboutLi2">Gruppi ridotti per vivere il mare in modo autentico.</li>
-            <li id="aboutLi3">Supporto dedicato prima, durante e dopo ogni tour.</li>
-          </ul>
+          <div class="about-two-col-text scroll-reveal-right">
+            <span class="about-badge">
+              <i class="bi bi-star-fill"></i>
+              La Nostra Storia
+            </span>
+            
+            <h2 class="about-title" id="aboutTitle">
+              Passione per il mare dal 2023
+            </h2>
+            
+            <p class="about-text">
+              La storia di <strong>Vento In Poppa Charter</strong> inizia nel 2023, dalla felice intuizione di persone già inserite nella realtà marinara sorrentina, appassionate del mare ed entusiaste del proprio lavoro.
+            </p>
+            
+            <p class="about-text">
+              La nostra attività si caratterizza per l'autentica passione che nutriamo verso il mare e dalla voglia di trasmettere e valorizzare la bellezza delle nostre coste, offrendo esperienze uniche e indimenticabili a piccoli gruppi di viaggiatori.
+            </p>
+            
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+                <div class="highlight-text">
+                  <strong>Autenticità Locale</strong>
+                  <span>Skipper nati e cresciuti tra queste acque, con conoscenza profonda del territorio</span>
+                </div>
+              </div>
+              
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="highlight-text">
+                  <strong>Piccoli Gruppi</strong>
+                  <span>Massimo 7 persone per garantire comfort, attenzione personalizzata e atmosfera intima</span>
+                </div>
+              </div>
+              
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div class="highlight-text">
+                  <strong>Sicurezza & Qualità</strong>
+                  <span>Barche certificate, attrezzature moderne e rispetto degli standard più elevati</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="section-divider"><hr class="section-divider-line"></div>
+    <div class="section-divider">
+      <hr class="section-divider-line" aria-hidden="true">
+    </div>
 
     <!-- FAQ -->
-    <section class="section reveal" id="faq">
-      <h2 class="section-title" id="faqTitle"><i class="bi bi-patch-question"></i> Domande frequenti</h2>
-      <p class="section-sub" id="faqSub">
-        Alcune risposte rapide sulle nostre escursioni in barca da Sorrento verso Capri e Costiera Amalfitana.
+    <section class="section" id="faq">
+      <h2 class="section-title">
+        <i class="bi bi-patch-question"></i> Domande frequenti
+      </h2>
+      <p class="section-sub">
+        Risposte alle domande più comuni sui nostri tour in barca da Sorrento, Napoli e Penisola Sorrentina.
       </p>
 
       <div class="faq-list">
         <article class="faq-item">
-          <button class="faq-question">
-            <span id="faqQ1"><i class="bi bi-people-fill" style="margin-right:.4rem;"></i>Quante persone ci sono in barca?</span>
-            <span class="faq-toggle">+</span>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+            <span>
+              <i class="bi bi-people-fill"></i>
+              Quante persone ci sono in barca?
+            </span>
+            <span class="faq-toggle" aria-hidden="true">+</span>
           </button>
-          <div class="faq-answer">
-            <p id="faqA1">
-              I tour condivisi sono pensati per piccoli gruppi (massimo 7 persone), così da garantire comfort a bordo e un'esperienza più autentica.
+          <div class="faq-answer" id="faq1">
+            <p>
+              I tour condivisi sono pensati per piccoli gruppi (massimo 7 persone), così da garantire comfort a bordo ed un'esperienza più autentica rispetto alle escursioni di massa. Offriamo anche tour privati per chi desidera un'esperienza esclusiva.
             </p>
           </div>
         </article>
 
         <article class="faq-item">
-          <button class="faq-question">
-            <span id="faqQ2"><i class="bi bi-cloud-rain-heavy" style="margin-right:.4rem;"></i>Cosa succede in caso di maltempo?</span>
-            <span class="faq-toggle">+</span>
+          <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+            <span>
+              <i class="bi bi-cloud-rain-heavy"></i>
+              Cosa succede in caso di maltempo?
+            </span>
+            <span class="faq-toggle" aria-hidden="true">+</span>
           </button>
-          <div class="faq-answer">
-            <p id="faqA2">
-              In caso di mare mosso o condizioni meteo non adatte proponiamo cambio data, itinerario alternativo o rimborso secondo le nostre policy.
+          <div class="faq-answer" id="faq2">
+            <p>
+              La sicurezza viene prima di tutto: in caso di condizioni meteo non adatte alla navigazione, proponiamo cambio data, itinerario alternativo o rimborso completo secondo le nostre policy. Vi avviseremo con almeno 24 ore di anticipo.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+            <span>
+              <i class="bi bi-life-preserver"></i>
+              È necessario saper nuotare?
+            </span>
+            <span class="faq-toggle" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq3">
+            <p>
+              Non è strettamente necessario, ma consigliato per godersi le soste bagno. A bordo sono presenti giubbotti di salvataggio per tutti i passeggeri e il nostro skipper monitora costantemente la sicurezza di tutti.
             </p>
           </div>
         </article>
       </div>
     </section>
 
-    <div class="section-divider"><hr class="section-divider-line"></div>
+    <div class="section-divider">
+      <hr class="section-divider-line" aria-hidden="true">
+    </div>
 
-    <!-- CONTATTI – PANNELLO UNICO -->
-    <section class="section reveal" id="contatti">
-      <h2 class="section-title" id="contactTitle"><i class="bi bi-person-vcard"></i> Contatti & Social</h2>
-      <p class="section-sub" id="contactSub">
-        Scrivici per preventivi, tour privati o informazioni su partenze e disponibilità.
+    <!-- CONTATTI -->
+    <section class="section" id="contatti">
+      <h2 class="section-title scroll-reveal" id="contactTitle">
+        <i class="bi bi-chat-dots"></i> Contattaci
+      </h2>
+      <p class="section-sub scroll-reveal">
+        Siamo qui per rispondere a tutte le tue domande e aiutarti a organizzare l'escursione perfetta.
       </p>
-
-      <div class="contact-panel">
-        <!-- Sinistra -->
-        <div class="contact-left">
-          <div class="contact-left-header">
-            <i class="bi bi-telephone-fill contact-icon-main"></i>
-            <div>
-              <h3 class="contact-main-title" id="contactMainTitle">Contatta il nostro team</h3>
-              <p class="contact-main-text" id="contactMainText">
-                Ti aiutiamo a scegliere il tour perfetto e rispondiamo di solito entro poche ore.
-              </p>
-            </div>
+      
+      <div class="contact-layout">
+        <!-- Hero Card -->
+        <div class="contact-hero scroll-reveal-scale">
+          <div class="contact-hero-icon">
+            <i class="bi bi-headset"></i>
           </div>
-
-          <div class="contact-row">
-            <div class="contact-line">
-              <i class="bi bi-telephone"></i>
-              <span><span class="contact-emphasis">+39 123 456 789</span> — <span id="labelPhone">Telefono</span></span>
+          <h3>Assistenza Dedicata 7/7</h3>
+          <p>
+            Il nostro team è sempre disponibile per aiutarti a scegliere il tour perfetto e rispondere a tutte le tue domande.
+          </p>
+        </div>
+        
+        <!-- Contact Cards -->
+        <div class="contact-cards-grid">
+          <div class="contact-card scroll-reveal">
+            <div class="contact-card-icon">
+              <i class="bi bi-telephone-fill"></i>
             </div>
-            <div class="contact-line">
+            <h4>Chiamaci</h4>
+            <p>Parlaci direttamente al telefono al numero  +39 123 456 789 per informazioni immediate</p>
+            <a href="tel:+39123456789" class="contact-card-btn btn-phone">
+              <i class="bi bi-telephone-fill"></i>
+            Chiamaci
+            </a>
+          </div>
+          
+          <div class="contact-card scroll-reveal">
+            <div class="contact-card-icon">
               <i class="bi bi-whatsapp"></i>
-              <span><span class="contact-emphasis">+39 123 456 789</span> — <span id="labelWhatsapp">WhatsApp</span></span>
             </div>
-            <div class="contact-line">
-              <i class="bi bi-envelope"></i>
-              <span><span class="contact-emphasis">info@ventoinpoppa.com</span> — <span id="labelEmail">Email</span></span>
-            </div>
-            <div class="contact-line">
-              <i class="bi bi-geo-alt"></i>
-              <span class="contact-emphasis" id="harborValue">Porto di Sorrento (NA)</span>
-            </div>
+            <h4>WhatsApp</h4>
+            <p>Chatta con noi per preventivi personalizzati e info rapide</p>
+            <a href="https://wa.me/39123456789?text=Ciao!%20Vorrei%20informazioni%20sui%20tour" target="_blank" rel="noopener noreferrer" class="contact-card-btn btn-whatsapp">
+              <i class="bi bi-whatsapp"></i>
+              Apri chat
+            </a>
           </div>
-
-          <div class="contact-cta-row">
-            <a href="https://wa.me/39123456789" target="_blank" class="contact-chip primary">
-              <i class="bi bi-whatsapp"></i><span id="btnWhatsappText">Apri chat</span>
-            </a>
-            <a href="tel:+39123456789" class="contact-chip">
-              <i class="bi bi-telephone"></i><span id="btnCallText">Chiama</span>
-            </a>
-            <a href="mailto:info@ventoinpoppa.com" class="contact-chip">
-              <i class="bi bi-envelope"></i><span id="btnEmailText">Invia email</span>
-            </a>
-            <a href="https://maps.google.com" target="_blank" class="contact-chip">
-              <i class="bi bi-geo-alt-fill"></i><span id="btnMapsText">Apri Maps</span>
+          
+          <div class="contact-card scroll-reveal">
+            <div class="contact-card-icon">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <h4>Email</h4>
+            <p>Inviaci una email a info@ventoinpoppa.com per richieste dettagliate</p>
+            <a href="mailto:info@ventoinpoppa.com?subject=Richiesta%20informazioni%20tour" class="contact-card-btn btn-email">
+              <i class="bi bi-envelope-fill"></i>
+              invia email
             </a>
           </div>
         </div>
-
-        <!-- Destra -->
-        <div class="contact-right">
-          <h3 class="contact-right-title" id="socialTitle">Seguici sui social</h3>
-          <p class="contact-right-text" id="socialText">
-            Foto, video e aggiornamenti in tempo reale dai nostri tour in barca.
-          </p>
-          <div class="social-row">
-            <a href="#" class="social-pill" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-pill" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-pill" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+        
+        <!-- Social Section -->
+        <div class="social-section scroll-reveal-scale">
+          <h3>
+            <i class="bi bi-share-fill"></i>
+            Seguici sui Social
+          </h3>
+          <p>Condividiamo ogni giorno foto, video e storie dal mare. Unisciti alla nostra community!</p>
+          
+          <div class="social-grid">
+            <a href="https://facebook.com/ventoinpoppacharter" class="social-card facebook" target="_blank" rel="noopener noreferrer">
+              <div class="social-card-icon">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <span>Facebook</span>
+            </a>
+            
+            <a href="https://instagram.com/ventoinpoppacharter" class="social-card instagram" target="_blank" rel="noopener noreferrer">
+              <div class="social-card-icon">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <span>Instagram</span>
+            </a>
+            
+            <a href="https://tiktok.com/@ventoinpoppacharter" class="social-card tiktok" target="_blank" rel="noopener noreferrer">
+              <div class="social-card-icon">
+                <i class="bi bi-tiktok"></i>
+              </div>
+              <span>TikTok</span>
+            </a>
           </div>
-          <p class="contact-meta" id="contactMeta">
-            Orari risposta: 09:00 - 20:00 • Tempo medio di risposta: 1-2 ore
-          </p>
+        </div>
+        
+        <!-- Info Cards -->
+        <div class="info-cards">
+          <div class="info-card scroll-reveal">
+            <h4>
+              <i class="bi bi-geo-alt-fill text-primary"></i>
+              Punto di Imbarco
+            </h4>
+            <p>
+              <strong>Porto di Sorrento</strong><br>
+              Penisola Sorrentina, Campania<br>
+              Facilmente raggiungibile in auto o treno
+            </p>
+          </div>
+          
+          <div class="info-card scroll-reveal">
+            <h4>
+              <i class="bi bi-clock-fill text-primary"></i>
+              Orari di Risposta
+            </h4>
+            <p>
+              <strong>Lunedì - Domenica</strong><br>
+              09:00 - 20:00<br>
+              Tempo medio di risposta: 1-2 ore
+            </p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-inner">
       <div class="footer-col">
-        <h3 id="footerBrandTitle"><i class="bi bi-sail-boat me-2"></i>Vento in Poppa Charter</h3>
-        <p id="footerBrandText">
-          Escursioni di gruppo e tour privati in barca da Sorrento verso Capri e Costiera Amalfitana, con skipper locali e assistenza dedicata.
+        <h3>
+          <i class="bi bi-sailboat"></i>
+          Vento in Poppa Charter
+        </h3>
+        <p>
+          Escursioni di gruppo e tour privati in barca da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana. Esperienze autentiche con skipper locali esperti.
         </p>
       </div>
+      
       <div class="footer-col">
-        <h3 id="footerToursTitle"><i class="bi bi-compass me-2"></i>Tour</h3>
-        <a href="#tour" class="footer-link" id="footerTour1">Costiera Amalfitana</a>
-        <a href="#tour" class="footer-link" id="footerTour2">Capri classica</a>
-        <a href="#tour" class="footer-link" id="footerTour3">Tramonto a Sorrento</a>
-        <a href="#tour" class="footer-link" id="footerTour4">Barca privata</a>
+        <h3>
+          <i class="bi bi-compass"></i>
+          Tour
+        </h3>
+        <a href="#tour" class="footer-link">
+          <i class="bi bi-chevron-right"></i> Esperienza Capri
+        </a>
+        <a href="#tour" class="footer-link">
+          <i class="bi bi-chevron-right"></i> Sunset Experience
+        </a>
+        <a href="#tour" class="footer-link">
+          <i class="bi bi-chevron-right"></i> Costiera Amalfitana
+        </a>
+        <a href="#tour" class="footer-link">
+          <i class="bi bi-chevron-right"></i> Tour privati
+        </a>
       </div>
+      
       <div class="footer-col">
-        <h3 id="footerContactTitle"><i class="bi bi-telephone me-2"></i>Contatti</h3>
-        <a href="tel:+39123456789" class="footer-link"><i class="bi bi-telephone me-1"></i>+39 123 456 789</a>
-        <a href="mailto:info@ventoinpoppa.com" class="footer-link"><i class="bi bi-envelope me-1"></i>info@ventoinpoppa.com</a>
-        <span class="footer-link" id="footerAddress"><i class="bi bi-geo-alt me-1"></i>Porto di Sorrento (NA)</span>
+        <h3>
+          <i class="bi bi-telephone"></i>
+          Contatti
+        </h3>
+        <a href="tel:+39123456789" class="footer-link">
+          <i class="bi bi-telephone-fill"></i> +39 123 456 789
+        </a>
+        <a href="mailto:info@ventoinpoppa.com" class="footer-link">
+          <i class="bi bi-envelope-fill"></i> info@ventoinpoppa.com
+        </a>
+        <span class="footer-link">
+          <i class="bi bi-geo-alt-fill"></i> Porto di Sorrento (NA)
+        </span>
       </div>
+      
       <div class="footer-col">
-        <h3 id="footerFollowTitle"><i class="bi bi-share me-2"></i>Seguici</h3>
-        <a href="#" class="footer-link"><i class="bi bi-facebook me-2"></i>Facebook</a>
-        <a href="#" class="footer-link"><i class="bi bi-instagram me-2"></i>Instagram</a>
-        <a href="#" class="footer-link"><i class="bi bi-tiktok me-2"></i>TikTok</a>
+        <h3>
+          <i class="bi bi-share"></i>
+          Social Media
+        </h3>
+        <a href="https://facebook.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="https://instagram.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i> Instagram
+        </a>
+        <a href="https://tiktok.com/@ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-tiktok"></i> TikTok
+        </a>
       </div>
     </div>
-    <div class="footer-bottom" id="footerBottom">
-      © 2025 Vento in Poppa Charter – Tutti i diritti riservati • P.IVA 12345678901
+    
+    <div class="footer-bottom">
+      © 2025 Vento in Poppa Charter – Tutti i diritti riservati | P.IVA 12345678901 | 
+      <a href="#privacy" style="color: inherit; text-decoration: underline;">Privacy Policy</a> | 
+      <a href="#cookies" style="color: inherit; text-decoration: underline;">Cookie Policy</a>
     </div>
   </footer>
 
   <!-- WHATSAPP STICKY -->
-  <a href="https://wa.me/39123456789" class="whatsapp" target="_blank" aria-label="Chat WhatsApp">
+  <a href="https://wa.me/39123456789?text=Ciao!%20Vorrei%20informazioni%20sui%20tour" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
   <script>
-    /* SLIDER HERO */
+    /* ==================== SLIDER HERO CON FADE OUT ==================== */
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
+    let interval;
+
     function nextSlide() {
-      const old = slides[currentSlide];
-      old.classList.remove('active');
-      old.classList.add('fade-out');
-      currentSlide = (currentSlide + 1) % slides.length;
-      const next = slides[currentSlide];
-      setTimeout(()=>{next.classList.add('active');next.classList.remove('fade-out');},100);
-    }
-    setInterval(nextSlide,5000);
-
-    /* MENU MOBILE */
-    function toggleMenu(){
-      const mobile = document.getElementById('navMobile');
-      mobile.style.display = mobile.style.display === 'flex' ? 'none' : 'flex';
+      // Aggiungi fade-out alla slide corrente
+      slides[currentSlide].classList.add('fade-out');
+      
+      setTimeout(() => {
+        slides[currentSlide].classList.remove('active', 'fade-out');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 800); // Sincronizza con la durata della transizione fade-out
     }
 
-    /* COOKIE */
-    const cookieBanner = document.getElementById('cookieBanner');
-    const cookieKey = 'vp_cookie_choice';
-    function showCookieBanner(){
-      if(!localStorage.getItem(cookieKey)){
-        setTimeout(()=>cookieBanner.classList.add('active'),1200);
-      }
+    function startSlider() {
+      interval = setInterval(nextSlide, 6000);
     }
-    function handleCookie(accepted){
-      localStorage.setItem(cookieKey, accepted ? 'accepted' : 'declined');
-      cookieBanner.classList.remove('active');
-    }
-    showCookieBanner();
 
-    /* SCROLL REVEAL */
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
+    startSlider();
+
+    /* ==================== SCROLL REVEAL ANIMATIONS ==================== */
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
         }
       });
-    },{threshold:0.15});
-    revealEls.forEach(el=>observer.observe(el));
+    }, observerOptions);
 
-    /* FAQ TOGGLE */
-    document.querySelectorAll('.faq-item').forEach(item=>{
-      const btn = item.querySelector('.faq-question');
-      btn.addEventListener('click',()=>{
-        const open = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
-        if(!open) item.classList.add('open');
+    // Osserva tutti gli elementi con classi scroll-reveal
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll(
+        '.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale'
+      );
+      
+      revealElements.forEach(el => {
+        observer.observe(el);
       });
     });
 
-    /* NAVIGAZIONE PAGINE TOUR */
-    function vaiAPagina(p){window.location.href = p;}
+    /* ==================== MENU MOBILE ==================== */
+    function toggleMenu() {
+      const mobile = document.getElementById('navMobile');
+      const hamburger = document.querySelector('.hamburger');
+      const isOpen = mobile.style.display === 'flex';
+      
+      mobile.style.display = isOpen ? 'none' : 'flex';
+      hamburger.setAttribute('aria-expanded', !isOpen);
+    }
 
-    /* TRADUZIONI */
-    const langToggle = document.getElementById('langToggle');
+    /* ==================== FAQ ACCORDION ==================== */
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Chiudi tutti gli altri
+        document.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('open');
+          faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        
+        // Toggle quello corrente
+        if (!isOpen) {
+          item.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
 
+    /* ==================== COOKIE BANNER ==================== */
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieKey = 'vp_cookie_choice';
+
+    function showCookieBanner() {
+      if (!localStorage.getItem(cookieKey)) {
+        setTimeout(() => {
+          cookieBanner.classList.add('active');
+        }, 1000);
+      }
+    }
+
+    function handleCookie(accepted) {
+      localStorage.setItem(cookieKey, accepted ? 'accepted' : 'declined');
+      cookieBanner.classList.remove('active');
+      
+      // Analytics tracking se accettato
+      if (accepted) {
+        console.log('Cookie accettati - Inizializza analytics');
+        // Qui puoi inizializzare Google Analytics, Facebook Pixel, etc.
+      }
+    }
+
+    showCookieBanner();
+
+    /* ==================== NAVIGAZIONE PAGINA ==================== */
+    function vaiAPagina(pagina) {
+      window.location.href = pagina;
+    }
+
+    /* ==================== SMOOTH SCROLL ==================== */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#privacy' && href !== '#cookies') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+
+    /* ==================== MULTILINGUA ==================== */
     const translations = {
-      it:{
-        pageTitle:"Vento in Poppa Charter | Escursioni in barca Sorrento, Capri e Costiera Amalfitana",
-        metaDescription:"Tour in barca da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana. Piccoli gruppi, skipper locali esperti e assistenza dedicata. Prenota la tua escursione.",
-        navTour:"Tour",
-        navWhy:"Perché noi",
-        navAbout:"Chi siamo",
-        navFaq:"FAQ",
-        navContact:"Contatti",
-        heroTitle:"Scopri le meraviglie della Costiera in barca",
-        heroText:"Escursioni da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana con piccoli gruppi e skipper locali.",
-        heroBtn:"Vedi i tour",
-        tourTitle:"I nostri tour più amati",
-        tourSub:"Piccoli gruppi, partenze giornaliere e assistenza dedicata per tutta la durata dell'escursione.",
-        tourBadge:"Più venduto",
-        tour1Title:"Esperienza a Capri",
-        tour1Desc:"Tour completo con bagno ai Faraglioni, sosta ad Anacapri e tempo libero in Piazzetta.",
-        tour2Title:"Sunset Experience",
-        tour2Desc:"Navigazione al tramonto con prosecco, musica e vista sul Vesuvio.",
-        tour3Title:"Esperienza Amalfi e Positano",
-        tour3From:"Da",
-        tour3Desc:"Soste bagno a Furore e Praiano, tempo libero a Positano e pranzo a bordo opzionale.",
-        tourDetails:"Dettagli tour",
-        whyTitle:"Perché scegliere Vento in Poppa",
-        whySub:"Un team locale, barche curate e attenzione ai dettagli per farti vivere il mare senza pensieri.",
-        why1Title:"Skipper locali esperti",
-        why1Text:"Conosciamo il golfo, le correnti e i punti migliori per nuotare o scattare foto.",
-        why2Title:"Barche curate e confortevoli",
-        why2Text:"Imbarcazioni mantenute con cura, gruppi ridotti e spazio per tutti gli ospiti.",
-        why3Title:"Tempo ben organizzato",
-        why3Text:"Itinerari pensati per vedere i luoghi iconici senza fretta, con soste bagno e relax.",
-        why4Title:"Assistenza dedicata",
-        why4Text:"Supporto via WhatsApp per domande su meteo, imbarco e richieste speciali.",
-        aboutKicker:"La nostra storia",
-        aboutTitle:"Vento in Poppa Charter",
-        aboutText1:"Vento in Poppa Charter nasce nel 2023 da un gruppo di persone legate al mare e alla tradizione marinara sorrentina.",
-        aboutText2:"Organizziamo escursioni in barca verso Capri e Costiera Amalfitana con un approccio familiare e attento ai dettagli.",
-        aboutLi1:"Skipper locali con anni di esperienza nel Golfo di Napoli.",
-        aboutLi2:"Gruppi ridotti per vivere il mare in modo autentico.",
-        aboutLi3:"Supporto dedicato prima, durante e dopo ogni tour.",
-        faqTitle:"Domande frequenti",
-        faqSub:"Alcune risposte rapide sulle nostre escursioni in barca da Sorrento verso Capri e Costiera Amalfitana.",
-        faqQ1:"Quante persone ci sono in barca?",
-        faqA1:"I tour condivisi sono pensati per piccoli gruppi (massimo 7 persone), così da garantire comfort a bordo e un'esperienza più autentica.",
-        faqQ2:"Cosa succede in caso di maltempo?",
-        faqA2:"In caso di mare mosso o condizioni meteo non adatte proponiamo cambio data, itinerario alternativo o rimborso secondo le nostre policy.",
-        contactTitle:"Contatti & Social",
-        contactSub:"Scrivici per preventivi, tour privati o informazioni su partenze e disponibilità.",
-        contactMainTitle:"Contatta il nostro team",
-        contactMainText:"Ti aiutiamo a scegliere il tour perfetto e rispondiamo di solito entro poche ore.",
-        labelPhone:"Telefono",
-        labelWhatsapp:"WhatsApp",
-        labelEmail:"Email",
-        btnCallText:"Chiama",
-        btnWhatsappText:"Apri chat",
-        btnEmailText:"Invia email",
-        btnMapsText:"Apri Maps",
-        harborValue:"Porto di Sorrento (NA)",
-        socialTitle:"Seguici sui social",
-        socialText:"Foto, video e aggiornamenti in tempo reale dai nostri tour in barca.",
-        contactMeta:"Orari risposta: 09:00 - 20:00 • Tempo medio di risposta: 1-2 ore",
-        cookieText:"Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico sul sito.",
-        cookieAccept:"Accetta",
-        cookieDecline:"Rifiuta",
-        footerBrandTitle:"Vento in Poppa Charter",
-        footerBrandText:"Escursioni di gruppo e tour privati in barca da Sorrento verso Capri e Costiera Amalfitana, con skipper locali e assistenza dedicata.",
-        footerToursTitle:"Tour",
-        footerTour1:"Costiera Amalfitana",
-        footerTour2:"Capri classica",
-        footerTour3:"Tramonto a Sorrento",
-        footerTour4:"Barca privata",
-        footerContactTitle:"Contatti",
-        footerAddress:"Porto di Sorrento (NA)",
-        footerFollowTitle:"Seguici",
-        footerBottom:"© 2025 Vento in Poppa Charter – Tutti i diritti riservati • P.IVA 12345678901"
+      it: {
+        heroTitle: 'Scopri le meraviglie della Costiera in barca',
+        heroText: 'Escursioni da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana con piccoli gruppi e skipper locali esperti.',
+        heroBtn: 'Scopri i tour',
+        tourTitle: 'I nostri tour più amati',
+        whyTitle: 'Perché scegliere Vento in Poppa',
+        aboutTitle: 'La nostra storia',
+        contactTitle: 'Contatti & Social'
       },
-      en:{
-        pageTitle:"Vento in Poppa Charter | Boat tours from Sorrento to Capri and Amalfi Coast",
-        metaDescription:"Boat tours from Sorrento, Naples and the Sorrento Peninsula to Capri and the Amalfi Coast. Small groups, local skippers and dedicated assistance.",
-        navTour:"Tours",
-        navWhy:"Why us",
-        navAbout:"About us",
-        navFaq:"FAQ",
-        navContact:"Contacts",
-        heroTitle:"Discover the Amalfi Coast by boat",
-        heroText:"Boat excursions from Sorrento, Naples and the Sorrento Peninsula to Capri and the Amalfi Coast with small groups and local skippers.",
-        heroBtn:"View tours",
-        tourTitle:"Our most popular tours",
-        tourSub:"Small groups, daily departures and dedicated assistance throughout the experience.",
-        tourBadge:"Best seller",
-        tour1Title:"Capri Experience",
-        tour1Desc:"Full tour with swim stop at the Faraglioni and free time in Anacapri and in the Piazzetta.",
-        tour2Title:"Sunset Experience",
-        tour2Desc:"Sunset cruise with prosecco, music and panoramic views of Sorrento bay.",
-        tour3Title:"Amalfi & Positano Experience",
-        tour3From:"From",
-        tour3Desc:"Swim stops in Furore and Praiano, free time in Positano and optional lunch on board.",
-        tourDetails:"View details",
-        whyTitle:"Why choose Vento in Poppa",
-        whySub:"A local team, well-kept boats and attention to detail to let you enjoy the sea without worries.",
-        why1Title:"Local expert skippers",
-        why1Text:"We truly know the gulf, currents and the best spots for swimming and photos.",
-        why2Title:"Comfortable, well-kept boats",
-        why2Text:"Well maintained boats, small groups and plenty of space on board.",
-        why3Title:"Time well organized",
-        why3Text:"Itineraries designed to see iconic places without rush, with swim and relax stops.",
-        why4Title:"Dedicated assistance",
-        why4Text:"WhatsApp support for questions about weather, boarding and special requests.",
-        aboutKicker:"Our story",
-        aboutTitle:"Vento in Poppa Charter",
-        aboutText1:"Vento in Poppa Charter was born in 2023 from a team deeply connected to the sea and Sorrento’s maritime tradition.",
-        aboutText2:"We organize boat tours to Capri and the Amalfi Coast with a friendly approach and attention to every detail.",
-        aboutLi1:"Local skippers with years of experience in the Gulf of Naples.",
-        aboutLi2:"Small groups to enjoy the sea in an authentic way.",
-        aboutLi3:"Dedicated support before, during and after each tour.",
-        faqTitle:"Frequently asked questions",
-        faqSub:"Quick answers about our boat tours from Sorrento to Capri and the Amalfi Coast.",
-        faqQ1:"How many people are on board?",
-        faqA1:"Shared tours are designed for small groups (maximum 7 guests) to guarantee comfort and a more authentic experience.",
-        faqQ2:"What happens in case of bad weather?",
-        faqA2:"In case of rough sea or unsafe conditions, we offer a new date, an alternative itinerary or a refund according to our policy.",
-        contactTitle:"Contacts & Social",
-        contactSub:"Write us for quotes, private tours or information about departures and availability.",
-        contactMainTitle:"Contact our team",
-        contactMainText:"We help you choose the perfect tour and usually reply within a few hours.",
-        labelPhone:"Phone",
-        labelWhatsapp:"WhatsApp",
-        labelEmail:"Email",
-        btnCallText:"Call",
-        btnWhatsappText:"Open chat",
-        btnEmailText:"Send email",
-        btnMapsText:"Open Maps",
-        harborValue:"Sorrento Harbour (NA)",
-        socialTitle:"Follow us on social",
-        socialText:"Photos, videos and live updates from our boat tours.",
-        contactMeta:"Reply hours: 09:00 - 20:00 • Average response time: 1–2 hours",
-        cookieText:"We use cookies to improve your browsing experience and analyze website traffic.",
-        cookieAccept:"Accept",
-        cookieDecline:"Decline",
-        footerBrandTitle:"Vento in Poppa Charter",
-        footerBrandText:"Group excursions and private boat tours from Sorrento to Capri and the Amalfi Coast, with local skippers and dedicated assistance.",
-        footerToursTitle:"Tours",
-        footerTour1:"Amalfi Coast",
-        footerTour2:"Classic Capri",
-        footerTour3:"Sorrento Sunset",
-        footerTour4:"Private boat",
-        footerContactTitle:"Contacts",
-        footerAddress:"Sorrento Harbour (NA)",
-        footerFollowTitle:"Follow us",
-        footerBottom:"© 2025 Vento in Poppa Charter – All rights reserved • VAT 12345678901"
+      en: {
+        heroTitle: 'Discover the Coast by boat',
+        heroText: 'Boat trips from Sorrento, Naples and the Sorrento Peninsula to Capri and the Amalfi Coast with small groups and expert local skippers.',
+        heroBtn: 'View tours',
+        tourTitle: 'Our most popular tours',
+        whyTitle: 'Why choose Vento in Poppa',
+        aboutTitle: 'Our story',
+        contactTitle: 'Contacts & Social'
       }
     };
 
-    function applyLang(lang){
-      const t = translations[lang];
+    function setLang(e, lang) {
+      // Aggiorna i bottoni
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      if (e && e.target) e.target.classList.add('active');
+      
+      // Applica traduzioni
+      const t = translations[lang] || translations.it;
+      document.getElementById('heroTitle').textContent = t.heroTitle;
+      document.getElementById('heroText').textContent = t.heroText;
+      document.getElementById('heroBtn').innerHTML = `<i class="bi bi-compass"></i> ${t.heroBtn}`;
+      
+      const tourTitle = document.getElementById('tourTitle');
+      tourTitle.innerHTML = `<i class="bi bi-tsunami"></i> ${t.tourTitle}`;
+      
+      const whyTitle = document.getElementById('whyTitle');
+      whyTitle.innerHTML = `<i class="bi bi-trophy"></i> ${t.whyTitle}`;
+      
+      const aboutTitle = document.getElementById('aboutTitle');
+      aboutTitle.innerHTML = `<i class="bi bi-book"></i> ${t.aboutTitle}`;
+      
+      const contactTitle = document.getElementById('contactTitle');
+      contactTitle.innerHTML = `<i class="bi bi-person-vcard"></i> ${t.contactTitle}`;
+      
+      // Salva preferenza
+      localStorage.setItem('preferredLang', lang);
+      
+      // Aggiorna HTML lang attribute
       document.documentElement.lang = lang;
-      pageTitle.textContent = t.pageTitle;
-      metaDescription.setAttribute('content', t.metaDescription);
-
-      // NAV
-      navTour.textContent = t.navTour;
-      navWhy.textContent = t.navWhy;
-      navAbout.textContent = t.navAbout;
-      navFaq.textContent = t.navFaq;
-      navContact.textContent = t.navContact;
-      navTourMobile.textContent = t.navTour;
-      navWhyMobile.textContent = t.navWhy;
-      navAboutMobile.textContent = t.navAbout;
-      navFaqMobile.textContent = t.navFaq;
-      navContactMobile.textContent = t.navContact;
-
-      // HERO
-      heroTitle.textContent = t.heroTitle;
-      heroText.textContent = t.heroText;
-      heroBtn.textContent = t.heroBtn;
-
-      // TOUR
-      tourTitle.innerHTML = '<i class="bi bi-tsunami"></i> ' + t.tourTitle;
-      tourSub.textContent = t.tourSub;
-      tourBadge.textContent = t.tourBadge;
-      tour1Title.textContent = t.tour1Title;
-      tour1Desc.textContent = t.tour1Desc;
-      tour2Title.textContent = t.tour2Title;
-      tour2Desc.textContent = t.tour2Desc;
-      tour3Title.textContent = t.tour3Title;
-      tour3Desc.textContent = t.tour3Desc;
-      tour3From.textContent = t.tour3From;
-      tourDetails1.textContent = t.tourDetails;
-      tourDetails2.textContent = t.tourDetails;
-      tourDetails3.textContent = t.tourDetails;
-
-      // WHY
-      whyTitle.innerHTML = '<i class="bi bi-trophy"></i> ' + t.whyTitle;
-      whySub.textContent = t.whySub;
-      why1Title.textContent = t.why1Title;
-      why1Text.textContent = t.why1Text;
-      why2Title.textContent = t.why2Title;
-      why2Text.textContent = t.why2Text;
-      why3Title.textContent = t.why3Title;
-      why3Text.textContent = t.why3Text;
-      why4Title.textContent = t.why4Title;
-      why4Text.textContent = t.why4Text;
-
-      // ABOUT
-      aboutKicker.textContent = t.aboutKicker;
-      aboutTitle.innerHTML = '<i class="bi bi-book"></i> ' + t.aboutTitle;
-      aboutText1.textContent = t.aboutText1;
-      aboutText2.textContent = t.aboutText2;
-      aboutLi1.textContent = t.aboutLi1;
-      aboutLi2.textContent = t.aboutLi2;
-      aboutLi3.textContent = t.aboutLi3;
-
-      // FAQ
-      faqTitle.innerHTML = '<i class="bi bi-patch-question"></i> ' + t.faqTitle;
-      faqSub.textContent = t.faqSub;
-      faqQ1.innerHTML = '<i class="bi bi-people-fill" style="margin-right:.4rem;"></i>' + t.faqQ1;
-      faqA1.textContent = t.faqA1;
-      faqQ2.innerHTML = '<i class="bi bi-cloud-rain-heavy" style="margin-right:.4rem;"></i>' + t.faqQ2;
-      faqA2.textContent = t.faqA2;
-
-      // CONTACT
-      contactTitle.innerHTML = '<i class="bi bi-person-vcard"></i> ' + t.contactTitle;
-      contactSub.textContent = t.contactSub;
-      contactMainTitle.textContent = t.contactMainTitle;
-      contactMainText.textContent = t.contactMainText;
-      labelPhone.textContent = t.labelPhone;
-      labelWhatsapp.textContent = t.labelWhatsapp;
-      labelEmail.textContent = t.labelEmail;
-      btnCallText.textContent = t.btnCallText;
-      btnWhatsappText.textContent = t.btnWhatsappText;
-      btnEmailText.textContent = t.btnEmailText;
-      btnMapsText.textContent = t.btnMapsText;
-      harborValue.textContent = t.harborValue;
-      socialTitle.textContent = t.socialTitle;
-      socialText.textContent = t.socialText;
-      contactMeta.textContent = t.contactMeta;
-
-      // COOKIE
-      cookieText.firstChild.textContent = t.cookieText + " ";
-      cookieAccept.textContent = t.cookieAccept;
-      cookieDecline.textContent = t.cookieDecline;
-
-      // FOOTER
-      footerBrandTitle.innerHTML = '<i class="bi bi-sail-boat me-2"></i>' + t.footerBrandTitle;
-      footerBrandText.textContent = t.footerBrandText;
-      footerToursTitle.innerHTML = '<i class="bi bi-compass me-2"></i>' + t.footerToursTitle;
-      footerTour1.textContent = t.footerTour1;
-      footerTour2.textContent = t.footerTour2;
-      footerTour3.textContent = t.footerTour3;
-      footerTour4.textContent = t.footerTour4;
-      footerContactTitle.innerHTML = '<i class="bi bi-telephone me-2"></i>' + t.footerContactTitle;
-      footerAddress.innerHTML = '<i class="bi bi-geo-alt me-1"></i>' + t.footerAddress;
-      footerFollowTitle.innerHTML = '<i class="bi bi-share me-2"></i>' + t.footerFollowTitle;
-      footerBottom.textContent = t.footerBottom;
     }
 
-    langToggle.addEventListener('click',()=>{
-      const current = langToggle.getAttribute('data-lang') || 'it';
-      const next = current === 'it' ? 'en' : 'it';
-      langToggle.setAttribute('data-lang', next);
-      applyLang(next);
+    /* ==================== LAZY LOADING IMAGES ==================== */
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+
+    /* ==================== CARICA LINGUA PREFERITA ==================== */
+    window.addEventListener('DOMContentLoaded', () => {
+      const preferredLang = localStorage.getItem('preferredLang');
+      if (preferredLang && preferredLang !== 'it') {
+        const langBtn = document.querySelector(`[data-lang="${preferredLang}"]`);
+        if (langBtn) {
+          setLang({ target: langBtn }, preferredLang);
+        }
+      }
     });
 
-    // Inizializza IT
-    applyLang('it');
+    /* ==================== PERFORMANCE: Preload critical images ==================== */
+    const preloadImages = [
+      'immagini/vento_in_poppa_boat.jpg',
+      'immagini/capri_tour_faraglioni.jpg'
+    ];
+
+    preloadImages.forEach(src => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = src;
+      document.head.appendChild(link);
+    });
   </script>
 </body>
 </html>
