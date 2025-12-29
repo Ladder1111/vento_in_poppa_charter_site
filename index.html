@@ -425,146 +425,155 @@
       margin: var(--spacing-3xl) 0;
     }
 
-    /* ==================== TOUR CARDS ==================== */
+    /* ==================== TOUR CARDS (NUOVE) ==================== */
     .tour-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: var(--spacing-xl);
     }
     
     .tour-card {
-      border-radius: var(--radius-xl);
-      overflow: hidden;
       background: white;
-      box-shadow: var(--shadow-lg);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-slow);
+      cursor: pointer;
+      position: relative;
+      padding: var(--spacing-md);
       display: flex;
       flex-direction: column;
-      transition: all var(--transition-slow);
-      border: 1px solid var(--gray-200);
     }
-    
+
     .tour-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(15, 23, 42, 0.15);
+      box-shadow: var(--shadow-lg);
     }
-    
+
     .tour-card-image {
       position: relative;
+      height: 280px;
       overflow: hidden;
-      aspect-ratio: 4 / 3;
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-md);
     }
-    
+
     .tour-card-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform var(--transition-slow);
+      border-radius: var(--radius-md);
     }
-    
+
     .tour-card:hover .tour-card-image img {
       transform: scale(1.08);
     }
-    
+
     .tour-badge {
       position: absolute;
-      top: var(--spacing-md);
-      left: var(--spacing-md);
-      background: var(--primary-blue);
-      color: white;
-      padding: var(--spacing-xs) var(--spacing-md);
-      border-radius: var(--radius-full);
+      top: 12px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--gray-900);
+      padding: 6px 12px;
+      border-radius: 6px;
       font-size: var(--font-size-xs);
       font-weight: 700;
-      box-shadow: var(--shadow-md);
-      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      z-index: 10;
+      backdrop-filter: blur(10px);
     }
-    
-    .tour-card-body {
-      padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-sm);
-      flex: 1;
+
+    .tour-price-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
     }
-    
+
     .tour-title {
-      font-size: var(--font-size-xl);
+      font-size: var(--font-size-lg);
       font-weight: 700;
       color: var(--gray-900);
-      margin-bottom: var(--spacing-xs);
+      margin-bottom: var(--spacing-sm);
       letter-spacing: -0.01em;
     }
-    
-    .tour-meta {
+
+    .tour-description {
       font-size: var(--font-size-sm);
-      color: var(--gray-500);
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--spacing-sm);
-      align-items: center;
-    }
-    
-    .tour-meta span {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    
-    .tour-desc {
-      font-size: var(--font-size-base);
       color: var(--gray-600);
-      line-height: 1.6;
-      margin: var(--spacing-sm) 0;
+      line-height: 1.5;
+      margin-bottom: var(--spacing-md);
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-    
+
+    .tour-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: var(--spacing-md);
+      padding: var(--spacing-md);
+      background: var(--gray-50);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-xs);
+    }
+
+    .tour-info-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--gray-700);
+    }
+
+    .tour-info-label {
+      font-weight: 500;
+      color: var(--gray-600);
+    }
+
+    .tour-info-value {
+      font-weight: 600;
+      color: var(--primary-blue);
+    }
+
     .tour-footer {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
+      justify-content: flex-end;
+      gap: var(--spacing-md);
       padding-top: var(--spacing-md);
       border-top: 1px solid var(--gray-200);
+      margin-top: auto;
     }
-    
-    .tour-cta {
-      font-size: var(--font-size-sm);
-      font-weight: 600;
-      color: var(--primary-blue);
-      padding: var(--spacing-sm) var(--spacing-lg);
-      border-radius: var(--radius-full);
-      border: 2px solid var(--primary-blue);
-      background: var(--primary-blue-light);
-      transition: all var(--transition-base);
-      white-space: nowrap;
-    }
-    
-    .tour-cta:hover,
-    .tour-cta:focus {
+
+    .tour-btn {
       background: var(--primary-blue);
       color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: var(--font-size-xs);
+      cursor: pointer;
+      transition: all var(--transition-base);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .tour-btn:hover {
+      background: var(--primary-blue-dark);
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
-    }
-    
-    .tour-price {
-      text-align: right;
-      font-size: var(--font-size-lg);
-    }
-    
-    .price-label {
-      font-size: var(--font-size-sm);
-      color: var(--gray-500);
-      margin-right: 4px;
-    }
-    
-    .price-new {
-      color: var(--primary-blue);
-      font-weight: 800;
-      font-size: var(--font-size-2xl);
     }
 
     /* ==================== FEATURES ==================== */
@@ -1547,6 +1556,259 @@
     .me-2 { margin-right: 0.5rem; }
     .mb-3 { margin-bottom: 0.75rem; }
     .text-primary { color: var(--primary-blue); }
+
+    /* ==================== TOUR CARD CON LINK ICON ==================== */
+    .tour-card-link {
+      cursor: pointer;
+      transition: all var(--transition-base);
+    }
+
+    .tour-card-link:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .tour-link-icon {
+      margin-left: 6px;
+      font-size: 1.1em;
+      transition: all var(--transition-base);
+      color: var(--primary-blue);
+      display: inline-block;
+    }
+
+    .tour-card-link:hover .tour-link-icon {
+      transform: translate(2px, -2px);
+      color: var(--primary-blue-dark);
+    }
+
+    .tour-title {
+      display: flex;
+      align-items: center;
+    }
+
+    /* ==================== TOUR INFO COMPATTA ==================== */
+    .tour-info {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      margin-bottom: var(--spacing-md);
+      padding: 8px 12px;
+      background: var(--gray-50);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-xs);
+    }
+
+    .tour-info-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 4px;
+      color: var(--gray-700);
+      flex: 1;
+    }
+
+    .tour-info-label {
+      font-weight: 500;
+      color: var(--gray-600);
+      white-space: nowrap;
+    }
+
+    .tour-info-value {
+      font-weight: 600;
+      color: var(--primary-blue);
+      white-space: nowrap;
+    }
+/* ==================== ABOUT SECTION CON PARALLASSE ==================== */
+    .about-section-parallax {
+      position: relative;
+      min-height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin: var(--spacing-3xl) 0;
+      padding: var(--spacing-xl) var(--spacing-lg);
+      background-image: url('immagini/vento_in_poppa_boat.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .parallax-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(22, 74, 185, 0.45) 0%,
+        rgba(14, 165, 233, 0.4) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .about-parallax-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-parallax-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: auto;
+      padding: var(--spacing-2xl) 0;
+    }
+
+    .about-parallax-text-wrapper {
+      max-width: 750px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      padding: var(--spacing-3xl);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-parallax-text-wrapper .about-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      padding: var(--spacing-sm) var(--spacing-md);
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      margin-bottom: var(--spacing-lg);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5px);
+    }
+
+    .about-parallax-text-wrapper .about-badge i {
+      font-size: 1.2em;
+    }
+
+    .about-parallax-text-wrapper .about-title {
+      font-size: var(--font-size-3xl);
+      color: white;
+      margin-bottom: var(--spacing-lg);
+      line-height: 1.3;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .about-parallax-text-wrapper .about-text {
+      color: rgba(255, 255, 255, 0.98);
+      margin-bottom: var(--spacing-lg);
+      font-size: var(--font-size-base);
+      line-height: 1.8;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-parallax-text-wrapper .about-text strong {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .about-highlights {
+      display: none;
+    }
+
+    .highlight-item {
+      display: none;
+    }
+
+    .highlight-icon {
+      display: none;
+    }
+
+    .highlight-text {
+      display: none;
+    }
+
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 1024px) {
+      .about-highlights {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-section-parallax {
+        min-height: auto;
+        padding: var(--spacing-2xl) var(--spacing-md);
+        background-attachment: scroll;
+      }
+
+      .about-parallax-inner {
+        min-height: auto;
+        padding: var(--spacing-2xl) 0;
+      }
+
+      .about-parallax-text-wrapper .about-title {
+        font-size: var(--font-size-2xl);
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-2xl);
+      }
+
+      .highlight-item {
+        padding: var(--spacing-lg);
+      }
+
+      .highlight-icon {
+        font-size: 2em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-parallax-text-wrapper .about-title {
+        font-size: var(--font-size-xl);
+      }
+
+      .about-parallax-text-wrapper .about-text {
+        font-size: var(--font-size-sm);
+      }
+
+      .highlight-item {
+        padding: var(--spacing-md);
+      }
+
+      .highlight-text strong {
+        font-size: var(--font-size-xs);
+      }
+
+      .highlight-text span {
+        font-size: 0.7rem;
+      }
+
+      .highlight-icon {
+        font-size: 1.8em;
+      }
+
+      .tour-info {
+        flex-direction: column;
+        gap: 8px;
+        padding: 6px 10px;
+      }
+
+      .tour-title {
+        flex-wrap: wrap;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1596,7 +1858,6 @@
 
     <nav class="nav-mobile" id="navMobile" aria-label="Menu mobile">
       <a href="#tour" onclick="toggleMenu()">Tour</a>
-      <a href="#perche" onclick="toggleMenu()">Perché noi</a>
       <a href="#chi-siamo" onclick="toggleMenu()">Chi siamo</a>
       <a href="#faq" onclick="toggleMenu()">FAQ</a>
       <a href="#contatti" onclick="toggleMenu()">Contatti</a>
@@ -1612,10 +1873,11 @@
         <div class="slide" style="background-image:url('immagini/amalfi-coast.jpg');"></div>
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
+      
       <div class="hero-content">
-        <h1 class="hero-title" id="heroTitle">Scopri le meraviglie della Costiera in barca</h1>
+        <h1 class="hero-title" id="heroTitle">Scopri le meraviglie della costiera con Vento in Poppa</h1>
         <p class="hero-sub" id="heroText">
-          Escursioni da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana con piccoli gruppi e skipper locali esperti.
+        Esplora un mondo di meraviglie! Scopri i luoghi più straordinari con noi!
         </p>
         <a href="#tour" class="hero-cta" id="heroBtn">
           <i class="bi bi-compass"></i> Scopri i tour
@@ -1633,92 +1895,77 @@
       </p>
 
       <div class="tour-grid">
-        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/TouristTrip">
+        <!-- TOUR CARD 1: CAPRI -->
+        <article class="tour-card scroll-reveal tour-card-link" itemscope itemtype="https://schema.org/TouristTrip" onclick="vaiAPagina('tour_capri_multilingua.html')" role="button" tabindex="0" aria-label="Vedi dettagli tour Esperienza a Capri">
           <div class="tour-card-image">
             <img src="immagini/capri_tour_faraglioni.jpg" alt="Tour in barca a Capri con vista sui Faraglioni" loading="lazy" width="400" height="300" itemprop="image">
-            <span class="tour-badge">Più venduto</span>
+            <span class="tour-badge">🔥 Più venduto</span>
+            <span class="tour-price-badge">799 €</span>
           </div>
-          <div class="tour-card-body">
-            <h3 class="tour-title" itemprop="name">Esperienza a Capri</h3>
-            <div class="tour-meta">
-              <span><i class="bi bi-clock"></i> 7-8 ore</span>
-              <span>•</span>
-              <span><i class="bi bi-people"></i> Max 7 persone</span>
-            </div>
-            <p class="tour-desc" itemprop="description">
-              Tour completo con bagno ai Faraglioni, sosta ad Anacapri e tempo libero nella famosa Piazzetta.
-            </p>
-            <div class="tour-footer">
-              <button class="tour-cta" type="button" onclick="vaiAPagina('tour_capri_multilingua.html')" aria-label="Vedi dettagli tour Capri">
-                Dettagli tour
-              </button>
-              <div class="tour-price">
-                <span class="price-label">Da</span>
-                <span class="price-new" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                  <meta itemprop="price" content="69">
-                  <meta itemprop="priceCurrency" content="EUR">
-                  69 €
-                </span>
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <h3 class="tour-title" itemprop="name">
+              Esperienza a Capri
+              <i class="bi bi-arrow-up-right tour-link-icon"></i>
+            </h3>
+            <p class="tour-description" itemprop="description">Le grotte sono bocche spalancate che raccontano storie solo a chi si avventura ad esplorarle.</p>
+            <div class="tour-info">
+              <div class="tour-info-item">
+                <span class="tour-info-label">⏱ Durata:</span>
+                <span class="tour-info-value">7-8 ore</span>
+              </div>
+              <div class="tour-info-item">
+                <span class="tour-info-label">👥 Max:</span>
+                <span class="tour-info-value">7 pers.</span>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/TouristTrip">
+        <!-- TOUR CARD 2: SUNSET -->
+        <article class="tour-card scroll-reveal tour-card-link" itemscope itemtype="https://schema.org/TouristTrip" onclick="vaiAPagina('tour_sunset_multilingua.html')" role="button" tabindex="0" aria-label="Vedi dettagli tour Sunset Experience">
           <div class="tour-card-image">
             <img src="immagini/sunset-sorrento.jpg" alt="Tour al tramonto nella baia di Sorrento" loading="lazy" width="400" height="300" itemprop="image">
+            <span class="tour-price-badge">299 €</span>
           </div>
-          <div class="tour-card-body">
-            <h3 class="tour-title" itemprop="name">Sunset Experience</h3>
-            <div class="tour-meta">
-              <span><i class="bi bi-clock"></i> 2-3 ore</span>
-              <span>•</span>
-              <span><i class="bi bi-people"></i> Max 7 persone</span>
-            </div>
-            <p class="tour-desc" itemprop="description">
-              Navigazione romantica al tramonto con prosecco, musica e foto panoramiche sulla baia di Sorrento.
-            </p>
-            <div class="tour-footer">
-              <button class="tour-cta" type="button" aria-label="Vedi dettagli sunset tour">
-                Dettagli tour
-              </button>
-              <div class="tour-price">
-                <span class="price-label">Da</span>
-                <span class="price-new" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                  <meta itemprop="price" content="299">
-                  <meta itemprop="priceCurrency" content="EUR">
-                  299 €
-                </span>
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <h3 class="tour-title" itemprop="name">
+              Sunset Experience
+              <i class="bi bi-arrow-up-right tour-link-icon"></i>
+            </h3>
+            <p class="tour-description" itemprop="description">Salpa con noi mentre il sole si tuffa nel mare, tingendo il cielo di tonalità calde e avvolgenti.</p>
+            <div class="tour-info">
+              <div class="tour-info-item">
+                <span class="tour-info-label">⏱ Durata:</span>
+                <span class="tour-info-value">2-3 ore</span>
+              </div>
+              <div class="tour-info-item">
+                <span class="tour-info-label">👥 Max:</span>
+                <span class="tour-info-value">7 pers.</span>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/TouristTrip">
+        <!-- TOUR CARD 3: AMALFI -->
+        <article class="tour-card scroll-reveal tour-card-link" itemscope itemtype="https://schema.org/TouristTrip" onclick="vaiAPagina('tour_amalfi_multilingua.html')" role="button" tabindex="0" aria-label="Vedi dettagli tour Costiera Amalfitana">
           <div class="tour-card-image">
-            <img src="immagini/amalfi-coast.jpg" alt="Tour Costiera Amalfitana con vista su Positano e Amalfi" loading="lazy" width="400" height="300" itemprop="image">
+            <img src="immagini/amalfi-coast.jpg" alt="Tour della Costiera Amalfitana da Sorrento" loading="lazy" width="400" height="300" itemprop="image">
+            <span class="tour-price-badge">449 €</span>
           </div>
-          <div class="tour-card-body">
-            <h3 class="tour-title" itemprop="name">Esperienza Amalfi e Positano</h3>
-            <div class="tour-meta">
-              <span><i class="bi bi-clock"></i> 7-8 ore</span>
-              <span>•</span>
-              <span><i class="bi bi-people"></i> Max 7 persone</span>
-            </div>
-            <p class="tour-desc" itemprop="description">
-              Soste bagno a Furore e Praiano, tempo libero a Positano e pranzo a bordo opzionale con prodotti locali.
-            </p>
-            <div class="tour-footer">
-              <button class="tour-cta" type="button" aria-label="Vedi dettagli tour Costiera Amalfitana">
-                Dettagli tour
-              </button>
-              <div class="tour-price">
-                <span class="price-label">Da</span>
-                <span class="price-new" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                  <meta itemprop="price" content="899">
-                  <meta itemprop="priceCurrency" content="EUR">
-                  899 €
-                </span>
+          <div style="flex: 1; display: flex; flex-direction: column;">
+            <h3 class="tour-title" itemprop="name">
+              Costiera Amalfitana
+              <i class="bi bi-arrow-up-right tour-link-icon"></i>
+            </h3>
+            <p class="tour-description" itemprop="description">Se è vero che un paesaggio è uno stato d'animo, allora preparati alla felicità!</p>
+            <div class="tour-info">
+              <div class="tour-info-item">
+                <span class="tour-info-label">⏱ Durata:</span>
+                <span class="tour-info-value">5-6 ore</span>
+              </div>
+              <div class="tour-info-item">
+                <span class="tour-info-label">👥 Max:</span>
+                <span class="tour-info-value">7 pers.</span>
               </div>
             </div>
           </div>
@@ -1726,148 +1973,36 @@
       </div>
     </section>
 
-    <div class="section-divider">
-      <hr class="section-divider-line" aria-hidden="true">
-    </div>
+<!-- CHI SIAMO + PERCHÉ SCEGLIERCI CON PARALLASSE -->
+    <section class="about-section-parallax" id="chi-siamo">
+      <div class="parallax-overlay" aria-hidden="true"></div>
 
-    <!-- PERCHÉ SCEGLIERE NOI -->
-    <section class="section" id="perche">
-      <h2 class="section-title" id="whyTitle">
-        <i class="bi bi-trophy"></i> Perché scegliere Vento in Poppa
-      </h2>
-      <p class="section-sub">
-        Un team locale, barche curate e attenzione ai dettagli per farti vivere il mare in modo rilassato, senza pensieri.
-      </p>
-
-      <div class="features">
-        <article class="feature scroll-reveal">
-          <div class="feature-icon" aria-hidden="true">
-            <i class="bi bi-person-badge-fill"></i>
-          </div>
-          <div class="feature-body">
-            <h3>Skipper locali esperti</h3>
-            <p>Persone che conoscono davvero il golfo, le correnti e i punti migliori per nuotare o scattare foto indimenticabili.</p>
-          </div>
-        </article>
-
-        <article class="feature scroll-reveal">
-          <div class="feature-icon" aria-hidden="true">
-            <i class="bi bi-boat-fill"></i>
-          </div>
-          <div class="feature-body">
-            <h3>Barche curate e confortevoli</h3>
-            <p>Imbarcazioni mantenute con cura, posti comodi e gruppi ridotti per goderti lo spazio a bordo in totale relax.</p>
-          </div>
-        </article>
-
-        <article class="feature scroll-reveal">
-          <div class="feature-icon" aria-hidden="true">
-            <i class="bi bi-clock-history"></i>
-          </div>
-          <div class="feature-body">
-            <h3>Itinerari ben organizzati</h3>
-            <p>Percorsi pensati per vedere i luoghi iconici senza correre, con soste bagno e momenti di relax in acqua cristallina.</p>
-          </div>
-        </article>
-
-        <article class="feature scroll-reveal">
-          <div class="feature-icon" aria-hidden="true">
-            <i class="bi bi-headset"></i>
-          </div>
-          <div class="feature-body">
-            <h3>Assistenza completa</h3>
-            <p>Supporto via WhatsApp per domande su meteo, imbarco e richieste speciali, dalla prenotazione al rientro.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <div class="section-divider">
-      <hr class="section-divider-line" aria-hidden="true">
-    </div>
-
-    <!-- CHI SIAMO -->
-    <section class="about-section" id="chi-siamo">
-      <div class="about-content">
-        <div class="about-two-col">
-          <div class="about-two-col-media scroll-reveal-left">
-            <div>
-              <div class="about-photo-wrapper">
-                <div class="about-photo">
-                  <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Vista panoramica dal mare della Costiera Amalfitana" loading="lazy" width="600" height="700">
-                </div>
-              </div>
-              
-              <div class="about-stats">
-                <div class="stat-card">
-                  <div class="stat-number">2023</div>
-                  <div class="stat-label">Anno Fondazione</div>
-                </div>
-                <div class="stat-card">
-                  <div class="stat-number">1000+</div>
-                  <div class="stat-label">Clienti Felici</div>
-                </div>
-                <div class="stat-card">
-                  <div class="stat-number">100%</div>
-                  <div class="stat-label">Passione Mare</div>
-                </div>
-                <div class="stat-card">
-                  <div class="stat-number">7</div>
-                  <div class="stat-label">Max Persone</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-two-col-text scroll-reveal-right">
+      <div class="about-parallax-content">
+        <div class="about-parallax-inner">
+          <div class="about-parallax-text-wrapper scroll-reveal">
             <span class="about-badge">
               <i class="bi bi-star-fill"></i>
               La Nostra Storia
             </span>
-            
-            <h2 class="about-title" id="aboutTitle">
+
+            <h2 class="about-title">
               Passione per il mare dal 2023
             </h2>
-            
+
             <p class="about-text">
-              La storia di <strong>Vento In Poppa Charter</strong> inizia nel 2023, dalla felice intuizione di persone già inserite nella realtà marinara sorrentina, appassionate del mare ed entusiaste del proprio lavoro.
+              La storia di <strong>Vento In Poppa Charter</strong> inizia nel 2023, dalla felice intuizione di persone già inserite nella realtà marinaria sorrentina, appassionate del mare ed entusiaste del proprio lavoro.
             </p>
-            
+
             <p class="about-text">
-              La nostra attività si caratterizza per l'autentica passione che nutriamo verso il mare e dalla voglia di trasmettere e valorizzare la bellezza delle nostre coste, offrendo esperienze uniche e indimenticabili a piccoli gruppi di viaggiatori.
-            </p>
+              Il nostro equipaggio è composto da guide e capitani locali che conoscono profondamente la zona. 
+              Questa conoscenza approfondita ci consente di offrire esperienze autentiche e personalizzate, 
+              consentendo ai visitatori di scoprire i segreti nascosti e gli angoli più affascinanti della Penisola Sorrentina e di Capri.
+              Inoltre comprendiamo che ogni viaggiatore ha esigenze e interessi diversi.Offriamo itinerari flessibili che possono essere adattati 
+              alle preferenze dei nostri clienti. Che si tratti di esplorare grotte marine,fare un bagno in acque cristalline o semplicemente godersi il paesaggio,
+               possiamo personalizzare il tour per soddisfare le aspettative di ciascun cliente.
             
-            <div class="about-highlights">
-              <div class="highlight-item">
-                <div class="highlight-icon">
-                  <i class="bi bi-heart-fill"></i>
-                </div>
-                <div class="highlight-text">
-                  <strong>Autenticità Locale</strong>
-                  <span>Skipper nati e cresciuti tra queste acque, con conoscenza profonda del territorio</span>
-                </div>
-              </div>
-              
-              <div class="highlight-item">
-                <div class="highlight-icon">
-                  <i class="bi bi-people-fill"></i>
-                </div>
-                <div class="highlight-text">
-                  <strong>Piccoli Gruppi</strong>
-                  <span>Massimo 7 persone per garantire comfort, attenzione personalizzata e atmosfera intima</span>
-                </div>
-              </div>
-              
-              <div class="highlight-item">
-                <div class="highlight-icon">
-                  <i class="bi bi-shield-check"></i>
-                </div>
-                <div class="highlight-text">
-                  <strong>Sicurezza & Qualità</strong>
-                  <span>Barche certificate, attrezzature moderne e rispetto degli standard più elevati</span>
-                </div>
-              </div>
-            </div>
+            </p>
+
           </div>
         </div>
       </div>
@@ -1877,7 +2012,7 @@
       <hr class="section-divider-line" aria-hidden="true">
     </div>
 
-    <!-- FAQ -->
+<!-- FAQ -->
     <section class="section" id="faq">
       <h2 class="section-title">
         <i class="bi bi-patch-question"></i> Domande frequenti
@@ -1912,7 +2047,7 @@
           </button>
           <div class="faq-answer" id="faq2">
             <p>
-              La sicurezza viene prima di tutto: in caso di condizioni meteo non adatte alla navigazione, proponiamo cambio data, itinerario alternativo o rimborso completo secondo le nostre policy. Vi avviseremo con almeno 24 ore di anticipo.
+             La sicurezza dei nostri passeggeri è la nostra massima priorità. In caso di maltempo o condizioni marine avverse, potremmo dover cancellare o riprogrammare il tour. In tal caso, ti contatteremo per fornirti opzioni alternative o per il rimborso.
             </p>
           </div>
         </article>
@@ -2144,14 +2279,13 @@
     let interval;
 
     function nextSlide() {
-      // Aggiungi fade-out alla slide corrente
       slides[currentSlide].classList.add('fade-out');
       
       setTimeout(() => {
         slides[currentSlide].classList.remove('active', 'fade-out');
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');
-      }, 800); // Sincronizza con la durata della transizione fade-out
+      }, 800);
     }
 
     function startSlider() {
@@ -2175,7 +2309,6 @@
       });
     }, observerOptions);
 
-    // Osserva tutti gli elementi con classi scroll-reveal
     document.addEventListener('DOMContentLoaded', () => {
       const revealElements = document.querySelectorAll(
         '.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale'
@@ -2202,13 +2335,11 @@
         const item = button.parentElement;
         const isOpen = item.classList.contains('open');
         
-        // Chiudi tutti gli altri
         document.querySelectorAll('.faq-item').forEach(faq => {
           faq.classList.remove('open');
           faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
         });
         
-        // Toggle quello corrente
         if (!isOpen) {
           item.classList.add('open');
           button.setAttribute('aria-expanded', 'true');
@@ -2232,10 +2363,8 @@
       localStorage.setItem(cookieKey, accepted ? 'accepted' : 'declined');
       cookieBanner.classList.remove('active');
       
-      // Analytics tracking se accettato
       if (accepted) {
         console.log('Cookie accettati - Inizializza analytics');
-        // Qui puoi inizializzare Google Analytics, Facebook Pixel, etc.
       }
     }
 
@@ -2287,11 +2416,9 @@
     };
 
     function setLang(e, lang) {
-      // Aggiorna i bottoni
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       if (e && e.target) e.target.classList.add('active');
       
-      // Applica traduzioni
       const t = translations[lang] || translations.it;
       document.getElementById('heroTitle').textContent = t.heroTitle;
       document.getElementById('heroText').textContent = t.heroText;
@@ -2304,15 +2431,12 @@
       whyTitle.innerHTML = `<i class="bi bi-trophy"></i> ${t.whyTitle}`;
       
       const aboutTitle = document.getElementById('aboutTitle');
-      aboutTitle.innerHTML = `<i class="bi bi-book"></i> ${t.aboutTitle}`;
+      aboutTitle.innerHTML = t.aboutTitle;
       
       const contactTitle = document.getElementById('contactTitle');
-      contactTitle.innerHTML = `<i class="bi bi-person-vcard"></i> ${t.contactTitle}`;
+      contactTitle.innerHTML = `<i class="bi bi-chat-dots"></i> ${t.contactTitle}`;
       
-      // Salva preferenza
       localStorage.setItem('preferredLang', lang);
-      
-      // Aggiorna HTML lang attribute
       document.documentElement.lang = lang;
     }
 
@@ -2347,7 +2471,7 @@
       }
     });
 
-    /* ==================== PERFORMANCE: Preload critical images ==================== */
+    /* ==================== PRELOAD IMAGES ==================== */
     const preloadImages = [
       'immagini/vento_in_poppa_boat.jpg',
       'immagini/capri_tour_faraglioni.jpg'
