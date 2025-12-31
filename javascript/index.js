@@ -1,0 +1,103 @@
+ /* ==================== SLIDER ==================== */
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function nextSlide() {
+      slides[currentSlide].classList.add('fade-out');
+      setTimeout(() => {
+        slides[currentSlide].classList.remove('active', 'fade-out');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 800);
+    }
+
+    setInterval(nextSlide, 6000);
+
+       /* ==================== NAVIGAZIONE PAGINA ==================== */
+    function vaiAPagina(pagina) {
+      window.location.href = pagina;
+    }
+
+    /* ==================== SCROLL REVEAL ==================== */
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.scroll-reveal, .scroll-reveal-scale').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    /* ==================== MOBILE MENU ==================== */
+    function toggleMenu() {
+      const mobile = document.getElementById('navMobile');
+      const hamburger = document.querySelector('.hamburger');
+      const isOpen = mobile.style.display === 'flex';
+      mobile.style.display = isOpen ? 'none' : 'flex';
+      hamburger.setAttribute('aria-expanded', !isOpen);
+    }
+
+    /* ==================== FAQ ==================== */
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+
+        document.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('open');
+          faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isOpen) {
+          item.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ==================== COOKIE BANNER ==================== */
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieKey = 'vp_cookie_choice';
+
+    function showCookieBanner() {
+      if (!localStorage.getItem(cookieKey)) {
+        setTimeout(() => {
+          cookieBanner.classList.add('active');
+        }, 1000);
+      }
+    }
+
+    function handleCookie(accepted) {
+      localStorage.setItem(cookieKey, accepted ? 'accepted' : 'declined');
+      cookieBanner.classList.remove('active');
+    }
+
+    showCookieBanner();
+
+    /* ==================== SMOOTH SCROLL ==================== */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#privacy' && href !== '#cookies') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
