@@ -20,944 +20,22 @@
 
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
 
   <style>
-    /* ==================== DESIGN SYSTEM ==================== */
-    :root {
-      --primary-blue: #164ab9;
-      --primary-blue-dark: #0d3a8f;
-      --primary-blue-light: #e0edff;
-      --secondary-blue: #0ea5e9;
-      --gray-50: #f9fafb;
-      --gray-100: #f5f7fb;
-      --gray-200: #e5e7eb;
-      --gray-300: #d1d5db;
-      --gray-400: #9ca3af;
-      --gray-500: #6b7280;
-      --gray-600: #4b5563;
-      --gray-700: #374151;
-      --gray-800: #1f2937;
-      --gray-900: #111827;
-      --accent-green: #16a34a;
-      --accent-red: #dc2626;
-      --whatsapp: #25D366;
-      --spacing-xs: 0.5rem;
-      --spacing-sm: 0.75rem;
-      --spacing-md: 1rem;
-      --spacing-lg: 1.5rem;
-      --spacing-xl: 2rem;
-      --spacing-2xl: 3rem;
-      --spacing-3xl: 4rem;
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 16px;
-      --radius-xl: 24px;
-      --radius-full: 999px;
-      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
-      --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
-      --shadow-lg: 0 8px 26px rgba(15, 23, 42, 0.1);
-      --shadow-xl: 0 12px 35px rgba(15, 23, 42, 0.15);
-      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-size-xs: 0.8rem;
-      --font-size-sm: 0.875rem;
-      --font-size-base: 1rem;
-      --font-size-lg: 1.125rem;
-      --font-size-xl: 1.25rem;
-      --font-size-2xl: 1.5rem;
-      --font-size-3xl: 2rem;
-      --font-size-4xl: 2.5rem;
-      --transition-fast: 0.15s ease;
-      --transition-base: 0.2s ease;
-      --transition-slow: 0.3s ease;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      line-height: 1.6;
-      color: var(--gray-800);
-      background: var(--gray-100);
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.98);
-      border-bottom: 1px solid var(--gray-200);
-      backdrop-filter: blur(16px);
-      z-index: 2000;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .nav-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: var(--spacing-md) var(--spacing-lg);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--spacing-lg);
-    }
-
-    .logo {
-      height: 42px;
-      font-size: var(--font-size-xl);
-      font-weight: 800;
-      color: var(--primary-blue);
-      display: flex;
-      align-items: center;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-xl);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: var(--spacing-lg);
-      align-items: center;
-    }
-
-    nav a {
-      font-size: var(--font-size-sm);
-      font-weight: 500;
-      color: var(--gray-600);
-      transition: color var(--transition-base);
-      padding: var(--spacing-xs) var(--spacing-sm);
-      border-radius: var(--radius-sm);
-    }
-
-    nav a:hover,
-    nav a:focus {
-      color: var(--primary-blue);
-      background: var(--primary-blue-light);
-    }
-
-    .lang-switcher {
-      display: flex;
-      gap: 4px;
-      background: var(--gray-50);
-      padding: 4px;
-      border-radius: var(--radius-full);
-      border: 1px solid var(--gray-200);
-    }
-
-    .lang-btn {
-      border: none;
-      background: transparent;
-      padding: 6px 12px;
-      border-radius: var(--radius-full);
-      font-size: var(--font-size-xs);
-      font-weight: 600;
-      color: var(--gray-600);
-      transition: all var(--transition-base);
-      cursor: pointer;
-    }
-
-    .lang-btn.active,
-    .lang-btn:hover {
-      background: var(--primary-blue);
-      color: white;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 4px;
-      cursor: pointer;
-      padding: var(--spacing-xs);
-      background: none;
-      border: none;
-    }
-
-    .hamburger span {
-      width: 24px;
-      height: 3px;
-      background: var(--primary-blue);
-      border-radius: 2px;
-      transition: var(--transition-base);
-    }
-
-    main {
-      margin-top: 72px;
-    }
-
-    /* ==================== HERO WITH SLIDER ==================== */
-    .tour-hero {
-      position: relative;
-      min-height: 65vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: var(--spacing-3xl) var(--spacing-lg);
-      overflow: hidden;
-    }
-
-    .hero-slider {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
-
-    .hero-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.4);
-    }
-
-    .hero-slide.active {
-      opacity: 1;
-    }
-
-    .hero-slide-1 {
-      background-image: url('https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=1600');
-    }
-
-    .hero-slide-2 {
-      background-image: url('https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=1600');
-    }
-
-    .hero-slide-3 {
-      background-image: url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1600');
-    }
-
-    .hero-slide-4 {
-      background-image: url('https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=1600');
-    }
-
-    .tour-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        135deg,
-        rgba(22, 74, 185, 0.85) 0%,
-        rgba(13, 58, 143, 0.75) 50%,
-        rgba(14, 165, 233, 0.65) 100%
-      );
-      z-index: 2;
-    }
-
-    .tour-hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 900px;
-      color: white;
-    }
-
-    .tour-badge {
-      display: inline-block;
-      padding: var(--spacing-xs) var(--spacing-lg);
-      background: rgba(255, 255, 255, 0.25);
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      border-radius: var(--radius-full);
-      font-size: var(--font-size-sm);
-      font-weight: 700;
-      margin-bottom: var(--spacing-lg);
-      backdrop-filter: blur(10px);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .tour-hero-title {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      margin-bottom: var(--spacing-lg);
-      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-      letter-spacing: -0.02em;
-    }
-
-    .tour-hero-subtitle {
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      opacity: 0.98;
-      margin-bottom: var(--spacing-2xl);
-      line-height: 1.7;
-      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
-      font-weight: 400;
-    }
-
-    .tour-meta-box {
-      display: flex;
-      gap: var(--spacing-xl);
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: var(--spacing-2xl);
-    }
-
-    .meta-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--spacing-xs);
-      background: rgba(255, 255, 255, 0.15);
-      padding: var(--spacing-lg);
-      border-radius: var(--radius-lg);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      min-width: 140px;
-    }
-
-    .meta-icon {
-      width: 52px;
-      height: 52px;
-      background: rgba(255, 255, 255, 0.25);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      backdrop-filter: blur(10px);
-    }
-
-    .meta-label {
-      font-size: var(--font-size-xs);
-      opacity: 0.95;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-    }
-
-    .meta-value {
-      font-size: var(--font-size-xl);
-      font-weight: 800;
-    }
-
-    /* ==================== SCROLL ANIMATIONS ==================== */
-    .scroll-animate {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .scroll-animate.animated {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .scroll-animate-left {
-      opacity: 0;
-      transform: translateX(-50px);
-      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .scroll-animate-left.animated {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .scroll-animate-right {
-      opacity: 0;
-      transform: translateX(50px);
-      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .scroll-animate-right.animated {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .scroll-animate-scale {
-      opacity: 0;
-      transform: scale(0.9);
-      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .scroll-animate-scale.animated {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .tour-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: var(--spacing-3xl) var(--spacing-lg);
-    }
-
-    .tour-layout {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: var(--spacing-3xl);
-    }
-
-    .tour-main {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-2xl);
-    }
-
-    .tour-section {
-      background: white;
-      padding: var(--spacing-2xl);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-md);
-    }
-
-    .tour-section h2 {
-      font-size: var(--font-size-2xl);
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: var(--spacing-lg);
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
-    }
-
-    .tour-section h2 i {
-      color: var(--primary-blue);
-    }
-
-    .tour-section p {
-      font-size: var(--font-size-base);
-      color: var(--gray-600);
-      line-height: 1.8;
-      margin-bottom: var(--spacing-md);
-    }
-
-    /* ==================== TIMELINE STYLE ==================== */
-    .timeline-container {
-      position: relative;
-      padding: var(--spacing-xl) 0;
-    }
-
-    .timeline-line {
-      position: absolute;
-      left: 30px;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-blue));
-      border-radius: var(--radius-full);
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-left: 80px;
-      margin-bottom: var(--spacing-2xl);
-    }
-
-    .timeline-icon {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 60px;
-      height: 60px;
-      background: white;
-      border: 4px solid var(--primary-blue);
-      border-radius: var(--radius-full);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      color: var(--primary-blue);
-      box-shadow: var(--shadow-md);
-      z-index: 2;
-      transition: all var(--transition-base);
-    }
-
-    .timeline-item:hover .timeline-icon {
-      transform: scale(1.15) rotate(5deg);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .timeline-icon.highlight {
-      background: var(--primary-blue);
-      color: white;
-    }
-
-    .timeline-icon.optional {
-      border-color: var(--gray-400);
-      color: var(--gray-400);
-    }
-
-    .timeline-content {
-      background: var(--gray-50);
-      padding: var(--spacing-lg);
-      border-radius: var(--radius-lg);
-      border-left: 4px solid var(--primary-blue);
-      transition: all var(--transition-base);
-    }
-
-    .timeline-item:hover .timeline-content {
-      transform: translateX(5px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .timeline-content.optional {
-      border-left-color: var(--gray-400);
-      background: white;
-      border: 2px dashed var(--gray-300);
-    }
-
-    .timeline-time {
-      display: inline-block;
-      padding: 4px 12px;
-      background: var(--primary-blue-light);
-      color: var(--primary-blue);
-      border-radius: var(--radius-full);
-      font-size: var(--font-size-xs);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .timeline-time.optional {
-      background: var(--gray-200);
-      color: var(--gray-600);
-    }
-
-    .timeline-title {
-      font-size: var(--font-size-lg);
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: var(--spacing-xs);
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-xs);
-    }
-
-    .timeline-desc {
-      font-size: var(--font-size-sm);
-      color: var(--gray-600);
-      line-height: 1.6;
-    }
-
-    .optional-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      background: var(--gray-300);
-      color: var(--gray-700);
-      border-radius: var(--radius-sm);
-      font-size: var(--font-size-xs);
-      font-weight: 600;
-      margin-left: var(--spacing-xs);
-    }
-
-    /* ==================== GALLERIA ==================== */
-    .gallery-section {
-      background: white;
-      padding: var(--spacing-2xl);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-md);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--spacing-md);
-      margin-top: var(--spacing-lg);
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      aspect-ratio: 4/3;
-      cursor: pointer;
-      box-shadow: var(--shadow-sm);
-      transition: all var(--transition-base);
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-      display: flex;
-      align-items: flex-end;
-      padding: var(--spacing-lg);
-      opacity: 0;
-      transition: opacity var(--transition-base);
-    }
-
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
-
-    .gallery-caption {
-      color: white;
-      font-size: var(--font-size-sm);
-      font-weight: 600;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    }
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.95);
-      z-index: 3000;
-      padding: var(--spacing-xl);
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox-content {
-      position: relative;
-      max-width: 90vw;
-      max-height: 90vh;
-    }
-
-    .lightbox-content img {
-      max-width: 100%;
-      max-height: 90vh;
-      border-radius: var(--radius-lg);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: -50px;
-      right: 0;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 2.5rem;
-      cursor: pointer;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all var(--transition-base);
-    }
-
-    .lightbox-close:hover {
-      transform: rotate(90deg);
-    }
-
-    .lightbox-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      color: white;
-      font-size: 2rem;
-      width: 50px;
-      height: 50px;
-      border-radius: var(--radius-full);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(10px);
-      transition: all var(--transition-base);
-    }
-
-    .lightbox-nav:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateY(-50%) scale(1.1);
-    }
-
-    .lightbox-prev {
-      left: -70px;
-    }
-
-    .lightbox-next {
-      right: -70px;
-    }
-
-    .tour-sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-xl);
-    }
-
-    .price-card {
-      background: white;
-      padding: var(--spacing-2xl);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-lg);
-      border: 2px solid var(--primary-blue-light);
-      position: sticky;
-      top: 100px;
-      z-index: 100;
-    }
-
-    .price-header {
-      text-align: center;
-      padding-bottom: var(--spacing-lg);
-      border-bottom: 2px solid var(--gray-200);
-      margin-bottom: var(--spacing-lg);
-    }
-
-    .price-label {
-      font-size: var(--font-size-sm);
-      color: var(--gray-500);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: var(--spacing-xs);
-    }
-
-    .price-amount {
-      font-size: var(--font-size-4xl);
-      font-weight: 800;
-      color: var(--primary-blue);
-      line-height: 1;
-    }
-
-    .price-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-sm);
-      margin-bottom: var(--spacing-xl);
-    }
-
-    .price-features li {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
-      font-size: var(--font-size-sm);
-      color: var(--gray-600);
-      padding: 0;
-      background: none;
-      border: none;
-    }
-
-    .price-features i {
-      color: var(--accent-green);
-      font-size: 1rem;
-    }
-
-    .cta-button {
-      width: 100%;
-      padding: var(--spacing-md) var(--spacing-xl);
-      background: var(--primary-blue);
-      color: white;
-      border: none;
-      border-radius: var(--radius-full);
-      font-size: var(--font-size-lg);
-      font-weight: 700;
-      transition: all var(--transition-base);
-      box-shadow: var(--shadow-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--spacing-xs);
-    }
-
-    .cta-button:hover {
-      background: var(--primary-blue-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .info-card {
-      background: white;
-      padding: var(--spacing-xl);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md);
-    }
-
-    .info-card h3 {
-      font-size: var(--font-size-lg);
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: var(--spacing-md);
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-xs);
-    }
-
-    .info-card h3 i {
-      color: var(--primary-blue);
-    }
-
-    .info-card ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-sm);
-    }
-
-    .info-card li {
-      font-size: var(--font-size-sm);
-      color: var(--gray-600);
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-xs);
-      padding: 0;
-      background: none;
-      border: none;
-    }
-
-    .info-card li i {
-      color: var(--primary-blue);
-      font-size: 0.9rem;
-    }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 64px;
-      height: 64px;
-      border-radius: var(--radius-full);
-      background: var(--whatsapp);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-      animation: pulse 2s infinite;
-      z-index: 1500;
-      transition: all var(--transition-base);
-    }
-
-    .whatsapp:hover {
-      transform: scale(1.1);
-      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-      70% {
-        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    @media (max-width: 900px) {
-      .tour-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .price-card {
-        position: static;
-      }
-
-      .tour-hero {
-        min-height: 50vh;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-
-      .lightbox-nav {
-        display: none;
-      }
-
-      .timeline-line {
-        left: 20px;
-      }
-
-      .timeline-item {
-        padding-left: 65px;
-      }
-
-      .timeline-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .tour-meta-box {
-        gap: var(--spacing-md);
-      }
-
-      .meta-item {
-        min-width: 120px;
-        padding: var(--spacing-md);
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .timeline-item {
-        padding-left: 55px;
-        margin-bottom: var(--spacing-lg);
-      }
-
-      .timeline-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-      }
-    }
+  
   </style>
+
+  <link rel="stylesheet" href="\css\detail.css">
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
     <div class="nav-wrapper">
-      <div class="logo">
-        Vento in Poppa
-      </div>
+      <a href="#home" class="logo" aria-label="Vento in Poppa Charter - Homepage">
+        <img src="immagini/logo-vento-in-poppa-charter.jpg" alt="Logo Vento in Poppa Charter" width="180" height="42">
+      </a>
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
@@ -992,8 +70,9 @@
 
       <div class="tour-hero-content">
         <span class="tour-badge" data-translate="tour.badge">Tour Privato</span>
-        <h1 class="tour-hero-title" data-translate="tour.title">Tour Capri</h1>
-        <p class="tour-hero-subtitle" data-translate="tour.subtitle">Le grotte sono bocche spalancate che raccontano storie solo a chi si avventura ad esplorarle</p>
+        <h1 class="tour-hero-title" data-translate="tour.title">Positano Amalfi</h1>
+        <p class="tour-hero-subtitle" data-translate="tour.subtitle">SE È VERO CHE UN PAESAGGIO È UNO STATO D’ANIMO ALLORA PREPARATI ALLA FELICITÀ!
+ Con questa escursione ammirerai l’intera Costiera Amalfitana dal mare, restando affascinato dalla sua bellezza unica al mondo.</p>
 
         <div class="tour-meta-box">
           <div class="meta-item">
@@ -1030,175 +109,201 @@
           <!-- DESCRIZIONE -->
           <div class="tour-section scroll-animate">
             <h2><i class="bi bi-info-circle"></i> <span data-translate="section.description">Descrizione del Tour</span></h2>
-            <p data-translate="content.desc1">Durante questo tour avrai l'opportunità di immergerti nella bellezza naturale della così detta "isola azzurra", la quale è caratterizzata dalla presenza di varie grotte, le cui pareti assumono sfumature di colore uniche grazie alla luce del sole che filtra attraverso l'acqua.</p>
-            <p data-translate="content.desc2">Questa strabiliante esperienza ti porterà a navigare attraverso le acque cristalline del Mar Tirreno, rivelando i tesori naturali e le meraviglie nascoste dell'Isola più affascinante del Golfo di Napoli.</p>
+            <p data-translate="content.desc1">Optando per questo tour, avrai l’opportunità di viaggiare da Sorrento ad Amalfi e goderti gli incantevoli paesaggi lungo il tragitto,</p>
+            <p data-translate="content.desc2"></p>
           </div>
 
-          <!-- TIMELINE UNIFICATA -->
-          <div class="tour-section scroll-animate">
-            <h2><i class="bi bi-compass"></i> <span data-translate="section.itinerary">Itinerario dell'Escursione</span></h2>
-            <p data-translate="content.itinerary.intro">Scopri il percorso completo della tua giornata a Capri, dalle partenza fino al rientro al porto, attraverso tutte le meraviglie naturali dell'isola azzurra.</p>
+    
+       <!-- TIMELINE UNIFICATA -->
+<div class="tour-section scroll-animate">
+  <h2><i class="bi bi-compass"></i> <span data-translate="section.itinerary">Itinerario dell'Escursione</span></h2>
+  <p data-translate="content.itinerary.intro">Scopri il percorso completo della tua giornata da Sorrento ad Amalfi, godendoti i paesaggi mozzafiato della Costa Amalfitana e le sue meraviglie naturali.</p>
 
-            <div class="timeline-container">
-              <div class="timeline-line"></div>
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
 
-              <!-- PARTENZA -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-geo-alt-fill"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">Mattina</span>
-                  <h3 class="timeline-title" data-translate="timeline.departure.title">Partenza dal Porto</h3>
-                  <p class="timeline-desc" data-translate="timeline.departure.desc">Incontro con lo skipper all'orario concordato. Porti disponibili: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.</p>
-                </div>
-              </div>
+    <!-- PARTENZA -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-geo-alt-fill"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">Mattina</span>
+        <h3 class="timeline-title" data-translate="timeline.departure.title">Partenza dal Porto</h3>
+        <p class="timeline-desc" data-translate="timeline.departure.desc">Incontro con lo skipper all'orario concordato. Porti disponibili: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.</p>
+      </div>
+    </div>
 
-              <!-- COSTA SORRENTINA -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-water"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">9:30 - 10:00</span>
-                  <h3 class="timeline-title" data-translate="timeline.coast.title">Esplorazione Costa Sorrentina</h3>
-                  <p class="timeline-desc" data-translate="timeline.coast.desc">Ammira le scogliere mozzafiato e le acque cristalline della penisola mentre navighiamo verso Capri.</p>
-                </div>
-              </div>
+    <!-- COSTA SORRENTINA -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon">
+        <i class="bi bi-water"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">9:30 - 10:00</span>
+        <h3 class="timeline-title" data-translate="timeline.coast.title">Esplorazione Costa Sorrentina</h3>
+        <p class="timeline-desc" data-translate="timeline.coast.desc">Ammira le scogliere di Punta Campanella e la Torre di Minerva, mentre navighiamo verso sud lungo la costa sorrentina.</p>
+      </div>
+    </div>
 
-              <!-- NAVIGAZIONE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-compass"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">10:00 - 10:30</span>
-                  <h3 class="timeline-title" data-translate="timeline.navigation.title">Navigazione verso Capri</h3>
-                  <p class="timeline-desc" data-translate="timeline.navigation.desc">Attraverso il Mar Tirreno con il nostro skipper professionista e bilingue, godendo della brezza marina.</p>
-                </div>
-              </div>
+    <!-- BAIAS E FIORDI -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon">
+        <i class="bi bi-water"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">10:00 - 10:30</span>
+        <h3 class="timeline-title" data-translate="timeline.bays.title">Baia di Ieranto e Tordigliano</h3>
+        <p class="timeline-desc" data-translate="timeline.bays.desc">Scorci naturali e incontaminati: la Baia di Ieranto e la Spiaggia di Tordigliano, piccoli paradisi nascosti tra le rocce della Costa Sorrentina.</p>
+      </div>
+    </div>
 
-              <!-- FARAGLIONI -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-stars"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">10:30 - 11:00</span>
-                  <h3 class="timeline-title" data-translate="timeline.faraglioni.title">I Faraglioni</h3>
-                  <p class="timeline-desc" data-translate="timeline.faraglioni.desc">I guardiani dell'isola: tre maestose formazioni rocciose che emergono dal mare, ognuna con caratteristiche uniche e foto panoramiche mozzafiato.</p>
-                </div>
-              </div>
+    <!-- POSITANO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-building"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">10:30 - 11:00</span>
+        <h3 class="timeline-title" data-translate="timeline.positano.title">Arrivo a Positano</h3>
+        <p class="timeline-desc" data-translate="timeline.positano.desc">Scopri il famoso borgo marinaro visto dal mare, con le sue case colorate che risalgono le rocce calcaree, perfetto per foto da cartolina.</p>
+      </div>
+    </div>
 
-              <!-- PUNTA TRAGARA -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-eye"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">11:00 - 11:15</span>
-                  <h3 class="timeline-title" data-translate="timeline.tragara.title">Punta Tragara</h3>
-                  <p class="timeline-desc" data-translate="timeline.tragara.desc">Belvedere naturale con vista spettacolare dall'alto dei Faraglioni e della costa caprese.</p>
-                </div>
-              </div>
+    <!-- TEMPO LIBERO A POSITANO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon optional">
+        <i class="bi bi-clock-history"></i>
+      </div>
+      <div class="timeline-content optional">
+        <span class="timeline-time optional">Opzionale</span>
+        <h3 class="timeline-title">
+          <span data-translate="timeline.freetime.positano">Tempo libero a Positano</span>
+          <span class="optional-badge">Non incluso</span>
+        </h3>
+        <p class="timeline-desc" data-translate="timeline.freetime.positano.desc">Passeggia tra i vicoli ricchi di negozi di artigianato locale e scopri la rinomata moda positanese.</p>
+      </div>
+    </div>
 
-              <!-- ARCO NATURALE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-brightness-high"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">11:15 - 11:30</span>
-                  <h3 class="timeline-title" data-translate="timeline.arco.title">Arco Naturale</h3>
-                  <p class="timeline-desc" data-translate="timeline.arco.desc">Maestosa opera della natura che ti lascerà senza parole per la sua grandiosità e bellezza selvaggia.</p>
-                </div>
-              </div>
+    <!-- FIUMICELLO E PRAIANO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon">
+        <i class="bi bi-water"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">11:00 - 11:30</span>
+        <h3 class="timeline-title" data-translate="timeline.praiano.title">Praiano e Furore</h3>
+        <p class="timeline-desc" data-translate="timeline.praiano.desc">Attraversa la costa di Praiano, con le sue caratteristiche cupole maiolicate, e il suggestivo fiordo di Furore, detto “il paese che non c’è”.</p>
+      </div>
+    </div>
 
-              <!-- GROTTE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-brightness-alt-high"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">11:30 - 12:30</span>
-                  <h3 class="timeline-title" data-translate="timeline.grottoes.title">Tour delle Grotte</h3>
-                  <p class="timeline-desc" data-translate="timeline.grottoes.desc">
-                    <strong>Grotta Rossa</strong> (del Corallo) con i suoi caratteristici coralli rossi.<br>
-                    <strong>Grotta Azzurra</strong> (facoltativa, non inclusa) famosa per il colore blu intenso.<br>
-                    <strong>Grotta Verde</strong> con le acque color smeraldo.<br>
-                    <strong>Grotta Bianca</strong> dalle pareti di tufo chiaro.
-                  </p>
-                </div>
-              </div>
+    <!-- CONCA DEI MARINI -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon">
+        <i class="bi bi-water"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">11:30 - 12:00</span>
+        <h3 class="timeline-title" data-translate="timeline.conca.title">Conca dei Marini</h3>
+        <p class="timeline-desc" data-translate="timeline.conca.desc">Un piccolo centro marinaro incastonato in uno scorcio panoramico di rara bellezza, con scorci mozzafiato sul mare.</p>
+      </div>
+    </div>
 
-              <!-- BAGNO -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-droplet"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">12:30 - 13:30</span>
-                  <h3 class="timeline-title" data-translate="timeline.swim.title">Bagno nelle Baie</h3>
-                  <p class="timeline-desc" data-translate="timeline.swim.desc">Sosta in una delle splendide baie di Capri per un rilassante bagno nelle acque azzurro cobalto cristalline.</p>
-                </div>
-              </div>
+    <!-- LI GALLI -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-stars"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">12:00 - 12:30</span>
+        <h3 class="timeline-title" data-translate="timeline.galli.title">Arcipelago Li Galli</h3>
+        <p class="timeline-desc" data-translate="timeline.galli.desc">Passaggio tra i tre isolotti di Li Galli, legati alla mitologia greca e alle sirene che con il loro canto attirarono Ulisse.</p>
+      </div>
+    </div>
 
-              <!-- PRANZO OPZIONALE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon optional">
-                  <i class="bi bi-cup-straw"></i>
-                </div>
-                <div class="timeline-content optional">
-                  <span class="timeline-time optional">Opzionale</span>
-                  <h3 class="timeline-title">
-                    <span data-translate="timeline.lunch.title">Pranzo al Ristorante</span>
-                    <span class="optional-badge">Non incluso</span>
-                  </h3>
-                  <p class="timeline-desc" data-translate="timeline.lunch.desc">Su richiesta, sosta per il pranzo in un caratteristico ristorante accessibile solo via mare, per gustare specialità locali.</p>
-                </div>
-              </div>
+    <!-- BAGNO E SNORKELING -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-droplet"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">12:30 - 13:30</span>
+        <h3 class="timeline-title" data-translate="timeline.swim.title">Bagno e Snorkeling</h3>
+        <p class="timeline-desc" data-translate="timeline.swim.desc">Soste lungo la costa per una nuotata rinfrescante e per fare snorkeling nelle acque cristalline della Costiera.</p>
+      </div>
+    </div>
 
-              <!-- TEMPO LIBERO OPZIONALE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon optional">
-                  <i class="bi bi-clock-history"></i>
-                </div>
-                <div class="timeline-content optional">
-                  <span class="timeline-time optional">Opzionale</span>
-                  <h3 class="timeline-title">
-                    <span data-translate="timeline.freetime.title">Tempo Libero a Capri</span>
-                    <span class="optional-badge">Tassa extra</span>
-                  </h3>
-                  <p class="timeline-desc" data-translate="timeline.freetime.desc">Esplora la famosa Piazzetta, i Giardini di Augusto, Via Camerelle con le sue boutique di lusso, e Anacapri con il Monte Solaro (richiesta tassa di sbarco aggiuntiva).</p>
-                </div>
-              </div>
+    <!-- PRANZO OPZIONALE -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon optional">
+        <i class="bi bi-cup-straw"></i>
+      </div>
+      <div class="timeline-content optional">
+        <span class="timeline-time optional">Opzionale</span>
+        <h3 class="timeline-title">
+          <span data-translate="timeline.lunch.title">Pranzo al Ristorante sul Mare</span>
+          <span class="optional-badge">Non incluso</span>
+        </h3>
+        <p class="timeline-desc" data-translate="timeline.lunch.desc">Su richiesta, sosta per il pranzo in un ristorante sul mare con spiaggia privata per assaporare specialità locali.</p>
+      </div>
+    </div>
 
-              <!-- COSTRUZIONI STORICHE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-buildings"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">Pomeriggio</span>
-                  <h3 class="timeline-title" data-translate="timeline.architecture.title">Architettura dal Mare</h3>
-                  <p class="timeline-desc" data-translate="timeline.architecture.desc">Vista di antiche ville romane e moderne costruzioni che narrano la storia architettonica millenaria di Capri.</p>
-                </div>
-              </div>
+    <!-- GROTTA DELLO SMERALDO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon optional">
+        <i class="bi bi-brightness-alt-high"></i>
+      </div>
+      <div class="timeline-content optional">
+        <span class="timeline-time optional">Opzionale</span>
+        <h3 class="timeline-title">
+          <span data-translate="timeline.smeraldo.title">Grotta dello Smeraldo</span>
+          <span class="optional-badge">Non incluso</span>
+        </h3>
+        <p class="timeline-desc" data-translate="timeline.smeraldo.desc">Visita facoltativa della Grotta dello Smeraldo a Conca dei Marini, una cavità naturale invasa dal mare con riflessi verdi smeraldo.</p>
+      </div>
+    </div>
 
-              <!-- RITORNO -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-house-door"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">Tardo Pomeriggio</span>
-                  <h3 class="timeline-title" data-translate="timeline.return.title">Ritorno al Porto</h3>
-                  <p class="timeline-desc" data-translate="timeline.return.desc">Navigazione di rientro al porto di partenza nel tardo pomeriggio, con i ricordi di una giornata indimenticabile.</p>
-                </div>
-              </div>
+    <!-- AMALFI -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-building"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">Pomeriggio</span>
+        <h3 class="timeline-title" data-translate="timeline.amalfi.title">Arrivo ad Amalfi</h3>
+        <p class="timeline-desc" data-translate="timeline.amalfi.desc">Scopri la perla della Costiera Amalfitana, patrimonio UNESCO e una delle antiche repubbliche marinare d’Italia.</p>
+      </div>
+    </div>
 
-            </div>
-          </div>
+    <!-- TEMPO LIBERO AD AMALFI -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon optional">
+        <i class="bi bi-clock-history"></i>
+      </div>
+      <div class="timeline-content optional">
+        <span class="timeline-time optional">Opzionale</span>
+        <h3 class="timeline-title">
+          <span data-translate="timeline.freetime.amalfi">Tempo libero ad Amalfi</span>
+          <span class="optional-badge">Non incluso</span>
+        </h3>
+        <p class="timeline-desc" data-translate="timeline.freetime.amalfi.desc">Visita il celebre Duomo di Sant’Andrea e passeggi per la piazza principale, godendoti l’atmosfera della città.</p>
+      </div>
+    </div>
+
+    <!-- RITORNO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-house-door"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">Tardo Pomeriggio</span>
+        <h3 class="timeline-title" data-translate="timeline.return.title">Ritorno al Porto</h3>
+        <p class="timeline-desc" data-translate="timeline.return.desc">Navigazione di rientro al porto di partenza nel tardo pomeriggio, con i ricordi di una giornata indimenticabile lungo la Costiera Amalfitana.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
           <!-- GALLERIA FOTOGRAFICA (SPOSTATA ALLA FINE) -->
           <div class="gallery-section scroll-animate-scale">
@@ -1248,28 +353,6 @@
         <!-- SIDEBAR -->
         <div class="tour-sidebar">
 
-          <!-- PREZZO E PRENOTAZIONE -->
-          <div class="price-card scroll-animate-right">
-            <div class="price-header">
-              <div class="price-label" data-translate="price.from">A partire da</div>
-              <div class="price-amount">799€</div>
-            </div>
-
-            <ul class="price-features">
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.drinks">Bevande fredde incluse</span></li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.snacks">Snack a bordo</span></li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.towels">Teli mare personalizzati</span></li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.skipper">Skipper professionista</span></li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.private">Tour privato</span></li>
-            </ul>
-
-            <a href="https://wa.me/393316166512?text=Ciao!%20Vorrei%20prenotare%20il%20tour%20di%20Capri" 
-               class="cta-button"
-               target="_blank"
-               rel="noopener noreferrer">
-              <i class="bi bi-whatsapp"></i> <span data-translate="button.book">Prenota Ora</span>
-            </a>
-          </div>
 
           <!-- SERVIZI NON INCLUSI -->
           <div class="info-card scroll-animate-right">
@@ -1291,6 +374,29 @@
               <li><i class="bi bi-check2"></i> <span data-translate="tobring.sunglasses">Occhiali da sole</span></li>
               <li><i class="bi bi-check2"></i> <span data-translate="tobring.sunscreen">Crema solare</span></li>
             </ul>
+          </div>
+
+             <!-- PREZZO E PRENOTAZIONE -->
+          <div class="price-card scroll-animate-right">
+            <div class="price-header">
+              <div class="price-label" data-translate="price.from">A partire da</div>
+              <div class="price-amount">899€</div>
+            </div>
+
+            <ul class="price-features">
+              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.drinks">Bevande fredde incluse</span></li>
+              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.snacks">Snack a bordo</span></li>
+              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.towels">Teli mare personalizzati</span></li>
+              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.skipper">Skipper professionista</span></li>
+              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.private">Tour privato</span></li>
+            </ul>
+
+            <a href="https://wa.me/393316166512?text=Ciao!%20Vorrei%20prenotare%20il%20tour%20di%20Capri" 
+               class="cta-button"
+               target="_blank"
+               rel="noopener noreferrer">
+              <i class="bi bi-whatsapp"></i> <span data-translate="button.book">Prenota Ora</span>
+            </a>
           </div>
 
         </div>
@@ -1360,81 +466,195 @@
       scrollObserver.observe(el);
     });
 
-    // ==================== MULTILANGUAGE SYSTEM ====================
     const translations = {
-      it: {
-        'nav.tours': 'Tour',
-        'nav.about': 'Chi Siamo',
-        'nav.contact': 'Contatti',
-        'tour.badge': 'Tour Privato',
-        'tour.title': 'Tour Capri',
-        'tour.subtitle': 'Le grotte sono bocche spalancate che raccontano storie solo a chi si avventura ad esplorarle',
-        'tour.duration': 'Durata',
-        'tour.maxpeople': 'Max persone',
-        'tour.departure': 'Partenza',
-        'section.description': 'Descrizione del Tour',
-        'section.gallery': 'Galleria Fotografica',
-        'section.itinerary': 'Itinerario dell\'Escursione',
-        'content.desc1': 'Durante questo tour avrai l\'opportunità di immergerti nella bellezza naturale della così detta "isola azzurra", la quale è caratterizzata dalla presenza di varie grotte, le cui pareti assumono sfumature di colore uniche grazie alla luce del sole che filtra attraverso l\'acqua.',
-        'content.desc2': 'Questa strabiliante esperienza ti porterà a navigare attraverso le acque cristalline del Mar Tirreno, rivelando i tesori naturali e le meraviglie nascoste dell\'Isola più affascinante del Golfo di Napoli.',
-        'content.itinerary.intro': 'Scopri il percorso completo della tua giornata a Capri, dalle partenza fino al rientro al porto, attraverso tutte le meraviglie naturali dell\'isola azzurra.',
-        'price.from': 'A partire da',
-        'button.book': 'Prenota Ora',
-        'included.drinks': 'Bevande fredde incluse',
-        'included.snacks': 'Snack a bordo',
-        'included.towels': 'Teli mare personalizzati',
-        'included.skipper': 'Skipper professionista',
-        'included.private': 'Tour privato',
-        'notincluded.title': 'Non Incluso',
-        'notincluded.tax': 'Tasse di sbarco a Capri',
-        'notincluded.bluegrotto': 'Biglietto Grotta Azzurra',
-        'notincluded.lunch': 'Pranzo',
-        'tobring.title': 'Cosa Portare',
-        'tobring.swimsuit': 'Costume da bagno',
-        'tobring.camera': 'Macchina fotografica',
-        'tobring.hat': 'Cappello',
-        'tobring.sunglasses': 'Occhiali da sole',
-        'tobring.sunscreen': 'Crema solare'
-      },
-      en: {
-        'nav.tours': 'Tours',
-        'nav.about': 'About Us',
-        'nav.contact': 'Contact',
-        'tour.badge': 'Private Tour',
-        'tour.title': 'Capri Tour',
-        'tour.subtitle': 'The caves are wide-open mouths that tell stories only to those who venture to explore them',
-        'tour.duration': 'Duration',
-        'tour.maxpeople': 'Max people',
-        'tour.departure': 'Departure',
-        'section.description': 'Tour Description',
-        'section.gallery': 'Photo Gallery',
-        'section.itinerary': 'Tour Itinerary',
-        'content.desc1': 'During this tour you will have the opportunity to immerse yourself in the natural beauty of the so-called "blue island", which is characterized by the presence of various caves, whose walls take on unique shades of color thanks to the sunlight filtering through the water.',
-        'content.desc2': 'This amazing experience will take you sailing through the crystal-clear waters of the Tyrrhenian Sea, revealing the natural treasures and hidden wonders of the most fascinating island in the Gulf of Naples.',
-        'content.itinerary.intro': 'Discover the complete route of your day in Capri, from departure to return to the port, through all the natural wonders of the blue island.',
-        'price.from': 'From',
-        'button.book': 'Book Now'
-      },
-      es: {
-        'nav.tours': 'Tours',
-        'nav.about': 'Nosotros',
-        'nav.contact': 'Contacto',
-        'tour.badge': 'Tour Privado',
-        'tour.title': 'Tour Capri',
-        'tour.subtitle': 'Las cuevas son bocas abiertas que cuentan historias solo a quienes se aventuran a explorarlas',
-        'tour.duration': 'Duración',
-        'tour.maxpeople': 'Máx personas',
-        'tour.departure': 'Salida',
-        'section.description': 'Descripción del Tour',
-        'section.gallery': 'Galería Fotográfica',
-        'section.itinerary': 'Itinerario de la Excursión',
-        'content.desc1': 'Durante este tour tendrás la oportunidad de sumergirte en la belleza natural de la llamada "isla azul", que se caracteriza por la presencia de varias cuevas, cuyas paredes adquieren matices de color únicos gracias a la luz del sol que se filtra a través del agua.',
-        'content.desc2': 'Esta increíble experiencia te llevará a navegar por las aguas cristalinas del Mar Tirreno, revelando los tesoros naturales y las maravillas ocultas de la isla más fascinante del Golfo de Nápoles.',
-        'content.itinerary.intro': 'Descubre el recorrido completo de tu día en Capri, desde la salida hasta el regreso al puerto, a través de todas las maravillas naturales de la isla azul.',
-        'price.from': 'Desde',
-        'button.book': 'Reservar Ahora'
-      }
-    };
+  it: {
+    'nav.tours': 'Tour',
+    'nav.about': 'Chi Siamo',
+    'nav.contact': 'Contatti',
+    'tour.badge': 'Tour Privato',
+    'tour.title': 'Positano Amalfi',
+    'tour.subtitle': 'SE È VERO CHE UN PAESAGGIO È UNO STATO D\'ANIMO ALLORA PREPARATI ALLA FELICITÀ! Con questa escursione ammirerai l\'intera Costiera Amalfitana dal mare, restando affascinato dalla sua bellezza unica al mondo.',
+    'tour.duration': 'Durata',
+    'tour.maxpeople': 'Max persone',
+    'tour.departure': 'Partenza',
+    'section.description': 'Descrizione del Tour',
+    'content.desc1': 'Optando per questo tour, avrai l\'opportunità di viaggiare da Sorrento ad Amalfi e goderti gli incantevoli paesaggi lungo il tragitto,',
+    'content.desc2': '',
+    'section.itinerary': 'Itinerario dell\'Escursione',
+    'content.itinerary.intro': 'Scopri il percorso completo della tua giornata da Sorrento ad Amalfi, godendoti i paesaggi mozzafiato della Costa Amalfitana e le sue meraviglie naturali.',
+    'timeline.departure.title': 'Partenza dal Porto',
+    'timeline.departure.desc': 'Incontro con lo skipper all\'orario concordato. Porti disponibili: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.',
+    'timeline.coast.title': 'Esplorazione Costa Sorrentina',
+    'timeline.coast.desc': 'Ammira le scogliere di Punta Campanella e la Torre di Minerva, mentre navighiamo verso sud lungo la costa sorrentina.',
+    'timeline.bays.title': 'Baia di Ieranto e Tordigliano',
+    'timeline.bays.desc': 'Scorci naturali e incontaminati: la Baia di Ieranto e la Spiaggia di Tordigliano, piccoli paradisi nascosti tra le rocce della Costa Sorrentina.',
+    'timeline.positano.title': 'Arrivo a Positano',
+    'timeline.positano.desc': 'Scopri il famoso borgo marinaro visto dal mare, con le sue case colorate che risalgono le rocce calcaree, perfetto per foto da cartolina.',
+    'timeline.freetime.positano': 'Tempo libero a Positano',
+    'timeline.freetime.positano.desc': 'Passeggia tra i vicoli ricchi di negozi di artigianato locale e scopri la rinomata moda positanese.',
+    'timeline.praiano.title': 'Praiano e Furore',
+    'timeline.praiano.desc': 'Attraversa la costa di Praiano, con le sue caratteristiche cupole maiolicate, e il suggestivo fiordo di Furore, detto "il paese che non c\'è".',
+    'timeline.conca.title': 'Conca dei Marini',
+    'timeline.conca.desc': 'Un piccolo centro marinaro incastonato in uno scorcio panoramico di rara bellezza, con scorci mozzafiato sul mare.',
+    'timeline.galli.title': 'Arcipelago Li Galli',
+    'timeline.galli.desc': 'Passaggio tra i tre isolotti di Li Galli, legati alla mitologia greca e alle sirene che con il loro canto attirarono Ulisse.',
+    'timeline.swim.title': 'Bagno e Snorkeling',
+    'timeline.swim.desc': 'Soste lungo la costa per una nuotata rinfrescante e per fare snorkeling nelle acque cristalline della Costiera.',
+    'timeline.lunch.title': 'Pranzo al Ristorante sul Mare',
+    'timeline.lunch.desc': 'Su richiesta, sosta per il pranzo in un ristorante sul mare con spiaggia privata per assaporare specialità locali.',
+    'timeline.smeraldo.title': 'Grotta dello Smeraldo',
+    'timeline.smeraldo.desc': 'Visita facoltativa della Grotta dello Smeraldo a Conca dei Marini, una cavità naturale invasa dal mare con riflessi verdi smeraldo.',
+    'timeline.amalfi.title': 'Arrivo ad Amalfi',
+    'timeline.amalfi.desc': 'Scopri la perla della Costiera Amalfitana, patrimonio UNESCO e una delle antiche repubbliche marinare d\'Italia.',
+    'timeline.freetime.amalfi': 'Tempo libero ad Amalfi',
+    'timeline.freetime.amalfi.desc': 'Visita il celebre Duomo di Sant\'Andrea e passeggi per la piazza principale, godendoti l\'atmosfera della città.',
+    'timeline.return.title': 'Ritorno al Porto',
+    'timeline.return.desc': 'Navigazione di rientro al porto di partenza nel tardo pomeriggio, con i ricordi di una giornata indimenticabile lungo la Costiera Amalfitana.',
+    'section.gallery': 'Galleria Fotografica',
+    'notincluded.title': 'Non Incluso',
+    'notincluded.tax': 'Tasse di sbarco a Capri',
+    'notincluded.bluegrotto': 'Biglietto Grotta Azzurra',
+    'notincluded.lunch': 'Pranzo',
+    'tobring.title': 'Cosa Portare',
+    'tobring.swimsuit': 'Costume da bagno',
+    'tobring.camera': 'Macchina fotografica',
+    'tobring.hat': 'Cappello',
+    'tobring.sunglasses': 'Occhiali da sole',
+    'tobring.sunscreen': 'Crema solare',
+    'price.from': 'A partire da',
+    'included.drinks': 'Bevande fredde incluse',
+    'included.snacks': 'Snack a bordo',
+    'included.towels': 'Teli mare personalizzati',
+    'included.skipper': 'Skipper professionista',
+    'included.private': 'Tour privato',
+    'button.book': 'Prenota Ora'
+  },
+  en: {
+    'nav.tours': 'Tours',
+    'nav.about': 'About Us',
+    'nav.contact': 'Contact',
+    'tour.badge': 'Private Tour',
+    'tour.title': 'Positano Amalfi',
+    'tour.subtitle': 'IF IT\'S TRUE THAT A LANDSCAPE IS A STATE OF MIND THEN GET READY FOR HAPPINESS! With this excursion you will admire the entire Amalfi Coast from the sea, remaining fascinated by its unique beauty in the world.',
+    'tour.duration': 'Duration',
+    'tour.maxpeople': 'Max people',
+    'tour.departure': 'Departure',
+    'section.description': 'Tour Description',
+    'content.desc1': 'By choosing this tour, you will have the opportunity to travel from Sorrento to Amalfi and enjoy the enchanting landscapes along the way,',
+    'content.desc2': '',
+    'section.itinerary': 'Excursion Itinerary',
+    'content.itinerary.intro': 'Discover the complete route of your day from Sorrento to Amalfi, enjoying the breathtaking views of the Amalfi Coast and its natural wonders.',
+    'timeline.departure.title': 'Departure from Port',
+    'timeline.departure.desc': 'Meeting with the skipper at the agreed time. Available ports: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.',
+    'timeline.coast.title': 'Sorrento Coast Exploration',
+    'timeline.coast.desc': 'Admire the cliffs of Punta Campanella and the Tower of Minerva, as we sail south along the Sorrento coast.',
+    'timeline.bays.title': 'Ieranto Bay and Tordigliano',
+    'timeline.bays.desc': 'Natural and unspoiled views: Ieranto Bay and Tordigliano Beach, small hidden paradises among the rocks of the Sorrento Coast.',
+    'timeline.positano.title': 'Arrival in Positano',
+    'timeline.positano.desc': 'Discover the famous seaside village seen from the sea, with its colorful houses climbing the limestone rocks, perfect for postcard photos.',
+    'timeline.freetime.positano': 'Free time in Positano',
+    'timeline.freetime.positano.desc': 'Stroll through the alleys full of local craft shops and discover the renowned Positano fashion.',
+    'timeline.praiano.title': 'Praiano and Furore',
+    'timeline.praiano.desc': 'Cross the coast of Praiano, with its characteristic majolica domes, and the evocative fjord of Furore, called "the town that doesn\'t exist".',
+    'timeline.conca.title': 'Conca dei Marini',
+    'timeline.conca.desc': 'A small seaside center set in a panoramic view of rare beauty, with breathtaking views of the sea.',
+    'timeline.galli.title': 'Li Galli Archipelago',
+    'timeline.galli.desc': 'Passage between the three islets of Li Galli, linked to Greek mythology and the sirens who attracted Ulysses with their song.',
+    'timeline.swim.title': 'Swimming and Snorkeling',
+    'timeline.swim.desc': 'Stops along the coast for a refreshing swim and snorkeling in the crystal-clear waters of the Coast.',
+    'timeline.lunch.title': 'Lunch at Seaside Restaurant',
+    'timeline.lunch.desc': 'Upon request, stop for lunch at a seaside restaurant with private beach to savor local specialties.',
+    'timeline.smeraldo.title': 'Emerald Grotto',
+    'timeline.smeraldo.desc': 'Optional visit to the Emerald Grotto in Conca dei Marini, a natural cavity invaded by the sea with emerald green reflections.',
+    'timeline.amalfi.title': 'Arrival in Amalfi',
+    'timeline.amalfi.desc': 'Discover the pearl of the Amalfi Coast, UNESCO heritage and one of the ancient maritime republics of Italy.',
+    'timeline.freetime.amalfi': 'Free time in Amalfi',
+    'timeline.freetime.amalfi.desc': 'Visit the famous Cathedral of Sant\'Andrea and stroll through the main square, enjoying the atmosphere of the city.',
+    'timeline.return.title': 'Return to Port',
+    'timeline.return.desc': 'Return navigation to the departure port in the late afternoon, with memories of an unforgettable day along the Amalfi Coast.',
+    'section.gallery': 'Photo Gallery',
+    'notincluded.title': 'Not Included',
+    'notincluded.tax': 'Landing fees in Capri',
+    'notincluded.bluegrotto': 'Blue Grotto ticket',
+    'notincluded.lunch': 'Lunch',
+    'tobring.title': 'What to Bring',
+    'tobring.swimsuit': 'Swimsuit',
+    'tobring.camera': 'Camera',
+    'tobring.hat': 'Hat',
+    'tobring.sunglasses': 'Sunglasses',
+    'tobring.sunscreen': 'Sunscreen',
+    'price.from': 'From',
+    'included.drinks': 'Cold drinks included',
+    'included.snacks': 'Snacks on board',
+    'included.towels': 'Personalized beach towels',
+    'included.skipper': 'Professional skipper',
+    'included.private': 'Private tour',
+    'button.book': 'Book Now'
+  },
+  es: {
+    'nav.tours': 'Tours',
+    'nav.about': 'Nosotros',
+    'nav.contact': 'Contacto',
+    'tour.badge': 'Tour Privado',
+    'tour.title': 'Positano Amalfi',
+    'tour.subtitle': '¡SI ES VERDAD QUE UN PAISAJE ES UN ESTADO DE ÁNIMO ENTONCES PREPÁRATE PARA LA FELICIDAD! Con esta excursión admirarás toda la Costa Amalfitana desde el mar, quedando fascinado por su belleza única en el mundo.',
+    'tour.duration': 'Duración',
+    'tour.maxpeople': 'Máx personas',
+    'tour.departure': 'Salida',
+    'section.description': 'Descripción del Tour',
+    'content.desc1': 'Al optar por este tour, tendrás la oportunidad de viajar desde Sorrento a Amalfi y disfrutar de los encantadores paisajes en el camino,',
+    'content.desc2': '',
+    'section.itinerary': 'Itinerario de la Excursión',
+    'content.itinerary.intro': 'Descubre el recorrido completo de tu día desde Sorrento a Amalfi, disfrutando de las vistas impresionantes de la Costa Amalfitana y sus maravillas naturales.',
+    'timeline.departure.title': 'Salida del Puerto',
+    'timeline.departure.desc': 'Encuentro con el patrón a la hora acordada. Puertos disponibles: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.',
+    'timeline.coast.title': 'Exploración Costa Sorrentina',
+    'timeline.coast.desc': 'Admira los acantilados de Punta Campanella y la Torre de Minerva, mientras navegamos hacia el sur a lo largo de la costa sorrentina.',
+    'timeline.bays.title': 'Bahía de Ieranto y Tordigliano',
+    'timeline.bays.desc': 'Vistas naturales e intactas: la Bahía de Ieranto y la Playa de Tordigliano, pequeños paraísos escondidos entre las rocas de la Costa Sorrentina.',
+    'timeline.positano.title': 'Llegada a Positano',
+    'timeline.positano.desc': 'Descubre el famoso pueblo marinero visto desde el mar, con sus casas coloridas que escalan las rocas calizas, perfecto para fotos de postal.',
+    'timeline.freetime.positano': 'Tiempo libre en Positano',
+    'timeline.freetime.positano.desc': 'Pasea por los callejones llenos de tiendas de artesanía local y descubre la reconocida moda positanesa.',
+    'timeline.praiano.title': 'Praiano y Furore',
+    'timeline.praiano.desc': 'Atraviesa la costa de Praiano, con sus características cúpulas de mayólica, y el evocador fiordo de Furore, llamado "el pueblo que no existe".',
+    'timeline.conca.title': 'Conca dei Marini',
+    'timeline.conca.desc': 'Un pequeño centro marinero ubicado en un rincón panorámico de rara belleza, con vistas impresionantes al mar.',
+    'timeline.galli.title': 'Archipiélago Li Galli',
+    'timeline.galli.desc': 'Paso entre los tres islotes de Li Galli, vinculados a la mitología griega y a las sirenas que atrajeron a Ulises con su canto.',
+    'timeline.swim.title': 'Baño y Snorkel',
+    'timeline.swim.desc': 'Paradas a lo largo de la costa para un baño refrescante y hacer snorkel en las aguas cristalinas de la Costa.',
+    'timeline.lunch.title': 'Almuerzo en Restaurante junto al Mar',
+    'timeline.lunch.desc': 'Bajo petición, parada para almorzar en un restaurante junto al mar con playa privada para saborear especialidades locales.',
+    'timeline.smeraldo.title': 'Gruta Esmeralda',
+    'timeline.smeraldo.desc': 'Visita opcional a la Gruta Esmeralda en Conca dei Marini, una cavidad natural invadida por el mar con reflejos verde esmeralda.',
+    'timeline.amalfi.title': 'Llegada a Amalfi',
+    'timeline.amalfi.desc': 'Descubre la perla de la Costa Amalfitana, patrimonio de la UNESCO y una de las antiguas repúblicas marítimas de Italia.',
+    'timeline.freetime.amalfi': 'Tiempo libre en Amalfi',
+    'timeline.freetime.amalfi.desc': 'Visita la famosa Catedral de Sant\'Andrea y pasea por la plaza principal, disfrutando del ambiente de la ciudad.',
+    'timeline.return.title': 'Regreso al Puerto',
+    'timeline.return.desc': 'Navegación de regreso al puerto de salida por la tarde, con los recuerdos de un día inolvidable a lo largo de la Costa Amalfitana.',
+    'section.gallery': 'Galería Fotográfica',
+    'notincluded.title': 'No Incluido',
+    'notincluded.tax': 'Tasas de desembarco en Capri',
+    'notincluded.bluegrotto': 'Entrada Gruta Azul',
+    'notincluded.lunch': 'Almuerzo',
+    'tobring.title': 'Qué Llevar',
+    'tobring.swimsuit': 'Traje de baño',
+    'tobring.camera': 'Cámara fotográfica',
+    'tobring.hat': 'Sombrero',
+    'tobring.sunglasses': 'Gafas de sol',
+    'tobring.sunscreen': 'Protector solar',
+    'price.from': 'Desde',
+    'included.drinks': 'Bebidas frías incluidas',
+    'included.snacks': 'Snacks a bordo',
+    'included.towels': 'Toallas de playa personalizadas',
+    'included.skipper': 'Patrón profesional',
+    'included.private': 'Tour privado',
+    'button.book': 'Reservar Ahora'
+  }
+};
+
 
     let currentLang = 'it';
 

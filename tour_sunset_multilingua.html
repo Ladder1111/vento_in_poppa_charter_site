@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>Tour Capri | Escursione in Barca da Sorrento | Vento in Poppa Charter</title>
+  <title>SUNSET EXPERIENCE | Escursione in Barca da Sorrento | Vento in Poppa Charter</title>
   <meta name="description" content="Tour privato in barca a Capri: esplora i Faraglioni, la Grotta Azzurra e le meraviglie dell'isola. 7-8 ore con skipper, bevande e snack inclusi. 799€." />
   <meta name="keywords" content="tour Capri, escursione barca Capri, Grotta Azzurra, Faraglioni, gita barca Sorrento Capri" />
   <link rel="canonical" href="https://www.ventoinpoppacharter.com/tour-capri" />
@@ -124,13 +124,19 @@
     }
 
     .logo {
-      height: 42px;
-      font-size: var(--font-size-xl);
-      font-weight: 800;
-      color: var(--primary-blue);
-      display: flex;
-      align-items: center;
-    }
+  height: 42px;
+  width: auto;
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
 
     nav {
       display: flex;
@@ -954,10 +960,10 @@
 
   <!-- HEADER -->
   <header>
-    <div class="nav-wrapper">
-      <div class="logo">
-        Vento in Poppa
-      </div>
+     <div class="nav-wrapper">
+      <a href="/" class="logo" aria-label="Vento in Poppa Charter - Homepage">
+        <img src="immagini/logo-vento-in-poppa-charter.jpg" alt="Logo Vento in Poppa Charter" width="180" height="42">
+      </a>
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
@@ -992,8 +998,11 @@
 
       <div class="tour-hero-content">
         <span class="tour-badge" data-translate="tour.badge">Tour Privato</span>
-        <h1 class="tour-hero-title" data-translate="tour.title">Tour Capri</h1>
-        <p class="tour-hero-subtitle" data-translate="tour.subtitle">Le grotte sono bocche spalancate che raccontano storie solo a chi si avventura ad esplorarle</p>
+        <h1 class="tour-hero-title" data-translate="tour.title">SUNSET EXPERIENCE</h1>
+        <p class="tour-hero-subtitle" data-translate="tour.subtitle">
+          COLTIVA IL PIACERE DEI SENSI LASCIANDOTI TRASPORTARE IN UN VIAGGIO DI SCOPERTA E APPAGAMENTO.
+          Salpa con noi mentre il sole cala nel mare tingendo il cielo di tonalità calde e avvolgenti.
+        </p>
 
         <div class="tour-meta-box">
           <div class="meta-item">
@@ -1001,7 +1010,7 @@
               <i class="bi bi-clock"></i>
             </div>
             <span class="meta-label" data-translate="tour.duration">Durata</span>
-            <span class="meta-value">7-8h</span>
+            <span class="meta-value">2-3h</span>
           </div>
           <div class="meta-item">
             <div class="meta-icon">
@@ -1030,175 +1039,96 @@
           <!-- DESCRIZIONE -->
           <div class="tour-section scroll-animate">
             <h2><i class="bi bi-info-circle"></i> <span data-translate="section.description">Descrizione del Tour</span></h2>
-            <p data-translate="content.desc1">Durante questo tour avrai l'opportunità di immergerti nella bellezza naturale della così detta "isola azzurra", la quale è caratterizzata dalla presenza di varie grotte, le cui pareti assumono sfumature di colore uniche grazie alla luce del sole che filtra attraverso l'acqua.</p>
-            <p data-translate="content.desc2">Questa strabiliante esperienza ti porterà a navigare attraverso le acque cristalline del Mar Tirreno, rivelando i tesori naturali e le meraviglie nascoste dell'Isola più affascinante del Golfo di Napoli.</p>
+            <p data-translate="content.desc1">Questo è un viaggio sensoriale che coinvolgerà ogni fibra del tuo essere, lasciandoti immerso in un’atmosfera di pace e serenità. Il dondolio delle onde cullerà i tuoi pensieri permettendoti di godere appieno dello spettacolo mozzafiato offerto dal sole che si tufferà nell’orizzonte, dipingendo il cielo con sfumature dorate e rosate mentre il mare si tingerà di un blu profondo. Il vento ti accarezzerà delicatamente il viso, portando con sé il profumo salmastro del mare misto al dolce aroma dei limoneti che punteggiano la costa e il suono rilassante delle onde che si infrangono sulla scogliera creerà una colonna sonora naturale. A questo punto mancherà solo il gusto, a cui penseremo noi con un aperitivo davvero speciale.</p>
+            <p data-translate="content.desc2">Il tramonto a Sorrento è uno spettacolo incantevole che cattura l’anima di chiunque lo osservi. Situata sulla splendida costa amalfitana, Sorrento offre uno scenario unico dove il sole calante dipinge il cielo con tonalità ardenti di rosso, arancione e viola, mentre si riflette delicatamente sulle acque del Golfo di Napoli.</p>
           </div>
 
-          <!-- TIMELINE UNIFICATA -->
-          <div class="tour-section scroll-animate">
-            <h2><i class="bi bi-compass"></i> <span data-translate="section.itinerary">Itinerario dell'Escursione</span></h2>
-            <p data-translate="content.itinerary.intro">Scopri il percorso completo della tua giornata a Capri, dalle partenza fino al rientro al porto, attraverso tutte le meraviglie naturali dell'isola azzurra.</p>
+     <!-- TIMELINE UNIFICATA SERALE -->
+<div class="tour-section scroll-animate">
+  <h2><i class="bi bi-compass"></i> <span data-translate="section.itinerary">Itinerario dell'Escursione</span></h2>
+  <p data-translate="content.itinerary.intro">Scopri il percorso completo della tua serata sulla Costiera Sorrentina, dalla partenza al tramonto fino al rientro al porto, tra meraviglie naturali e aperitivo a bordo.</p>
 
-            <div class="timeline-container">
-              <div class="timeline-line"></div>
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
 
-              <!-- PARTENZA -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-geo-alt-fill"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">Mattina</span>
-                  <h3 class="timeline-title" data-translate="timeline.departure.title">Partenza dal Porto</h3>
-                  <p class="timeline-desc" data-translate="timeline.departure.desc">Incontro con lo skipper all'orario concordato. Porti disponibili: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.</p>
-                </div>
-              </div>
+    <!-- PARTENZA -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-geo-alt-fill"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">18:30</span>
+        <h3 class="timeline-title" data-translate="timeline.departure.title">Partenza dal Porto</h3>
+        <p class="timeline-desc" data-translate="timeline.departure.desc">Incontro con lo skipper professionista, autorizzato e bilingue. Porti disponibili: Sorrento, Massalubrense.</p>
+      </div>
+    </div>
 
-              <!-- COSTA SORRENTINA -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-water"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">9:30 - 10:00</span>
-                  <h3 class="timeline-title" data-translate="timeline.coast.title">Esplorazione Costa Sorrentina</h3>
-                  <p class="timeline-desc" data-translate="timeline.coast.desc">Ammira le scogliere mozzafiato e le acque cristalline della penisola mentre navighiamo verso Capri.</p>
-                </div>
-              </div>
+    <!-- COSTA SORRENTINA -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-water"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">18:30 - 19:15</span>
+        <h3 class="timeline-title" data-translate="timeline.coast.title">Tour della Costiera Sorrentina</h3>
+        <p class="timeline-desc" data-translate="timeline.coast.desc">Navigazione lungo le scogliere mozzafiato, passando per Marina Grande, Bagni della Regina Giovanna, Punta Campanella e baie nascoste mentre il sole cala.</p>
+      </div>
+    </div>
 
-              <!-- NAVIGAZIONE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-compass"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">10:00 - 10:30</span>
-                  <h3 class="timeline-title" data-translate="timeline.navigation.title">Navigazione verso Capri</h3>
-                  <p class="timeline-desc" data-translate="timeline.navigation.desc">Attraverso il Mar Tirreno con il nostro skipper professionista e bilingue, godendo della brezza marina.</p>
-                </div>
-              </div>
+    <!-- BAGNO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-droplet"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">19:15 - 20:00</span>
+        <h3 class="timeline-title" data-translate="timeline.swim.title">Sosta per il Bagno</h3>
+        <p class="timeline-desc" data-translate="timeline.swim.desc">Relaxante bagno nelle acque cristalline di una baia suggestiva, con attrezzatura snorkeling e teli mare forniti.</p>
+      </div>
+    </div>
 
-              <!-- FARAGLIONI -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-stars"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">10:30 - 11:00</span>
-                  <h3 class="timeline-title" data-translate="timeline.faraglioni.title">I Faraglioni</h3>
-                  <p class="timeline-desc" data-translate="timeline.faraglioni.desc">I guardiani dell'isola: tre maestose formazioni rocciose che emergono dal mare, ognuna con caratteristiche uniche e foto panoramiche mozzafiato.</p>
-                </div>
-              </div>
+    <!-- APERITIVO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-cup-straw"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">20:00 - 20:30</span>
+        <h3 class="timeline-title" data-translate="timeline.apero.title">Aperitivo a Bordo</h3>
+        <p class="timeline-desc" data-translate="timeline.apero.desc">Prosecco, snack, frutta fresca e musica mentre ammiri il tramonto spettacolare sulla costa.</p>
+      </div>
+    </div>
 
-              <!-- PUNTA TRAGARA -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-eye"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">11:00 - 11:15</span>
-                  <h3 class="timeline-title" data-translate="timeline.tragara.title">Punta Tragara</h3>
-                  <p class="timeline-desc" data-translate="timeline.tragara.desc">Belvedere naturale con vista spettacolare dall'alto dei Faraglioni e della costa caprese.</p>
-                </div>
-              </div>
+    <!-- OPZIONALE PROLUNGAMENTO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon optional">
+        <i class="bi bi-stars"></i>
+      </div>
+      <div class="timeline-content optional">
+        <span class="timeline-time optional">Su Richiesta (+2h)</span>
+        <h3 class="timeline-title">
+          <span data-translate="timeline.prolung.title">Prolungamento a Capri/Nerano</span>
+          <span class="optional-badge">Cena Extra</span>
+        </h3>
+        <p class="timeline-desc" data-translate="timeline.prolung.desc">Raggiungi Capri dopo tramonto o Nerano per cena in romantico ristorante sul mare (durata minima +2 ore, costo aggiuntivo).</p>
+      </div>
+    </div>
 
-              <!-- ARCO NATURALE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-brightness-high"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">11:15 - 11:30</span>
-                  <h3 class="timeline-title" data-translate="timeline.arco.title">Arco Naturale</h3>
-                  <p class="timeline-desc" data-translate="timeline.arco.desc">Maestosa opera della natura che ti lascerà senza parole per la sua grandiosità e bellezza selvaggia.</p>
-                </div>
-              </div>
+    <!-- RIENTRO -->
+    <div class="timeline-item scroll-animate-left">
+      <div class="timeline-icon highlight">
+        <i class="bi bi-house-door"></i>
+      </div>
+      <div class="timeline-content">
+        <span class="timeline-time">20:30 / 22:30+</span>
+        <h3 class="timeline-title" data-translate="timeline.return.title">Rientro al Porto</h3>
+        <p class="timeline-desc" data-translate="timeline.return.desc">Navigazione di rientro al porto di partenza con i ricordi di una serata indimenticabile sotto le stelle.</p>
+      </div>
+    </div>
 
-              <!-- GROTTE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-brightness-alt-high"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">11:30 - 12:30</span>
-                  <h3 class="timeline-title" data-translate="timeline.grottoes.title">Tour delle Grotte</h3>
-                  <p class="timeline-desc" data-translate="timeline.grottoes.desc">
-                    <strong>Grotta Rossa</strong> (del Corallo) con i suoi caratteristici coralli rossi.<br>
-                    <strong>Grotta Azzurra</strong> (facoltativa, non inclusa) famosa per il colore blu intenso.<br>
-                    <strong>Grotta Verde</strong> con le acque color smeraldo.<br>
-                    <strong>Grotta Bianca</strong> dalle pareti di tufo chiaro.
-                  </p>
-                </div>
-              </div>
+  </div>
+</div>
 
-              <!-- BAGNO -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-droplet"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">12:30 - 13:30</span>
-                  <h3 class="timeline-title" data-translate="timeline.swim.title">Bagno nelle Baie</h3>
-                  <p class="timeline-desc" data-translate="timeline.swim.desc">Sosta in una delle splendide baie di Capri per un rilassante bagno nelle acque azzurro cobalto cristalline.</p>
-                </div>
-              </div>
-
-              <!-- PRANZO OPZIONALE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon optional">
-                  <i class="bi bi-cup-straw"></i>
-                </div>
-                <div class="timeline-content optional">
-                  <span class="timeline-time optional">Opzionale</span>
-                  <h3 class="timeline-title">
-                    <span data-translate="timeline.lunch.title">Pranzo al Ristorante</span>
-                    <span class="optional-badge">Non incluso</span>
-                  </h3>
-                  <p class="timeline-desc" data-translate="timeline.lunch.desc">Su richiesta, sosta per il pranzo in un caratteristico ristorante accessibile solo via mare, per gustare specialità locali.</p>
-                </div>
-              </div>
-
-              <!-- TEMPO LIBERO OPZIONALE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon optional">
-                  <i class="bi bi-clock-history"></i>
-                </div>
-                <div class="timeline-content optional">
-                  <span class="timeline-time optional">Opzionale</span>
-                  <h3 class="timeline-title">
-                    <span data-translate="timeline.freetime.title">Tempo Libero a Capri</span>
-                    <span class="optional-badge">Tassa extra</span>
-                  </h3>
-                  <p class="timeline-desc" data-translate="timeline.freetime.desc">Esplora la famosa Piazzetta, i Giardini di Augusto, Via Camerelle con le sue boutique di lusso, e Anacapri con il Monte Solaro (richiesta tassa di sbarco aggiuntiva).</p>
-                </div>
-              </div>
-
-              <!-- COSTRUZIONI STORICHE -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon">
-                  <i class="bi bi-buildings"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">Pomeriggio</span>
-                  <h3 class="timeline-title" data-translate="timeline.architecture.title">Architettura dal Mare</h3>
-                  <p class="timeline-desc" data-translate="timeline.architecture.desc">Vista di antiche ville romane e moderne costruzioni che narrano la storia architettonica millenaria di Capri.</p>
-                </div>
-              </div>
-
-              <!-- RITORNO -->
-              <div class="timeline-item scroll-animate-left">
-                <div class="timeline-icon highlight">
-                  <i class="bi bi-house-door"></i>
-                </div>
-                <div class="timeline-content">
-                  <span class="timeline-time">Tardo Pomeriggio</span>
-                  <h3 class="timeline-title" data-translate="timeline.return.title">Ritorno al Porto</h3>
-                  <p class="timeline-desc" data-translate="timeline.return.desc">Navigazione di rientro al porto di partenza nel tardo pomeriggio, con i ricordi di una giornata indimenticabile.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
 
           <!-- GALLERIA FOTOGRAFICA (SPOSTATA ALLA FINE) -->
           <div class="gallery-section scroll-animate-scale">
@@ -1252,7 +1182,7 @@
           <div class="price-card scroll-animate-right">
             <div class="price-header">
               <div class="price-label" data-translate="price.from">A partire da</div>
-              <div class="price-amount">799€</div>
+              <div class="price-amount">299€</div>
             </div>
 
             <ul class="price-features">
@@ -1361,80 +1291,235 @@
     });
 
     // ==================== MULTILANGUAGE SYSTEM ====================
-    const translations = {
-      it: {
-        'nav.tours': 'Tour',
-        'nav.about': 'Chi Siamo',
-        'nav.contact': 'Contatti',
-        'tour.badge': 'Tour Privato',
-        'tour.title': 'Tour Capri',
-        'tour.subtitle': 'Le grotte sono bocche spalancate che raccontano storie solo a chi si avventura ad esplorarle',
-        'tour.duration': 'Durata',
-        'tour.maxpeople': 'Max persone',
-        'tour.departure': 'Partenza',
-        'section.description': 'Descrizione del Tour',
-        'section.gallery': 'Galleria Fotografica',
-        'section.itinerary': 'Itinerario dell\'Escursione',
-        'content.desc1': 'Durante questo tour avrai l\'opportunità di immergerti nella bellezza naturale della così detta "isola azzurra", la quale è caratterizzata dalla presenza di varie grotte, le cui pareti assumono sfumature di colore uniche grazie alla luce del sole che filtra attraverso l\'acqua.',
-        'content.desc2': 'Questa strabiliante esperienza ti porterà a navigare attraverso le acque cristalline del Mar Tirreno, rivelando i tesori naturali e le meraviglie nascoste dell\'Isola più affascinante del Golfo di Napoli.',
-        'content.itinerary.intro': 'Scopri il percorso completo della tua giornata a Capri, dalle partenza fino al rientro al porto, attraverso tutte le meraviglie naturali dell\'isola azzurra.',
-        'price.from': 'A partire da',
-        'button.book': 'Prenota Ora',
-        'included.drinks': 'Bevande fredde incluse',
-        'included.snacks': 'Snack a bordo',
-        'included.towels': 'Teli mare personalizzati',
-        'included.skipper': 'Skipper professionista',
-        'included.private': 'Tour privato',
-        'notincluded.title': 'Non Incluso',
-        'notincluded.tax': 'Tasse di sbarco a Capri',
-        'notincluded.bluegrotto': 'Biglietto Grotta Azzurra',
-        'notincluded.lunch': 'Pranzo',
-        'tobring.title': 'Cosa Portare',
-        'tobring.swimsuit': 'Costume da bagno',
-        'tobring.camera': 'Macchina fotografica',
-        'tobring.hat': 'Cappello',
-        'tobring.sunglasses': 'Occhiali da sole',
-        'tobring.sunscreen': 'Crema solare'
-      },
-      en: {
-        'nav.tours': 'Tours',
-        'nav.about': 'About Us',
-        'nav.contact': 'Contact',
-        'tour.badge': 'Private Tour',
-        'tour.title': 'Capri Tour',
-        'tour.subtitle': 'The caves are wide-open mouths that tell stories only to those who venture to explore them',
-        'tour.duration': 'Duration',
-        'tour.maxpeople': 'Max people',
-        'tour.departure': 'Departure',
-        'section.description': 'Tour Description',
-        'section.gallery': 'Photo Gallery',
-        'section.itinerary': 'Tour Itinerary',
-        'content.desc1': 'During this tour you will have the opportunity to immerse yourself in the natural beauty of the so-called "blue island", which is characterized by the presence of various caves, whose walls take on unique shades of color thanks to the sunlight filtering through the water.',
-        'content.desc2': 'This amazing experience will take you sailing through the crystal-clear waters of the Tyrrhenian Sea, revealing the natural treasures and hidden wonders of the most fascinating island in the Gulf of Naples.',
-        'content.itinerary.intro': 'Discover the complete route of your day in Capri, from departure to return to the port, through all the natural wonders of the blue island.',
-        'price.from': 'From',
-        'button.book': 'Book Now'
-      },
-      es: {
-        'nav.tours': 'Tours',
-        'nav.about': 'Nosotros',
-        'nav.contact': 'Contacto',
-        'tour.badge': 'Tour Privado',
-        'tour.title': 'Tour Capri',
-        'tour.subtitle': 'Las cuevas son bocas abiertas que cuentan historias solo a quienes se aventuran a explorarlas',
-        'tour.duration': 'Duración',
-        'tour.maxpeople': 'Máx personas',
-        'tour.departure': 'Salida',
-        'section.description': 'Descripción del Tour',
-        'section.gallery': 'Galería Fotográfica',
-        'section.itinerary': 'Itinerario de la Excursión',
-        'content.desc1': 'Durante este tour tendrás la oportunidad de sumergirte en la belleza natural de la llamada "isla azul", que se caracteriza por la presencia de varias cuevas, cuyas paredes adquieren matices de color únicos gracias a la luz del sol que se filtra a través del agua.',
-        'content.desc2': 'Esta increíble experiencia te llevará a navegar por las aguas cristalinas del Mar Tirreno, revelando los tesoros naturales y las maravillas ocultas de la isla más fascinante del Golfo de Nápoles.',
-        'content.itinerary.intro': 'Descubre el recorrido completo de tu día en Capri, desde la salida hasta el regreso al puerto, a través de todas las maravillas naturales de la isla azul.',
-        'price.from': 'Desde',
-        'button.book': 'Reservar Ahora'
-      }
-    };
+   const translations = {
+  it: {
+    // HEADER
+    'logo': 'Vento in Poppa',
+    'nav.tours': 'Tour',
+    'nav.about': 'Chi Siamo',
+    'nav.contact': 'Contatti',
+    
+    // HERO SECTION
+    'tour.badge': 'Tour Privato',
+    'tour.title': 'SUNSET EXPERIENCE',
+    'tour.subtitle': 'COLTIVA IL PIACERE DEI SENSI LASCIANDOTI TRASPORTARE IN UN VIAGGIO DI SCOPERTA E APPAGAMENTO.\nSalpa con noi mentre il sole cala nel mare tingendo il cielo di tonalità calde e avvolgenti.',
+    'tour.duration': 'Durata',
+    'tour.maxpeople': 'Max persone',
+    'tour.departure': 'Partenza',
+    
+    // SECTIONS
+    'section.description': 'Descrizione del Tour',
+    'section.itinerary': 'Itinerario dell\'Escursione',
+    'section.gallery': 'Galleria Fotografica',
+    
+    // CONTENT
+    'content.desc1': 'Questo è un viaggio sensoriale che coinvolgerà ogni fibra del tuo essere, lasciandoti immerso in un’atmosfera di pace e serenità. Il dondolio delle onde cullerà i tuoi pensieri permettendoti di godere appieno dello spettacolo mozzafiato offerto dal sole che si tufferà nell’orizzonte, dipingendo il cielo con sfumature dorate e rosate mentre il mare si tingerà di un blu profondo. Il vento ti accarezzerà delicatamente il viso, portando con sé il profumo salmastro del mare misto al dolce aroma dei limoneti che punteggiano la costa e il suono rilassante delle onde che si infrangono sulla scogliera creerà una colonna sonora naturale. A questo punto mancherà solo il gusto, a cui penseremo noi con un aperitivo davvero speciale.',
+    'content.desc2': 'Il tramonto a Sorrento è uno spettacolo incantevole che cattura l’anima di chiunque lo osservi. Situata sulla splendida costa amalfitana, Sorrento offre uno scenario unico dove il sole calante dipinge il cielo con tonalità ardenti di rosso, arancione e viola, mentre si riflette delicatamente sulle acque del Golfo di Napoli.',
+    'content.itinerary.intro': 'Scopri il percorso completo della tua serata sulla Costiera Sorrentina, dalla partenza al tramonto fino al rientro al porto, tra meraviglie naturali e aperitivo a bordo.',
+    
+    // TIMELINE
+    'timeline.departure.title': 'Partenza dal Porto',
+    'timeline.departure.desc': 'Incontro con lo skipper professionista, autorizzato e bilingue. Porti disponibili: Sorrento, Massalubrense.',
+    'timeline.coast.title': 'Tour della Costiera Sorrentina',
+    'timeline.coast.desc': 'Navigazione lungo le scogliere mozzafiato, passando per Marina Grande, Bagni della Regina Giovanna, Punta Campanella e baie nascoste mentre il sole cala.',
+    'timeline.swim.title': 'Sosta per il Bagno',
+    'timeline.swim.desc': 'Relaxante bagno nelle acque cristalline di una baia suggestiva, con attrezzatura snorkeling e teli mare forniti.',
+    'timeline.apero.title': 'Aperitivo a Bordo',
+    'timeline.apero.desc': 'Prosecco, snack, frutta fresca e musica mentre ammiri il tramonto spettacolare sulla costa.',
+    'timeline.prolung.title': 'Prolungamento a Capri/Nerano',
+    'timeline.prolung.desc': 'Raggiungi Capri dopo tramonto o Nerano per cena in romantico ristorante sul mare (durata minima +2 ore, costo aggiuntivo).',
+    'timeline.return.title': 'Rientro al Porto',
+    'timeline.return.desc': 'Navigazione di rientro al porto di partenza con i ricordi di una serata indimenticabile sotto le stelle.',
+    
+    // GALLERY CAPTIONS
+    'gallery.faraglioni': 'I Faraglioni',
+    'gallery.grottazzurra': 'Grotta Azzurra',
+    'gallery.costacapri': 'Costa di Capri',
+    'gallery.acquecristalline': 'Acque cristalline',
+    'gallery.tourbarca': 'Tour in barca',
+    'gallery.tramontomagico': 'Tramonto magico',
+    
+    // PRICE & BOOKING
+    'price.from': 'A partire da',
+    'button.book': 'Prenota Ora',
+    
+    // INCLUDED
+    'included.drinks': 'Bevande fredde incluse',
+    'included.snacks': 'Snack a bordo',
+    'included.towels': 'Teli mare personalizzati',
+    'included.skipper': 'Skipper professionista',
+    'included.private': 'Tour privato',
+    
+    // NOT INCLUDED
+    'notincluded.title': 'Non Incluso',
+    'notincluded.tax': 'Tasse di sbarco a Capri',
+    'notincluded.bluegrotto': 'Biglietto Grotta Azzurra',
+    'notincluded.lunch': 'Pranzo',
+    
+    // WHAT TO BRING
+    'tobring.title': 'Cosa Portare',
+    'tobring.swimsuit': 'Costume da bagno',
+    'tobring.camera': 'Macchina fotografica',
+    'tobring.hat': 'Cappello',
+    'tobring.sunglasses': 'Occhiali da sole',
+    'tobring.sunscreen': 'Crema solare',
+    
+    // WHATSAPP
+    'whatsapp.label': 'Contattaci su WhatsApp'
+  },
+  en: {
+    // HEADER
+    'logo': 'Fair Wind',
+    'nav.tours': 'Tours',
+    'nav.about': 'About Us',
+    'nav.contact': 'Contact',
+    
+    // HERO SECTION
+    'tour.badge': 'Private Tour',
+    'tour.title': 'SUNSET EXPERIENCE',
+    'tour.subtitle': 'CULTIVATE THE PLEASURE OF YOUR SENSES LETTING YOURSELF BE CARRIED AWAY ON A JOURNEY OF DISCOVERY AND SATISFACTION.\nSet sail with us as the sun sets over the sea, painting the sky in warm and enveloping hues.',
+    'tour.duration': 'Duration',
+    'tour.maxpeople': 'Max people',
+    'tour.departure': 'Departure',
+    
+    // SECTIONS
+    'section.description': 'Tour Description',
+    'section.itinerary': 'Excursion Itinerary',
+    'section.gallery': 'Photo Gallery',
+    
+    // CONTENT
+    'content.desc1': 'This is a sensory journey that will engage every fiber of your being, leaving you immersed in an atmosphere of peace and serenity. The rocking of the waves will cradle your thoughts, allowing you to fully enjoy the breathtaking spectacle offered by the sun diving into the horizon, painting the sky with golden and pink hues while the sea takes on a deep blue. The wind will gently caress your face, bringing with it the salty scent of the sea mixed with the sweet aroma of lemon groves dotting the coast, and the relaxing sound of waves crashing against the cliffs will create a natural soundtrack. At this point, only taste will be missing, which we will take care of with a truly special aperitif.',
+    'content.desc2': 'The sunset in Sorrento is an enchanting spectacle that captures the soul of anyone who watches it. Located on the stunning Amalfi Coast, Sorrento offers a unique scenario where the setting sun paints the sky with fiery shades of red, orange, and purple, gently reflecting on the waters of the Gulf of Naples.',
+    'content.itinerary.intro': 'Discover the complete route of your evening on the Sorrentine Coast, from departure to sunset and return to the port, among natural wonders and aperitif on board.',
+    
+    // TIMELINE
+    'timeline.departure.title': 'Departure from Port',
+    'timeline.departure.desc': 'Meet with the professional, authorized, bilingual skipper. Available ports: Sorrento, Massalubrense.',
+    'timeline.coast.title': 'Sorrento Coast Tour',
+    'timeline.coast.desc': 'Navigation along breathtaking cliffs, passing Marina Grande, Bagni della Regina Giovanna, Punta Campanella, and hidden bays while the sun sets.',
+    'timeline.swim.title': 'Swimming Stop',
+    'timeline.swim.desc': 'Relaxing swim in the crystal-clear waters of a suggestive bay, with snorkeling equipment and beach towels provided.',
+    'timeline.apero.title': 'Aperitif on Board',
+    'timeline.apero.desc': 'Prosecco, snacks, fresh fruit, and music while you admire the spectacular sunset over the coast.',
+    'timeline.prolung.title': 'Extension to Capri/Nerano',
+    'timeline.prolung.desc': 'Reach Capri after sunset or Nerano for dinner in a romantic seaside restaurant (minimum +2 hours duration, additional cost).',
+    'timeline.return.title': 'Return to Port',
+    'timeline.return.desc': 'Return navigation to the departure port with memories of an unforgettable evening under the stars.',
+    
+    // GALLERY CAPTIONS
+    'gallery.faraglioni': 'The Faraglioni',
+    'gallery.grottazzurra': 'Blue Grotto',
+    'gallery.costacapri': 'Capri Coast',
+    'gallery.acquecristalline': 'Crystal Clear Waters',
+    'gallery.tourbarca': 'Boat Tour',
+    'gallery.tramontomagico': 'Magic Sunset',
+    
+    // PRICE & BOOKING
+    'price.from': 'From',
+    'button.book': 'Book Now',
+    
+    // INCLUDED
+    'included.drinks': 'Cold drinks included',
+    'included.snacks': 'Onboard snacks',
+    'included.towels': 'Personalized beach towels',
+    'included.skipper': 'Professional skipper',
+    'included.private': 'Private tour',
+    
+    // NOT INCLUDED
+    'notincluded.title': 'Not Included',
+    'notincluded.tax': 'Capri landing taxes',
+    'notincluded.bluegrotto': 'Blue Grotto ticket',
+    'notincluded.lunch': 'Lunch',
+    
+    // WHAT TO BRING
+    'tobring.title': 'What to Bring',
+    'tobring.swimsuit': 'Swimsuit',
+    'tobring.camera': 'Camera',
+    'tobring.hat': 'Hat',
+    'tobring.sunglasses': 'Sunglasses',
+    'tobring.sunscreen': 'Sunscreen',
+    
+    // WHATSAPP
+    'whatsapp.label': 'Contact us on WhatsApp'
+  },
+  es: {
+    // HEADER
+    'logo': 'Viento en Popa',
+    'nav.tours': 'Tours',
+    'nav.about': 'Sobre Nosotros',
+    'nav.contact': 'Contacto',
+    
+    // HERO SECTION
+    'tour.badge': 'Tour Privado',
+    'tour.title': 'EXPERIENCIA ATARDECER',
+    'tour.subtitle': 'CULTIVA EL PLACER DE LOS SENTIDOS DEJÁNDOTE LLEVAR EN UN VIAJE DE DESCUBRIMIENTO Y SATISFACCIÓN.\nZarpa con nosotros mientras el sol se pone en el mar tiñendo el cielo de tonos cálidos y envolventes.',
+    'tour.duration': 'Duración',
+    'tour.maxpeople': 'Máx personas',
+    'tour.departure': 'Salida',
+    
+    // SECTIONS
+    'section.description': 'Descripción del Tour',
+    'section.itinerary': 'Itinerario de la Excursión',
+    'section.gallery': 'Galería Fotográfica',
+    
+    // CONTENT
+    'content.desc1': 'Este es un viaje sensorial que involucrará cada fibra de tu ser, dejándote inmerso en una atmósfera de paz y serenidad. El balanceo de las olas acunará tus pensamientos permitiéndote disfrutar plenamente del espectáculo impresionante que ofrece el sol que se sumerge en el horizonte, pintando el cielo con matices dorados y rosados mientras el mar se tiñe de un azul profundo. El viento acariciará suavemente tu rostro, trayendo consigo el aroma salado del mar mezclado con el dulce aroma de los limoneros que salpican la costa y el sonido relajante de las olas que rompen contra los acantilados creará una banda sonora natural. En este punto solo faltará el gusto, del cual nos encargaremos nosotros con un aperitivo realmente especial.',
+    'content.desc2': 'El atardecer en Sorrento es un espectáculo encantador que captura el alma de quien lo observa. Ubicada en la impresionante costa amalfitana, Sorrento ofrece un escenario único donde el sol poniente pinta el cielo con tonos ardientes de rojo, naranja y púrpura, reflejándose delicadamente en las aguas del Golfo de Nápoles.',
+    'content.itinerary.intro': 'Descubre el recorrido completo de tu velada en la Costa Sorrentina, desde la salida hasta el atardecer y el regreso al puerto, entre maravillas naturales y aperitivo a bordo.',
+    
+    // TIMELINE
+    'timeline.departure.title': 'Salida del Puerto',
+    'timeline.departure.desc': 'Encuentro con el patrón profesional, autorizado y bilingüe. Puertos disponibles: Sorrento, Massalubrense.',
+    'timeline.coast.title': 'Tour de la Costa Sorrentina',
+    'timeline.coast.desc': 'Navegación a lo largo de acantilados impresionantes, pasando por Marina Grande, Bagni della Regina Giovanna, Punta Campanella y calas escondidas mientras se pone el sol.',
+    'timeline.swim.title': 'Parada para Baño',
+    'timeline.swim.desc': 'Baño relajante en las aguas cristalinas de una cala sugestiva, con equipo de snorkel y toallas de playa proporcionados.',
+    'timeline.apero.title': 'Aperitivo a Bordo',
+    'timeline.apero.desc': 'Prosecco, snacks, fruta fresca y música mientras admiras el espectacular atardecer sobre la costa.',
+    'timeline.prolung.title': 'Prolongación a Capri/Nerano',
+    'timeline.prolung.desc': 'Llega a Capri después del atardecer o Nerano para cenar en un romántico restaurante frente al mar (duración mínima +2 horas, coste adicional).',
+    'timeline.return.title': 'Regreso al Puerto',
+    'timeline.return.desc': 'Navegación de regreso al puerto de salida con los recuerdos de una velada inolvidable bajo las estrellas.',
+    
+    // GALLERY CAPTIONS
+    'gallery.faraglioni': 'Los Faraglioni',
+    'gallery.grottazzurra': 'Gruta Azul',
+    'gallery.costacapri': 'Costa de Capri',
+    'gallery.acquecristalline': 'Aguas cristalinas',
+    'gallery.tourbarca': 'Tour en barco',
+    'gallery.tramontomagico': 'Atardecer mágico',
+    
+    // PRICE & BOOKING
+    'price.from': 'Desde',
+    'button.book': 'Reservar Ahora',
+    
+    // INCLUDED
+    'included.drinks': 'Bebidas frías incluidas',
+    'included.snacks': 'Snacks a bordo',
+    'included.towels': 'Toallas de playa personalizadas',
+    'included.skipper': 'Patrón profesional',
+    'included.private': 'Tour privado',
+    
+    // NOT INCLUDED
+    'notincluded.title': 'No Incluido',
+    'notincluded.tax': 'Impuestos de desembarco en Capri',
+    'notincluded.bluegrotto': 'Entrada Gruta Azul',
+    'notincluded.lunch': 'Almuerzo',
+    
+    // WHAT TO BRING
+    'tobring.title': 'Qué Llevar',
+    'tobring.swimsuit': 'Bañador',
+    'tobring.camera': 'Cámara fotográfica',
+    'tobring.hat': 'Sombrero',
+    'tobring.sunglasses': 'Gafas de sol',
+    'tobring.sunscreen': 'Protector solar',
+    
+    // WHATSAPP
+    'whatsapp.label': 'Contáctanos por WhatsApp'
+  }
+};
+
+    
 
     let currentLang = 'it';
 
