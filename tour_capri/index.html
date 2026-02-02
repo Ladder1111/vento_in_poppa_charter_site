@@ -169,6 +169,7 @@
 
   <!-- Stylesheet -->
 <link rel="stylesheet" href="../css/detail.css">
+<link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
@@ -177,7 +178,7 @@
   <header>
     <div class="nav-wrapper">
       <a href="/" class="logo" aria-label="Vento in Poppa Charter - Homepage">
-        <img src=".../immagini/logo-vento-in-poppa-charter.jpg" alt="Logo Vento in Poppa Charter - Escursioni in Barca Sorrento" width="180" height="42" loading="eager" />
+        <img src="../immagini/logo-vento-in-poppa-charter.jpg" alt="Logo Vento in Poppa Charter - Escursioni in Barca Sorrento" width="180" height="42" loading="eager" />
       </a>
       <nav aria-label="Menu principale">
         <ul>
@@ -205,14 +206,11 @@
     <!-- HERO SECTION CON SLIDER -->
     <section class="tour-hero" aria-label="Introduzione tour Capri">
       <div class="hero-slider" aria-hidden="true">
-        <div class="hero-slide active"></div>
-        <div class="hero-slide slide-2"></div>
-        <div class="hero-slide slide-3"></div>
-        <div class="hero-slide slide-4"></div>
+        <div class="hero-slide active" style="background-image:url('../immagini/capri_tour_faraglioni.jpg');"></div>
+        <div class="hero-slide slide-2"  style="background-image:url('../immagini/faraglioni-g801b2d316_1920.jpg');"></div>
       </div>
 
       <div class="tour-hero-content">
-        <span class="tour-badge" data-translate="tour.badge">Tour Privato</span>
         <h1 class="tour-hero-title" data-translate="tour.title">Tour Capri</h1>
         <p class="tour-hero-subtitle" data-translate="tour.subtitle">Le grotte sono bocche spalancate che raccontano
           storie solo a chi si avventura ad esplorarle</p>
@@ -239,9 +237,13 @@
             <span class="meta-label" data-translate="tour.departure">Partenza</span>
             <span class="meta-value">Sorrento</span>
           </div>
+
+          
         </div>
       </div>
     </section>
+
+   
 
     <!-- TOUR CONTENT -->
     <div class="tour-content">
@@ -829,12 +831,9 @@
 
     // ==================== LIGHTBOX GALLERY ====================
     const galleryImages = [
-      'https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=1200',
-      'https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=1200',
-      'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1200',
-      'https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=1200',
-      'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200',
-      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200'
+      '../immagini/capri_tour_faraglioni.jpeg','../immagini/capri_tour_faraglioni.jpeg',
+      '../immagini/capri_tour_faraglioni.jpeg',
+'../immagini/capri_tour_faraglioni.jpeg',
     ];
 
     let currentImageIndex = 0;

@@ -177,6 +177,7 @@ main {
 }
 
 /* HERO SECTION CON SLIDER - IMMAGINI IN CSS */
+/* Trova questa classe in detail.css e sostituisci il border-radius */
 .tour-hero {
   position: relative;
   min-height: 65vh;
@@ -186,7 +187,8 @@ main {
   text-align: center;
   padding: 3rem 1.5rem;
   margin-bottom: 3rem;
-  border-radius: var(--radius-xl);
+  /* Modifica qui: rimuove l'arrotondamento sopra e lo lascia solo sotto */
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl); 
   overflow: hidden;
   box-shadow: var(--shadow-xl);
 }
@@ -791,7 +793,6 @@ main {
     right: 20px;
   }
 }
-
 @media (max-width: 768px) {
   .hamburger {
     display: flex !important;
@@ -830,13 +831,56 @@ main {
   
   main {
     margin-top: 80px !important;
-    padding: 1.5rem 1rem !important;
+    padding: 1rem !important; /* Ridotto leggermente il padding esterno */
   }
-  
+
+  /* --- FIX HERO MOBILE --- */
   .tour-hero {
-    min-height: 50vh !important;
-    padding: 2rem 1rem !important;
+    min-height: auto !important; /* Fondamentale: permette alla sezione di allungarsi se il testo è tanto */
+    padding: 3rem 1rem !important; /* Spazio interno bilanciato */
+    margin-top: 1rem !important; /* Crea distacco dall'header per far vedere i bordi tondi sopra */
+    border-radius: var(--radius-xl) !important; /* Bordo arrotondato su tutti i lati */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
   }
+
+  .tour-hero-content {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important; /* Crea spazio verticale tra titolo, sottotitolo e box */
+  }
+
+  .tour-hero-title {
+    font-size: 1.8rem !important; /* Dimensione più gestibile per smartphone */
+    line-height: 1.3 !important;
+    margin: 0 !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .tour-hero-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+
+  .tour-meta-box {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Dispone le icone su due colonne invece che una riga lunga */
+    gap: 0.8rem !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px);
+    padding: 1rem !important;
+    border-radius: var(--radius-lg);
+  }
+
+  .meta-item {
+    margin: 0 !important;
+    padding: 0.5rem !important;
+    border-right: none !important; /* Rimuove la linea verticale che in mobile non serve */
+  }
+  /* --- FINE FIX HERO --- */
   
   .gallery-grid {
     grid-template-columns: 1fr !important;
@@ -879,6 +923,7 @@ main {
     font-size: 2.5rem;
   }
 }
+
 
 @media (max-width: 991px) {
   .tour-layout {
