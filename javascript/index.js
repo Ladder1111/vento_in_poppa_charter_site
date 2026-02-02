@@ -13,11 +13,13 @@
 
     setInterval(nextSlide, 6000);
 
-       /* ==================== NAVIGAZIONE PAGINA ==================== */
-    function vaiAPagina(pagina) {
-      window.location.href = pagina;
-    }
-
+function vaiAPagina(percorso) {
+    // Rimuove eventuali slash iniziali o finali
+    percorso = percorso.replace(/^\/+|\/+$/g, '');
+    
+    // Usa sempre la struttura a cartelle
+    window.location.href = `/${percorso}/`;
+}
     /* ==================== SCROLL REVEAL ==================== */
     const observerOptions = {
       threshold: 0.1,
