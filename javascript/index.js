@@ -17,8 +17,11 @@ function vaiAPagina(percorso) {
     // Rimuove eventuali slash iniziali o finali
     percorso = percorso.replace(/^\/+|\/+$/g, '');
     
-    // Usa sempre la struttura a cartelle
-    window.location.href = `/${percorso}/`;
+    // Ottiene il percorso base dal pathname corrente
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    const basePath = pathSegments.length > 0 ? `/${pathSegments[0]}` : '';
+    
+    window.location.href = `${basePath}/${percorso}/`;
 }
     /* ==================== SCROLL REVEAL ==================== */
     const observerOptions = {
