@@ -609,7 +609,7 @@
         }
       });
       document.documentElement.lang = lang;
-      localStorage.setItem('preferred-language', lang);
+      localStorage.setItem('preferredLang', lang);
     }
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -619,7 +619,7 @@
       });
     });
 
-    const savedLang = localStorage.getItem('preferred-language');
+    const savedLang = localStorage.getItem('preferredLang');
     if (savedLang && translations[savedLang]) {
       changeLanguage(savedLang);
     }

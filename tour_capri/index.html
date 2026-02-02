@@ -38,7 +38,7 @@
   <!-- HEADER -->
   <header>
     <div class="nav-wrapper">
-      <a href="#home" class="logo" aria-label="Vento in Poppa Charter - Homepage">
+      <a href="/" class="logo" aria-label="Vento in Poppa Charter - Homepage">
         <img src="immagini/logo-vento-in-poppa-charter.jpg" alt="Logo Vento in Poppa Charter" width="180" height="42">
       </a>
       <nav>
@@ -577,7 +577,7 @@
         }
       });
       document.documentElement.lang = lang;
-      localStorage.setItem('preferred-language', lang);
+      localStorage.setItem('preferredLang', lang);
     }
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -587,7 +587,7 @@
       });
     });
 
-    const savedLang = localStorage.getItem('preferred-language');
+    const savedLang = localStorage.getItem('preferredLang');
     if (savedLang && translations[savedLang]) {
       changeLanguage(savedLang);
     }
