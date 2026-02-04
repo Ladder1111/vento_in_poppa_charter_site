@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
   <title>SUNSET EXPERIENCE | Escursione in Barca da Sorrento | Vento in Poppa Charter</title>
-  <meta name="description" content="Tour privato in barca a Capri: esplora i Faraglioni, la Grotta Azzurra e le meraviglie dell'isola. 7-8 ore con skipper, bevande e snack inclusi. 799€." />
-  <meta name="keywords" content="tour Capri, escursione barca Capri, Grotta Azzurra, Faraglioni, gita barca Sorrento Capri" />
+  <meta name="description"
+    content="Tour privato in barca a Capri: esplora i Faraglioni, la Grotta Azzurra e le meraviglie dell'isola. 7-8 ore con skipper, bevande e snack inclusi. 799€." />
+  <meta name="keywords"
+    content="tour Capri, escursione barca Capri, Grotta Azzurra, Faraglioni, gita barca Sorrento Capri" />
   <link rel="canonical" href="https://www.ventoinpoppacharter.com/tour-capri" />
 
   <!-- Alternate Languages -->
@@ -22,33 +25,40 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <style>
-    
+
   </style>
-    
-<link rel="stylesheet" href="../css/detail.css">
+
+  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="../css/index.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
   <!-- HEADER -->
   <header>
-     <div class="nav-wrapper">
+    <div class="nav-wrapper">
       <a href="/" class="logo" aria-label="Vento in Poppa Charter - Homepage">
-        <img src="immagini/logo-vento-in-poppa-charter.jpg" alt="Logo Vento in Poppa Charter" width="180" height="42">
+        <img src="../immagini/logo-vento-in-poppa-charter.jpg"
+          alt="Logo Vento in Poppa Charter - Escursioni in Barca Sorrento" width="180" height="42" loading="eager" />
       </a>
-      <nav>
+      <nav aria-label="Menu principale">
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/#tours" data-translate="nav.tours">Tour</a></li>
           <li><a href="/#about" data-translate="nav.about">Chi Siamo</a></li>
           <li><a href="/#contact" data-translate="nav.contact">Contatti</a></li>
         </ul>
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="it">IT</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="es">ES</button>
+        <div class="lang-switcher" role="group" aria-label="Selezione lingua">
+          <button class="lang-btn active" data-lang="it" aria-label="Italiano">IT</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
         </div>
       </nav>
-      <button class="hamburger" aria-label="Menu">
+      <button class="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -58,44 +68,55 @@
 
   <!-- MAIN CONTENT -->
   <main>
-    <!-- HERO SECTION CON SLIDER -->
-    <section class="tour-hero">
-      <div class="hero-slider">
-        <div class="hero-slide hero-slide-1 active"></div>
-        <div class="hero-slide hero-slide-2"></div>
-        <div class="hero-slide hero-slide-3"></div>
-        <div class="hero-slide hero-slide-4"></div>
-      </div>
-
-      <div class="tour-hero-content">
-        <span class="tour-badge" data-translate="tour.badge">Tour Privato</span>
-        <h1 class="tour-hero-title" data-translate="tour.title">SUNSET EXPERIENCE</h1>
-        <p class="tour-hero-subtitle" data-translate="tour.subtitle">
-          COLTIVA IL PIACERE DEI SENSI LASCIANDOTI TRASPORTARE IN UN VIAGGIO DI SCOPERTA E APPAGAMENTO.
-          Salpa con noi mentre il sole cala nel mare tingendo il cielo di tonalità calde e avvolgenti.
-        </p>
-
-        <div class="tour-meta-box">
-          <div class="meta-item">
-            <div class="meta-icon">
-              <i class="bi bi-clock"></i>
-            </div>
-            <span class="meta-label" data-translate="tour.duration">Durata</span>
-            <span class="meta-value">2-3h</span>
+    <!-- HERO SECTION CON GALLERY -->
+    <section class="tour-hero-new">
+      <div class="hero-new-container">
+        <!-- Titolo e prezzo con icone -->
+        <div class="hero-new-header">
+          <h1 class="hero-new-title" data-translate="tour.title">Tour Sunset</h1>
+          <div class="hero-new-price">
+            <span class="price-item">
+              <i class="bi bi-currency-euro"></i>
+              <span data-translate="tour.price.amount">Da €299</span>
+            </span>
+            <span class="price-separator">|</span>
+            <span class="price-item">
+              <i class="bi bi-people-fill"></i>
+              <span data-translate="tour.price.people">Max 7 passeggeri</span>
+            </span>
+            <span class="price-separator">|</span>
+            <span class="price-item">
+              <i class="bi bi-clock-fill"></i>
+              <span data-translate="tour.price.duration">Durata di 2/3 ore</span>
+            </span>
           </div>
-          <div class="meta-item">
-            <div class="meta-icon">
-              <i class="bi bi-people"></i>
-            </div>
-            <span class="meta-label" data-translate="tour.maxpeople">Max persone</span>
-            <span class="meta-value">7</span>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="hero-gallery">
+          <!-- Immagine principale -->
+          <div class="hero-gallery-main" onclick="openLightbox(0)">
+            <img src="../immagini/sunset-sorrento.jpg"
+              alt="Tour Capri - Vista panoramica dei Faraglioni di Capri con barca" loading="eager">
           </div>
-          <div class="meta-item">
-            <div class="meta-icon">
-              <i class="bi bi-geo-alt"></i>
+
+          <!-- 4 Immagini secondarie -->
+          <div class="hero-gallery-thumbs">
+            <div class="hero-gallery-thumb" onclick="openLightbox(1)">
+              <img src="../immagini/sunset-sorrento.jpg" alt="Faraglioni di Capri al tramonto"
+                loading="lazy">
             </div>
-            <span class="meta-label" data-translate="tour.departure">Partenza</span>
-            <span class="meta-value">Sorrento</span>
+            <div class="hero-gallery-thumb" onclick="openLightbox(2)">
+              <img src="../immagini/sunset-sorrento.jpg" alt="Costa di Capri con acque cristalline"
+                loading="lazy">
+            </div>
+            <div class="hero-gallery-thumb" onclick="openLightbox(3)">
+              <img src="../immagini/sunset-sorrento.jpg" alt="Mare cristallino e grotte di Capri"
+                loading="lazy">
+            </div>
+            <div class="hero-gallery-thumb" onclick="openLightbox(4)">
+              <img src="../immagini/sunset-sorrento.jpg" alt="Barca privata a Capri" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -106,491 +127,576 @@
       <div class="tour-layout">
         <!-- MAIN CONTENT -->
         <div class="tour-main">
-
           <!-- DESCRIZIONE -->
-          <div class="tour-section scroll-animate">
-            <h2><i class="bi bi-info-circle"></i> <span data-translate="section.description">Descrizione del Tour</span></h2>
-            <p data-translate="content.desc1">Questo è un viaggio sensoriale che coinvolgerà ogni fibra del tuo essere, lasciandoti immerso in un’atmosfera di pace e serenità. Il dondolio delle onde cullerà i tuoi pensieri permettendoti di godere appieno dello spettacolo mozzafiato offerto dal sole che si tufferà nell’orizzonte, dipingendo il cielo con sfumature dorate e rosate mentre il mare si tingerà di un blu profondo. Il vento ti accarezzerà delicatamente il viso, portando con sé il profumo salmastro del mare misto al dolce aroma dei limoneti che punteggiano la costa e il suono rilassante delle onde che si infrangono sulla scogliera creerà una colonna sonora naturale. A questo punto mancherà solo il gusto, a cui penseremo noi con un aperitivo davvero speciale.</p>
-            <p data-translate="content.desc2">Il tramonto a Sorrento è uno spettacolo incantevole che cattura l’anima di chiunque lo osservi. Situata sulla splendida costa amalfitana, Sorrento offre uno scenario unico dove il sole calante dipinge il cielo con tonalità ardenti di rosso, arancione e viola, mentre si riflette delicatamente sulle acque del Golfo di Napoli.</p>
-          </div>
+          <article class="tour-section scroll-animate">
+            <h2><i class="bi bi-info-circle" aria-hidden="true"></i> <span
+                data-translate="section.description">Descrizione del Tour</span>
+            </h2>
+            <p data-translate="content.desc1">Questo è un viaggio sensoriale che coinvolgerà ogni fibra del tuo essere,
+              lasciandoti immerso in un’atmosfera di pace e serenità. Il dondolio delle onde cullerà i tuoi pensieri
+              permettendoti di godere appieno dello spettacolo mozzafiato offerto dal sole che si tufferà
+              nell’orizzonte, dipingendo il cielo con sfumature dorate e rosate mentre il mare si tingerà di un blu
+              profondo. Il vento ti accarezzerà delicatamente il viso, portando con sé il profumo salmastro del mare
+              misto al dolce aroma dei limoneti che punteggiano la costa e il suono rilassante delle onde che si
+              infrangono sulla scogliera creerà una colonna sonora naturale. A questo punto mancherà solo il gusto, a
+              cui penseremo noi con un aperitivo davvero speciale.
+            </p>
+            <p data-translate="content.desc2">Il tramonto a Sorrento è uno spettacolo incantevole che cattura l’anima di
+              chiunque lo osservi. Situata sulla splendida costa amalfitana, Sorrento offre uno scenario unico dove il
+              sole calante dipinge il cielo con tonalità ardenti di rosso, arancione e viola, mentre si riflette
+              delicatamente sulle acque del Golfo di Napoli.</p>
 
-     <!-- TIMELINE UNIFICATA SERALE -->
-<div class="tour-section scroll-animate">
-  <h2><i class="bi bi-compass"></i> <span data-translate="section.itinerary">Itinerario dell'Escursione</span></h2>
-  <p data-translate="content.itinerary.intro">Scopri il percorso completo della tua serata sulla Costiera Sorrentina, dalla partenza al tramonto fino al rientro al porto, tra meraviglie naturali e aperitivo a bordo.</p>
-
-  <div class="timeline-container">
-    <div class="timeline-line"></div>
-
-    <!-- PARTENZA -->
-    <div class="timeline-item scroll-animate-left">
-      <div class="timeline-icon highlight">
-        <i class="bi bi-geo-alt-fill"></i>
-      </div>
-      <div class="timeline-content">
-        <span class="timeline-time">18:30</span>
-        <h3 class="timeline-title" data-translate="timeline.departure.title">Partenza dal Porto</h3>
-        <p class="timeline-desc" data-translate="timeline.departure.desc">Incontro con lo skipper professionista, autorizzato e bilingue. Porti disponibili: Sorrento, Massalubrense.</p>
-      </div>
-    </div>
-
-    <!-- COSTA SORRENTINA -->
-    <div class="timeline-item scroll-animate-left">
-      <div class="timeline-icon highlight">
-        <i class="bi bi-water"></i>
-      </div>
-      <div class="timeline-content">
-        <span class="timeline-time">18:30 - 19:15</span>
-        <h3 class="timeline-title" data-translate="timeline.coast.title">Tour della Costiera Sorrentina</h3>
-        <p class="timeline-desc" data-translate="timeline.coast.desc">Navigazione lungo le scogliere mozzafiato, passando per Marina Grande, Bagni della Regina Giovanna, Punta Campanella e baie nascoste mentre il sole cala.</p>
-      </div>
-    </div>
-
-    <!-- BAGNO -->
-    <div class="timeline-item scroll-animate-left">
-      <div class="timeline-icon highlight">
-        <i class="bi bi-droplet"></i>
-      </div>
-      <div class="timeline-content">
-        <span class="timeline-time">19:15 - 20:00</span>
-        <h3 class="timeline-title" data-translate="timeline.swim.title">Sosta per il Bagno</h3>
-        <p class="timeline-desc" data-translate="timeline.swim.desc">Relaxante bagno nelle acque cristalline di una baia suggestiva, con attrezzatura snorkeling e teli mare forniti.</p>
-      </div>
-    </div>
-
-    <!-- APERITIVO -->
-    <div class="timeline-item scroll-animate-left">
-      <div class="timeline-icon highlight">
-        <i class="bi bi-cup-straw"></i>
-      </div>
-      <div class="timeline-content">
-        <span class="timeline-time">20:00 - 20:30</span>
-        <h3 class="timeline-title" data-translate="timeline.apero.title">Aperitivo a Bordo</h3>
-        <p class="timeline-desc" data-translate="timeline.apero.desc">Prosecco, snack, frutta fresca e musica mentre ammiri il tramonto spettacolare sulla costa.</p>
-      </div>
-    </div>
-
-    <!-- OPZIONALE PROLUNGAMENTO -->
-    <div class="timeline-item scroll-animate-left">
-      <div class="timeline-icon optional">
-        <i class="bi bi-stars"></i>
-      </div>
-      <div class="timeline-content optional">
-        <span class="timeline-time optional">Su Richiesta (+2h)</span>
-        <h3 class="timeline-title">
-          <span data-translate="timeline.prolung.title">Prolungamento a Capri/Nerano</span>
-          <span class="optional-badge">Cena Extra</span>
-        </h3>
-        <p class="timeline-desc" data-translate="timeline.prolung.desc">Raggiungi Capri dopo tramonto o Nerano per cena in romantico ristorante sul mare (durata minima +2 ore, costo aggiuntivo).</p>
-      </div>
-    </div>
-
-    <!-- RIENTRO -->
-    <div class="timeline-item scroll-animate-left">
-      <div class="timeline-icon highlight">
-        <i class="bi bi-house-door"></i>
-      </div>
-      <div class="timeline-content">
-        <span class="timeline-time">20:30 / 22:30+</span>
-        <h3 class="timeline-title" data-translate="timeline.return.title">Rientro al Porto</h3>
-        <p class="timeline-desc" data-translate="timeline.return.desc">Navigazione di rientro al porto di partenza con i ricordi di una serata indimenticabile sotto le stelle.</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-          <!-- GALLERIA FOTOGRAFICA (SPOSTATA ALLA FINE) -->
-          <div class="gallery-section scroll-animate-scale">
-            <h2><i class="bi bi-images"></i> <span data-translate="section.gallery">Galleria Fotografica</span></h2>
-            <div class="gallery-grid">
-              <div class="gallery-item scroll-animate" onclick="openLightbox(0)">
-                <img src="https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=600" alt="Faraglioni di Capri">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">I Faraglioni</span>
+            <!-- Informazioni Tour -->
+            <div class="tour-info-box">
+              <div class="tour-info-item">
+                <i class="bi bi-currency-euro"></i>
+                <div>
+                  <span class="info-label" data-translate="info.price.label">Prezzo</span>
+                  <span class="info-value" data-translate="info.price.value">Da €299.00 per barca</span>
                 </div>
               </div>
-              <div class="gallery-item scroll-animate" onclick="openLightbox(1)">
-                <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=600" alt="Grotta Azzurra">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Grotta Azzurra</span>
+              <div class="tour-info-item">
+                <i class="bi bi-clock-fill"></i>
+                <div>
+                  <span class="info-label" data-translate="info.duration.label">Durata</span>
+                  <span class="info-value" data-translate="info.duration.value">2/3 ore</span>
                 </div>
               </div>
-              <div class="gallery-item scroll-animate" onclick="openLightbox(2)">
-                <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600" alt="Costa di Capri">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Costa di Capri</span>
-                </div>
-              </div>
-              <div class="gallery-item scroll-animate" onclick="openLightbox(3)">
-                <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=600" alt="Vista mare">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Acque cristalline</span>
-                </div>
-              </div>
-              <div class="gallery-item scroll-animate" onclick="openLightbox(4)">
-                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600" alt="Barca a Capri">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Tour in barca</span>
-                </div>
-              </div>
-              <div class="gallery-item scroll-animate" onclick="openLightbox(5)">
-                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600" alt="Tramonto a Capri">
-                <div class="gallery-overlay">
-                  <span class="gallery-caption">Tramonto magico</span>
+              <div class="tour-info-item">
+                <i class="bi bi-people-fill"></i>
+                <div>
+                  <span class="info-label" data-translate="info.people.label">Passeggeri</span>
+                  <span class="info-value" data-translate="info.people.value">Max 7 persone</span>
                 </div>
               </div>
             </div>
+
+            <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Capri"
+              class="cta-button cta-description" aria-label="Prenota tour Capri su WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+              <span data-translate="button.book">Prenota Ora</span>
+            </a>
+          </article>
+
+          <!-- INFO CARDS - MOBILE ONLY (appaiono dopo la descrizione su mobile) -->
+          <div class="info-cards-mobile">
+            <!-- INCLUSO -->
+            <div class="info-card">
+              <h3>
+                <i class="bi bi-check-circle-fill"></i>
+                <span data-translate="included.title">Incluso nel Tour</span>
+              </h3>
+              <ul>
+                <li>
+                  <i class="bi bi-cup-straw"></i>
+                  <span data-translate="included.drinks">Bevande fredde incluse</span>
+                </li>
+                <li>
+                  <i class="bi bi-emoji-smile"></i>
+                  <span data-translate="included.snacks">Snacks a bordo</span>
+                </li>
+                <li>
+                  <i class="bi bi-moisture"></i>
+                  <span data-translate="included.towels">Asciugamani da mare personalizzati</span>
+                </li>
+                <li>
+                  <i class="bi bi-person-badge"></i>
+                  <span data-translate="included.skipper">Skipper professionale</span>
+                </li>
+                <li>
+                  <i class="bi bi-lock-fill"></i>
+                  <span data-translate="included.private">Tour privato</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- NON INCLUSO -->
+            <div class="info-card">
+              <h3>
+                <i class="bi bi-x-circle-fill"></i>
+                <span data-translate="notincluded.title">Non Incluso</span>
+              </h3>
+              <ul>
+                <li>
+                  <i class="bi bi-ticket-perforated"></i>
+                  <span data-translate="notincluded.tax">Tassa di sbarco a Capri</span>
+                </li>
+                <li>
+                  <i class="bi bi-water"></i>
+                  <span data-translate="notincluded.bluegrotto">Biglietto Grotta Azzurra (€18)</span>
+                </li>
+                <li>
+                  <i class="bi bi-egg-fried"></i>
+                  <span data-translate="notincluded.lunch">Pranzo</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- COSA PORTARE -->
+            <div class="info-card">
+              <h3>
+                <i class="bi bi-backpack-fill"></i>
+                <span data-translate="tobring.title">Cosa Portare</span>
+              </h3>
+              <ul>
+                <li>
+                  <i class="bi bi-gear"></i>
+                  <span data-translate="tobring.swimsuit">Costume da bagno</span>
+                </li>
+                <li>
+                  <i class="bi bi-camera-fill"></i>
+                  <span data-translate="tobring.camera">Macchina fotografica</span>
+                </li>
+                <li>
+                  <i class="bi bi-emoji-sunglasses"></i>
+                  <span data-translate="tobring.hat">Cappello</span>
+                </li>
+                <li>
+                  <i class="bi bi-sunglasses"></i>
+                  <span data-translate="tobring.sunglasses">Occhiali da sole</span>
+                </li>
+                <li>
+                  <i class="bi bi-sun-fill"></i>
+                  <span data-translate="tobring.sunscreen">Crema solare</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
+
+
+
+
+
+          <!-- TIMELINE UNIFICATA SERALE -->
+          <section class="tour-section scroll-animate">
+            <h2><i class="bi bi-compass" aria-hidden="true"></i> <span data-translate="section.itinerary">Itinerario
+                dell'Escursione</span>
+            </h2>
+            <p class="itinerary-intro" data-translate="content.itinerary.intro">Scopri il percorso completo della tua
+              serata sulla Costiera
+              Sorrentina, dalla partenza al tramonto fino al rientro al porto, tra meraviglie naturali e aperitivo a
+              bordo.</p>
+
+
+            <div class="timeline">
+              <div class="timeline-line" aria-hidden="true"></div>
+
+              <!-- PARTENZA -->
+              <div class="timeline-item scroll-animate-left">
+                <div class="timeline-icon highlight">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="timeline-content">
+
+                  <h3 class="timeline-title" data-translate="timeline.departure.title">Partenza dal Porto</h3>
+                  <p class="timeline-desc" data-translate="timeline.departure.desc">Incontro con lo skipper
+                    professionista, autorizzato e bilingue. Porti disponibili: Sorrento, Massalubrense.</p>
+                </div>
+              </div>
+
+              <!-- COSTA SORRENTINA -->
+              <div class="timeline-item scroll-animate-left">
+                <div class="timeline-icon highlight">
+                  <i class="bi bi-water"></i>
+                </div>
+                <div class="timeline-content">
+
+                  <h3 class="timeline-title" data-translate="timeline.coast.title">Tour della Costiera Sorrentina</h3>
+                  <p class="timeline-desc" data-translate="timeline.coast.desc">Navigazione lungo le scogliere
+                    mozzafiato, passando per Marina Grande, Bagni della Regina Giovanna, Punta Campanella e baie
+                    nascoste mentre il sole cala.</p>
+                </div>
+              </div>
+
+              <!-- BAGNO -->
+              <div class="timeline-item scroll-animate-left">
+                <div class="timeline-icon highlight">
+                  <i class="bi bi-droplet"></i>
+                </div>
+                <div class="timeline-content">
+
+                  <h3 class="timeline-title" data-translate="timeline.swim.title">Sosta per il Bagno</h3>
+                  <p class="timeline-desc" data-translate="timeline.swim.desc">Relaxante bagno nelle acque cristalline
+                    di una baia suggestiva, con attrezzatura snorkeling e teli mare forniti.</p>
+                </div>
+              </div>
+
+              <!-- APERITIVO -->
+              <div class="timeline-item scroll-animate-left">
+                <div class="timeline-icon highlight">
+                  <i class="bi bi-cup-straw"></i>
+                </div>
+                <div class="timeline-content">
+
+                  <h3 class="timeline-title" data-translate="timeline.apero.title">Aperitivo a Bordo</h3>
+                  <p class="timeline-desc" data-translate="timeline.apero.desc">Prosecco, snack, frutta fresca e musica
+                    mentre ammiri il tramonto spettacolare sulla costa.</p>
+                </div>
+              </div>
+
+              <!-- OPZIONALE PROLUNGAMENTO -->
+              <div class="timeline-item scroll-animate-left">
+                <div class="timeline-icon optional">
+                  <i class="bi bi-stars"></i>
+                </div>
+                <div class="timeline-content optional">
+                  <span class="timeline-time optional">Su Richiesta (+2h)</span>
+                  <h3 class="timeline-title">
+                    <span data-translate="timeline.prolung.title">Prolungamento a Capri/Nerano</span>
+                    <span class="optional-badge">Cena Extra</span>
+                  </h3>
+                  <p class="timeline-desc" data-translate="timeline.prolung.desc">Raggiungi Capri dopo tramonto o Nerano
+                    per cena in romantico ristorante sul mare (durata minima +2 ore, costo aggiuntivo).</p>
+                </div>
+              </div>
+
+              <!-- RIENTRO -->
+              <div class="timeline-item scroll-animate-left">
+                <div class="timeline-icon highlight">
+                  <i class="bi bi-house-door"></i>
+                </div>
+                <div class="timeline-content">
+                  <h3 class="timeline-title" data-translate="timeline.return.title">Rientro al Porto</h3>
+                  <p class="timeline-desc" data-translate="timeline.return.desc">Navigazione di rientro al porto di
+                    partenza con i ricordi di una serata indimenticabile sotto le stelle.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <!-- SIDEBAR -->
-        <div class="tour-sidebar">
 
-          <!-- PREZZO E PRENOTAZIONE -->
-          <div class="price-card scroll-animate-right">
-            <div class="price-header">
-              <div class="price-label" data-translate="price.from">A partire da</div>
-              <div class="price-amount">299€</div>
-            </div>
+        <!-- SIDEBAR (visibile solo desktop) -->
+        <aside class="tour-sidebar">
 
-            <ul class="price-features">
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.drinks">Bevande fredde incluse</span></li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.snacks">Snack a bordo</span></li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.towels">Teli mare personalizzati</span></li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.skipper">Skipper professionista</span></li>
-              <li><i class="bi bi-check-circle-fill"></i> <span data-translate="included.private">Tour privato</span></li>
+
+          <!-- INCLUSO -->
+          <div class="info-card">
+            <h3>
+              <i class="bi bi-check-circle-fill"></i>
+              <span data-translate="included.title">Incluso nel Tour</span>
+            </h3>
+            <ul>
+              <li>
+                <i class="bi bi-cup-straw"></i>
+                <span data-translate="included.drinks">Bevande fredde incluse</span>
+              </li>
+              <li>
+                <i class="bi bi-emoji-smile"></i>
+                <span data-translate="included.snacks">Snacks a bordo</span>
+              </li>
+              <li>
+                <i class="bi bi-moisture"></i>
+                <span data-translate="included.towels">Asciugamani da mare personalizzati</span>
+              </li>
+              <li>
+                <i class="bi bi-person-badge"></i>
+                <span data-translate="included.skipper">Skipper professionale</span>
+              </li>
+              <li>
+                <i class="bi bi-lock-fill"></i>
+                <span data-translate="included.private">Tour privato</span>
+              </li>
             </ul>
-
-            <a href="https://wa.me/393316166512?text=Ciao!%20Vorrei%20prenotare%20il%20tour%20di%20Capri" 
-               class="cta-button"
-               target="_blank"
-               rel="noopener noreferrer">
-              <i class="bi bi-whatsapp"></i> <span data-translate="button.book">Prenota Ora</span>
-            </a>
           </div>
 
-          <!-- SERVIZI NON INCLUSI -->
-          <div class="info-card scroll-animate-right">
-            <h3><i class="bi bi-exclamation-circle"></i> <span data-translate="notincluded.title">Non Incluso</span></h3>
+          <!-- NON INCLUSO -->
+          <div class="info-card">
+            <h3>
+              <i class="bi bi-x-circle-fill"></i>
+              <span data-translate="notincluded.title">Non Incluso</span>
+            </h3>
             <ul>
-              <li><i class="bi bi-x-circle"></i> <span data-translate="notincluded.tax">Tasse di sbarco a Capri</span></li>
-              <li><i class="bi bi-x-circle"></i> <span data-translate="notincluded.bluegrotto">Biglietto Grotta Azzurra</span></li>
-              <li><i class="bi bi-x-circle"></i> <span data-translate="notincluded.lunch">Pranzo</span></li>
+              <li>
+                <i class="bi bi-ticket-perforated"></i>
+                <span data-translate="notincluded.tax">Tassa di sbarco a Capri</span>
+              </li>
+              <li>
+                <i class="bi bi-water"></i>
+                <span data-translate="notincluded.bluegrotto">Biglietto Grotta Azzurra (€18)</span>
+              </li>
+              <li>
+                <i class="bi bi-egg-fried"></i>
+                <span data-translate="notincluded.lunch">Pranzo</span>
+              </li>
             </ul>
           </div>
 
           <!-- COSA PORTARE -->
-          <div class="info-card scroll-animate-right">
-            <h3><i class="bi bi-backpack"></i> <span data-translate="tobring.title">Cosa Portare</span></h3>
+          <div class="info-card">
+            <h3>
+              <i class="bi bi-backpack-fill"></i>
+              <span data-translate="tobring.title">Cosa Portare</span>
+            </h3>
             <ul>
-              <li><i class="bi bi-check2"></i> <span data-translate="tobring.swimsuit">Costume da bagno</span></li>
-              <li><i class="bi bi-check2"></i> <span data-translate="tobring.camera">Macchina fotografica</span></li>
-              <li><i class="bi bi-check2"></i> <span data-translate="tobring.hat">Cappello</span></li>
-              <li><i class="bi bi-check2"></i> <span data-translate="tobring.sunglasses">Occhiali da sole</span></li>
-              <li><i class="bi bi-check2"></i> <span data-translate="tobring.sunscreen">Crema solare</span></li>
+              <li>
+                <i class="bi bi-gear"></i>
+                <span data-translate="tobring.swimsuit">Costume da bagno</span>
+              </li>
+              <li>
+                <i class="bi bi-camera-fill"></i>
+                <span data-translate="tobring.camera">Macchina fotografica</span>
+              </li>
+              <li>
+                <i class="bi bi-emoji-sunglasses"></i>
+                <span data-translate="tobring.hat">Cappello</span>
+              </li>
+              <li>
+                <i class="bi bi-sunglasses"></i>
+                <span data-translate="tobring.sunglasses">Occhiali da sole</span>
+              </li>
+              <li>
+                <i class="bi bi-sun-fill"></i>
+                <span data-translate="tobring.sunscreen">Crema solare</span>
+              </li>
             </ul>
           </div>
-
-        </div>
+        </aside>
       </div>
     </div>
 
   </main>
-
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-    <div class="lightbox-content">
-      <button class="lightbox-close" onclick="closeLightbox(event)">
-        <i class="bi bi-x"></i>
-      </button>
-      <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1, event)">
-        <i class="bi bi-chevron-left"></i>
-      </button>
-      <img id="lightbox-img" src="" alt="">
-      <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1, event)">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" aria-label="Chiudi lightbox">&times;</button>
+    <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)"
+      aria-label="Immagine precedente">&#10094;</button>
+    <img id="lightbox-img" src="" alt="Immagine tour Capri">
+    <button class="lightbox-next" onclick="changeLightboxImage(1, event)"
+      aria-label="Immagine successiva">&#10095;</button>
   </div>
 
-  <!-- WHATSAPP BUTTON -->
-  <a href="https://wa.me/393316166512?text=Ciao!%20Vorrei%20informazioni%20sul%20tour%20di%20Capri" 
-     class="whatsapp" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     aria-label="Contattaci su WhatsApp">
+  <!-- WHATSAPP FLOATING -->
+  <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20informazioni%20sul%20Tour%20Capri" class="whatsapp"
+    aria-label="Contattaci su WhatsApp" target="_blank" rel="noopener">
     <i class="bi bi-whatsapp"></i>
   </a>
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3 id="footerBrand">
+          <i class="bi bi-sailboat"></i>
+          Vento in Poppa Charter
+        </h3>
+        <p id="footerDesc">
+          Escursioni di gruppo e tour privati in barca da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera
+          Amalfitana. Esperienze autentiche con skipper locali esperti dal 2023.
+        </p>
+      </div>
 
+      <div class="footer-col">
+        <h3 id="footerToursTitle">
+          <i class="bi bi-compass"></i>
+          I Nostri Tour
+        </h3>
+        <a href="tour-capri.html" class="footer-link" id="footerCapri">
+          <i class="bi bi-chevron-right"></i> Tour Capri
+        </a>
+        <a href="tour-sunset.html" class="footer-link" id="footerSunset">
+          <i class="bi bi-chevron-right"></i> Sunset Experience
+        </a>
+        <a href="tour-costiera-amalfitana.html" class="footer-link" id="footerAmalfi">
+          <i class="bi bi-chevron-right"></i> Costiera Amalfitana
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h3 id="footerContactsTitle">
+          <i class="bi bi-telephone"></i>
+          Contatti
+        </h3>
+        <a href="tel:+393316166512" class="footer-link" id="footerPhone">
+          <i class="bi bi-telephone-fill"></i> +39 331 616 6512
+        </a>
+        <a href="/cdn-cgi/l/email-protection#6a03040c052a1c0f041e0503041a051a1a0b44090507" class="footer-link"
+          id="footerEmail">
+          <i class="bi bi-envelope-fill"></i> <span class="__cf_email__"
+            data-cfemail="056c6b636a4573606b716a6c6b756a7575642b666a68">[email&#160;protected]</span>
+        </a>
+        <div class="footer-link" id="footerAddress">
+          <i class="bi bi-geo-alt-fill"></i> Marina Piccola, Porto di Sorrento (NA)
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3 id="footerSocialTitle">
+          <i class="bi bi-share"></i>
+          Social Media
+        </h3>
+        <a href="https://www.facebook.com/ventoinpoppacharter" class="footer-link" target="_blank"
+          rel="noopener noreferrer">
+          <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/ventoinpoppacharter" class="footer-link" target="_blank"
+          rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@ventoinpoppacharter" class="footer-link" target="_blank"
+          rel="noopener noreferrer">
+          <i class="bi bi-tiktok"></i> TikTok
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span id="copyright">© 2023 Vento in Poppa Charter – Tutti i diritti riservati | P.IVA |</span>
+      <a href="cookie-policy.html" id="cookieLink">Cookie Policy</a>
+    </div>
+  </footer>
+  <!-- JAVASCRIPT -->
   <script>
-    // ==================== HERO SLIDER ==================== 
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.hero-slide');
-    const totalSlides = slides.length;
-
-    function changeSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % totalSlides;
-      slides[currentSlide].classList.add('active');
-    }
-
-    // Cambio slide ogni 5 secondi
-    setInterval(changeSlide, 5000);
-
-    // ==================== SCROLL ANIMATIONS ====================
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const scrollObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-          // Opzionale: smetti di osservare dopo l'animazione
-          // scrollObserver.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    // Osserva tutti gli elementi con classi di animazione
-    document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale').forEach(el => {
-      scrollObserver.observe(el);
-    });
-
-    // ==================== MULTILANGUAGE SYSTEM ====================
-   const translations = {
+    // ==================== TRADUZIONI ====================
+    const translations = {
   it: {
-    // HEADER
-    'logo': 'Vento in Poppa',
     'nav.tours': 'Tour',
     'nav.about': 'Chi Siamo',
     'nav.contact': 'Contatti',
-    
-    // HERO SECTION
-    'tour.badge': 'Tour Privato',
-    'tour.title': 'SUNSET EXPERIENCE',
-    'tour.subtitle': 'COLTIVA IL PIACERE DEI SENSI LASCIANDOTI TRASPORTARE IN UN VIAGGIO DI SCOPERTA E APPAGAMENTO.\nSalpa con noi mentre il sole cala nel mare tingendo il cielo di tonalità calde e avvolgenti.',
-    'tour.duration': 'Durata',
-    'tour.maxpeople': 'Max persone',
-    'tour.departure': 'Partenza',
-    
-    // SECTIONS
+    'tour.title': 'Tour Sunset',
+    'tour.price.amount': 'Da €299',
+    'tour.price.people': 'Max 7 passeggeri',
+    'tour.price.duration': 'Durata di 2/3 ore',
     'section.description': 'Descrizione del Tour',
+    'content.desc1': 'Questo è un viaggio sensoriale che coinvolgerà ogni fibra del tuo essere, lasciandoti immerso in un\'atmosfera di pace e serenità. Il dondolio delle onde cullerà i tuoi pensieri permettendoti di godere appieno dello spettacolo mozzafiato offerto dal sole che si tufferà nell\'orizzonte, dipingendo il cielo con sfumature dorate e rosate mentre il mare si tingerà di un blu profondo. Il vento ti accarezzerà delicatamente il viso, portando con sé il profumo salmastro del mare misto al dolce aroma dei limoneti che punteggiano la costa e il suono rilassante delle onde che si infrangono sulla scogliera creerà una colonna sonora naturale. A questo punto mancherà solo il gusto, a cui penseremo noi con un aperitivo davvero speciale.',
+    'content.desc2': 'Il tramonto a Sorrento è uno spettacolo incantevole che cattura l\'anima di chiunque lo osservi. Situata sulla splendida costa amalfitana, Sorrento offre uno scenario unico dove il sole calante dipinge il cielo con tonalità ardenti di rosso, arancione e viola, mentre si riflette delicatamente sulle acque del Golfo di Napoli.',
+    'info.price.label': 'Prezzo',
+    'info.price.value': 'Da €299.00 per barca',
+    'info.duration.label': 'Durata',
+    'info.duration.value': '2/3 ore',
+    'info.people.label': 'Passeggeri',
+    'info.people.value': 'Max 7 persone',
     'section.itinerary': 'Itinerario dell\'Escursione',
-    'section.gallery': 'Galleria Fotografica',
-    
-    // CONTENT
-    'content.desc1': 'Questo è un viaggio sensoriale che coinvolgerà ogni fibra del tuo essere, lasciandoti immerso in un’atmosfera di pace e serenità. Il dondolio delle onde cullerà i tuoi pensieri permettendoti di godere appieno dello spettacolo mozzafiato offerto dal sole che si tufferà nell’orizzonte, dipingendo il cielo con sfumature dorate e rosate mentre il mare si tingerà di un blu profondo. Il vento ti accarezzerà delicatamente il viso, portando con sé il profumo salmastro del mare misto al dolce aroma dei limoneti che punteggiano la costa e il suono rilassante delle onde che si infrangono sulla scogliera creerà una colonna sonora naturale. A questo punto mancherà solo il gusto, a cui penseremo noi con un aperitivo davvero speciale.',
-    'content.desc2': 'Il tramonto a Sorrento è uno spettacolo incantevole che cattura l’anima di chiunque lo osservi. Situata sulla splendida costa amalfitana, Sorrento offre uno scenario unico dove il sole calante dipinge il cielo con tonalità ardenti di rosso, arancione e viola, mentre si riflette delicatamente sulle acque del Golfo di Napoli.',
-    'content.itinerary.intro': 'Scopri il percorso completo della tua serata sulla Costiera Sorrentina, dalla partenza al tramonto fino al rientro al porto, tra meraviglie naturali e aperitivo a bordo.',
-    
-    // TIMELINE
+    'content.itinerary.intro': 'Scopri il percorso completo della tua esperienza al tramonto, dalla partenza al rientro in porto, attraverso le meraviglie della costa sorrentina.',
     'timeline.departure.title': 'Partenza dal Porto',
-    'timeline.departure.desc': 'Incontro con lo skipper professionista, autorizzato e bilingue. Porti disponibili: Sorrento, Massalubrense.',
-    'timeline.coast.title': 'Tour della Costiera Sorrentina',
-    'timeline.coast.desc': 'Navigazione lungo le scogliere mozzafiato, passando per Marina Grande, Bagni della Regina Giovanna, Punta Campanella e baie nascoste mentre il sole cala.',
-    'timeline.swim.title': 'Sosta per il Bagno',
-    'timeline.swim.desc': 'Relaxante bagno nelle acque cristalline di una baia suggestiva, con attrezzatura snorkeling e teli mare forniti.',
-    'timeline.apero.title': 'Aperitivo a Bordo',
-    'timeline.apero.desc': 'Prosecco, snack, frutta fresca e musica mentre ammiri il tramonto spettacolare sulla costa.',
-    'timeline.prolung.title': 'Prolungamento a Capri/Nerano',
-    'timeline.prolung.desc': 'Raggiungi Capri dopo tramonto o Nerano per cena in romantico ristorante sul mare (durata minima +2 ore, costo aggiuntivo).',
-    'timeline.return.title': 'Rientro al Porto',
-    'timeline.return.desc': 'Navigazione di rientro al porto di partenza con i ricordi di una serata indimenticabile sotto le stelle.',
-    
-    // GALLERY CAPTIONS
-    'gallery.faraglioni': 'I Faraglioni',
-    'gallery.grottazzurra': 'Grotta Azzurra',
-    'gallery.costacapri': 'Costa di Capri',
-    'gallery.acquecristalline': 'Acque cristalline',
-    'gallery.tourbarca': 'Tour in barca',
-    'gallery.tramontomagico': 'Tramonto magico',
-    
-    // PRICE & BOOKING
-    'price.from': 'A partire da',
+    'timeline.departure.desc': 'Incontro con lo skipper all\'orario concordato. Porti disponibili: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.',
+    'timeline.coast.title': 'Esplorazione Costa Sorrentina',
+    'timeline.coast.desc': 'Ammira le scogliere mozzafiato e le acque cristalline della penisola mentre navighiamo lungo la costa.',
+    'timeline.navigation.title': 'Navigazione panoramica',
+    'timeline.navigation.desc': 'Goditi la brezza marina e le viste spettacolari della costa con il nostro skipper professionista bilingue.',
+    'timeline.sunset.title': 'Aperitivo al tramonto',
+    'timeline.sunset.desc': 'Momento magico con aperitivo speciale mentre il sole si tuffa nell\'orizzonte, dipingendo il cielo di colori straordinari.',
+    'timeline.swimming.title': 'Bagno e Relax',
+    'timeline.swimming.desc': 'Tuffati nelle acque cristalline per un bagno rinfrescante o rilassati a bordo godendo della tranquillità del mare.',
+    'timeline.return.title': 'Rientro in Porto',
+    'timeline.return.desc': 'Rilassati durante la navigazione di rientro godendo delle ultime luci del giorno e delle viste panoramiche della costa.',
+    'price.from': 'Da',
     'button.book': 'Prenota Ora',
-    
-    // INCLUDED
+    'included.title': 'Incluso nel Tour',
     'included.drinks': 'Bevande fredde incluse',
     'included.snacks': 'Snack a bordo',
-    'included.towels': 'Teli mare personalizzati',
+    'included.towels': 'Asciugamani da mare personalizzati',
     'included.skipper': 'Skipper professionista',
     'included.private': 'Tour privato',
-    
-    // NOT INCLUDED
+    'included.aperitif': 'Aperitivo al tramonto',
     'notincluded.title': 'Non Incluso',
-    'notincluded.tax': 'Tasse di sbarco a Capri',
-    'notincluded.bluegrotto': 'Biglietto Grotta Azzurra',
     'notincluded.lunch': 'Pranzo',
-    
-    // WHAT TO BRING
     'tobring.title': 'Cosa Portare',
     'tobring.swimsuit': 'Costume da bagno',
     'tobring.camera': 'Macchina fotografica',
     'tobring.hat': 'Cappello',
     'tobring.sunglasses': 'Occhiali da sole',
-    'tobring.sunscreen': 'Crema solare',
-    
-    // WHATSAPP
-    'whatsapp.label': 'Contattaci su WhatsApp'
+    'tobring.sunscreen': 'Crema solare'
   },
   en: {
-    // HEADER
-    'logo': 'Fair Wind',
     'nav.tours': 'Tours',
     'nav.about': 'About Us',
     'nav.contact': 'Contact',
-    
-    // HERO SECTION
-    'tour.badge': 'Private Tour',
-    'tour.title': 'SUNSET EXPERIENCE',
-    'tour.subtitle': 'CULTIVATE THE PLEASURE OF YOUR SENSES LETTING YOURSELF BE CARRIED AWAY ON A JOURNEY OF DISCOVERY AND SATISFACTION.\nSet sail with us as the sun sets over the sea, painting the sky in warm and enveloping hues.',
-    'tour.duration': 'Duration',
-    'tour.maxpeople': 'Max people',
-    'tour.departure': 'Departure',
-    
-    // SECTIONS
+    'tour.title': 'Sunset Tour',
+    'tour.price.amount': 'From €299',
+    'tour.price.people': 'Max 7 passengers',
+    'tour.price.duration': 'Duration 2/3 hours',
     'section.description': 'Tour Description',
-    'section.itinerary': 'Excursion Itinerary',
-    'section.gallery': 'Photo Gallery',
-    
-    // CONTENT
-    'content.desc1': 'This is a sensory journey that will engage every fiber of your being, leaving you immersed in an atmosphere of peace and serenity. The rocking of the waves will cradle your thoughts, allowing you to fully enjoy the breathtaking spectacle offered by the sun diving into the horizon, painting the sky with golden and pink hues while the sea takes on a deep blue. The wind will gently caress your face, bringing with it the salty scent of the sea mixed with the sweet aroma of lemon groves dotting the coast, and the relaxing sound of waves crashing against the cliffs will create a natural soundtrack. At this point, only taste will be missing, which we will take care of with a truly special aperitif.',
-    'content.desc2': 'The sunset in Sorrento is an enchanting spectacle that captures the soul of anyone who watches it. Located on the stunning Amalfi Coast, Sorrento offers a unique scenario where the setting sun paints the sky with fiery shades of red, orange, and purple, gently reflecting on the waters of the Gulf of Naples.',
-    'content.itinerary.intro': 'Discover the complete route of your evening on the Sorrentine Coast, from departure to sunset and return to the port, among natural wonders and aperitif on board.',
-    
-    // TIMELINE
+    'content.desc1': 'This is a sensory journey that will engage every fiber of your being, immersing you in an atmosphere of peace and serenity. The rocking of the waves will cradle your thoughts, allowing you to fully enjoy the breathtaking spectacle offered by the sun diving into the horizon, painting the sky with golden and pink hues while the sea turns a deep blue. The wind will gently caress your face, bringing with it the salty scent of the sea mixed with the sweet aroma of the lemon groves dotting the coast, and the relaxing sound of waves crashing against the cliffs will create a natural soundtrack. At this point, only the taste will be missing, which we will take care of with a truly special aperitif.',
+    'content.desc2': 'The sunset in Sorrento is an enchanting spectacle that captures the soul of anyone who observes it. Located on the stunning Amalfi Coast, Sorrento offers a unique setting where the setting sun paints the sky with fiery shades of red, orange and purple, while gently reflecting on the waters of the Gulf of Naples.',
+    'info.price.label': 'Price',
+    'info.price.value': 'From €299.00 per boat',
+    'info.duration.label': 'Duration',
+    'info.duration.value': '2/3 hours',
+    'info.people.label': 'Passengers',
+    'info.people.value': 'Max 7 people',
+    'section.itinerary': 'Tour Itinerary',
+    'content.itinerary.intro': 'Discover the complete route of your sunset experience, from departure to return to port, through the wonders of the Sorrento coast.',
     'timeline.departure.title': 'Departure from Port',
-    'timeline.departure.desc': 'Meet with the professional, authorized, bilingual skipper. Available ports: Sorrento, Massalubrense.',
-    'timeline.coast.title': 'Sorrento Coast Tour',
-    'timeline.coast.desc': 'Navigation along breathtaking cliffs, passing Marina Grande, Bagni della Regina Giovanna, Punta Campanella, and hidden bays while the sun sets.',
-    'timeline.swim.title': 'Swimming Stop',
-    'timeline.swim.desc': 'Relaxing swim in the crystal-clear waters of a suggestive bay, with snorkeling equipment and beach towels provided.',
-    'timeline.apero.title': 'Aperitif on Board',
-    'timeline.apero.desc': 'Prosecco, snacks, fresh fruit, and music while you admire the spectacular sunset over the coast.',
-    'timeline.prolung.title': 'Extension to Capri/Nerano',
-    'timeline.prolung.desc': 'Reach Capri after sunset or Nerano for dinner in a romantic seaside restaurant (minimum +2 hours duration, additional cost).',
+    'timeline.departure.desc': 'Meeting with the skipper at the agreed time. Available ports: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.',
+    'timeline.coast.title': 'Sorrento Coast Exploration',
+    'timeline.coast.desc': 'Admire the breathtaking cliffs and crystal-clear waters of the peninsula as we sail along the coast.',
+    'timeline.navigation.title': 'Panoramic Navigation',
+    'timeline.navigation.desc': 'Enjoy the sea breeze and spectacular coastal views with our professional bilingual skipper.',
+    'timeline.sunset.title': 'Sunset Aperitif',
+    'timeline.sunset.desc': 'Magical moment with a special aperitif while the sun dives into the horizon, painting the sky with extraordinary colors.',
+    'timeline.swimming.title': 'Swimming and Relaxation',
+    'timeline.swimming.desc': 'Dive into the crystal-clear waters for a refreshing swim or relax on board enjoying the tranquility of the sea.',
     'timeline.return.title': 'Return to Port',
-    'timeline.return.desc': 'Return navigation to the departure port with memories of an unforgettable evening under the stars.',
-    
-    // GALLERY CAPTIONS
-    'gallery.faraglioni': 'The Faraglioni',
-    'gallery.grottazzurra': 'Blue Grotto',
-    'gallery.costacapri': 'Capri Coast',
-    'gallery.acquecristalline': 'Crystal Clear Waters',
-    'gallery.tourbarca': 'Boat Tour',
-    'gallery.tramontomagico': 'Magic Sunset',
-    
-    // PRICE & BOOKING
+    'timeline.return.desc': 'Relax during the return voyage enjoying the last lights of the day and the panoramic views of the coast.',
     'price.from': 'From',
     'button.book': 'Book Now',
-    
-    // INCLUDED
+    'included.title': 'Included in the Tour',
     'included.drinks': 'Cold drinks included',
-    'included.snacks': 'Onboard snacks',
+    'included.snacks': 'Snacks on board',
     'included.towels': 'Personalized beach towels',
     'included.skipper': 'Professional skipper',
     'included.private': 'Private tour',
-    
-    // NOT INCLUDED
+    'included.aperitif': 'Sunset aperitif',
     'notincluded.title': 'Not Included',
-    'notincluded.tax': 'Capri landing taxes',
-    'notincluded.bluegrotto': 'Blue Grotto ticket',
     'notincluded.lunch': 'Lunch',
-    
-    // WHAT TO BRING
     'tobring.title': 'What to Bring',
     'tobring.swimsuit': 'Swimsuit',
     'tobring.camera': 'Camera',
     'tobring.hat': 'Hat',
     'tobring.sunglasses': 'Sunglasses',
-    'tobring.sunscreen': 'Sunscreen',
-    
-    // WHATSAPP
-    'whatsapp.label': 'Contact us on WhatsApp'
+    'tobring.sunscreen': 'Sunscreen'
   },
   es: {
-    // HEADER
-    'logo': 'Viento en Popa',
     'nav.tours': 'Tours',
-    'nav.about': 'Sobre Nosotros',
+    'nav.about': 'Quiénes Somos',
     'nav.contact': 'Contacto',
-    
-    // HERO SECTION
-    'tour.badge': 'Tour Privado',
-    'tour.title': 'EXPERIENCIA ATARDECER',
-    'tour.subtitle': 'CULTIVA EL PLACER DE LOS SENTIDOS DEJÁNDOTE LLEVAR EN UN VIAJE DE DESCUBRIMIENTO Y SATISFACCIÓN.\nZarpa con nosotros mientras el sol se pone en el mar tiñendo el cielo de tonos cálidos y envolventes.',
-    'tour.duration': 'Duración',
-    'tour.maxpeople': 'Máx personas',
-    'tour.departure': 'Salida',
-    
-    // SECTIONS
+    'tour.title': 'Tour Sunset',
+    'tour.price.amount': 'Desde €299',
+    'tour.price.people': 'Máx 7 pasajeros',
+    'tour.price.duration': 'Duración de 2/3 horas',
     'section.description': 'Descripción del Tour',
+    'content.desc1': 'Este es un viaje sensorial que involucrará cada fibra de tu ser, sumergiéndote en una atmósfera de paz y serenidad. El balanceo de las olas acunará tus pensamientos, permitiéndote disfrutar plenamente del espectáculo impresionante ofrecido por el sol sumergiéndose en el horizonte, pintando el cielo con tonos dorados y rosados mientras el mar se tiñe de un azul profundo. El viento acariciará delicadamente tu rostro, trayendo consigo el aroma salado del mar mezclado con el dulce aroma de los limoneros que salpican la costa, y el relajante sonido de las olas rompiendo contra los acantilados creará una banda sonora natural. En este punto, solo faltará el gusto, del cual nos encargaremos con un aperitivo verdaderamente especial.',
+    'content.desc2': 'El atardecer en Sorrento es un espectáculo encantador que captura el alma de quien lo observa. Situada en la espléndida costa amalfitana, Sorrento ofrece un escenario único donde el sol poniente pinta el cielo con tonos ardientes de rojo, naranja y violeta, mientras se refleja delicadamente sobre las aguas del Golfo de Nápoles.',
+    'info.price.label': 'Precio',
+    'info.price.value': 'Desde €299.00 por barco',
+    'info.duration.label': 'Duración',
+    'info.duration.value': '2/3 horas',
+    'info.people.label': 'Pasajeros',
+    'info.people.value': 'Máx 7 personas',
     'section.itinerary': 'Itinerario de la Excursión',
-    'section.gallery': 'Galería Fotográfica',
-    
-    // CONTENT
-    'content.desc1': 'Este es un viaje sensorial que involucrará cada fibra de tu ser, dejándote inmerso en una atmósfera de paz y serenidad. El balanceo de las olas acunará tus pensamientos permitiéndote disfrutar plenamente del espectáculo impresionante que ofrece el sol que se sumerge en el horizonte, pintando el cielo con matices dorados y rosados mientras el mar se tiñe de un azul profundo. El viento acariciará suavemente tu rostro, trayendo consigo el aroma salado del mar mezclado con el dulce aroma de los limoneros que salpican la costa y el sonido relajante de las olas que rompen contra los acantilados creará una banda sonora natural. En este punto solo faltará el gusto, del cual nos encargaremos nosotros con un aperitivo realmente especial.',
-    'content.desc2': 'El atardecer en Sorrento es un espectáculo encantador que captura el alma de quien lo observa. Ubicada en la impresionante costa amalfitana, Sorrento ofrece un escenario único donde el sol poniente pinta el cielo con tonos ardientes de rojo, naranja y púrpura, reflejándose delicadamente en las aguas del Golfo de Nápoles.',
-    'content.itinerary.intro': 'Descubre el recorrido completo de tu velada en la Costa Sorrentina, desde la salida hasta el atardecer y el regreso al puerto, entre maravillas naturales y aperitivo a bordo.',
-    
-    // TIMELINE
+    'content.itinerary.intro': 'Descubre el recorrido completo de tu experiencia al atardecer, desde la salida hasta el regreso al puerto, a través de las maravillas de la costa sorrentina.',
     'timeline.departure.title': 'Salida del Puerto',
-    'timeline.departure.desc': 'Encuentro con el patrón profesional, autorizado y bilingüe. Puertos disponibles: Sorrento, Massalubrense.',
-    'timeline.coast.title': 'Tour de la Costa Sorrentina',
-    'timeline.coast.desc': 'Navegación a lo largo de acantilados impresionantes, pasando por Marina Grande, Bagni della Regina Giovanna, Punta Campanella y calas escondidas mientras se pone el sol.',
-    'timeline.swim.title': 'Parada para Baño',
-    'timeline.swim.desc': 'Baño relajante en las aguas cristalinas de una cala sugestiva, con equipo de snorkel y toallas de playa proporcionados.',
-    'timeline.apero.title': 'Aperitivo a Bordo',
-    'timeline.apero.desc': 'Prosecco, snacks, fruta fresca y música mientras admiras el espectacular atardecer sobre la costa.',
-    'timeline.prolung.title': 'Prolongación a Capri/Nerano',
-    'timeline.prolung.desc': 'Llega a Capri después del atardecer o Nerano para cenar en un romántico restaurante frente al mar (duración mínima +2 horas, coste adicional).',
+    'timeline.departure.desc': 'Encuentro con el patrón a la hora acordada. Puertos disponibles: Sorrento, Castellammare, Marina di Stabia, Massa Lubrense, Nerano, Positano, Amalfi.',
+    'timeline.coast.title': 'Exploración Costa Sorrentina',
+    'timeline.coast.desc': 'Admira los acantilados impresionantes y las aguas cristalinas de la península mientras navegamos a lo largo de la costa.',
+    'timeline.navigation.title': 'Navegación Panorámica',
+    'timeline.navigation.desc': 'Disfruta de la brisa marina y las vistas espectaculares de la costa con nuestro patrón profesional bilingüe.',
+    'timeline.sunset.title': 'Aperitivo al Atardecer',
+    'timeline.sunset.desc': 'Momento mágico con aperitivo especial mientras el sol se sumerge en el horizonte, pintando el cielo con colores extraordinarios.',
+    'timeline.swimming.title': 'Baño y Relax',
+    'timeline.swimming.desc': 'Sumérgete en las aguas cristalinas para un baño refrescante o relájate a bordo disfrutando de la tranquilidad del mar.',
     'timeline.return.title': 'Regreso al Puerto',
-    'timeline.return.desc': 'Navegación de regreso al puerto de salida con los recuerdos de una velada inolvidable bajo las estrellas.',
-    
-    // GALLERY CAPTIONS
-    'gallery.faraglioni': 'Los Faraglioni',
-    'gallery.grottazzurra': 'Gruta Azul',
-    'gallery.costacapri': 'Costa de Capri',
-    'gallery.acquecristalline': 'Aguas cristalinas',
-    'gallery.tourbarca': 'Tour en barco',
-    'gallery.tramontomagico': 'Atardecer mágico',
-    
-    // PRICE & BOOKING
+    'timeline.return.desc': 'Relájate durante la navegación de regreso disfrutando de las últimas luces del día y las vistas panorámicas de la costa.',
     'price.from': 'Desde',
     'button.book': 'Reservar Ahora',
-    
-    // INCLUDED
+    'included.title': 'Incluido en el Tour',
     'included.drinks': 'Bebidas frías incluidas',
     'included.snacks': 'Snacks a bordo',
     'included.towels': 'Toallas de playa personalizadas',
     'included.skipper': 'Patrón profesional',
     'included.private': 'Tour privado',
-    
-    // NOT INCLUDED
+    'included.aperitif': 'Aperitivo al atardecer',
     'notincluded.title': 'No Incluido',
-    'notincluded.tax': 'Impuestos de desembarco en Capri',
-    'notincluded.bluegrotto': 'Entrada Gruta Azul',
     'notincluded.lunch': 'Almuerzo',
-    
-    // WHAT TO BRING
-    'tobring.title': 'Qué Llevar',
-    'tobring.swimsuit': 'Bañador',
+    'tobring.title': 'Qué Traer',
+    'tobring.swimsuit': 'Traje de baño',
     'tobring.camera': 'Cámara fotográfica',
     'tobring.hat': 'Sombrero',
     'tobring.sunglasses': 'Gafas de sol',
-    'tobring.sunscreen': 'Protector solar',
-    
-    // WHATSAPP
-    'whatsapp.label': 'Contáctanos por WhatsApp'
+    'tobring.sunscreen': 'Protector solar'
   }
 };
-
-    
 
     let currentLang = 'it';
 
@@ -627,29 +733,51 @@
     // ==================== HAMBURGER MENU ====================
     const hamburger = document.querySelector('.hamburger');
     const navUl = document.querySelector('nav ul');
+
     if (hamburger && navUl) {
-      hamburger.addEventListener('click', () => {
-        navUl.classList.toggle('hidden');
+      navUl.classList.add('hidden');
+
+      hamburger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isExpanded = navUl.classList.toggle('hidden');
+        hamburger.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', !isExpanded);
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!hamburger.contains(e.target) && !navUl.contains(e.target)) {
+          navUl.classList.add('hidden');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      navUl.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          navUl.classList.add('hidden');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
       });
     }
 
     // ==================== LIGHTBOX GALLERY ====================
     const galleryImages = [
-      'https://images.unsplash.com/photo-1583489094828-77e6c21b5d97?w=1200',
-      'https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=1200',
-      'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1200',
-      'https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=1200',
-      'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200',
-      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200'
+      '../immagini/capri_tour_faraglioni.jpg',
+      '../immagini/faraglioni-g801b2d316_1920.jpg',
+      '../immagini/capri_tour_faraglioni.jpg',
+      '../immagini/faraglioni-g801b2d316_1920.jpg',
+      '../immagini/capri_tour_faraglioni.jpg'
     ];
 
     let currentImageIndex = 0;
 
     function openLightbox(index) {
+      if (index >= galleryImages.length) index = 0;
       currentImageIndex = index;
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
-      lightboxImg.src = galleryImages[index];
+      lightboxImg.src = galleryImages[currentImageIndex];
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -663,7 +791,7 @@
     }
 
     function changeLightboxImage(direction, event) {
-      event.stopPropagation();
+      if (event) event.stopPropagation();
       currentImageIndex += direction;
       if (currentImageIndex < 0) {
         currentImageIndex = galleryImages.length - 1;
@@ -673,21 +801,21 @@
       document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
     }
 
-    // Keyboard navigation
+    // Navigazione da tastiera
     document.addEventListener('keydown', (e) => {
       const lightbox = document.getElementById('lightbox');
       if (lightbox.classList.contains('active')) {
-        if (e.key === 'Escape') {
-          lightbox.classList.remove('active');
-          document.body.style.overflow = '';
-        } else if (e.key === 'ArrowLeft') {
-          changeLightboxImage(-1, e);
-        } else if (e.key === 'ArrowRight') {
-          changeLightboxImage(1, e);
-        }
+        if (e.key === 'Escape') closeLightbox({
+          target: {
+            id: 'lightbox'
+          }
+        });
+        if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+        if (e.key === 'ArrowRight') changeLightboxImage(1);
       }
     });
   </script>
 
 </body>
+
 </html>
