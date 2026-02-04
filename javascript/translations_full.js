@@ -1,58 +1,98 @@
 /**
  * =====================================================
  * SISTEMA MULTILINGUA COMPLETO - VENTO IN POPPA CHARTER
- * Versione 3.0 - CON PRESERVAZIONE ICONE
+ * Versione 3.1 - CON PRESERVAZIONE ICONE
  * =====================================================
  * Lingue supportate: IT (default), EN, ES
- * Elementi tradotti: 90+
  * Sistema: Preserva icone Bootstrap durante traduzione
+ *
+ * CORREZIONI applicate in questa versione:
+ *  - Aggiunto menu mobile (navMobileTours / About / Faq / Contact)
+ *  - Aggiunto skipLink
+ *  - Aggiunto hamburger_label (aria-label del bottone hamburger)
+ *  - Corretto keyMap: acceptBtn, rejectBtn, heroText, heroBtn,
+ *    tourTitle, tourSubtitle, capriBadge, aboutMainTitle,
+ *    q1/a1/q2/a2/q3/a3  →  tutti allineati agli id reali dell'HTML
+ *  - Aggiunte traduzione EN/ES per ogni nuova chiave
+ * =====================================================
  */
+
 /* ==================== DIZIONARIO TRADUZIONI ====================*/
 const translationsData = {
   // ==================== ITALIANO (DEFAULT) ====================
   it: {
-    skip_link: "Skip Link per accessibilità",
+    // --- Skip link accessibilità ---
+    skip_link: "Vai al contenuto principale",
+
+    // --- Cookie banner ---
     cookie_text: "Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico sul sito.",
     cookie_more_info: "Maggiori informazioni",
     cookie_accept: "Accetta",
     cookie_reject: "Rifiuta",
+
+    // --- Navigazione desktop ---
     nav_tours: "Tour",
     nav_about: "Chi siamo",
     nav_faq: "FAQ",
     nav_contact: "Contatti",
-    hero_title: "Scopri le meraviglie della costiera con Vento in Poppa",
-    hero_subtitle: "Esplora un mondo di meraviglie! Scopri i luoghi più straordinari con noi!",
+
+    // --- Navigazione mobile ---
+    nav_mobile_tours: "Tour",
+    nav_mobile_about: "Chi siamo",
+    nav_mobile_faq: "FAQ",
+    nav_mobile_contact: "Contatti",
+    hamburger_label: "Apri menu mobile",
+
+    // --- Hero ---
+    hero_title: "Tour in Barca da Sorrento a Capri e Costiera Amalfitana",
+    hero_subtitle: "Esplora le meraviglie del Golfo di Napoli con i nostri tour esclusivi in piccoli gruppi. Skipper esperti, partenze giornaliere, esperienza indimenticabile!",
     hero_cta: "Scopri i tour",
-    tours_title: "I nostri tour più amati",
-    tours_subtitle: "Piccoli gruppi, partenze giornaliere, prelievo disponibile e assistenza dedicata per tutta la durata dell'escursione.",
+
+    // --- Sezione Tour ---
+    tours_title: "I Nostri Tour in Barca dalla Penisola Sorrentina",
+    tours_subtitle: "Piccoli gruppi max 7 persone, partenze giornaliere da Sorrento, prelievo disponibile e assistenza dedicata per tutta la durata dell'escursione.",
     badge_bestseller: "🔥 Più venduto",
     duration_label: "⏱ Durata:",
     max_label: "👥 Max:",
-    capri_title: "Esperienza a Capri",
-    capri_desc: "Le grotte sono bocche spalancate che raccontano storie solo a chi si avventura ad esplorarle.",
+
+    // Tour – Capri
+    capri_title: "Tour Capri in Barca: Grotta Azzurra e Faraglioni",
+    capri_desc: "Esplora l'isola di Capri in barca con visita alla Grotta Azzurra, giro completo dei Faraglioni e soste bagno nelle acque cristalline. Tour completo di 7-8 ore.",
     capri_price: "799 €",
-    sunset_title: "Sunset Experience",
-    sunset_desc: "Salpa con noi mentre il sole si tuffa nel mare, tingendo il cielo di tonalità calde e avvolgenti.",
+
+    // Tour – Sunset
+    sunset_title: "Sunset Experience - Tour al Tramonto da Sorrento",
+    sunset_desc: "Vivi un'esperienza romantica unica con il nostro tour al tramonto. Navigazione lungo la costa sorrentina mentre il sole si tuffa nel mare, con aperitivo incluso.",
     sunset_price: "299 €",
-    amalfi_title: "Costiera Amalfitana",
-    amalfi_desc: "Se è vero che un paesaggio è uno stato d'animo, allora preparati alla felicità!",
+
+    // Tour – Amalfi
+    amalfi_title: "Tour Costiera Amalfitana in Barca: Positano, Amalfi e Grotte",
+    amalfi_desc: "Scopri la bellezza della Costiera Amalfitana dal mare. Tour di 5-6 ore con soste a Positano, Amalfi, Praiano e visita alle grotte marine più suggestive.",
     amalfi_price: "899 €",
+
+    // --- Sezione About ---
     about_badge: "La Nostra Storia",
-    about_title: "Passione per il mare dal 2023",
+    about_title: "Passione per il Mare dal 2023 - Skipper Locali Esperti",
     about_intro: "La storia di Vento In Poppa Charter inizia nel 2023, dalla felice intuizione di persone già inserite nella realtà marinaria sorrentina, appassionate del mare ed entusiaste del proprio lavoro.",
-    about_full: "Il nostro equipaggio è composto da guide e capitani locali che conoscono profondamente la zona. Questa conoscenza approfondita ci consente di offrire esperienze autentiche e personalizzate, consentendo ai visitatori di scoprire i segreti nascosti e gli angoli più affascinanti della Penisola Sorrentina e di Capri. Inoltre comprendiamo che ogni viaggiatore ha esigenze e interessi diversi. Offriamo itinerari flessibili che possono essere adattati alle preferenze dei nostri clienti. Che si tratti di esplorare grotte marine, fare un bagno in acque cristalline o semplicemente godersi il paesaggio, possiamo personalizzare il tour per soddisfare le aspettative di ciascun cliente.",
-    faq_title: "Domande frequenti",
-    faq_intro: "Risposte alle domande più comuni sui nostri tour in barca da Sorrento, Napoli e Penisola Sorrentina.",
-    faq_q1: "Quante persone ci sono in barca?",
+    about_full: "Il nostro equipaggio è composto da guide e capitani locali che conoscono profondamente la Penisola Sorrentina, Capri e la Costiera Amalfitana. Questa conoscenza approfondita ci consente di offrire esperienze autentiche e personalizzate, consentendo ai visitatori di scoprire i segreti nascosti e gli angoli più affascinanti del Golfo di Napoli. Offriamo itinerari flessibili che possono essere adattati alle preferenze dei nostri clienti: esplorare grotte marine, fare soste bagno in acque cristalline o semplicemente godersi il paesaggio mozzafiato.",
+
+    // --- Sezione FAQ ---
+    faq_title: "Domande Frequenti sui Tour in Barca da Sorrento",
+    faq_intro: "Risposte alle domande più comuni sui nostri tour in barca da Sorrento verso Capri, Costiera Amalfitana e Penisola Sorrentina.",
+    faq_q1: "Quante persone ci sono in barca durante i tour?",
     faq_a1: "I tour condivisi sono pensati per piccoli gruppi (massimo 7 persone), così da garantire comfort a bordo ed un'esperienza più autentica rispetto alle escursioni di massa. Offriamo anche tour privati per chi desidera un'esperienza esclusiva.",
-    faq_q2: "Cosa succede in caso di maltempo?",
-    faq_a2: "La sicurezza dei nostri passeggeri è la nostra massima priorità. In caso di maltempo o condizioni marine avverse, potremmo dover cancellare o riprogrammare il tour. In tal caso, ti contatteremo per fornirti opzioni alternative o per il rimborso.",
-    faq_q3: "È necessario saper nuotare?",
-    faq_a3: "Non è strettamente necessario, ma consigliato per godersi le soste bagno. A bordo sono presenti giubbotti di salvataggio per tutti i passeggeri e il nostro skipper monitora costantemente la sicurezza di tutti.",
-    contact_title: "Contattaci",
-    contact_intro: "Siamo qui per rispondere a tutte le tue domande e aiutarti a organizzare l'escursione perfetta.",
+    faq_q2: "Cosa succede in caso di maltempo durante il tour?",
+    faq_a2: "La sicurezza dei nostri passeggeri è la nostra massima priorità. In caso di maltempo o condizioni marine avverse, potremmo dover cancellare o riprogrammare il tour. In tal caso, ti contatteremo per fornirti opzioni alternative o per il rimborso completo.",
+    faq_q3: "È necessario saper nuotare per partecipare ai tour?",
+    faq_a3: "Non è strettamente necessario saper nuotare, ma è consigliato per godersi le soste bagno. A bordo sono presenti giubbotti di salvataggio per tutti i passeggeri e il nostro skipper monitora costantemente la sicurezza di tutti.",
+
+    // --- Sezione Contatti ---
+    contact_title: "Contattaci per Prenotare il Tuo Tour",
+    contact_intro: "Siamo qui per rispondere a tutte le tue domande e aiutarti a organizzare l'escursione perfetta da Sorrento.",
     support_247: "Assistenza Dedicata 7 Giorni su 7",
     team_available: "Il nostro team è sempre disponibile per aiutarti a scegliere il tour perfetto e rispondere a tutte le tue domande su Capri, Costiera Amalfitana e Penisola Sorrentina.",
+
+    // Contatti – carte
     call_label: "Chiamaci Ora",
     call_text: "Parlaci direttamente al telefono al numero +39 081 123 4567 per informazioni immediate sui tour",
     call_btn: "Chiamaci",
@@ -62,11 +102,15 @@ const translationsData = {
     email_label: "Email",
     email_text: "Inviaci una email a info@ventoinpoppa.com per richieste dettagliate sui nostri tour",
     email_btn: "Invia email",
+
+    // Contatti – social
     follow_title: "Seguici sui Social Media",
     follow_text: "Condividiamo ogni giorno foto, video e storie dal mare. Unisciti alla nostra community di amanti delle escursioni in barca!",
     facebook: "Facebook",
     instagram: "Instagram",
     tiktok: "TikTok",
+
+    // Contatti – info cards
     embarkation_label: "Punto di Imbarco",
     port_label: "Porto di Sorrento - Marina Piccola",
     location_info: "Penisola Sorrentina, Provincia di Napoli, Campania",
@@ -75,6 +119,8 @@ const translationsData = {
     days_label: "Lunedì - Domenica",
     hours_label: "09:00 - 20:00",
     avg_response_label: "Tempo medio di risposta: 1-2 ore",
+
+    // --- Footer ---
     footer_brand: "Vento in Poppa Charter",
     footer_desc: "Escursioni di gruppo e tour privati in barca da Sorrento, Napoli e Penisola Sorrentina verso Capri e Costiera Amalfitana. Esperienze autentiche con skipper locali esperti dal 2023.",
     footer_tours_title: "I Nostri Tour",
@@ -86,9 +132,13 @@ const translationsData = {
     footer_email: "info@ventoinpoppa.com",
     footer_address: "Marina Piccola, Porto di Sorrento (NA)",
     footer_social_title: "Social Media",
+
+    // --- Footer bottom ---
     copyright: "© 2025 Vento in Poppa Charter – Tutti i diritti riservati | P.IVA 12345678901 |",
     privacy_link: "Privacy Policy",
     cookie_link: "Cookie Policy",
+
+    // --- Meta / SEO (usati direttamente in setLang) ---
     page_title: "Tour Barca Sorrento Capri | Escursioni Costiera Amalfitana",
     meta_description: "Escursioni in barca da Sorrento a Capri e Costiera Amalfitana. Piccoli gruppi max 7 persone, skipper locali esperti. Prenota il tuo tour ⛵ Dal 2023.",
     meta_keywords: "escursioni barca Sorrento, tour Capri, Costiera Amalfitana boat tour, gite in barca Napoli, charter Penisola Sorrentina"
@@ -96,72 +146,108 @@ const translationsData = {
 
   // ==================== INGLESE ====================
   en: {
-    skip_link: "Skip Link for accessibility",
+    // --- Skip link accessibilità ---
+    skip_link: "Skip to main content",
+
+    // --- Cookie banner ---
     cookie_text: "We use cookies to improve your browsing experience and analyze website traffic.",
     cookie_more_info: "More information",
     cookie_accept: "Accept",
     cookie_reject: "Reject",
+
+    // --- Navigazione desktop ---
     nav_tours: "Tours",
     nav_about: "About us",
     nav_faq: "FAQ",
     nav_contact: "Contact",
-    hero_title: "Discover the wonders of the coast with Vento in Poppa",
-    hero_subtitle: "Explore a world of wonders! Discover the most extraordinary places with us!",
+
+    // --- Navigazione mobile ---
+    nav_mobile_tours: "Tours",
+    nav_mobile_about: "About us",
+    nav_mobile_faq: "FAQ",
+    nav_mobile_contact: "Contact",
+    hamburger_label: "Open mobile menu",
+
+    // --- Hero ---
+    hero_title: "Boat Tours from Sorrento to Capri and the Amalfi Coast",
+    hero_subtitle: "Explore the wonders of the Gulf of Naples with our exclusive small-group tours. Expert skippers, daily departures, an unforgettable experience!",
     hero_cta: "Discover tours",
-    tours_title: "Our most beloved tours",
-    tours_subtitle: "Small groups, daily departures, pickup available and dedicated assistance throughout the excursion.",
+
+    // --- Sezione Tour ---
+    tours_title: "Our Boat Tours from the Sorrento Peninsula",
+    tours_subtitle: "Small groups of max 7 people, daily departures from Sorrento, pickup available and dedicated assistance throughout the excursion.",
     badge_bestseller: "🔥 Best seller",
     duration_label: "⏱ Duration:",
     max_label: "👥 Max:",
-    capri_title: "Capri Experience",
-    capri_desc: "Caves are gaping mouths that tell stories only to those who dare to explore them.",
+
+    // Tour – Capri
+    capri_title: "Capri Boat Tour: Blue Grotto and Faraglioni",
+    capri_desc: "Explore the island of Capri by boat with a visit to the Blue Grotto, a full tour of the Faraglioni and swimming stops in crystal-clear waters. Full 7-8 hour tour.",
     capri_price: "€799",
-    sunset_title: "Sunset Experience",
-    sunset_desc: "Set sail with us as the sun dives into the sea, painting the sky in warm and enveloping hues.",
+
+    // Tour – Sunset
+    sunset_title: "Sunset Experience – Sunset Tour from Sorrento",
+    sunset_desc: "Live a truly unique romantic experience with our sunset tour. Cruise along the Sorrento coast as the sun dives into the sea, with an aperitif included.",
     sunset_price: "€299",
-    amalfi_title: "Amalfi Coast",
-    amalfi_desc: "If it's true that a landscape is a state of mind, then prepare yourself for happiness!",
+
+    // Tour – Amalfi
+    amalfi_title: "Amalfi Coast Boat Tour: Positano, Amalfi and Caves",
+    amalfi_desc: "Discover the beauty of the Amalfi Coast from the sea. A 5-6 hour tour with stops in Positano, Amalfi, Praiano and visits to the most spectacular sea caves.",
     amalfi_price: "€899",
+
+    // --- Sezione About ---
     about_badge: "Our Story",
-    about_title: "Passion for the sea since 2023",
-    about_intro: "The story of Vento In Poppa Charter begins in 2023, from the happy intuition of people already immersed in the Sorrento maritime reality, passionate about the sea and enthusiastic about their work.",
-    about_full: "Our crew is composed of local guides and captains who have deep knowledge of the area. This in-depth knowledge allows us to offer authentic and personalized experiences, enabling visitors to discover hidden secrets and the most fascinating corners of the Sorrento Peninsula and Capri. Additionally, we understand that every traveler has different needs and interests. We offer flexible itineraries that can be adapted to our clients' preferences. Whether it's exploring sea caves, swimming in crystal-clear waters, or simply enjoying the scenery, we can customize the tour to meet each client's expectations.",
-    faq_title: "Frequently Asked Questions",
-    faq_intro: "Answers to the most common questions about our boat tours from Sorrento, Naples and the Sorrento Peninsula.",
-    faq_q1: "How many people are on the boat?",
-    faq_a1: "Shared tours are designed for small groups (maximum 7 people) to ensure comfort on board and a more authentic experience compared to mass excursions. We also offer private tours for those who want an exclusive experience.",
-    faq_q2: "What happens in case of bad weather?",
-    faq_a2: "The safety of our passengers is our top priority. In case of bad weather or adverse marine conditions, we may need to cancel or reschedule the tour. In that case, we will contact you to provide alternative options or a refund.",
-    faq_q3: "Is it necessary to know how to swim?",
-    faq_a3: "It's not strictly necessary, but recommended to enjoy the swimming stops. Life jackets are available on board for all passengers and our skipper constantly monitors everyone's safety.",
-    contact_title: "Contact us",
-    contact_intro: "We are here to answer all your questions and help you organize the perfect excursion.",
+    about_title: "Passion for the Sea since 2023 – Expert Local Skippers",
+    about_intro: "The story of Vento In Poppa Charter begins in 2023, from the happy intuition of people already immersed in the Sorrento maritime world, passionate about the sea and enthusiastic about their work.",
+    about_full: "Our crew is made up of local guides and captains who know the Sorrento Peninsula, Capri and the Amalfi Coast inside and out. This in-depth knowledge allows us to offer authentic and personalised experiences, enabling visitors to discover hidden secrets and the most fascinating corners of the Gulf of Naples. We offer flexible itineraries that can be tailored to our guests' preferences: exploring sea caves, swimming in crystal-clear waters or simply soaking in the breathtaking scenery.",
+
+    // --- Sezione FAQ ---
+    faq_title: "Frequently Asked Questions about Boat Tours from Sorrento",
+    faq_intro: "Answers to the most common questions about our boat tours from Sorrento to Capri, the Amalfi Coast and the Sorrento Peninsula.",
+    faq_q1: "How many people are on the boat during the tours?",
+    faq_a1: "Shared tours are designed for small groups (a maximum of 7 people) to guarantee comfort on board and a more authentic experience compared to mass excursions. We also offer private tours for those who desire an exclusive experience.",
+    faq_q2: "What happens in case of bad weather during the tour?",
+    faq_a2: "The safety of our passengers is our top priority. In case of bad weather or adverse sea conditions, we may have to cancel or reschedule the tour. In that case, we will contact you to offer alternative options or a full refund.",
+    faq_q3: "Is it necessary to know how to swim to join the tours?",
+    faq_a3: "It is not strictly necessary to know how to swim, but it is recommended to enjoy the swimming stops. Life jackets are available on board for all passengers and our skipper constantly monitors everyone's safety.",
+
+    // --- Sezione Contatti ---
+    contact_title: "Contact Us to Book Your Tour",
+    contact_intro: "We are here to answer all your questions and help you organise the perfect excursion from Sorrento.",
     support_247: "Dedicated Support 7 Days a Week",
     team_available: "Our team is always available to help you choose the perfect tour and answer all your questions about Capri, the Amalfi Coast and the Sorrento Peninsula.",
+
+    // Contatti – carte
     call_label: "Call Us Now",
     call_text: "Talk to us directly by phone at +39 081 123 4567 for immediate information about tours",
     call_btn: "Call us",
     whatsapp_label: "WhatsApp",
-    whatsapp_text: "Chat with us for personalized quotes and quick information about available tours",
+    whatsapp_text: "Chat with us for personalised quotes and quick information about available tours",
     whatsapp_btn: "Open chat",
     email_label: "Email",
     email_text: "Send us an email at info@ventoinpoppa.com for detailed requests about our tours",
     email_btn: "Send email",
-    follow_title: "Follow us on Social Media",
+
+    // Contatti – social
+    follow_title: "Follow Us on Social Media",
     follow_text: "We share photos, videos and stories from the sea every day. Join our community of boat excursion lovers!",
     facebook: "Facebook",
     instagram: "Instagram",
     tiktok: "TikTok",
+
+    // Contatti – info cards
     embarkation_label: "Embarkation Point",
-    port_label: "Port of Sorrento - Marina Piccola",
+    port_label: "Port of Sorrento – Marina Piccola",
     location_info: "Sorrento Peninsula, Province of Naples, Campania",
-    accessibility_info: "Easily accessible by car, train or bus from Naples",
+    accessibility_info: "Easily reachable by car, train or bus from Naples",
     response_times_label: "Response Times",
-    days_label: "Monday - Sunday",
-    hours_label: "09:00 - 20:00",
+    days_label: "Monday – Sunday",
+    hours_label: "09:00 – 20:00",
     avg_response_label: "Average response time: 1-2 hours",
+
+    // --- Footer ---
     footer_brand: "Vento in Poppa Charter",
-    footer_desc: "Group excursions and private boat tours from Sorrento, Naples and Sorrento Peninsula to Capri and Amalfi Coast. Authentic experiences with expert local skippers since 2023.",
+    footer_desc: "Group excursions and private boat tours from Sorrento, Naples and the Sorrento Peninsula to Capri and the Amalfi Coast. Authentic experiences with expert local skippers since 2023.",
     footer_tours_title: "Our Tours",
     footer_capri: "Capri Tour",
     footer_sunset: "Sunset Experience",
@@ -171,58 +257,92 @@ const translationsData = {
     footer_email: "info@ventoinpoppa.com",
     footer_address: "Marina Piccola, Port of Sorrento (NA)",
     footer_social_title: "Social Media",
+
+    // --- Footer bottom ---
     copyright: "© 2025 Vento in Poppa Charter – All rights reserved | VAT 12345678901 |",
     privacy_link: "Privacy Policy",
     cookie_link: "Cookie Policy",
+
+    // --- Meta / SEO ---
     page_title: "Boat Tours Sorrento Capri | Amalfi Coast Excursions",
-    meta_description: "Boat excursions from Sorrento to Capri and Amalfi Coast. Small groups max 7 people, expert local skippers. Book your tour ⛵ Since 2023.",
+    meta_description: "Boat excursions from Sorrento to Capri and the Amalfi Coast. Small groups max 7 people, expert local skippers. Book your tour ⛵ Since 2023.",
     meta_keywords: "Sorrento boat excursions, Capri tour, Amalfi Coast boat tour, Naples boat trips, Sorrento Peninsula charter"
   },
 
   // ==================== SPAGNOLO ====================
   es: {
-    skip_link: "Enlace de salto para accesibilidad",
+    // --- Skip link accessibilità ---
+    skip_link: "Ir al contenido principal",
+
+    // --- Cookie banner ---
     cookie_text: "Utilizamos cookies para mejorar su experiencia de navegación y analizar el tráfico del sitio web.",
     cookie_more_info: "Más información",
     cookie_accept: "Aceptar",
     cookie_reject: "Rechazar",
+
+    // --- Navigazione desktop ---
     nav_tours: "Tours",
     nav_about: "Sobre nosotros",
     nav_faq: "Preguntas frecuentes",
     nav_contact: "Contacto",
-    hero_title: "Descubre las maravillas de la costa con Vento in Poppa",
-    hero_subtitle: "¡Explora un mundo de maravillas! ¡Descubre los lugares más extraordinarios con nosotros!",
+
+    // --- Navigazione mobile ---
+    nav_mobile_tours: "Tours",
+    nav_mobile_about: "Sobre nosotros",
+    nav_mobile_faq: "Preguntas frecuentes",
+    nav_mobile_contact: "Contacto",
+    hamburger_label: "Abrir menú móvil",
+
+    // --- Hero ---
+    hero_title: "Tours en Barco desde Sorrento a Capri y la Costa Amalfitana",
+    hero_subtitle: "Explora las maravillas del Golfo de Nápoles con nuestros tours exclusivos en grupos pequeños. Patrones expertos, salidas diarias, ¡una experiencia inolvidable!",
     hero_cta: "Descubre los tours",
-    tours_title: "Nuestros tours más queridos",
-    tours_subtitle: "Grupos pequeños, salidas diarias, recogida disponible y asistencia dedicada durante toda la excursión.",
+
+    // --- Sezione Tour ---
+    tours_title: "Nuestros Tours en Barco desde la Península de Sorrento",
+    tours_subtitle: "Grupos pequeños de máximo 7 personas, salidas diarias desde Sorrento, recogida disponible y asistencia dedicada durante toda la excursión.",
     badge_bestseller: "🔥 Más vendido",
     duration_label: "⏱ Duración:",
     max_label: "👥 Máx:",
-    capri_title: "Experiencia en Capri",
-    capri_desc: "Las cuevas son bocas abiertas que cuentan historias solo a quienes se atreven a explorarlas.",
+
+    // Tour – Capri
+    capri_title: "Tour en Barco a Capri: Gruta Azul y Faraglioni",
+    capri_desc: "Explora la isla de Capri en barco con visita a la Gruta Azul, un recorrido completo de los Faraglioni y paradas para nadar en aguas cristalinas. Tour completo de 7-8 horas.",
     capri_price: "799 €",
-    sunset_title: "Experiencia al Atardecer",
-    sunset_desc: "Navega con nosotros mientras el sol se sumerge en el mar, pintando el cielo con tonos cálidos y envolventes.",
+
+    // Tour – Sunset
+    sunset_title: "Experiencia al Atardecer – Tour desde Sorrento",
+    sunset_desc: "Vive una experiencia romántica única con nuestro tour al atardecer. Navegación a lo largo de la costa sorrentina mientras el sol se sumerge en el mar, con aperitivo incluido.",
     sunset_price: "299 €",
-    amalfi_title: "Costa Amalfitana",
-    amalfi_desc: "Si es cierto que un paisaje es un estado de ánimo, ¡entonces prepárate para la felicidad!",
+
+    // Tour – Amalfi
+    amalfi_title: "Tour en Barco por la Costa Amalfitana: Positano, Amalfi y Cuevas",
+    amalfi_desc: "Descubre la belleza de la Costa Amalfitana desde el mar. Tour de 5-6 horas con paradas en Positano, Amalfi, Praiano y visita a las cuevas marinas más impresionantes.",
     amalfi_price: "899 €",
+
+    // --- Sezione About ---
     about_badge: "Nuestra Historia",
-    about_title: "Pasión por el mar desde 2023",
+    about_title: "Pasión por el Mar desde 2023 – Patrones Locales Expertos",
     about_intro: "La historia de Vento In Poppa Charter comienza en 2023, de la feliz intuición de personas ya inmersas en la realidad marítima de Sorrento, apasionadas por el mar y entusiastas de su trabajo.",
-    about_full: "Nuestro equipo está compuesto por guías y capitanes locales que conocen profundamente la zona. Este conocimiento profundo nos permite ofrecer experiencias auténticas y personalizadas, permitiendo a los visitantes descubrir secretos ocultos y los rincones más fascinantes de la Península de Sorrento y Capri. Además, entendemos que cada viajero tiene necesidades e intereses diferentes. Ofrecemos itinerarios flexibles que pueden adaptarse a las preferencias de nuestros clientes. Ya sea explorando cuevas marinas, nadando en aguas cristalinas o simplemente disfrutando del paisaje, podemos personalizar el tour para cumplir con las expectativas de cada cliente.",
-    faq_title: "Preguntas frecuentes",
-    faq_intro: "Respuestas a las preguntas más comunes sobre nuestros tours en barco desde Sorrento, Nápoles y la Península de Sorrento.",
-    faq_q1: "¿Cuántas personas hay en el barco?",
+    about_full: "Nuestro equipo está compuesto por guías y capitanes locales que conocen a la perfección la Península de Sorrento, Capri y la Costa Amalfitana. Este conocimiento profundo nos permite ofrecer experiencias auténticas y personalizadas, permitiendo a los visitantes descubrir los secretos ocultos y los rincones más fascinantes del Golfo de Nápoles. Ofrecemos itinerarios flexibles que se pueden adaptar a las preferencias de nuestros clientes: explorar cuevas marinas, hacer paradas para nadar en aguas cristalinas o simplemente disfrutar del impresionante paisaje.",
+
+    // --- Sezione FAQ ---
+    faq_title: "Preguntas Frecuentes sobre Tours en Barco desde Sorrento",
+    faq_intro: "Respuestas a las preguntas más comunes sobre nuestros tours en barco desde Sorrento hacia Capri, la Costa Amalfitana y la Península de Sorrento.",
+    faq_q1: "¿Cuántas personas hay en el barco durante los tours?",
     faq_a1: "Los tours compartidos están diseñados para grupos pequeños (máximo 7 personas) para garantizar comodidad a bordo y una experiencia más auténtica en comparación con las excursiones masivas. También ofrecemos tours privados para quienes desean una experiencia exclusiva.",
-    faq_q2: "¿Qué sucede en caso de mal tiempo?",
-    faq_a2: "La seguridad de nuestros pasajeros es nuestra máxima prioridad. En caso de mal tiempo o condiciones marinas adversas, podríamos necesitar cancelar o reprogramar el tour. En ese caso, nos pondremos en contacto con usted para proporcionar opciones alternativas o un reembolso.",
-    faq_q3: "¿Es necesario saber nadar?",
-    faq_a3: "No es estrictamente necesario, pero se recomienda para disfrutar de las paradas para nadar. Hay chalecos salvavidas disponibles a bordo para todos los pasajeros y nuestro patrón monitorea constantemente la seguridad de todos.",
-    contact_title: "Contáctanos",
-    contact_intro: "Estamos aquí para responder todas sus preguntas y ayudarlo a organizar la excursión perfecta.",
+    faq_q2: "¿Qué sucede en caso de mal tiempo durante el tour?",
+    faq_a2: "La seguridad de nuestros pasajeros es nuestra máxima prioridad. En caso de mal tiempo o condiciones marinas adversas, podríamos tener que cancelar o reprogramar el tour. En ese caso, nos pondremos en contacto con usted para ofrecer opciones alternativas o un reembolso completo.",
+    faq_q3: "¿Es necesario saber nadar para participar en los tours?",
+    faq_a3: "No es estrictamente necesario saber nadar, pero se recomienda para disfrutar de las paradas para nadar. A bordo hay chalecos salvavidas para todos los pasajeros y nuestro patrón monitorea constantemente la seguridad de todos.",
+
+    // --- Sezione Contatti ---
+    contact_title: "Contáctanos para Reservar su Tour",
+    contact_intro: "Estamos aquí para responder todas sus preguntas y ayudarle a organizar la excursión perfecta desde Sorrento.",
     support_247: "Asistencia Dedicada 7 Días a la Semana",
-    team_available: "Nuestro equipo está siempre disponible para ayudarlo a elegir el tour perfecto y responder todas sus preguntas sobre Capri, la Costa Amalfitana y la Península de Sorrento.",
+    team_available: "Nuestro equipo está siempre disponible para ayudarle a elegir el tour perfecto y responder todas sus preguntas sobre Capri, la Costa Amalfitana y la Península de Sorrento.",
+
+    // Contatti – carte
     call_label: "Llámenos Ahora",
     call_text: "Hable con nosotros directamente por teléfono al +39 081 123 4567 para información inmediata sobre los tours",
     call_btn: "Llámenos",
@@ -230,21 +350,27 @@ const translationsData = {
     whatsapp_text: "Chatea con nosotros para presupuestos personalizados e información rápida sobre los tours disponibles",
     whatsapp_btn: "Abrir chat",
     email_label: "Email",
-    email_text: "Envíenos un email a info@ventoinpoppa.com para solicitudes detalladas sobre nuestros tours",
-    email_btn: "Enviar email",
+    email_text: "Envíenos un correo electrónico a info@ventoinpoppa.com para solicitudes detalladas sobre nuestros tours",
+    email_btn: "Enviar correo",
+
+    // Contatti – social
     follow_title: "Síguenos en las Redes Sociales",
     follow_text: "Compartimos fotos, videos e historias del mar todos los días. ¡Únete a nuestra comunidad de amantes de las excursiones en barco!",
     facebook: "Facebook",
     instagram: "Instagram",
     tiktok: "TikTok",
+
+    // Contatti – info cards
     embarkation_label: "Punto de Embarque",
-    port_label: "Puerto de Sorrento - Marina Piccola",
+    port_label: "Puerto de Sorrento – Marina Piccola",
     location_info: "Península de Sorrento, Provincia de Nápoles, Campania",
     accessibility_info: "Fácilmente accesible en coche, tren o autobús desde Nápoles",
     response_times_label: "Horarios de Respuesta",
-    days_label: "Lunes - Domingo",
-    hours_label: "09:00 - 20:00",
-    avg_response_label: "Tiempo promedio de respuesta: 1-2 horas",
+    days_label: "Lunes – Domingo",
+    hours_label: "09:00 – 20:00",
+    avg_response_label: "Tiempo medio de respuesta: 1-2 horas",
+
+    // --- Footer ---
     footer_brand: "Vento in Poppa Charter",
     footer_desc: "Excursiones grupales y tours privados en barco desde Sorrento, Nápoles y la Península de Sorrento hacia Capri y la Costa Amalfitana. Experiencias auténticas con patrones locales expertos desde 2023.",
     footer_tours_title: "Nuestros Tours",
@@ -256,110 +382,141 @@ const translationsData = {
     footer_email: "info@ventoinpoppa.com",
     footer_address: "Marina Piccola, Puerto de Sorrento (NA)",
     footer_social_title: "Redes Sociales",
+
+    // --- Footer bottom ---
     copyright: "© 2025 Vento in Poppa Charter – Todos los derechos reservados | NIF 12345678901 |",
     privacy_link: "Política de Privacidad",
     cookie_link: "Política de Cookies",
+
+    // --- Meta / SEO ---
     page_title: "Tours en Barco Sorrento Capri | Excursiones Costa Amalfitana",
-    meta_description: "Excursiones en barco desde Sorrento a Capri y Costa Amalfitana. Grupos pequeños máx 7 personas, patrones locales expertos. Reserva tu tour ⛵ Desde 2023.",
+    meta_description: "Excursiones en barco desde Sorrento a Capri y la Costa Amalfitana. Grupos pequeños máx 7 personas, patrones locales expertos. Reserva tu tour ⛵ Desde 2023.",
     meta_keywords: "excursiones barco Sorrento, tour Capri, Costa Amalfitana paseo barco, viajes barco Nápoles, charter Península Sorrento"
   }
 };
 
 // ==================== MAPPA ID ELEMENTI → CHIAVI TRADUZIONE ====================
+// Ogni chiave sinistra = id="" dell'elemento nel DOM dell'HTML
+// Ogni valore destra  = chiave nel dizionario translationsData[lang]
 const translationKeyMap = {
-  // Cookie banner
-  "cookieText": "cookie_text",
-  "cookieMoreInfo": "cookie_more_info",
-  "cookieAcceptBtn": "cookie_accept",
-  "cookieRejectBtn": "cookie_reject",
 
-  // Navigation
-  "navTours": "nav_tours",
-  "navAbout": "nav_about",
-  "navFaq": "nav_faq",
-  "navContact": "nav_contact",
+  // --- Skip link ---
+  "skipLink":                 "skip_link",
 
-  // Hero
-  "heroTitle": "hero_title",
-  "heroSubtitle": "hero_subtitle",
-  "heroCta": "hero_cta",
+  // --- Cookie banner ---
+  "cookieText":               "cookie_text",
+  "cookieMoreInfo":           "cookie_more_info",
+  "acceptBtn":                "cookie_accept",       // ← corretto (era cookieAcceptBtn)
+  "rejectBtn":                "cookie_reject",       // ← corretto (era cookieRejectBtn)
 
-  // Tours
-  "toursTitle": "tours_title",
-  "toursSubtitle": "tours_subtitle",
-  "badgeBestseller": "badge_bestseller",
-  "durationLabel": "duration_label",
-  "maxLabel": "max_label",
-  "capriTitle": "capri_title",
-  "capriDesc": "capri_desc",
-  "capriPrice": "capri_price",
-  "sunsetTitle": "sunset_title",
-  "sunsetDesc": "sunset_desc",
-  "sunsetPrice": "sunset_price",
-  "amalfiTitle": "amalfi_title",
-  "amalfiDesc": "amalfi_desc",
-  "amalfiPrice": "amalfi_price",
+  // --- Navigazione desktop ---
+  "navTours":                 "nav_tours",
+  "navAbout":                 "nav_about",
+  "navFaq":                   "nav_faq",
+  "navContact":               "nav_contact",
 
-  // About
-  "aboutBadge": "about_badge",
-  "aboutTitle": "about_title",
-  "aboutIntro": "about_intro",
-  "aboutFull": "about_full",
+  // --- Navigazione mobile ---                      // ← NUOVO blocco
+  "navMobileTours":           "nav_mobile_tours",
+  "navMobileAbout":           "nav_mobile_about",
+  "navMobileFaq":             "nav_mobile_faq",
+  "navMobileContact":         "nav_mobile_contact",
 
-  // FAQ
-  "faqTitle": "faq_title",
-  "faqIntro": "faq_intro",
-  "faqQ1": "faq_q1",
-  "faqA1": "faq_a1",
-  "faqQ2": "faq_q2",
-  "faqA2": "faq_a2",
-  "faqQ3": "faq_q3",
-  "faqA3": "faq_a3",
+  // --- Hero ---
+  "heroTitle":                "hero_title",
+  "heroText":                 "hero_subtitle",       // ← corretto (era heroSubtitle)
+  "heroBtn":                  "hero_cta",            // ← corretto (era heroCta)
 
-  // Contact
-  "contactTitle": "contact_title",
-  "contactIntro": "contact_intro",
-  "support247": "support_247",
-  "teamAvailable": "team_available",
-  "callUsLabel": "call_label",
-  "callUsText": "call_text",
-  "callUsBtn": "call_btn",
-  "whatsappLabel": "whatsapp_label",
-  "whatsappText": "whatsapp_text",
-  "whatsappBtn": "whatsapp_btn",
-  "emailLabel": "email_label",
-  "emailText": "email_text",
-  "emailBtn": "email_btn",
-  "followUsTitle": "follow_title",
-  "followUsText": "follow_text",
-  "facebookText": "facebook",
-  "instagramText": "instagram",
-  "tiktokText": "tiktok",
-  "embarkationLabel": "embarkation_label",
-  "portLabel": "port_label",
-  "locationInfo": "location_info",
-  "accessibilityInfo": "accessibility_info",
-  "responseTimesLabel": "response_times_label",
-  "daysLabel": "days_label",
-  "hoursLabel": "hours_label",
-  "avgResponseLabel": "avg_response_label",
+  // --- Sezione Tour ---
+  "tourTitle":                "tours_title",         // ← corretto (era toursTitle)
+  "tourSubtitle":             "tours_subtitle",      // ← corretto (era toursSubtitle)
+  "capriBadge":               "badge_bestseller",    // ← corretto (era badgeBestseller)
+  "durationLabel":            "duration_label",
+  "maxLabel":                 "max_label",
 
-  // Footer
-  "footerBrand": "footer_brand",
-  "footerDesc": "footer_desc",
-  "footerToursTitle": "footer_tours_title",
-  "footerCapri": "footer_capri",
-  "footerSunset": "footer_sunset",
-  "footerAmalfi": "footer_amalfi",
-  "footerContactsTitle": "footer_contacts_title",
-  "footerPhone": "footer_phone",
-  "footerEmail": "footer_email",
-  "footerAddress": "footer_address",
-  "footerSocialTitle": "footer_social_title",
-  "copyright": "copyright",
-  "privacyLink": "privacy_link",
-  "cookieLink": "cookie_link"
+  // Tour – Capri
+  "capriTitle":               "capri_title",
+  "capriDesc":                "capri_desc",
+  "capriPrice":               "capri_price",
+
+  // Tour – Sunset
+  "sunsetTitle":              "sunset_title",
+  "sunsetDesc":               "sunset_desc",
+  "sunsetPrice":              "sunset_price",
+
+  // Tour – Amalfi
+  "amalfiTitle":              "amalfi_title",
+  "amalfiDesc":               "amalfi_desc",
+  "amalfiPrice":              "amalfi_price",
+
+  // --- Sezione About ---
+  "aboutBadge":               "about_badge",
+  "aboutMainTitle":           "about_title",         // ← corretto (era aboutTitle)
+  "aboutIntro":               "about_intro",
+  "aboutFull":                "about_full",
+
+  // --- Sezione FAQ ---
+  "faqTitle":                 "faq_title",
+  "faqIntro":                 "faq_intro",
+  "q1":                       "faq_q1",              // ← corretto (era faqQ1)
+  "a1":                       "faq_a1",              // ← corretto (era faqA1)
+  "q2":                       "faq_q2",              // ← corretto (era faqQ2)
+  "a2":                       "faq_a2",              // ← corretto (era faqA2)
+  "q3":                       "faq_q3",              // ← corretto (era faqQ3)
+  "a3":                       "faq_a3",              // ← corretto (era faqA3)
+
+  // --- Sezione Contatti ---
+  "contactTitle":             "contact_title",
+  "contactIntro":             "contact_intro",
+  "support247":               "support_247",
+  "teamAvailable":            "team_available",
+
+  // Contatti – carte
+  "callUsLabel":              "call_label",
+  "callUsText":               "call_text",
+  "callUsBtn":                "call_btn",
+  "whatsappLabel":            "whatsapp_label",
+  "whatsappText":             "whatsapp_text",
+  "whatsappBtn":              "whatsapp_btn",
+  "emailLabel":               "email_label",
+  "emailText":                "email_text",
+  "emailBtn":                 "email_btn",
+
+  // Contatti – social
+  "followUsTitle":            "follow_title",
+  "followUsText":             "follow_text",
+  "facebookText":             "facebook",
+  "instagramText":            "instagram",
+  "tiktokText":               "tiktok",
+
+  // Contatti – info cards
+  "embarkationLabel":         "embarkation_label",
+  "portLabel":                "port_label",
+  "locationInfo":             "location_info",
+  "accessibilityInfo":        "accessibility_info",
+  "responseTimesLabel":       "response_times_label",
+  "daysLabel":                "days_label",
+  "hoursLabel":               "hours_label",
+  "avgResponseLabel":         "avg_response_label",
+
+  // --- Footer ---
+  "footerBrand":              "footer_brand",
+  "footerDesc":               "footer_desc",
+  "footerToursTitle":         "footer_tours_title",
+  "footerCapri":              "footer_capri",
+  "footerSunset":             "footer_sunset",
+  "footerAmalfi":             "footer_amalfi",
+  "footerContactsTitle":      "footer_contacts_title",
+  "footerPhone":              "footer_phone",
+  "footerEmail":              "footer_email",
+  "footerAddress":            "footer_address",
+  "footerSocialTitle":        "footer_social_title",
+
+  // --- Footer bottom ---
+  "copyright":                "copyright",
+  "privacyLink":              "privacy_link",
+  "cookieLink":               "cookie_link"
 };
+
 // ==================== FUNZIONE PRINCIPALE: CAMBIO LINGUA ====================
 /**
  * Cambia la lingua del sito PRESERVANDO le icone Bootstrap
@@ -390,6 +547,12 @@ function setLang(lang) {
   const ogDesc = document.querySelector('meta[property="og:description"]');
   if (ogDesc) ogDesc.setAttribute('content', t.meta_description);
 
+  // ==================== ARIA-LABEL: hamburger ====================
+  const hamburger = document.getElementById('hamburgerBtn');
+  if (hamburger && t.hamburger_label) {
+    hamburger.setAttribute('aria-label', t.hamburger_label);
+  }
+
   // ==================== TRADUZIONE ELEMENTI DOM ====================
   Object.entries(translationKeyMap).forEach(([elementId, translationKey]) => {
     const element = document.getElementById(elementId);
@@ -411,10 +574,10 @@ function setLang(lang) {
       const iconHTML = iconElement.outerHTML;
 
       // Se l'icona è all'inizio (es: <i></i> Testo)
-      if (element.firstChild && element.firstChild.nodeType === Node.ELEMENT_NODE && 
+      if (element.firstChild && element.firstChild.nodeType === Node.ELEMENT_NODE &&
           element.firstChild.tagName === 'I') {
         element.innerHTML = iconHTML + ' ' + t[translationKey];
-      } 
+      }
       // Se l'icona è alla fine o nel mezzo
       else {
         // Cerca tutti i nodi di testo e sostituiscili
@@ -461,7 +624,6 @@ function initializeLanguage() {
   // Carica lingua salvata o usa ITALIANO come default
   const savedLang = localStorage.getItem('preferredLang') || 'it';
 
-
   // Applica la lingua
   setLang(savedLang);
 
@@ -473,8 +635,6 @@ function initializeLanguage() {
       setLang(selectedLang);
     });
   });
-
-
 }
 
 // ==================== AUTO-START ====================
@@ -488,5 +648,3 @@ if (document.readyState === 'loading') {
 
 // Esporta funzione globale per uso manuale
 window.setLanguage = setLang;
-
-// ==================== DEBUG INFO ====================

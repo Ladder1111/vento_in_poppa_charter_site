@@ -60,7 +60,7 @@
         "alternateName": "Vento in Poppa",
         "description": "Escursioni in barca di lusso da Sorrento verso Capri e Costiera Amalfitana. Tour privati e di gruppo con skipper esperti locali.",
         "url": "https://www.ventoinpoppacharter.com",
-        "telephone": "+39-081-1234567",
+        "telephone": "+39-331-616-6512",
         "email": "info@ventoinpoppa.com",
         "priceRange": "€€-€€€",
         "image": [
@@ -132,12 +132,12 @@
       },
       {
         "@type": "Service",
-        "@id": "https://www.ventoinpoppacharter.com/tour-capri.html#service",
+        "@id": "https://www.ventoinpoppacharter.com/tour_capri",
         "serviceType": "Tour in Barca a Capri",
         "name": "Esperienza Capri - Tour Completo dell'Isola",
         "description": "Tour giornaliero di 7-8 ore da Sorrento a Capri con visita alla Grotta Azzurra, giro dei Faraglioni e soste bagno.",
         "provider": {
-          "@id": "https://www.ventoinpoppacharter.com/#organization"
+          "@id": "https://www.ventoinpoppacharter.com"
         },
         "areaServed": {
           "@type": "City",
@@ -150,29 +150,29 @@
           "availability": "https://schema.org/InStock",
           "validFrom": "2025-04-01",
           "priceValidUntil": "2025-10-31",
-          "url": "https://www.ventoinpoppacharter.com/tour-capri.html"
+          "url": "https://www.ventoinpoppacharter.com/tour_capri"
         }
       },
       {
         "@type": "Service",
-        "@id": "https://www.ventoinpoppacharter.com/tour-sunset.html#service",
+        "@id": "https://www.ventoinpoppacharter.com/tour_sunset",
         "serviceType": "Tour al Tramonto",
         "name": "Sunset Experience - Tour al Tramonto da Sorrento",
         "description": "Tour romantico di 2-3 ore al tramonto lungo la costa sorrentina con aperitivo incluso.",
         "provider": {
-          "@id": "https://www.ventoinpoppacharter.com/#organization"
+          "@id": "https://www.ventoinpoppacharter.com"
         },
         "offers": {
           "@type": "Offer",
           "price": "299",
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.ventoinpoppacharter.com/tour-sunset.html"
+          "url": "https://www.ventoinpoppacharter.com/tour_sunset"
         }
       },
       {
         "@type": "Service",
-        "@id": "https://www.ventoinpoppacharter.com/tour-costiera-amalfitana.html#service",
+        "@id": "https://www.ventoinpoppacharter.com/tour_amalfi",
         "serviceType": "Tour Costiera Amalfitana",
         "name": "Tour Costiera Amalfitana - Positano, Amalfi e Praiano",
         "description": "Tour di 5-6 ore della Costiera Amalfitana con soste a Positano e Amalfi.",
@@ -257,12 +257,10 @@
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consenso cookie">
     <div class="cookie-inner">
       <p class="cookie-text" id="cookieText">
-        Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico sul sito.
-        <a href="#privacy" id="cookieMoreInfo">Maggiori informazioni</a>
+       Il sito non utilizza nessun cookie.
       </p>
       <div class="cookie-actions">
-        <button class="cookie-btn cookie-accept" onclick="handleCookie(true)" id="acceptBtn">Accetta</button>
-        <button class="cookie-btn cookie-decline" onclick="handleCookie(false)" id="rejectBtn">Rifiuta</button>
+        <button class="cookie-btn cookie-accept" onclick="handleCookie(false)" id="acceptBtn">Chiudi</button>
       </div>
     </div>
   </div>
@@ -332,7 +330,7 @@
 
       <div class="tour-grid">
         <!-- CAPRI TOUR -->
-        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/Product" >
+        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/Product" onclick="vaiAPagina('tour_capri')">
           <div class="tour-card-image">
             <img 
               src="immagini/capri_tour_faraglioni.jpg" 
@@ -562,8 +560,8 @@
               <i class="bi bi-telephone-fill"></i>
             </div>
             <h4 id="callUsLabel">Chiamaci Ora</h4>
-            <p id="callUsText">Parlaci direttamente al telefono al numero +39 081 123 4567 per informazioni immediate sui tour</p>
-            <a href="tel:+390811234567" class="contact-card-btn btn-phone" id="callUsBtn" aria-label="Chiama Vento in Poppa Charter">
+            <p id="callUsText">Parlaci direttamente al telefono al numero +39 331 616 6512 per informazioni immediate sui tour</p>
+            <a href="tel:+393316166512" class="contact-card-btn btn-phone" id="callUsBtn" aria-label="Chiama Vento in Poppa Charter">
               <i class="bi bi-telephone-fill"></i>
               Chiamaci
             </a>
@@ -575,7 +573,7 @@
             </div>
             <h4 id="whatsappLabel">WhatsApp</h4>
             <p id="whatsappText">Chatta con noi per preventivi personalizzati e informazioni rapide sui tour disponibili</p>
-            <a href="https://wa.me/390811234567" target="_blank" rel="noopener noreferrer" class="contact-card-btn btn-whatsapp" id="whatsappBtn" aria-label="Contattaci su WhatsApp">
+            <a href="https://wa.me/393316166512" target="_blank" rel="noopener noreferrer" class="contact-card-btn btn-whatsapp" id="whatsappBtn" aria-label="Contattaci su WhatsApp">
               <i class="bi bi-whatsapp"></i>
               Apri chat
             </a>
@@ -688,8 +686,8 @@
           <i class="bi bi-telephone"></i>
           Contatti
         </h3>
-        <a href="tel:+390811234567" class="footer-link" id="footerPhone">
-          <i class="bi bi-telephone-fill"></i> +39 081 123 4567
+        <a href="tel:+393316166512" class="footer-link" id="footerPhone">
+          <i class="bi bi-telephone-fill"></i> +39 331 616 6512
         </a>
         <a href="/cdn-cgi/l/email-protection#6a03040c052a1c0f041e0503041a051a1a0b44090507" class="footer-link" id="footerEmail">
           <i class="bi bi-envelope-fill"></i> <span class="__cf_email__" data-cfemail="056c6b636a4573606b716a6c6b756a7575642b666a68">[email&#160;protected]</span>
@@ -717,14 +715,13 @@
     </div>
 
     <div class="footer-bottom">
-      <span id="copyright">© 2025 Vento in Poppa Charter – Tutti i diritti riservati | P.IVA 12345678901 |</span>
-      <a href="privacy-policy.html" id="privacyLink">Privacy Policy</a> | 
+      <span id="copyright">© 2023 Vento in Poppa Charter – Tutti i diritti riservati | P.IVA  |</span>
       <a href="cookie-policy.html" id="cookieLink">Cookie Policy</a>
     </div>
   </footer>
 
   <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/390811234567" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp per prenotare un tour">
+  <a href="https://wa.me/393316166512" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp per prenotare un tour">
     <i class="bi bi-whatsapp"></i>
   </a>
 

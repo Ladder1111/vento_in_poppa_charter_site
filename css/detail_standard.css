@@ -1,0 +1,1023 @@
+/* =======================================================
+   TOUR CAPRI - CSS COMPLETO RESPONSIVE
+   SEO Ottimizzato con Immagini in CSS
+======================================================= */
+
+/* RESET E BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #f9fafb;
+}
+
+/* VARIABILI DESIGN SYSTEM */
+:root {
+  --primary-blue: #164ab9;
+  --primary-blue-dark: #0d3a8f;
+  --primary-blue-light: #e0edff;
+  --secondary-blue: #0ea5e9;
+  --gray-50: #f9fafb;
+  --gray-100: #f5f7fb;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --accent-green: #16a34a;
+  --whatsapp: #25D366;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 8px 26px rgba(15, 23, 42, 0.1);
+  --shadow-xl: 0 12px 35px rgba(15, 23, 42, 0.15);
+  --transition-base: 0.2s ease;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+}
+
+/* HEADER FISSO RESPONSIVE */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--gray-200);
+  backdrop-filter: blur(16px);
+  z-index: 2000;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo img {
+  height: 42px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+nav a:hover {
+  color: var(--primary-blue);
+  background: var(--primary-blue-light);
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  background: var(--gray-50);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--gray-200);
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.lang-btn.active, .lang-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: var(--primary-blue);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MAIN CONTENT */
+main {
+  margin-top: 72px;
+}
+
+.tour-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* HERO SECTION CON SLIDER - IMMAGINI IN CSS */
+/* Trova questa classe in detail.css e sostituisci il border-radius */
+.tour-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-bottom: 3rem;
+  /* Modifica qui: rimuove l'arrotondamento sopra e lo lascia solo sotto */
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl); 
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* IMMAGINI HERO SLIDER */
+/* HERO SECTION CON SLIDER - IMMAGINI IN CSS */
+.tour-hero {
+  position: relative;
+  /* Altezza dinamica ma con un minimo garantito */
+  min-height: 75vh;
+  min-height: 75dvh; /* Supporto per mobile moderni */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 1.5rem 6rem; /* Più spazio sopra per l'header fisso */
+  margin-bottom: 3rem;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  /* Previene scatti durante il caricamento */
+  background-color: var(--gray-800); 
+}
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Transizione più morbida */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.05); /* Leggero zoom per effetto cinema */
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1.5s ease-in-out, transform 6s linear; /* Effetto lento di movimento */
+}
+
+/* Immagini slide rimangono uguali a prima */
+.hero-slide:nth-child(1) { background-image: url('../immagini/capri_tour_faraglioni.jpg'); }
+.hero-slide.slide-2 { background-image: url('../immagini/faraglioni-g801b2d316_1920.jpg'); }
+.hero-slide.slide-3 { background-image: url('../immagini/capri_tour_faraglioni.jpg'); }
+.hero-slide.slide-4 { background-image: url('../immagini/faraglioni-g801b2d316_1920.jpg'); }
+
+.tour-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Gradiente migliorato: scuro sotto per leggere le scritte, chiaro sopra */
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 74, 185, 0.3) 0%,
+    rgba(15, 23, 42, 0.4) 50%,
+    rgba(15, 23, 42, 0.8) 100%
+  );
+  z-index: 2;
+}
+
+.tour-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1000px; /* Allargato leggermente per dare respiro */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tour-hero-title {
+  /* Clamp: Minimo 2rem, Ideale 5vw, Massimo 4.5rem - Scala fluida */
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.tour-hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  opacity: 0.95;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  max-width: 70ch; /* Limita la lunghezza della riga per leggibilità */
+  margin: 0;
+}
+
+/* CONTAINER ICONE INTELLIGENTE */
+.tour-meta-box {
+  display: flex;
+  flex-wrap: wrap; /* Permette di andare a capo se non c'è spazio */
+  justify-content: center; /* Centra sempre gli elementi, anche se dispari */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.meta-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center; /* Icona e testo allineati orizzontalmente */
+  gap: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+  min-width: 160px; /* Larghezza minima per coerenza */
+  flex: 0 1 auto; /* Non forzare larghezze strane */
+}
+
+.meta-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+}
+
+.meta-icon {
+  width: 44px;
+  height: 44px;
+  background: white;
+  color: var(--primary-blue);
+  border-radius: 50%; /* Icona circolare è più moderna */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0; /* Impedisce all'icona di schiacciarsi */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.meta-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.meta-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* LAYOUT PRINCIPALE */
+.tour-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.tour-main, .tour-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tour-section {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.tour-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tour-section h2 i {
+  color: var(--primary-blue);
+  font-size: 1.25rem;
+}
+
+.tour-section p {
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* TIMELINE STYLE */
+.timeline-container {
+  position: relative;
+  padding: var(--spacing-xl) 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-blue));
+  border-radius: var(--radius-full);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 4px solid var(--primary-blue);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+  transition: all var(--transition-base);
+}
+
+.timeline-item:hover .timeline-icon {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: var(--shadow-lg);
+}
+
+.timeline-icon.highlight {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.timeline-icon.optional {
+  border-color: var(--gray-400);
+  color: var(--gray-400);
+}
+
+.timeline-content {
+  background: var(--gray-50);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--primary-blue);
+  transition: all var(--transition-base);
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-content.optional {
+  border-left-color: var(--gray-400);
+  background: white;
+  border: 2px dashed var(--gray-300);
+}
+
+.timeline-time {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--primary-blue-light);
+  color: var(--primary-blue);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-time.optional {
+  background: var(--gray-200);
+  color: var(--gray-600);
+}
+
+.timeline-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.timeline-desc {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+.optional-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--gray-300);
+  color: var(--gray-700);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  margin-left: var(--spacing-xs);
+}
+
+/* GALLERY - IMMAGINI IN CSS */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* IMMAGINI GALLERY */
+
+
+/* SIDEBAR */
+.price-card {
+  background: white;
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--primary-blue-light);
+  position: sticky;
+  top: 100px;
+  z-index: 100;
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: var(--primary-blue-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.info-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.info-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.info-card ul {
+  list-style: none;
+}
+
+.info-card li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  color: var(--gray-600);
+}
+
+.price-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.price-features i {
+  color: var(--accent-green);
+  font-size: 1rem;
+}
+
+.price-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.price-header {
+  text-align: center;
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--gray-200);
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-card h3 i {
+  color: var(--primary-blue);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  z-index: 10001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-prev {
+  left: 2rem;
+}
+
+.lightbox-next {
+  right: 2rem;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 64px;
+  height: 64px;
+  background: var(--whatsapp);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  animation: pulse 2s infinite;
+  z-index: 1500;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ANIMAZIONI SCROLL */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.scroll-animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* RESPONSIVE - MOBILE FIRST */
+@media (max-width: 480px) {
+  .tour-hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .tour-hero-subtitle {
+    font-size: 1.1rem !important;
+  }
+  
+  h1, h2, h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .price-amount {
+    font-size: 2rem;
+  }
+  
+  .whatsapp {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex !important;
+  }
+  
+  nav ul {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid var(--gray-200);
+  }
+  
+  nav ul:not(.hidden) {
+    display: flex !important;
+  }
+  
+  .tour-layout {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .tour-sidebar {
+    order: 2;
+  }
+  
+  .price-card {
+    position: static !important;
+  }
+  
+  main {
+    margin-top: 80px !important;
+    padding: 1rem !important; /* Ridotto leggermente il padding esterno */
+  }
+
+  /* --- FIX HERO MOBILE --- */
+  .tour-hero {
+    min-height: auto !important; /* Fondamentale: permette alla sezione di allungarsi se il testo è tanto */
+    padding: 3rem 1rem !important; /* Spazio interno bilanciato */
+    margin-top: 1rem !important; /* Crea distacco dall'header per far vedere i bordi tondi sopra */
+    border-radius: var(--radius-xl) !important; /* Bordo arrotondato su tutti i lati */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .tour-hero-content {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important; /* Crea spazio verticale tra titolo, sottotitolo e box */
+  }
+
+  .tour-hero-title {
+    font-size: 1.8rem !important; /* Dimensione più gestibile per smartphone */
+    line-height: 1.3 !important;
+    margin: 0 !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .tour-hero-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+/* Container principale delle card */
+  .tour-meta-box {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important; /* Centra le card nel contenitore */
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+
+  /* La singola card */
+  .meta-item {
+    /* 1. Dimensioni e Spazi */
+    width: calc(50% - 0.4rem) !important; /* Due per riga precisi */
+    flex: 0 0 auto !important; /* Blocca ridimensionamenti strani */
+    min-width: auto !important;
+    padding: 0.75rem 0.5rem !important; /* Padding leggero ai lati */
+    
+    /* 2. Layout Interno (Flex Verticale) */
+    display: flex !important;
+    flex-direction: column !important; /* Icona sopra, testo sotto */
+    align-items: center !important;    /* Centra orizzontalmente gli elementi figli (icona e wrapper) */
+    justify-content: flex-start !important;
+    
+    /* 3. Reset bordi/sfondi se necessario */
+    text-align: center !important;
+  }
+
+  /* Il contenitore di testo (Label + Valore) */
+  .meta-text-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* FONDAMENTALE: Centra Label e Value tra loro */
+    justify-content: center !important;
+    width: 100% !important; /* Assicura che prenda tutto lo spazio per potersi centrare */
+    margin-top: 0.5rem !important; /* Spazio tra icona e testo */
+    text-align: center !important; /* Forza allineamento testo eredita */
+  }
+  
+  /* L'etichetta piccola (es. DURATA) */
+  .meta-label {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 0.7rem !important;
+    margin-bottom: 2px !important;
+  }
+  
+  /* Il valore grande (es. 7-8h) */
+  .meta-value {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* L'icona */
+  .meta-icon {
+    margin: 0 !important; /* Rimuove margini laterali che potrebbero spostarla */
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  /* --- FINE FIX HERO --- */
+  
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .timeline-item {
+    padding-left: 55px !important;
+  }
+  
+  .timeline-line {
+    left: 18px !important;
+  }
+  
+  .timeline-icon {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .lightbox-prev,
+  .lightbox-next {
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+  }
+  
+  .lightbox-prev {
+    left: 1rem;
+  }
+  
+  .lightbox-next {
+    right: 1rem;
+  }
+  
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    font-size: 2.5rem;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .tour-layout {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* PERFORMANCE OPTIMIZATIONS */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
