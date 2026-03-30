@@ -45,9 +45,9 @@
       <nav aria-label="Menu principale">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/#tours" data-translate="nav.tours">Tour</a></li>
-          <li><a href="/#about" data-translate="nav.about">Chi Siamo</a></li>
-          <li><a href="/#contact" data-translate="nav.contact">Contatti</a></li>
+          <li><a href="/#tour" data-translate="nav.tours">Tour</a></li>
+          <li><a href="/#chi-siamo" data-translate="nav.about">Chi Siamo</a></li>
+          <li><a href="/#contatti" data-translate="nav.contact">Contatti</a></li>
         </ul>
         <div class="lang-switcher" role="group" aria-label="Selezione lingua">
           <button class="lang-btn active" data-lang="it" aria-label="Italiano">IT</button>
@@ -866,18 +866,17 @@
     const navUl = document.querySelector('nav ul');
 
     if (hamburger && navUl) {
-      navUl.classList.add('hidden');
-
       hamburger.addEventListener('click', function (e) {
         e.stopPropagation();
-        const isExpanded = navUl.classList.toggle('hidden');
+        navUl.classList.toggle('show');
         hamburger.classList.toggle('open');
-        hamburger.setAttribute('aria-expanded', !isExpanded);
+        var isOpen = navUl.classList.contains('show');
+        hamburger.setAttribute('aria-expanded', isOpen);
       });
 
       document.addEventListener('click', function (e) {
         if (!hamburger.contains(e.target) && !navUl.contains(e.target)) {
-          navUl.classList.add('hidden');
+          navUl.classList.remove('show');
           hamburger.classList.remove('open');
           hamburger.setAttribute('aria-expanded', 'false');
         }
@@ -885,7 +884,7 @@
 
       navUl.addEventListener('click', function (e) {
         if (e.target.tagName === 'A') {
-          navUl.classList.add('hidden');
+          navUl.classList.remove('show');
           hamburger.classList.remove('open');
           hamburger.setAttribute('aria-expanded', 'false');
         }
@@ -894,11 +893,11 @@
 
     // ==================== LIGHTBOX GALLERY ====================
     const galleryImages = [
-      '../immagini/capri_tour_faraglioni.jpg',
-      '../immagini/faraglioni-g801b2d316_1920.jpg',
-      '../immagini/capri_tour_faraglioni.jpg',
-      '../immagini/faraglioni-g801b2d316_1920.jpg',
-      '../immagini/capri_tour_faraglioni.jpg'
+      '../immagini/amalfi-coast.jpg',
+      '../immagini/amalfi-coast.jpg',
+      '../immagini/amalfi-coast.jpg',
+      '../immagini/amalfi-coast.jpg',
+      '../immagini/amalfi-coast.jpg'
     ];
 
     let currentImageIndex = 0;

@@ -1,15 +1,3 @@
-/* ==================== REDIRECT 404 → HOMEPAGE ==================== */
-(function() {
-  var validPages = ['', '/', '/index.html', '/tour_amalfi', '/tour_amalfi/', '/tour_amalfi/index.html', '/tour_sunset', '/tour_sunset/', '/tour_sunset/index.html', '/tour_capri', '/tour_capri/', '/tour_capri/index.html'];
-  var path = window.location.pathname;
-  // Rimuove eventuale base path del deploy (es. /nome-repo/)
-  var repoBase = document.querySelector('base') ? new URL(document.querySelector('base').href).pathname : '/';
-  var relativePath = path.startsWith(repoBase) ? path.slice(repoBase.length - 1) : path;
-  if (!validPages.includes(relativePath)) {
-    window.location.replace(repoBase);
-  }
-})();
-
 /* ==================== SLIDER ==================== */
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;

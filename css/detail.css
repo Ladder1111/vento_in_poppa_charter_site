@@ -12,10 +12,10 @@
 
 :root {
   /* PALETTE COLORI LUXURY */
-  --primary-blue: #004E98;
-  --primary-blue-dark: #003366;
-  --primary-blue-light: #E6F0FA;
-  --secondary-blue: #3A86FF;
+  --primary-blue: #164ab9;
+  --primary-blue-dark: #0d3a8f;
+  --primary-blue-light: #e0edff;
+  --secondary-blue: #0ea5e9;
   
   --accent-gold: #C5A059;
   --accent-teal: #2DC7CC;
@@ -44,7 +44,7 @@
 
 html, body {
   overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   color: var(--text-main);
   background: var(--bg-color);
@@ -52,7 +52,7 @@ html, body {
 
 /* TYPOGRAPHY PREMIUM */
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--primary-blue-dark);
   letter-spacing: -0.02em;
 }
@@ -93,8 +93,14 @@ header {
   object-fit: contain;
 }
 
-nav ul {
+nav {
   display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav ul {
+  display: flex !important;
   list-style: none;
   gap: 2rem;
   margin: 0;
@@ -119,7 +125,7 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent-gold);
+  background: var(--primary-blue);
   transition: width var(--transition-base);
 }
 
@@ -151,7 +157,7 @@ nav a:hover::after {
   color: var(--text-light);
   cursor: pointer;
   transition: all var(--transition-base);
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .lang-btn.active, .lang-btn:hover {
@@ -204,7 +210,7 @@ main {
 }
 
 .hero-new-title {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   color: var(--primary-blue-dark);
@@ -480,7 +486,7 @@ main {
 }
 
 .timeline-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary-blue-dark);
@@ -508,7 +514,7 @@ main {
   margin-left: 10px;
   vertical-align: middle;
   letter-spacing: 0.5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* ==================== INFO CARDS (SIDEBAR) ==================== */
@@ -529,7 +535,7 @@ main {
 }
 
 .info-card h3 i {
-  color: var(--accent-gold);
+  color: var(--primary-blue);
 }
 
 .info-card ul {
@@ -575,7 +581,7 @@ main {
 }
 
 .price-value {
-  font-family: 'Playfair Display', serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1;
@@ -738,7 +744,7 @@ main {
   }
   
   nav ul {
-    display: none;
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
@@ -750,9 +756,9 @@ main {
     box-shadow: var(--shadow-xl);
     border-bottom: 1px solid var(--primary-blue-light);
   }
-  
-  nav ul:not(.hidden) { 
-    display: flex; 
+
+  nav ul.show {
+    display: flex !important;
   }
 
   /* HERO MOBILE */
