@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
+  <script>
+
+  if (window.location.hash) {
+
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    
+
+    window.addEventListener('DOMContentLoaded', function() {
+      window.scrollTo(0, 0);
+    });
+  }
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -44,6 +59,19 @@
   <!-- Preload Risorse Critiche -->
   <link rel="preload" href="css/index.css" as="style" />
   <link rel="preload" href="javascript/index.js" as="script" />
+
+
+
+<script>
+  // Blocca lo scroll automatico del browser PRIMA che avvenga
+  if (window.location.hash && 'scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  if (window.location.hash) {
+    // Forza la pagina in cima quando si carica
+    setTimeout(function() { window.scrollTo(0, 0); }, 0);
+  }
+</script>
 
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -724,6 +752,85 @@
   <a href="https://wa.me/393316166512" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp per prenotare un tour">
     <i class="bi bi-whatsapp"></i>
   </a>
+
+<script>
+(function() {
+  'use strict';
+  
+
+  
+  // Disabilita il comportamento predefinito del browser
+  if (window.location.hash && 'scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  
+  function scrollToTarget() {
+    const hash = window.location.hash;
+    
+    if (!hash) {
+      return false;
+    }
+
+    const target = document.querySelector(hash);
+    
+    if (!target) {
+ 
+      return false;
+    }
+    
+    
+    // Calcola la posizione con offset per l'header
+    const headerOffset = 80;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+    // Scrolla alla posizione
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+    
+    
+    return true;
+  }
+  
+  // Forza scroll in cima prima di tutto
+  if (window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+  
+  // Funzione con retry
+  let attempts = 0;
+  const maxAttempts = 20;
+  
+  function tryScroll() {
+    attempts++;
+
+    
+    if (scrollToTarget()) {
+      return;
+    }
+    
+    if (attempts < maxAttempts) {
+      setTimeout(tryScroll, 250);
+    } 
+  }
+  
+  // Inizia i tentativi
+  if (window.location.hash) {
+    setTimeout(tryScroll, 100);
+  }
+  
+  // Gestisci i cambiamenti di hash
+  window.addEventListener('hashchange', function() {
+    attempts = 0;
+    if (window.location.hash) {
+      tryScroll();
+    }
+  });
+  
+})();
+</script>
 
   <!-- Script Files -->
   <script src="javascript/index.js" defer></script>
