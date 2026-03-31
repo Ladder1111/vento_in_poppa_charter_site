@@ -6,27 +6,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>SUNSET EXPERIENCE | Escursione in Barca da Sorrento | Vento in Poppa Charter</title>
+  <title>Tour Tramonto Sorrento | Sunset Experience in Barca | Vento in Poppa Charter</title>
   <meta name="description"
-    content="Tour privato in barca a Capri: esplora i Faraglioni, la Grotta Azzurra e le meraviglie dell'isola. 7-8 ore con skipper, bevande e snack inclusi. 799€." />
+    content="Tour al tramonto in barca da Sorrento: navigazione romantica lungo la costa sorrentina con aperitivo incluso. 2-3 ore, max 7 persone, da €299. Prenota la tua sunset experience!" />
   <meta name="keywords"
-    content="tour Capri, escursione barca Capri, Grotta Azzurra, Faraglioni, gita barca Sorrento Capri" />
-  <link rel="canonical" href="https://www.ventoinpoppacharter.com/tour-capri" />
+    content="tour tramonto Sorrento, sunset experience barca, escursione tramonto Golfo di Napoli, tour serale barca Sorrento, aperitivo in barca Sorrento, tramonto costiera sorrentina, sunset boat tour Sorrento" />
+  <link rel="canonical" href="https://www.ventoinpoppacharter.com/tour_sunset" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="IT-NA" />
+  <meta name="geo.placename" content="Sorrento" />
 
   <!-- Alternate Languages -->
-  <link rel="alternate" hreflang="it" href="https://www.ventoinpoppacharter.com/tour-capri" />
-  <link rel="alternate" hreflang="en" href="https://www.ventoinpoppacharter.com/en/capri-tour" />
-  <link rel="alternate" hreflang="es" href="https://www.ventoinpoppacharter.com/es/tour-capri" />
+  <link rel="alternate" hreflang="it" href="https://www.ventoinpoppacharter.com/tour_sunset" />
+  <link rel="alternate" hreflang="en" href="https://www.ventoinpoppacharter.com/en/sunset-tour" />
+  <link rel="alternate" hreflang="es" href="https://www.ventoinpoppacharter.com/es/tour-sunset" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ventoinpoppacharter.com/tour_sunset" />
+  <meta property="og:title" content="Tour Tramonto Sorrento | Sunset Experience in Barca" />
+  <meta property="og:description" content="Tour al tramonto in barca da Sorrento: navigazione romantica lungo la costa sorrentina con aperitivo incluso. 2-3 ore, max 7 persone, da €299." />
+  <meta property="og:image" content="https://www.ventoinpoppacharter.com/immagini/sunset-sorrento.jpg" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="Vento in Poppa Charter" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Tour Tramonto Sorrento | Sunset Experience in Barca" />
+  <meta property="twitter:description" content="Tour al tramonto in barca da Sorrento con aperitivo incluso. Navigazione romantica lungo la costa sorrentina." />
+  <meta property="twitter:image" content="https://www.ventoinpoppacharter.com/immagini/sunset-sorrento.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+  <!-- Schema.org TouristTrip -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Sunset Experience - Tour al Tramonto in Barca da Sorrento",
+    "description": "Tour romantico al tramonto in barca da Sorrento. Navigazione lungo la costa sorrentina con aperitivo incluso, vista mozzafiato sul Golfo di Napoli.",
+    "image": "https://www.ventoinpoppacharter.com/immagini/sunset-sorrento.jpg",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Vento in Poppa Charter",
+      "image": "https://www.ventoinpoppacharter.com/immagini/logo-vento-in-poppa-charter.jpg",
+      "telephone": "+39-331-616-6512",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sorrento",
+        "addressRegion": "Campania",
+        "addressCountry": "IT"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "299.00",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-04-01",
+      "priceValidUntil": "2026-10-31"
+    },
+    "touristType": ["Couples", "Friends", "Families"],
+    "duration": "PT3H",
+    "maximumAttendeeCapacity": 7,
+    "itinerary": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Partenza dal Porto di Sorrento"},
+        {"@type": "ListItem", "position": 2, "name": "Navigazione lungo la Costa Sorrentina"},
+        {"@type": "ListItem", "position": 3, "name": "Aperitivo al tramonto"},
+        {"@type": "ListItem", "position": 4, "name": "Rientro al porto"}
+      ]
+    }
+  }
+  </script>
+
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-  <style>
-
-  </style>
 
   <link rel="stylesheet" href="../css/detail.css">
   <link rel="stylesheet" href="../css/index.css">
@@ -39,31 +96,39 @@
 <body>
 
   <!-- HEADER -->
-  <header>
+  <header role="banner">
     <div class="nav-wrapper">
       <a href="/" class="logo" aria-label="Vento in Poppa Charter - Homepage">
         <img src="../immagini/logo-vento-in-poppa-charter.jpg"
           alt="Logo Vento in Poppa Charter - Escursioni in Barca Sorrento" width="180" height="42" loading="eager" />
       </a>
-      <nav aria-label="Menu principale">
+
+      <div class="lang-switcher" role="group" aria-label="Selezione lingua">
+        <button class="lang-btn active" data-lang="it" onclick="setLang('it')" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')" aria-label="Español">ES</button>
+      </div>
+
+      <nav role="navigation" aria-label="Navigazione principale">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/#tour" data-translate="nav.tours">Tour</a></li>
-          <li><a href="/#chi-siamo" data-translate="nav.about">Chi Siamo</a></li>
-          <li><a href="/#contatti" data-translate="nav.contact">Contatti</a></li>
+          <li><a href="/#tour">Tour</a></li>
+          <li><a href="/#chi-siamo">Chi siamo</a></li>
+          <li><a href="/#contatti">Contatti</a></li>
         </ul>
-        <div class="lang-switcher" role="group" aria-label="Selezione lingua">
-          <button class="lang-btn active" data-lang="it" aria-label="Italiano">IT</button>
-          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-          <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
-        </div>
       </nav>
-      <button class="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Apri menu mobile" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
+
+    <nav class="nav-mobile" id="navMobile" aria-label="Menu mobile">
+      <a href="/" onclick="toggleMenu()">Home</a>
+      <a href="/#tour" onclick="toggleMenu()">Tour</a>
+      <a href="/#chi-siamo" onclick="toggleMenu()">Chi siamo</a>
+      <a href="/#contatti" onclick="toggleMenu()">Contatti</a>
+    </nav>
   </header>
 
   <!-- MAIN CONTENT -->
@@ -97,25 +162,25 @@
           <!-- Immagine principale -->
           <div class="hero-gallery-main" onclick="openLightbox(0)">
             <img src="../immagini/sunset-sorrento.jpg"
-              alt="Tour Capri - Vista panoramica dei Faraglioni di Capri con barca" loading="eager">
+              alt="Tour al tramonto in barca da Sorrento - Sunset Experience sul Golfo di Napoli" loading="eager">
           </div>
 
           <!-- 4 Immagini secondarie -->
           <div class="hero-gallery-thumbs">
             <div class="hero-gallery-thumb" onclick="openLightbox(1)">
-              <img src="../immagini/sunset-sorrento.jpg" alt="Faraglioni di Capri al tramonto"
+              <img src="../immagini/sunset-sorrento.jpg" alt="Tramonto sulla costa sorrentina visto dalla barca"
                 loading="lazy">
             </div>
             <div class="hero-gallery-thumb" onclick="openLightbox(2)">
-              <img src="../immagini/sunset-sorrento.jpg" alt="Costa di Capri con acque cristalline"
+              <img src="../immagini/sunset-sorrento.jpg" alt="Aperitivo al tramonto in barca a Sorrento"
                 loading="lazy">
             </div>
             <div class="hero-gallery-thumb" onclick="openLightbox(3)">
-              <img src="../immagini/sunset-sorrento.jpg" alt="Mare cristallino e grotte di Capri"
+              <img src="../immagini/sunset-sorrento.jpg" alt="Navigazione al tramonto nel Golfo di Napoli"
                 loading="lazy">
             </div>
             <div class="hero-gallery-thumb" onclick="openLightbox(4)">
-              <img src="../immagini/sunset-sorrento.jpg" alt="Barca privata a Capri" loading="lazy">
+              <img src="../immagini/sunset-sorrento.jpg" alt="Barca privata al tramonto a Sorrento" loading="lazy">
             </div>
           </div>
         </div>
@@ -171,7 +236,7 @@
               </div>
             </div>
 
-            <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Capri"
+            <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Sunset%20Experience"
               class="cta-button cta-description" aria-label="Prenota tour Capri su WhatsApp">
               <i class="bi bi-whatsapp"></i>
               <span data-translate="button.book">Prenota Ora</span>
@@ -408,7 +473,7 @@
               <span data-translate="notincluded.title">Non Incluso</span>
             </h3>
             <ul>
-              <li>
+            <!--  <li>
                 <i class="bi bi-ticket-perforated"></i>
                 <span data-translate="notincluded.tax">Tassa di sbarco a Capri</span>
               </li>
@@ -419,7 +484,7 @@
               <li>
                 <i class="bi bi-egg-fried"></i>
                 <span data-translate="notincluded.lunch">Pranzo</span>
-              </li>
+              </li>-->
             </ul>
           </div>
 
@@ -462,13 +527,13 @@
     <button class="lightbox-close" aria-label="Chiudi lightbox">&times;</button>
     <button class="lightbox-prev" onclick="changeLightboxImage(-1, event)"
       aria-label="Immagine precedente">&#10094;</button>
-    <img id="lightbox-img" src="" alt="Immagine tour Capri">
+    <img id="lightbox-img" src="" alt="Immagine tour tramonto Sorrento">
     <button class="lightbox-next" onclick="changeLightboxImage(1, event)"
       aria-label="Immagine successiva">&#10095;</button>
   </div>
 
   <!-- WHATSAPP FLOATING -->
-  <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20informazioni%20sul%20Tour%20Capri" class="whatsapp"
+  <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20informazioni%20sul%20Tour%20Sunset%20Experience" class="whatsapp"
     aria-label="Contattaci su WhatsApp" target="_blank" rel="noopener">
     <i class="bi bi-whatsapp"></i>
   </a>
@@ -510,10 +575,9 @@
         <a href="tel:+393316166512" class="footer-link" id="footerPhone">
           <i class="bi bi-telephone-fill"></i> +39 331 616 6512
         </a>
-        <a href="/cdn-cgi/l/email-protection#6a03040c052a1c0f041e0503041a051a1a0b44090507" class="footer-link"
+        <a href="mailto:ventoinpoppacharter@gmail.com" class="footer-link"
           id="footerEmail">
-          <i class="bi bi-envelope-fill"></i> <span class="__cf_email__"
-            data-cfemail="056c6b636a4573606b716a6c6b756a7575642b666a68">[email&#160;protected]</span>
+          <i class="bi bi-envelope-fill"></i> ventoinpoppacharter@gmail.com
         </a>
         <div class="footer-link" id="footerAddress">
           <i class="bi bi-geo-alt-fill"></i> Marina Piccola, Porto di Sorrento (NA)

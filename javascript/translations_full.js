@@ -52,8 +52,8 @@ const translationsData = {
     tours_title: "I Nostri Tour in Barca dalla Penisola Sorrentina",
     tours_subtitle: "Piccoli gruppi max 7 persone, partenze giornaliere da Sorrento, prelievo disponibile e assistenza dedicata per tutta la durata dell'escursione.",
     badge_bestseller: "🔥 Più venduto",
-    duration_label: "⏱ Durata:",
-    max_label: "👥 Max:",
+    duration_label: "Durata:",
+    max_label: "Max:",
 
     // Tour – Capri
     capri_title: "Tour Capri in Barca: Grotta Azzurra e Faraglioni",
@@ -94,13 +94,13 @@ const translationsData = {
 
     // Contatti – carte
     call_label: "Chiamaci Ora",
-    call_text: "Parlaci direttamente al telefono al numero +39 081 123 4567 per informazioni immediate sui tour",
+    call_text: "Parlaci direttamente al telefono al numero +39 331 616 6512 per informazioni immediate sui tour",
     call_btn: "Chiamaci",
     whatsapp_label: "WhatsApp",
     whatsapp_text: "Chatta con noi per preventivi personalizzati e informazioni rapide sui tour disponibili",
     whatsapp_btn: "Apri chat",
     email_label: "Email",
-    email_text: "Inviaci una email a info@ventoinpoppa.com per richieste dettagliate sui nostri tour",
+    email_text: "Inviaci una email a ventoinpoppacharter@gmail.com per richieste dettagliate sui nostri tour",
     email_btn: "Invia email",
 
     // Contatti – social
@@ -128,8 +128,8 @@ const translationsData = {
     footer_sunset: "Sunset Experience",
     footer_amalfi: "Costiera Amalfitana",
     footer_contacts_title: "Contatti",
-    footer_phone: "+39 081 123 4567",
-    footer_email: "info@ventoinpoppa.com",
+    footer_phone: "+39 331 616 6512",
+    footer_email: "ventoinpoppacharter@gmail.com",
     footer_address: "Marina Piccola, Porto di Sorrento (NA)",
     footer_social_title: "Social Media",
 
@@ -177,8 +177,8 @@ const translationsData = {
     tours_title: "Our Boat Tours from the Sorrento Peninsula",
     tours_subtitle: "Small groups of max 7 people, daily departures from Sorrento, pickup available and dedicated assistance throughout the excursion.",
     badge_bestseller: "🔥 Best seller",
-    duration_label: "⏱ Duration:",
-    max_label: "👥 Max:",
+    duration_label: "Duration:",
+    max_label: "Max:",
 
     // Tour – Capri
     capri_title: "Capri Boat Tour: Blue Grotto and Faraglioni",
@@ -219,13 +219,13 @@ const translationsData = {
 
     // Contatti – carte
     call_label: "Call Us Now",
-    call_text: "Talk to us directly by phone at +39 081 123 4567 for immediate information about tours",
+    call_text: "Talk to us directly by phone at +39 331 616 6512 for immediate information about tours",
     call_btn: "Call us",
     whatsapp_label: "WhatsApp",
     whatsapp_text: "Chat with us for personalised quotes and quick information about available tours",
     whatsapp_btn: "Open chat",
     email_label: "Email",
-    email_text: "Send us an email at info@ventoinpoppa.com for detailed requests about our tours",
+    email_text: "Send us an email at ventoinpoppacharter@gmail.com for detailed requests about our tours",
     email_btn: "Send email",
 
     // Contatti – social
@@ -253,8 +253,8 @@ const translationsData = {
     footer_sunset: "Sunset Experience",
     footer_amalfi: "Amalfi Coast",
     footer_contacts_title: "Contacts",
-    footer_phone: "+39 081 123 4567",
-    footer_email: "info@ventoinpoppa.com",
+    footer_phone: "+39 331 616 6512",
+    footer_email: "ventoinpoppacharter@gmail.com",
     footer_address: "Marina Piccola, Port of Sorrento (NA)",
     footer_social_title: "Social Media",
 
@@ -302,8 +302,8 @@ const translationsData = {
     tours_title: "Nuestros Tours en Barco desde la Península de Sorrento",
     tours_subtitle: "Grupos pequeños de máximo 7 personas, salidas diarias desde Sorrento, recogida disponible y asistencia dedicada durante toda la excursión.",
     badge_bestseller: "🔥 Más vendido",
-    duration_label: "⏱ Duración:",
-    max_label: "👥 Máx:",
+    duration_label: "Duración:",
+    max_label: "Máx:",
 
     // Tour – Capri
     capri_title: "Tour en Barco a Capri: Gruta Azul y Faraglioni",
@@ -344,13 +344,13 @@ const translationsData = {
 
     // Contatti – carte
     call_label: "Llámenos Ahora",
-    call_text: "Hable con nosotros directamente por teléfono al +39 081 123 4567 para información inmediata sobre los tours",
+    call_text: "Hable con nosotros directamente por teléfono al +39 331 616 6512 para información inmediata sobre los tours",
     call_btn: "Llámenos",
     whatsapp_label: "WhatsApp",
     whatsapp_text: "Chatea con nosotros para presupuestos personalizados e información rápida sobre los tours disponibles",
     whatsapp_btn: "Abrir chat",
     email_label: "Email",
-    email_text: "Envíenos un correo electrónico a info@ventoinpoppa.com para solicitudes detalladas sobre nuestros tours",
+    email_text: "Envíenos un correo electrónico a ventoinpoppacharter@gmail.com para solicitudes detalladas sobre nuestros tours",
     email_btn: "Enviar correo",
 
     // Contatti – social
@@ -378,8 +378,8 @@ const translationsData = {
     footer_sunset: "Experiencia al Atardecer",
     footer_amalfi: "Costa Amalfitana",
     footer_contacts_title: "Contactos",
-    footer_phone: "+39 081 123 4567",
-    footer_email: "info@ventoinpoppa.com",
+    footer_phone: "+39 331 616 6512",
+    footer_email: "ventoinpoppacharter@gmail.com",
     footer_address: "Marina Piccola, Puerto de Sorrento (NA)",
     footer_social_title: "Redes Sociales",
 
