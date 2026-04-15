@@ -1138,7 +1138,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .nav-wrapper { flex-wrap: wrap; }
+  .nav-wrapper { flex-wrap: nowrap; }
+  .logo { flex-shrink: 1; min-width: 0; max-width: 140px; }
   nav ul { display: none; }
   .hamburger { display: flex; }
   .section { padding: var(--spacing-2xl) var(--spacing-lg); }

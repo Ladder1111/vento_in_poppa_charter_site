@@ -25,9 +25,9 @@ const translationsData = {
     skip_link: "Vai al contenuto principale",
 
     // --- Cookie banner ---
-    cookie_text: "Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico sul sito.",
+    cookie_text: "Questo sito utilizza solo cookie tecnici per impostare la lingua di navigazione. Non vengono utilizzati altri tipi di cookie.",
     cookie_more_info: "Maggiori informazioni",
-    cookie_accept: "Accetta",
+    cookie_accept: "Chiudi",
     cookie_reject: "Rifiuta",
 
     // --- Navigazione desktop ---
@@ -150,9 +150,9 @@ const translationsData = {
     skip_link: "Skip to main content",
 
     // --- Cookie banner ---
-    cookie_text: "We use cookies to improve your browsing experience and analyze website traffic.",
+    cookie_text: "This site uses only technical cookies to set the browsing language. No other types of cookies are used.",
     cookie_more_info: "More information",
-    cookie_accept: "Accept",
+    cookie_accept: "Close",
     cookie_reject: "Reject",
 
     // --- Navigazione desktop ---
@@ -275,9 +275,9 @@ const translationsData = {
     skip_link: "Ir al contenido principal",
 
     // --- Cookie banner ---
-    cookie_text: "Utilizamos cookies para mejorar su experiencia de navegación y analizar el tráfico del sitio web.",
+    cookie_text: "Este sitio utiliza únicamente cookies técnicas para configurar el idioma de navegación. No se utilizan otros tipos de cookies.",
     cookie_more_info: "Más información",
-    cookie_accept: "Aceptar",
+    cookie_accept: "Cerrar",
     cookie_reject: "Rechazar",
 
     // --- Navigazione desktop ---
