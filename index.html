@@ -20,8 +20,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags OTTIMIZZATI -->
-  <title>Tour in Barca da Sorrento | Escursioni Capri e Costiera Amalfitana | Vento in Poppa Charter</title>
-  <meta name="description" content="Tour in barca da Sorrento verso Capri, Costiera Amalfitana e Penisola Sorrentina. Escursioni private e di gruppo, max 7 persone, skipper locali esperti. Grotta Azzurra, Faraglioni, Positano, Amalfi. Prenota ora!" />
+  <title>Escursioni in Barca Sorrento | Tour Privati Capri, Positano, Amalfi | Vento in Poppa Charter</title>
+  <meta name="description" content="Escursioni in barca Sorrento e Penisola Sorrentina: tour privati a Capri, Positano, Amalfi con skipper. Prezzi da €299. Max 7 persone. Prenota ora!" />
   <meta name="keywords" content="tour barca Sorrento, escursioni barca Capri, tour Costiera Amalfitana, gita barca Penisola Sorrentina, noleggio barca Sorrento, tour Grotta Azzurra, escursione Faraglioni, tour barca Positano, gita mare Amalfi, boat tour Sorrento, Capri boat trip, Amalfi Coast boat tour" />
   <meta name="author" content="Vento in Poppa Charter" />
   <meta name="robots" content="index, follow" />
@@ -59,6 +59,17 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
+  <!-- PWA Manifest e Theme Color -->
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#164ab9" />
+  <meta name="msapplication-TileColor" content="#164ab9" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Vento in Poppa" />
+  <meta name="application-name" content="Vento in Poppa" />
+  <meta name="format-detection" content="telephone=no" />
+
   <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
@@ -66,9 +77,10 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
-  <!-- Preload Risorse Critiche -->
+  <!-- Preload Risorse Critiche (LCP optimization) -->
   <link rel="preload" href="css/index.css" as="style" />
   <link rel="preload" href="javascript/index.js" as="script" />
+  <link rel="preload" as="image" href="immagini/vento_in_poppa_boat.jpg" fetchpriority="high" />
 
 
 
@@ -85,6 +97,11 @@
 
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Google Fonts (consistente con le tour pages) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
   <!-- Structured Data / Schema.org OTTIMIZZATO -->
   <script type="application/ld+json">
@@ -139,42 +156,14 @@
           "https://www.tiktok.com/@ventoinpoppacharter"
         ],
         "areaServed": [
-          {
-            "@type": "City",
-            "name": "Sorrento"
-          },
-          {
-            "@type": "City",
-            "name": "Capri"
-          },
-          {
-            "@type": "City",
-            "name": "Positano"
-          },
-          {
-            "@type": "City",
-            "name": "Amalfi"
-          },
-          {
-            "@type": "City",
-            "name": "Napoli"
-          },
-          {
-            "@type": "Place",
-            "name": "Penisola Sorrentina"
-          },
-          {
-            "@type": "Place",
-            "name": "Golfo di Napoli"
-          }
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "127",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
+          {"@type": "City", "name": "Sorrento"},
+          {"@type": "City", "name": "Positano"},
+          {"@type": "City", "name": "Amalfi"},
+          {"@type": "City", "name": "Capri"},
+          {"@type": "City", "name": "Praiano"},
+          {"@type": "City", "name": "Massa Lubrense"},
+          {"@type": "City", "name": "Vico Equense"}
+        ]
       },
       {
         "@type": "Service",
@@ -265,31 +254,58 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Quante persone ci sono in barca durante i tour?",
+            "name": "Da dove partono i tour in barca?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "I tour condivisi sono pensati per piccoli gruppi con massimo 7 persone, così da garantire comfort a bordo ed un'esperienza più autentica rispetto alle escursioni di massa. Offriamo anche tour privati per chi desidera un'esperienza esclusiva."
+              "text": "I tour partono dai principali porti della Penisola Sorrentina: Sorrento, Massa Lubrense, Nerano, Castellammare di Stabia. Su richiesta anche da Positano e Amalfi."
             }
           },
           {
             "@type": "Question",
-            "name": "Cosa succede in caso di maltempo durante il tour?",
+            "name": "Quanto costa un tour in barca privato da Sorrento?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "La sicurezza dei nostri passeggeri è la nostra massima priorità. In caso di maltempo o condizioni marine avverse, potremmo dover cancellare o riprogrammare il tour. In tal caso, ti contatteremo per fornirti opzioni alternative o per il rimborso completo."
+              "text": "I prezzi partono da €299 per il Tour Tramonto (2-3 ore) fino a €899 per il Tour Costiera Amalfitana (5-6 ore). Il Tour Capri parte da €799. Tutti i prezzi sono per barca privata, fino a 7 persone."
             }
           },
           {
             "@type": "Question",
-            "name": "È necessario saper nuotare per partecipare ai tour in barca?",
+            "name": "I tour sono privati?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Non è strettamente necessario saper nuotare, ma è consigliato per godersi le soste bagno. A bordo sono presenti giubbotti di salvataggio per tutti i passeggeri e il nostro skipper monitora costantemente la sicurezza di tutti."
+              "text": "Sì, tutti i nostri tour sono completamente privati. La barca è riservata esclusivamente al vostro gruppo (massimo 7 persone) con skipper professionale e bilingue incluso."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Si può raggiungere Positano e Amalfi in barca da Sorrento?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Assolutamente sì. Il nostro Tour Costiera Amalfitana copre tutto il percorso da Sorrento fino ad Amalfi, con sosta a Positano, Praiano e le grotte marine. Durata 5-6 ore."
             }
           }
         ]
       }
     ]
+  }
+  </script>
+
+  <!-- Speakable Specification per ricerca vocale (Google Assistant) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Tour in Barca da Sorrento - Vento in Poppa Charter",
+    "url": "https://www.ventoinpoppacharter.com/",
+    "inLanguage": "it-IT",
+    "isPartOf": {
+      "@id": "https://www.ventoinpoppacharter.com/#organization"
+    },
+    "primaryImageOfPage": "https://www.ventoinpoppacharter.com/immagini/vento_in_poppa_boat.jpg",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["#heroTitle", "#heroText", "#tourSubtitle", ".faq-answer p"]
+    }
   }
   </script>
 
@@ -402,14 +418,8 @@
               Esplora l'isola di Capri in barca con visita alla Grotta Azzurra, giro completo dei Faraglioni e soste bagno nelle acque cristalline. Tour completo di 7-8 ore.
             </p>
             <div class="tour-info">
-              <div class="tour-info-item">
-                <span class="tour-info-label" id="durationLabel"><i class="bi bi-clock"></i> Durata:</span>
-                <span class="tour-info-value">7-8 ore</span>
-              </div>
-              <div class="tour-info-item">
-                <span class="tour-info-label" id="maxLabel"><i class="bi bi-people"></i> Max:</span>
-                <span class="tour-info-value">7 pers.</span>
-              </div>
+              <span class="tour-pill"><i class="bi bi-clock"></i> 7-8 ore</span>
+              <span class="tour-pill"><i class="bi bi-people"></i> Max 7 pers.</span>
             </div>
           </div>
         </article>
@@ -440,14 +450,8 @@
               Vivi un'esperienza romantica unica con il nostro tour al tramonto. Navigazione lungo la costa sorrentina mentre il sole si tuffa nel mare, con aperitivo incluso.
             </p>
             <div class="tour-info">
-              <div class="tour-info-item">
-                <span class="tour-info-label"><i class="bi bi-clock"></i> Durata:</span>
-                <span class="tour-info-value">2-3 ore</span>
-              </div>
-              <div class="tour-info-item">
-                <span class="tour-info-label"><i class="bi bi-people"></i> Max:</span>
-                <span class="tour-info-value">7 pers.</span>
-              </div>
+              <span class="tour-pill"><i class="bi bi-clock"></i> 2-3 ore</span>
+              <span class="tour-pill"><i class="bi bi-people"></i> Max 7 pers.</span>
             </div>
           </div>
         </article>
@@ -478,14 +482,8 @@
               Scopri la bellezza della Costiera Amalfitana dal mare. Tour di 5-6 ore con soste a Positano, Amalfi, Praiano e visita alle grotte marine più suggestive.
             </p>
             <div class="tour-info">
-              <div class="tour-info-item">
-                <span class="tour-info-label"><i class="bi bi-clock"></i> Durata:</span>
-                <span class="tour-info-value">5-6 ore</span>
-              </div>
-              <div class="tour-info-item">
-                <span class="tour-info-label"><i class="bi bi-people"></i> Max:</span>
-                <span class="tour-info-value">7 pers.</span>
-              </div>
+              <span class="tour-pill"><i class="bi bi-clock"></i> 5-6 ore</span>
+              <span class="tour-pill"><i class="bi bi-people"></i> Max 7 pers.</span>
             </div>
           </div>
         </article>
@@ -646,21 +644,21 @@
           <p id="followUsText">Condividiamo ogni giorno foto, video e storie dal mare. Unisciti alla nostra community di amanti delle escursioni in barca!</p>
 
           <div class="social-grid">
-            <a href="https://www.facebook.com/ventoinpoppacharter" class="social-card facebook" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Facebook">
+            <a href="https://www.facebook.com/ventoinpoppacharter" class="social-card facebook" target="_blank" rel="me noopener noreferrer" aria-label="Seguici su Facebook">
               <div class="social-card-icon">
                 <i class="bi bi-facebook"></i>
               </div>
               <span id="facebookText">Facebook</span>
             </a>
 
-            <a href="https://www.instagram.com/ventoinpoppacharter" class="social-card instagram" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Instagram">
+            <a href="https://www.instagram.com/ventoinpoppacharter" class="social-card instagram" target="_blank" rel="me noopener noreferrer" aria-label="Seguici su Instagram">
               <div class="social-card-icon">
                 <i class="bi bi-instagram"></i>
               </div>
               <span id="instagramText">Instagram</span>
             </a>
 
-            <a href="https://www.tiktok.com/@ventoinpoppacharter" class="social-card tiktok" target="_blank" rel="noopener noreferrer" aria-label="Seguici su TikTok">
+            <a href="https://www.tiktok.com/@ventoinpoppacharter" class="social-card tiktok" target="_blank" rel="me noopener noreferrer" aria-label="Seguici su TikTok">
               <div class="social-card-icon">
                 <i class="bi bi-tiktok"></i>
               </div>
@@ -748,13 +746,13 @@
           <i class="bi bi-share"></i>
           Social Media
         </h3>
-        <a href="https://www.facebook.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="me noopener noreferrer">
           <i class="bi bi-facebook"></i> Facebook
         </a>
-        <a href="https://www.instagram.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="me noopener noreferrer">
           <i class="bi bi-instagram"></i> Instagram
         </a>
-        <a href="https://www.tiktok.com/@ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.tiktok.com/@ventoinpoppacharter" class="footer-link" target="_blank" rel="me noopener noreferrer">
           <i class="bi bi-tiktok"></i> TikTok
         </a>
       </div>
@@ -766,10 +764,24 @@
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- WHATSAPP FLOATING BUTTON (desktop) -->
   <a href="https://wa.me/393316166512" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp per prenotare un tour">
     <i class="bi bi-whatsapp"></i>
   </a>
+
+  <!-- MOBILE STICKY CTA BAR -->
+  <nav class="mobile-cta-bar" aria-label="Prenotazione rapida">
+    <a href="tel:+393316166512" class="mobile-cta-btn mobile-cta-call" aria-label="Chiama Vento in Poppa Charter">
+      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+      <span>Chiama</span>
+    </a>
+    <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20informazioni%20sui%20tour%20in%20barca"
+       class="mobile-cta-btn mobile-cta-whatsapp"
+       target="_blank" rel="noopener" aria-label="Prenota su WhatsApp">
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      <span>Prenota su WhatsApp</span>
+    </a>
+  </nav>
 
 <script>
 (function() {

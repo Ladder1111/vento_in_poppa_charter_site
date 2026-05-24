@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>Tour Costiera Amalfitana in Barca | Positano e Amalfi dal Mare | Vento in Poppa Charter</title>
+  <title>Tour Costiera Amalfitana in Barca | Positano, Amalfi, Praiano dal Mare | Vento in Poppa Charter</title>
   <meta name="description"
-    content="Tour della Costiera Amalfitana in barca da Sorrento: Positano, Amalfi, Praiano e grotte marine. 5-6 ore, max 7 persone, skipper locale esperto. Da €899. Prenota ora!" />
+    content="Tour costiera amalfitana in barca da Sorrento: Positano, Amalfi, Praiano, grotte marine, privato, da €899. Skipper locale esperto. Max 7 persone. Prenota ora!" />
   <meta name="keywords"
-    content="tour costiera amalfitana barca, escursione Positano Amalfi, gita barca Amalfi da Sorrento, tour Praiano barca, grotte marine costiera amalfitana, Amalfi Coast boat tour, boat trip Positano" />
+    content="tour costiera amalfitana barca, escursione Positano Amalfi, gita barca Amalfi da Sorrento, tour Praiano barca, grotte marine costiera amalfitana, Amalfi Coast boat tour, boat trip Positano, boat tour Amalfi Coast from Sorrento, escursione barca Positano Amalfi, gita mare Penisola Sorrentina costiera" />
   <link rel="canonical" href="https://www.ventoinpoppacharter.com/tour_amalfi" />
   <meta name="robots" content="index, follow" />
   <meta name="geo.region" content="IT-SA" />
@@ -20,6 +20,7 @@
   <link rel="alternate" hreflang="it" href="https://www.ventoinpoppacharter.com/tour_amalfi" />
   <link rel="alternate" hreflang="en" href="https://www.ventoinpoppacharter.com/en/amalfi-coast-tour" />
   <link rel="alternate" hreflang="es" href="https://www.ventoinpoppacharter.com/es/tour-amalfi" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ventoinpoppacharter.com/tour_amalfi" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -38,6 +39,27 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- PWA Manifest e Theme Color -->
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#164ab9" />
+  <meta name="msapplication-TileColor" content="#164ab9" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Vento in Poppa" />
+  <meta name="application-name" content="Vento in Poppa" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Preconnect per Performance (LCP/FCP optimization) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+  <!-- Preload Risorse Critiche -->
+  <link rel="preload" href="../css/detail.css" as="style" />
+  <link rel="preload" as="image" href="../immagini/amalfi-coast.jpg" fetchpriority="high" />
 
   <!-- Schema.org TouristTrip -->
   <script type="application/ld+json">
@@ -57,7 +79,8 @@
         "addressLocality": "Sorrento",
         "addressRegion": "Campania",
         "addressCountry": "IT"
-      }
+      },
+      "areaServed": ["Positano", "Amalfi", "Praiano", "Sorrento", "Penisola Sorrentina"]
     },
     "offers": {
       "@type": "Offer",
@@ -80,6 +103,123 @@
         {"@type": "ListItem", "position": 5, "name": "Visita grotte marine"},
         {"@type": "ListItem", "position": 6, "name": "Rientro a Sorrento"}
       ]
+    }
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ventoinpoppacharter.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tour in Barca",
+        "item": "https://www.ventoinpoppacharter.com/#tour"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Tour Costiera Amalfitana",
+        "item": "https://www.ventoinpoppacharter.com/tour_amalfi"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org TouristAttraction (destinazioni) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Positano",
+        "description": "Pittoresco borgo della Costiera Amalfitana, celebre per le case colorate a picco sul mare e le spiagge cristalline, raggiungibile in barca da Sorrento.",
+        "image": "https://www.ventoinpoppacharter.com/immagini/amalfi-coast.jpg",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.6280",
+          "longitude": "14.4844"
+        },
+        "containedInPlace": {
+          "@type": "Place",
+          "name": "Positano",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Positano",
+            "addressRegion": "Campania",
+            "addressCountry": "IT"
+          }
+        },
+        "touristType": ["Families", "Couples", "Friends"]
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Amalfi",
+        "description": "Antica Repubblica Marinara e cuore della Costiera Amalfitana, con il celebre Duomo e il porto storico, tappa principale del tour in barca.",
+        "image": "https://www.ventoinpoppacharter.com/immagini/amalfi-coast.jpg",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.6340",
+          "longitude": "14.6027"
+        },
+        "containedInPlace": {
+          "@type": "Place",
+          "name": "Amalfi",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Amalfi",
+            "addressRegion": "Campania",
+            "addressCountry": "IT"
+          }
+        }
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Praiano",
+        "description": "Borgo marinaro tra Positano e Amalfi, noto per le grotte marine e i panorami suggestivi, visitabile durante il tour in barca della Costiera Amalfitana.",
+        "image": "https://www.ventoinpoppacharter.com/immagini/amalfi-coast.jpg",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.6107",
+          "longitude": "14.5331"
+        },
+        "containedInPlace": {
+          "@type": "Place",
+          "name": "Praiano",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Praiano",
+            "addressRegion": "Campania",
+            "addressCountry": "IT"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Speakable Specification per ricerca vocale -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Tour Costiera Amalfitana in Barca - Positano, Amalfi, Praiano",
+    "url": "https://www.ventoinpoppacharter.com/tour_amalfi",
+    "inLanguage": "it-IT",
+    "primaryImageOfPage": "https://www.ventoinpoppacharter.com/immagini/amalfi-coast.jpg",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero-new-title", ".hero-new-price", ".itinerary-intro", ".tour-info-box"]
     }
   }
   </script>
@@ -142,6 +282,10 @@
       <div class="hero-new-container">
         <!-- Titolo e prezzo con icone -->
         <div class="hero-new-header">
+          <span class="hero-eyebrow">
+            <i class="bi bi-stars" aria-hidden="true"></i>
+            <span data-translate="hero.eyebrow">Esperienza Premium · Tour Privato</span>
+          </span>
           <h1 class="hero-new-title" data-translate="tour.title">Tour Costiera Amalfitana</h1>
           <div class="hero-new-price">
             <span class="price-item">
@@ -166,7 +310,7 @@
           <!-- Immagine principale -->
           <div class="hero-gallery-main" onclick="openLightbox(0)">
             <img src="../immagini/amalfi-coast.jpg"
-              alt="Tour della Costiera Amalfitana in barca - Vista panoramica da Sorrento" loading="eager">
+              alt="Tour della Costiera Amalfitana in barca - Vista panoramica da Sorrento" loading="eager" fetchpriority="high" width="1200" height="675">
           </div>
 
           <!-- 4 Immagini secondarie -->
@@ -186,6 +330,40 @@
             <div class="hero-gallery-thumb" onclick="openLightbox(4)">
               <img src="../immagini/amalfi-coast.jpg" alt="Barca privata lungo la Costiera Amalfitana" loading="lazy">
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR - segnali di fiducia -->
+    <section class="trust-bar" aria-label="Garanzie e servizio">
+      <div class="trust-bar-container">
+        <div class="trust-bar-item">
+          <i class="bi bi-shield-check" aria-hidden="true"></i>
+          <div>
+            <strong data-translate="trust.cancellation.title">Cancellazione gratuita</strong>
+            <span data-translate="trust.cancellation.sub">fino a 48h prima</span>
+          </div>
+        </div>
+        <div class="trust-bar-item">
+          <i class="bi bi-people-fill" aria-hidden="true"></i>
+          <div>
+            <strong data-translate="trust.private.title">Tour privato</strong>
+            <span data-translate="trust.private.sub">solo il tuo gruppo</span>
+          </div>
+        </div>
+        <div class="trust-bar-item">
+          <i class="bi bi-translate" aria-hidden="true"></i>
+          <div>
+            <strong data-translate="trust.skipper.title">Skipper bilingue</strong>
+            <span data-translate="trust.skipper.sub">Italiano e inglese</span>
+          </div>
+        </div>
+        <div class="trust-bar-item">
+          <i class="bi bi-chat-dots-fill" aria-hidden="true"></i>
+          <div>
+            <strong data-translate="trust.response.title">Risposta veloce</strong>
+            <span data-translate="trust.response.sub">entro 1-2 ore</span>
           </div>
         </div>
       </div>
@@ -232,11 +410,17 @@
               </div>
             </div>
 
-            <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Costiera%20Amalfitana"
-              class="cta-button cta-description" aria-label="Prenota tour Capri su WhatsApp">
-              <i class="bi bi-whatsapp"></i>
-              <span data-translate="button.book">Prenota Ora</span>
-            </a>
+            <div class="cta-wrapper">
+              <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Costiera%20Amalfitana"
+                class="cta-button cta-description" aria-label="Prenota Tour Costiera Amalfitana su WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+                <span data-translate="button.book">Prenota su WhatsApp</span>
+              </a>
+              <p class="cta-microcopy">
+                <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                <span data-translate="cta.microcopy">Risposta in 1-2 ore · Cancellazione gratuita 48h · Skipper locale incluso</span>
+              </p>
+            </div>
           </article>
           <!-- INFO CARDS - MOBILE ONLY (appaiono dopo la descrizione su mobile) -->
           <div class="info-cards-mobile">
@@ -629,6 +813,79 @@
         </aside>
       </div>
     </div>
+
+    <!-- FINAL CTA - momento decisionale -->
+    <section class="final-cta" aria-labelledby="finalCtaTitle">
+      <div class="final-cta-content">
+        <h2 id="finalCtaTitle" data-translate="final.cta.title">Pronto a esplorare la Costiera Amalfitana?</h2>
+        <p class="final-cta-desc" data-translate="final.cta.desc">Risposta su WhatsApp entro 1-2 ore · Cancellazione gratuita fino a 48h prima · Skipper locale incluso</p>
+        <div class="final-cta-buttons">
+          <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Costiera%20Amalfitana" class="final-cta-btn final-cta-whatsapp" target="_blank" rel="noopener" aria-label="Prenota Tour Costiera Amalfitana su WhatsApp">
+            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            <span data-translate="final.cta.whatsapp">Prenota su WhatsApp</span>
+          </a>
+          <a href="tel:+393316166512" class="final-cta-btn final-cta-call" aria-label="Chiama Vento in Poppa Charter">
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            <span data-translate="final.cta.call">Chiama Ora</span>
+          </a>
+        </div>
+        <p class="final-cta-trust">
+          <i class="bi bi-shield-check" aria-hidden="true"></i>
+          <span data-translate="final.cta.trust">Nessun pagamento online richiesto · Prenotazione confermata via messaggio</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- TOUR CORRELATI - Internal Linking SEO -->
+    <section class="related-tours-section" aria-labelledby="relatedToursTitle">
+      <div class="related-tours-container">
+        <h2 id="relatedToursTitle" data-translate="related.title">Altri Tour in Barca dalla Penisola Sorrentina</h2>
+        <p class="related-tours-sub" data-translate="related.subtitle">Scopri le altre esperienze di Vento in Poppa Charter da Sorrento.</p>
+
+        <div class="tour-grid">
+          <a href="/tour_capri" class="tour-card" aria-label="Vai al Tour Capri in barca">
+            <div class="tour-card-image">
+              <img src="../immagini/capri_tour_faraglioni.jpg" alt="Tour Capri in barca da Sorrento - Faraglioni e Grotta Azzurra" loading="lazy" width="800" height="600" />
+              <span class="tour-badge">🔥 Più venduto</span>
+              <span class="tour-price-badge">799 €</span>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <h3 class="tour-title">
+                Tour Capri in Barca: Grotta Azzurra e Faraglioni
+                <i class="bi bi-arrow-up-right tour-link-icon"></i>
+              </h3>
+              <p class="tour-description">
+                Esplora l'isola di Capri in barca con visita alla Grotta Azzurra, giro completo dei Faraglioni e soste bagno nelle acque cristalline. Tour completo di 7-8 ore.
+              </p>
+              <div class="tour-info">
+                <span class="tour-pill"><i class="bi bi-clock"></i> 7-8 ore</span>
+                <span class="tour-pill"><i class="bi bi-people"></i> Max 7 pers.</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="/tour_sunset" class="tour-card" aria-label="Vai al Tour Tramonto Sorrento">
+            <div class="tour-card-image">
+              <img src="../immagini/sunset-sorrento.jpg" alt="Tour al tramonto in barca da Sorrento con aperitivo" loading="lazy" width="800" height="600" />
+              <span class="tour-price-badge">299 €</span>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <h3 class="tour-title">
+                Sunset Experience - Tour al Tramonto da Sorrento
+                <i class="bi bi-arrow-up-right tour-link-icon"></i>
+              </h3>
+              <p class="tour-description">
+                Vivi un'esperienza romantica unica con il nostro tour al tramonto. Navigazione lungo la costa sorrentina mentre il sole si tuffa nel mare, con aperitivo incluso.
+              </p>
+              <div class="tour-info">
+                <span class="tour-pill"><i class="bi bi-clock"></i> 2-3 ore</span>
+                <span class="tour-pill"><i class="bi bi-people"></i> Max 7 pers.</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
@@ -638,11 +895,25 @@
     <button class="lightbox-next" onclick="changeLightboxImage(1, event)" aria-label="Immagine successiva">&#10095;</button>
   </div>
 
-  <!-- WHATSAPP FLOATING -->
+  <!-- WHATSAPP FLOATING (desktop) -->
   <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20informazioni%20sul%20Tour%20Costiera%20Amalfitana"
     class="whatsapp" aria-label="Contattaci su WhatsApp" target="_blank" rel="noopener">
     <i class="bi bi-whatsapp"></i>
   </a>
+
+  <!-- MOBILE STICKY CTA BAR -->
+  <nav class="mobile-cta-bar" aria-label="Prenotazione rapida">
+    <a href="tel:+393316166512" class="mobile-cta-btn mobile-cta-call" aria-label="Chiama Vento in Poppa Charter">
+      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+      <span data-translate="cta.call">Chiama</span>
+    </a>
+    <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Costiera%20Amalfitana"
+       class="mobile-cta-btn mobile-cta-whatsapp"
+       target="_blank" rel="noopener" aria-label="Prenota Tour Costiera Amalfitana su WhatsApp">
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      <span data-translate="cta.whatsapp.short">Prenota su WhatsApp</span>
+    </a>
+  </nav>
 <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="footer-inner">
@@ -693,13 +964,13 @@
           <i class="bi bi-share"></i>
           Social Media
         </h3>
-        <a href="https://www.facebook.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="me noopener noreferrer">
           <i class="bi bi-facebook"></i> Facebook
         </a>
-        <a href="https://www.instagram.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/ventoinpoppacharter" class="footer-link" target="_blank" rel="me noopener noreferrer">
           <i class="bi bi-instagram"></i> Instagram
         </a>
-        <a href="https://www.tiktok.com/@ventoinpoppacharter" class="footer-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.tiktok.com/@ventoinpoppacharter" class="footer-link" target="_blank" rel="me noopener noreferrer">
           <i class="bi bi-tiktok"></i> TikTok
         </a>
       </div>
@@ -773,7 +1044,27 @@
     'tobring.camera': 'Macchina fotografica',
     'tobring.hat': 'Cappello',
     'tobring.sunglasses': 'Occhiali da sole',
-    'tobring.sunscreen': 'Crema solare'
+    'tobring.sunscreen': 'Crema solare',
+    'button.book': 'Prenota su WhatsApp',
+    'hero.eyebrow': 'Esperienza Premium · Tour Privato',
+    'trust.cancellation.title': 'Cancellazione gratuita',
+    'trust.cancellation.sub': 'fino a 48h prima',
+    'trust.private.title': 'Tour privato',
+    'trust.private.sub': 'solo il tuo gruppo',
+    'trust.skipper.title': 'Skipper bilingue',
+    'trust.skipper.sub': 'Italiano e inglese',
+    'trust.response.title': 'Risposta veloce',
+    'trust.response.sub': 'entro 1-2 ore',
+    'cta.call': 'Chiama',
+    'cta.whatsapp.short': 'Prenota su WhatsApp',
+    'cta.microcopy': 'Risposta in 1-2 ore · Cancellazione gratuita 48h · Skipper locale incluso',
+    'final.cta.title': 'Pronto a esplorare la Costiera Amalfitana?',
+    'final.cta.desc': 'Risposta su WhatsApp entro 1-2 ore · Cancellazione gratuita fino a 48h prima · Skipper locale incluso',
+    'final.cta.whatsapp': 'Prenota su WhatsApp',
+    'final.cta.call': 'Chiama Ora',
+    'final.cta.trust': 'Nessun pagamento online richiesto · Prenotazione confermata via messaggio',
+    'related.title': 'Altri Tour in Barca dalla Penisola Sorrentina',
+    'related.subtitle': 'Scopri le altre esperienze di Vento in Poppa Charter da Sorrento.'
   },
   en: {
     'nav.tours': 'Tours',
@@ -834,7 +1125,27 @@
     'tobring.camera': 'Camera',
     'tobring.hat': 'Hat',
     'tobring.sunglasses': 'Sunglasses',
-    'tobring.sunscreen': 'Sunscreen'
+    'tobring.sunscreen': 'Sunscreen',
+    'button.book': 'Book on WhatsApp',
+    'hero.eyebrow': 'Premium Experience · Private Tour',
+    'trust.cancellation.title': 'Free cancellation',
+    'trust.cancellation.sub': 'up to 48h before',
+    'trust.private.title': 'Private tour',
+    'trust.private.sub': 'only your group',
+    'trust.skipper.title': 'Bilingual skipper',
+    'trust.skipper.sub': 'Italian and English',
+    'trust.response.title': 'Fast response',
+    'trust.response.sub': 'within 1-2 hours',
+    'cta.call': 'Call',
+    'cta.whatsapp.short': 'Book on WhatsApp',
+    'cta.microcopy': 'Reply in 1-2 hours · Free cancellation 48h · Local skipper included',
+    'final.cta.title': 'Ready to explore the Amalfi Coast?',
+    'final.cta.desc': 'Reply on WhatsApp within 1-2 hours · Free cancellation up to 48h before · Local skipper included',
+    'final.cta.whatsapp': 'Book on WhatsApp',
+    'final.cta.call': 'Call Now',
+    'final.cta.trust': 'No online payment required · Booking confirmed via message',
+    'related.title': 'Other Boat Tours from the Sorrento Peninsula',
+    'related.subtitle': 'Discover the other experiences offered by Vento in Poppa Charter from Sorrento.'
   },
   es: {
     'nav.tours': 'Tours',
@@ -895,7 +1206,27 @@
     'tobring.camera': 'Cámara fotográfica',
     'tobring.hat': 'Sombrero',
     'tobring.sunglasses': 'Gafas de sol',
-    'tobring.sunscreen': 'Protector solar'
+    'tobring.sunscreen': 'Protector solar',
+    'button.book': 'Reservar por WhatsApp',
+    'hero.eyebrow': 'Experiencia Premium · Tour Privado',
+    'trust.cancellation.title': 'Cancelación gratuita',
+    'trust.cancellation.sub': 'hasta 48h antes',
+    'trust.private.title': 'Tour privado',
+    'trust.private.sub': 'solo tu grupo',
+    'trust.skipper.title': 'Patrón bilingüe',
+    'trust.skipper.sub': 'Italiano e inglés',
+    'trust.response.title': 'Respuesta rápida',
+    'trust.response.sub': 'en 1-2 horas',
+    'cta.call': 'Llamar',
+    'cta.whatsapp.short': 'Reservar por WhatsApp',
+    'cta.microcopy': 'Respuesta en 1-2 horas · Cancelación gratuita 48h · Patrón local incluido',
+    'final.cta.title': '¿Listo para explorar la Costa Amalfitana?',
+    'final.cta.desc': 'Respuesta por WhatsApp en 1-2 horas · Cancelación gratuita hasta 48h antes · Patrón local incluido',
+    'final.cta.whatsapp': 'Reservar por WhatsApp',
+    'final.cta.call': 'Llamar Ahora',
+    'final.cta.trust': 'Sin pago online requerido · Reserva confirmada por mensaje',
+    'related.title': 'Otros Tours en Barco desde la Península de Sorrento',
+    'related.subtitle': 'Descubre las otras experiencias de Vento in Poppa Charter desde Sorrento.'
   }
 };
 

@@ -1,0 +1,54 @@
+{
+  "name": "Vento in Poppa Charter - Tour in Barca Sorrento",
+  "short_name": "Vento in Poppa",
+  "description": "Tour ed escursioni in barca da Sorrento verso Capri, Costiera Amalfitana e Penisola Sorrentina con skipper locali esperti.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d3a8f",
+  "theme_color": "#164ab9",
+  "lang": "it-IT",
+  "dir": "ltr",
+  "categories": ["travel", "tourism", "lifestyle"],
+  "icons": [
+    {
+      "src": "/immagini/logo-vento-in-poppa-charter.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/immagini/logo-vento-in-poppa-charter.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tour Capri",
+      "short_name": "Capri",
+      "url": "/tour_capri",
+      "description": "Tour in barca a Capri da Sorrento"
+    },
+    {
+      "name": "Tour Tramonto",
+      "short_name": "Tramonto",
+      "url": "/tour_sunset",
+      "description": "Sunset Experience da Sorrento"
+    },
+    {
+      "name": "Costiera Amalfitana",
+      "short_name": "Amalfi",
+      "url": "/tour_amalfi",
+      "description": "Tour della Costiera Amalfitana"
+    }
+  ]
+}

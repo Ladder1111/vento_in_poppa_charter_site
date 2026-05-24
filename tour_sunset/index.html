@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>Tour Tramonto Sorrento | Sunset Experience in Barca | Vento in Poppa Charter</title>
+  <title>Tour Tramonto in Barca Sorrento | Aperitivo Penisola Sorrentina | Vento in Poppa Charter</title>
   <meta name="description"
-    content="Tour al tramonto in barca da Sorrento: navigazione romantica lungo la costa sorrentina con aperitivo incluso. 2-3 ore, max 7 persone, da €299. Prenota la tua sunset experience!" />
+    content="Sunset tour barca Sorrento e Penisola Sorrentina: aperitivo tramonto, 2-3 ore, privato, da €299. Navigazione romantica lungo la costa. Max 7 persone. Prenota ora!" />
   <meta name="keywords"
-    content="tour tramonto Sorrento, sunset experience barca, escursione tramonto Golfo di Napoli, tour serale barca Sorrento, aperitivo in barca Sorrento, tramonto costiera sorrentina, sunset boat tour Sorrento" />
+    content="tour tramonto Sorrento, sunset experience barca, escursione tramonto Golfo di Napoli, tour serale barca Sorrento, aperitivo in barca Sorrento, tramonto costiera sorrentina, sunset boat tour Sorrento, sunset boat tour Sorrento coast, tour tramonto Penisola Sorrentina, aperitivo barca tramonto Positano, sunset experience Amalfi" />
   <link rel="canonical" href="https://www.ventoinpoppacharter.com/tour_sunset" />
   <meta name="robots" content="index, follow" />
   <meta name="geo.region" content="IT-NA" />
@@ -20,6 +20,7 @@
   <link rel="alternate" hreflang="it" href="https://www.ventoinpoppacharter.com/tour_sunset" />
   <link rel="alternate" hreflang="en" href="https://www.ventoinpoppacharter.com/en/sunset-tour" />
   <link rel="alternate" hreflang="es" href="https://www.ventoinpoppacharter.com/es/tour-sunset" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ventoinpoppacharter.com/tour_sunset" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -38,6 +39,27 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- PWA Manifest e Theme Color -->
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#164ab9" />
+  <meta name="msapplication-TileColor" content="#164ab9" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Vento in Poppa" />
+  <meta name="application-name" content="Vento in Poppa" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Preconnect per Performance (LCP/FCP optimization) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+  <!-- Preload Risorse Critiche -->
+  <link rel="preload" href="../css/detail.css" as="style" />
+  <link rel="preload" as="image" href="../immagini/sunset-sorrento.jpg" fetchpriority="high" />
 
   <!-- Schema.org TouristTrip -->
   <script type="application/ld+json">
@@ -57,7 +79,8 @@
         "addressLocality": "Sorrento",
         "addressRegion": "Campania",
         "addressCountry": "IT"
-      }
+      },
+      "areaServed": ["Sorrento", "Penisola Sorrentina", "Massa Lubrense", "Nerano", "Positano"]
     },
     "offers": {
       "@type": "Offer",
@@ -78,6 +101,92 @@
         {"@type": "ListItem", "position": 3, "name": "Aperitivo al tramonto"},
         {"@type": "ListItem", "position": 4, "name": "Rientro al porto"}
       ]
+    }
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ventoinpoppacharter.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tour in Barca",
+        "item": "https://www.ventoinpoppacharter.com/#tour"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Tour Tramonto Sorrento",
+        "item": "https://www.ventoinpoppacharter.com/tour_sunset"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org TouristAttraction (destinazioni) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Costa di Sorrento",
+        "description": "Tratto di costa della Penisola Sorrentina con scogliere a picco sul mare, grotte naturali e panorama unico sul Golfo di Napoli, esplorabile in barca al tramonto.",
+        "image": "https://www.ventoinpoppacharter.com/immagini/sunset-sorrento.jpg",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.6262",
+          "longitude": "14.3757"
+        },
+        "containedInPlace": {
+          "@type": "Place",
+          "name": "Sorrento",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sorrento",
+            "addressRegion": "Campania",
+            "addressCountry": "IT"
+          }
+        },
+        "touristType": ["Couples", "Friends", "Families"]
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Golfo di Napoli",
+        "description": "Splendido golfo della Campania incorniciato dal Vesuvio, ideale per ammirare il tramonto in barca lungo la Penisola Sorrentina.",
+        "image": "https://www.ventoinpoppacharter.com/immagini/sunset-sorrento.jpg",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.7500",
+          "longitude": "14.3000"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Speakable Specification per ricerca vocale -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Tour Tramonto in Barca da Sorrento - Sunset Experience",
+    "url": "https://www.ventoinpoppacharter.com/tour_sunset",
+    "inLanguage": "it-IT",
+    "primaryImageOfPage": "https://www.ventoinpoppacharter.com/immagini/sunset-sorrento.jpg",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero-new-title", ".hero-new-price", ".itinerary-intro", ".tour-info-box"]
     }
   }
   </script>
@@ -138,6 +247,10 @@
       <div class="hero-new-container">
         <!-- Titolo e prezzo con icone -->
         <div class="hero-new-header">
+          <span class="hero-eyebrow">
+            <i class="bi bi-stars" aria-hidden="true"></i>
+            <span data-translate="hero.eyebrow">Esperienza Romantica · Aperitivo Incluso</span>
+          </span>
           <h1 class="hero-new-title" data-translate="tour.title">Tour Sunset</h1>
           <div class="hero-new-price">
             <span class="price-item">
@@ -162,7 +275,7 @@
           <!-- Immagine principale -->
           <div class="hero-gallery-main" onclick="openLightbox(0)">
             <img src="../immagini/sunset-sorrento.jpg"
-              alt="Tour al tramonto in barca da Sorrento - Sunset Experience sul Golfo di Napoli" loading="eager">
+              alt="Tour al tramonto in barca da Sorrento - Sunset Experience sul Golfo di Napoli" loading="eager" fetchpriority="high" width="1200" height="675">
           </div>
 
           <!-- 4 Immagini secondarie -->
@@ -182,6 +295,40 @@
             <div class="hero-gallery-thumb" onclick="openLightbox(4)">
               <img src="../immagini/sunset-sorrento.jpg" alt="Barca privata al tramonto a Sorrento" loading="lazy">
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR - segnali di fiducia -->
+    <section class="trust-bar" aria-label="Garanzie e servizio">
+      <div class="trust-bar-container">
+        <div class="trust-bar-item">
+          <i class="bi bi-shield-check" aria-hidden="true"></i>
+          <div>
+            <strong data-translate="trust.cancellation.title">Cancellazione gratuita</strong>
+            <span data-translate="trust.cancellation.sub">fino a 48h prima</span>
+          </div>
+        </div>
+        <div class="trust-bar-item">
+          <i class="bi bi-cup-straw" aria-hidden="true"></i>
+          <div>
+            <strong data-translate="trust.aperitivo.title">Aperitivo incluso</strong>
+            <span data-translate="trust.aperitivo.sub">a bordo al tramonto</span>
+          </div>
+        </div>
+        <div class="trust-bar-item">
+          <i class="bi bi-translate" aria-hidden="true"></i>
+          <div>
+            <strong data-translate="trust.skipper.title">Skipper bilingue</strong>
+            <span data-translate="trust.skipper.sub">Italiano e inglese</span>
+          </div>
+        </div>
+        <div class="trust-bar-item">
+          <i class="bi bi-chat-dots-fill" aria-hidden="true"></i>
+          <div>
+            <strong data-translate="trust.response.title">Risposta veloce</strong>
+            <span data-translate="trust.response.sub">entro 1-2 ore</span>
           </div>
         </div>
       </div>
@@ -236,11 +383,17 @@
               </div>
             </div>
 
-            <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Sunset%20Experience"
-              class="cta-button cta-description" aria-label="Prenota tour Capri su WhatsApp">
-              <i class="bi bi-whatsapp"></i>
-              <span data-translate="button.book">Prenota Ora</span>
-            </a>
+            <div class="cta-wrapper">
+              <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Sunset%20Experience"
+                class="cta-button cta-description" aria-label="Prenota Tour Tramonto su WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+                <span data-translate="button.book">Prenota su WhatsApp</span>
+              </a>
+              <p class="cta-microcopy">
+                <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                <span data-translate="cta.microcopy">Risposta in 1-2 ore · Aperitivo incluso · Cancellazione gratuita 48h</span>
+              </p>
+            </div>
           </article>
 
           <!-- INFO CARDS - MOBILE ONLY (appaiono dopo la descrizione su mobile) -->
@@ -257,11 +410,11 @@
                   <span data-translate="included.drinks">Bevande fredde incluse</span>
                 </li>
                 <li>
-                  <i class="bi bi-emoji-smile"></i>
+                  <i class="bi bi-basket2-fill"></i>
                   <span data-translate="included.snacks">Snacks a bordo</span>
                 </li>
                 <li>
-                  <i class="bi bi-moisture"></i>
+                  <i class="bi bi-wind"></i>
                   <span data-translate="included.towels">Asciugamani da mare personalizzati</span>
                 </li>
                 <li>
@@ -269,7 +422,7 @@
                   <span data-translate="included.skipper">Skipper professionale</span>
                 </li>
                 <li>
-                  <i class="bi bi-lock-fill"></i>
+                  <i class="bi bi-shield-check"></i>
                   <span data-translate="included.private">Tour privato</span>
                 </li>
               </ul>
@@ -283,16 +436,12 @@
               </h3>
               <ul>
                 <li>
-                  <i class="bi bi-ticket-perforated"></i>
-                  <span data-translate="notincluded.tax">Tassa di sbarco a Capri</span>
-                </li>
-                <li>
-                  <i class="bi bi-water"></i>
-                  <span data-translate="notincluded.bluegrotto">Biglietto Grotta Azzurra (€18)</span>
-                </li>
-                <li>
                   <i class="bi bi-egg-fried"></i>
-                  <span data-translate="notincluded.lunch">Pranzo</span>
+                  <span data-translate="notincluded.lunch">Pranzo / Cena</span>
+                </li>
+                <li>
+                  <i class="bi bi-car-front-fill"></i>
+                  <span data-translate="notincluded.transfer">Transfer porto</span>
                 </li>
               </ul>
             </div>
@@ -305,7 +454,7 @@
               </h3>
               <ul>
                 <li>
-                  <i class="bi bi-gear"></i>
+                  <i class="bi bi-droplet-fill"></i>
                   <span data-translate="tobring.swimsuit">Costume da bagno</span>
                 </li>
                 <li>
@@ -313,7 +462,7 @@
                   <span data-translate="tobring.camera">Macchina fotografica</span>
                 </li>
                 <li>
-                  <i class="bi bi-emoji-sunglasses"></i>
+                  <i class="bi bi-umbrella-fill"></i>
                   <span data-translate="tobring.hat">Cappello</span>
                 </li>
                 <li>
@@ -435,7 +584,6 @@
         <!-- SIDEBAR (visibile solo desktop) -->
         <aside class="tour-sidebar">
 
-
           <!-- INCLUSO -->
           <div class="info-card">
             <h3>
@@ -448,11 +596,11 @@
                 <span data-translate="included.drinks">Bevande fredde incluse</span>
               </li>
               <li>
-                <i class="bi bi-emoji-smile"></i>
+                <i class="bi bi-basket2-fill"></i>
                 <span data-translate="included.snacks">Snacks a bordo</span>
               </li>
               <li>
-                <i class="bi bi-moisture"></i>
+                <i class="bi bi-wind"></i>
                 <span data-translate="included.towels">Asciugamani da mare personalizzati</span>
               </li>
               <li>
@@ -460,7 +608,7 @@
                 <span data-translate="included.skipper">Skipper professionale</span>
               </li>
               <li>
-                <i class="bi bi-lock-fill"></i>
+                <i class="bi bi-shield-check"></i>
                 <span data-translate="included.private">Tour privato</span>
               </li>
             </ul>
@@ -473,18 +621,14 @@
               <span data-translate="notincluded.title">Non Incluso</span>
             </h3>
             <ul>
-            <!--  <li>
-                <i class="bi bi-ticket-perforated"></i>
-                <span data-translate="notincluded.tax">Tassa di sbarco a Capri</span>
-              </li>
-              <li>
-                <i class="bi bi-water"></i>
-                <span data-translate="notincluded.bluegrotto">Biglietto Grotta Azzurra (€18)</span>
-              </li>
               <li>
                 <i class="bi bi-egg-fried"></i>
-                <span data-translate="notincluded.lunch">Pranzo</span>
-              </li>-->
+                <span data-translate="notincluded.lunch">Pranzo / Cena</span>
+              </li>
+              <li>
+                <i class="bi bi-car-front-fill"></i>
+                <span data-translate="notincluded.transfer">Transfer porto</span>
+              </li>
             </ul>
           </div>
 
@@ -496,7 +640,7 @@
             </h3>
             <ul>
               <li>
-                <i class="bi bi-gear"></i>
+                <i class="bi bi-droplet-fill"></i>
                 <span data-translate="tobring.swimsuit">Costume da bagno</span>
               </li>
               <li>
@@ -504,7 +648,7 @@
                 <span data-translate="tobring.camera">Macchina fotografica</span>
               </li>
               <li>
-                <i class="bi bi-emoji-sunglasses"></i>
+                <i class="bi bi-umbrella-fill"></i>
                 <span data-translate="tobring.hat">Cappello</span>
               </li>
               <li>
@@ -521,6 +665,79 @@
       </div>
     </div>
 
+    <!-- FINAL CTA - momento decisionale -->
+    <section class="final-cta" aria-labelledby="finalCtaTitle">
+      <div class="final-cta-content">
+        <h2 id="finalCtaTitle" data-translate="final.cta.title">Vuoi vivere il tramonto sul Golfo di Napoli?</h2>
+        <p class="final-cta-desc" data-translate="final.cta.desc">Risposta su WhatsApp entro 1-2 ore · Cancellazione gratuita fino a 48h prima · Aperitivo incluso</p>
+        <div class="final-cta-buttons">
+          <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Tramonto" class="final-cta-btn final-cta-whatsapp" target="_blank" rel="noopener" aria-label="Prenota Tour Tramonto su WhatsApp">
+            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            <span data-translate="final.cta.whatsapp">Prenota su WhatsApp</span>
+          </a>
+          <a href="tel:+393316166512" class="final-cta-btn final-cta-call" aria-label="Chiama Vento in Poppa Charter">
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            <span data-translate="final.cta.call">Chiama Ora</span>
+          </a>
+        </div>
+        <p class="final-cta-trust">
+          <i class="bi bi-shield-check" aria-hidden="true"></i>
+          <span data-translate="final.cta.trust">Nessun pagamento online richiesto · Prenotazione confermata via messaggio</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- TOUR CORRELATI - Internal Linking SEO -->
+    <section class="related-tours-section" aria-labelledby="relatedToursTitle">
+      <div class="related-tours-container">
+        <h2 id="relatedToursTitle" data-translate="related.title">Altri Tour in Barca dalla Penisola Sorrentina</h2>
+        <p class="related-tours-sub" data-translate="related.subtitle">Scopri le altre esperienze di Vento in Poppa Charter da Sorrento.</p>
+
+        <div class="tour-grid">
+          <a href="/tour_capri" class="tour-card" aria-label="Vai al Tour Capri in barca">
+            <div class="tour-card-image">
+              <img src="../immagini/capri_tour_faraglioni.jpg" alt="Tour Capri in barca da Sorrento - Faraglioni e Grotta Azzurra" loading="lazy" width="800" height="600" />
+              <span class="tour-badge">🔥 Più venduto</span>
+              <span class="tour-price-badge">799 €</span>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <h3 class="tour-title">
+                Tour Capri in Barca: Grotta Azzurra e Faraglioni
+                <i class="bi bi-arrow-up-right tour-link-icon"></i>
+              </h3>
+              <p class="tour-description">
+                Esplora l'isola di Capri in barca con visita alla Grotta Azzurra, giro completo dei Faraglioni e soste bagno nelle acque cristalline. Tour completo di 7-8 ore.
+              </p>
+              <div class="tour-info">
+                <span class="tour-pill"><i class="bi bi-clock"></i> 7-8 ore</span>
+                <span class="tour-pill"><i class="bi bi-people"></i> Max 7 pers.</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="/tour_amalfi" class="tour-card" aria-label="Vai al Tour Costiera Amalfitana">
+            <div class="tour-card-image">
+              <img src="../immagini/amalfi-coast.jpg" alt="Tour della Costiera Amalfitana in barca - Positano, Amalfi, Praiano" loading="lazy" width="800" height="600" />
+              <span class="tour-price-badge">899 €</span>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <h3 class="tour-title">
+                Tour Costiera Amalfitana in Barca: Positano, Amalfi e Grotte
+                <i class="bi bi-arrow-up-right tour-link-icon"></i>
+              </h3>
+              <p class="tour-description">
+                Scopri la bellezza della Costiera Amalfitana dal mare. Tour di 5-6 ore con soste a Positano, Amalfi, Praiano e visita alle grotte marine più suggestive.
+              </p>
+              <div class="tour-info">
+                <span class="tour-pill"><i class="bi bi-clock"></i> 5-6 ore</span>
+                <span class="tour-pill"><i class="bi bi-people"></i> Max 7 pers.</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
   <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
@@ -532,11 +749,25 @@
       aria-label="Immagine successiva">&#10095;</button>
   </div>
 
-  <!-- WHATSAPP FLOATING -->
+  <!-- WHATSAPP FLOATING (desktop) -->
   <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20informazioni%20sul%20Tour%20Sunset%20Experience" class="whatsapp"
     aria-label="Contattaci su WhatsApp" target="_blank" rel="noopener">
     <i class="bi bi-whatsapp"></i>
   </a>
+
+  <!-- MOBILE STICKY CTA BAR -->
+  <nav class="mobile-cta-bar" aria-label="Prenotazione rapida">
+    <a href="tel:+393316166512" class="mobile-cta-btn mobile-cta-call" aria-label="Chiama Vento in Poppa Charter">
+      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+      <span data-translate="cta.call">Chiama</span>
+    </a>
+    <a href="https://wa.me/393316166512?text=Ciao,%20vorrei%20prenotare%20il%20Tour%20Tramonto"
+       class="mobile-cta-btn mobile-cta-whatsapp"
+       target="_blank" rel="noopener" aria-label="Prenota Tour Tramonto su WhatsApp">
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      <span data-translate="cta.whatsapp.short">Prenota su WhatsApp</span>
+    </a>
+  </nav>
   <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="footer-inner">
@@ -590,15 +821,15 @@
           Social Media
         </h3>
         <a href="https://www.facebook.com/ventoinpoppacharter" class="footer-link" target="_blank"
-          rel="noopener noreferrer">
+          rel="me noopener noreferrer">
           <i class="bi bi-facebook"></i> Facebook
         </a>
         <a href="https://www.instagram.com/ventoinpoppacharter" class="footer-link" target="_blank"
-          rel="noopener noreferrer">
+          rel="me noopener noreferrer">
           <i class="bi bi-instagram"></i> Instagram
         </a>
         <a href="https://www.tiktok.com/@ventoinpoppacharter" class="footer-link" target="_blank"
-          rel="noopener noreferrer">
+          rel="me noopener noreferrer">
           <i class="bi bi-tiktok"></i> TikTok
         </a>
       </div>
@@ -660,7 +891,27 @@
     'tobring.camera': 'Macchina fotografica',
     'tobring.hat': 'Cappello',
     'tobring.sunglasses': 'Occhiali da sole',
-    'tobring.sunscreen': 'Crema solare'
+    'tobring.sunscreen': 'Crema solare',
+    'button.book': 'Prenota su WhatsApp',
+    'hero.eyebrow': 'Esperienza Romantica · Aperitivo Incluso',
+    'trust.cancellation.title': 'Cancellazione gratuita',
+    'trust.cancellation.sub': 'fino a 48h prima',
+    'trust.aperitivo.title': 'Aperitivo incluso',
+    'trust.aperitivo.sub': 'a bordo al tramonto',
+    'trust.skipper.title': 'Skipper bilingue',
+    'trust.skipper.sub': 'Italiano e inglese',
+    'trust.response.title': 'Risposta veloce',
+    'trust.response.sub': 'entro 1-2 ore',
+    'cta.call': 'Chiama',
+    'cta.whatsapp.short': 'Prenota su WhatsApp',
+    'cta.microcopy': 'Risposta in 1-2 ore · Aperitivo incluso · Cancellazione gratuita 48h',
+    'final.cta.title': 'Vuoi vivere il tramonto sul Golfo di Napoli?',
+    'final.cta.desc': 'Risposta su WhatsApp entro 1-2 ore · Cancellazione gratuita fino a 48h prima · Aperitivo incluso',
+    'final.cta.whatsapp': 'Prenota su WhatsApp',
+    'final.cta.call': 'Chiama Ora',
+    'final.cta.trust': 'Nessun pagamento online richiesto · Prenotazione confermata via messaggio',
+    'related.title': 'Altri Tour in Barca dalla Penisola Sorrentina',
+    'related.subtitle': 'Scopri le altre esperienze di Vento in Poppa Charter da Sorrento.'
   },
   en: {
     'nav.tours': 'Tours',
@@ -709,7 +960,27 @@
     'tobring.camera': 'Camera',
     'tobring.hat': 'Hat',
     'tobring.sunglasses': 'Sunglasses',
-    'tobring.sunscreen': 'Sunscreen'
+    'tobring.sunscreen': 'Sunscreen',
+    'button.book': 'Book on WhatsApp',
+    'hero.eyebrow': 'Romantic Experience · Aperitif Included',
+    'trust.cancellation.title': 'Free cancellation',
+    'trust.cancellation.sub': 'up to 48h before',
+    'trust.aperitivo.title': 'Aperitif included',
+    'trust.aperitivo.sub': 'on board at sunset',
+    'trust.skipper.title': 'Bilingual skipper',
+    'trust.skipper.sub': 'Italian and English',
+    'trust.response.title': 'Fast response',
+    'trust.response.sub': 'within 1-2 hours',
+    'cta.call': 'Call',
+    'cta.whatsapp.short': 'Book on WhatsApp',
+    'cta.microcopy': 'Reply in 1-2 hours · Aperitif included · Free cancellation 48h',
+    'final.cta.title': 'Want to experience sunset on the Gulf of Naples?',
+    'final.cta.desc': 'Reply on WhatsApp within 1-2 hours · Free cancellation up to 48h before · Aperitif included',
+    'final.cta.whatsapp': 'Book on WhatsApp',
+    'final.cta.call': 'Call Now',
+    'final.cta.trust': 'No online payment required · Booking confirmed via message',
+    'related.title': 'Other Boat Tours from the Sorrento Peninsula',
+    'related.subtitle': 'Discover the other experiences offered by Vento in Poppa Charter from Sorrento.'
   },
   es: {
     'nav.tours': 'Tours',
@@ -758,7 +1029,27 @@
     'tobring.camera': 'Cámara fotográfica',
     'tobring.hat': 'Sombrero',
     'tobring.sunglasses': 'Gafas de sol',
-    'tobring.sunscreen': 'Protector solar'
+    'tobring.sunscreen': 'Protector solar',
+    'button.book': 'Reservar por WhatsApp',
+    'hero.eyebrow': 'Experiencia Romántica · Aperitivo Incluido',
+    'trust.cancellation.title': 'Cancelación gratuita',
+    'trust.cancellation.sub': 'hasta 48h antes',
+    'trust.aperitivo.title': 'Aperitivo incluido',
+    'trust.aperitivo.sub': 'a bordo al atardecer',
+    'trust.skipper.title': 'Patrón bilingüe',
+    'trust.skipper.sub': 'Italiano e inglés',
+    'trust.response.title': 'Respuesta rápida',
+    'trust.response.sub': 'en 1-2 horas',
+    'cta.call': 'Llamar',
+    'cta.whatsapp.short': 'Reservar por WhatsApp',
+    'cta.microcopy': 'Respuesta en 1-2 horas · Aperitivo incluido · Cancelación gratuita 48h',
+    'final.cta.title': '¿Quieres vivir el atardecer en el Golfo de Nápoles?',
+    'final.cta.desc': 'Respuesta por WhatsApp en 1-2 horas · Cancelación gratuita hasta 48h antes · Aperitivo incluido',
+    'final.cta.whatsapp': 'Reservar por WhatsApp',
+    'final.cta.call': 'Llamar Ahora',
+    'final.cta.trust': 'Sin pago online requerido · Reserva confirmada por mensaje',
+    'related.title': 'Otros Tours en Barco desde la Península de Sorrento',
+    'related.subtitle': 'Descubre las otras experiencias de Vento in Poppa Charter desde Sorrento.'
   }
 };
 
