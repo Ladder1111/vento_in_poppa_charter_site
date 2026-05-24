@@ -315,6 +315,31 @@
   <!-- Skip Link per Accessibilità -->
   <a href="#main-content" class="skip-link" id="skipLink">Vai al contenuto principale</a>
 
+  <!-- LANGUAGE PICKER MODAL (mostrato solo al primo accesso) -->
+  <div id="langModal" class="lang-modal" role="dialog" aria-labelledby="langModalTitle" aria-modal="true">
+    <div class="lang-modal-content">
+      <div class="lang-modal-icon" aria-hidden="true">
+        <i class="bi bi-globe2"></i>
+      </div>
+      <h2 id="langModalTitle" class="lang-modal-title">Choose your language</h2>
+      <p class="lang-modal-sub">Seleziona la lingua &middot; Selecciona el idioma</p>
+      <div class="lang-modal-buttons">
+        <button class="lang-modal-btn" data-lang-pick="it" type="button" aria-label="Italiano">
+          <span class="lang-flag" aria-hidden="true">🇮🇹</span>
+          <span>Italiano</span>
+        </button>
+        <button class="lang-modal-btn" data-lang-pick="en" type="button" aria-label="English">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span>English</span>
+        </button>
+        <button class="lang-modal-btn" data-lang-pick="es" type="button" aria-label="Español">
+          <span class="lang-flag" aria-hidden="true">🇪🇸</span>
+          <span>Español</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- COOKIE BANNER -->
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consenso cookie">
     <div class="cookie-inner">
@@ -457,7 +482,7 @@
         </article>
 
         <!-- AMALFI TOUR -->
-        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/Product" onclick="vaiAPagina('tour_amalfitana')">
+        <article class="tour-card scroll-reveal" itemscope itemtype="https://schema.org/Product" onclick="vaiAPagina('tour_amalfi')">
           <div class="tour-card-image">
             <img 
               src="immagini/amalfi-coast.jpg" 

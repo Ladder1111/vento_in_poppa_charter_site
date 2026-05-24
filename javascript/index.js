@@ -71,12 +71,49 @@ function vaiAPagina(percorso) {
       });
     });
 
+    /* ==================== LANGUAGE PICKER MODAL (Prima visita) ==================== */
+    (function() {
+      const modal = document.getElementById('langModal');
+      if (!modal) return;
+      if (localStorage.getItem('preferredLang')) return; // già scelta
+
+      function applyLang(lang) {
+        localStorage.setItem('preferredLang', lang);
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        if (typeof setLang === 'function') setLang(lang);
+        else if (typeof changeLanguage === 'function') changeLanguage(lang);
+        // dopo aver scelto la lingua, mostra il cookie banner (se applicabile)
+        if (typeof showCookieBanner === 'function') showCookieBanner();
+      }
+
+      function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modal.querySelectorAll('[data-lang-pick]').forEach(btn => {
+          btn.addEventListener('click', function() {
+            applyLang(this.getAttribute('data-lang-pick'));
+          }, { once: true });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', openModal);
+      } else {
+        openModal();
+      }
+    })();
+
     /* ==================== COOKIE BANNER ==================== */
     const cookieBanner = document.getElementById('cookieBanner');
     const cookieKey = 'vp_cookie_choice';
 
     function showCookieBanner() {
       if (!localStorage.getItem(cookieKey)) {
+        // Se il lang modal è ancora attivo, aspetta che venga chiuso
+        if (document.getElementById('langModal') && !localStorage.getItem('preferredLang')) {
+          return;
+        }
         setTimeout(() => {
           cookieBanner.classList.add('active');
         }, 1000);

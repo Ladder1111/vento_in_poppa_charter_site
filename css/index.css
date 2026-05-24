@@ -1040,6 +1040,133 @@ footer {
   display: none;
 }
 
+/* ==================== LANGUAGE PICKER MODAL (Prima visita) ==================== */
+.lang-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 10, 30, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lang-modal.active {
+  display: flex;
+  animation: langModalFadeIn 0.35s ease;
+}
+
+@keyframes langModalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lang-modal-content {
+  background: white;
+  border-radius: 24px;
+  padding: 2.5rem 2rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  animation: langModalScale 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+@keyframes langModalScale {
+  from { transform: scale(0.88); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lang-modal-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: white;
+  font-size: 1.9rem;
+  box-shadow: 0 12px 28px rgba(22, 74, 185, 0.35);
+}
+
+.lang-modal-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-blue-dark);
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.lang-modal-sub {
+  font-size: 0.92rem;
+  color: var(--gray-500);
+  margin: 0 0 1.75rem 0;
+  line-height: 1.5;
+}
+
+.lang-modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.lang-modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1.5rem;
+  border: 2px solid var(--primary-blue-light);
+  background: white;
+  color: var(--primary-blue-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease,
+              border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lang-modal-btn:hover {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(22, 74, 185, 0.28);
+}
+
+.lang-modal-btn:active {
+  transform: translateY(0);
+}
+
+.lang-flag {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .lang-modal-content {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  .lang-modal-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.6rem;
+  }
+  .lang-modal-title {
+    font-size: 1.35rem;
+  }
+}
+
 /* ==================== COOKIE BANNER ==================== */
 
 .cookie-banner {
@@ -1050,10 +1177,19 @@ footer {
   background: rgba(17, 24, 39, 0.98);
   color: var(--gray-200);
   padding: var(--spacing-xl) var(--spacing-lg);
-  z-index: 1050;
+  z-index: 1600;
   transform: translateY(100%);
   transition: transform 0.4s ease-out;
   box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Su mobile, il cookie banner si posiziona sopra la mobile sticky CTA bar */
+@media (max-width: 768px) {
+  .cookie-banner.active ~ .mobile-cta-bar,
+  body:has(.cookie-banner.active) .mobile-cta-bar {
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+  }
 }
 
 .cookie-banner.active {

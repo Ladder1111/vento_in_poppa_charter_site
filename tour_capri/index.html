@@ -242,6 +242,31 @@
 
 <body>
 
+  <!-- LANGUAGE PICKER MODAL (mostrato solo al primo accesso) -->
+  <div id="langModal" class="lang-modal" role="dialog" aria-labelledby="langModalTitle" aria-modal="true">
+    <div class="lang-modal-content">
+      <div class="lang-modal-icon" aria-hidden="true">
+        <i class="bi bi-globe2"></i>
+      </div>
+      <h2 id="langModalTitle" class="lang-modal-title">Choose your language</h2>
+      <p class="lang-modal-sub">Seleziona la lingua &middot; Selecciona el idioma</p>
+      <div class="lang-modal-buttons">
+        <button class="lang-modal-btn" data-lang-pick="it" type="button" aria-label="Italiano">
+          <span class="lang-flag" aria-hidden="true">🇮🇹</span>
+          <span>Italiano</span>
+        </button>
+        <button class="lang-modal-btn" data-lang-pick="en" type="button" aria-label="English">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span>English</span>
+        </button>
+        <button class="lang-modal-btn" data-lang-pick="es" type="button" aria-label="Español">
+          <span class="lang-flag" aria-hidden="true">🇪🇸</span>
+          <span>Español</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- HEADER -->
   <header role="banner">
     <div class="nav-wrapper">
@@ -1205,6 +1230,33 @@
     if (savedLang && translations[savedLang]) {
       changeLanguage(savedLang);
     }
+
+    // ==================== LANGUAGE PICKER MODAL (Prima visita) ====================
+    (function() {
+      const modal = document.getElementById('langModal');
+      if (!modal) return;
+      if (localStorage.getItem('preferredLang')) return; // già scelta
+      function applyLang(lang) {
+        localStorage.setItem('preferredLang', lang);
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        if (typeof changeLanguage === 'function') changeLanguage(lang);
+      }
+      function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modal.querySelectorAll('[data-lang-pick]').forEach(btn => {
+          btn.addEventListener('click', function() {
+            applyLang(this.getAttribute('data-lang-pick'));
+          }, { once: true });
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', openModal);
+      } else {
+        openModal();
+      }
+    })();
 
     // ==================== HAMBURGER MENU ====================
     const hamburger = document.querySelector('.hamburger');
