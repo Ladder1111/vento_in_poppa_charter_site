@@ -71,20 +71,31 @@ function vaiAPagina(percorso) {
       });
     });
 
-    /* ==================== LANGUAGE PICKER MODAL (Prima visita) ==================== */
-    (function() {
+    /* ==================== WELCOME MODAL (Lingua + Cookie unificati) ==================== */
+    const cookieKey = 'vp_cookie_choice';
+    const cookieBanner = document.getElementById('cookieBanner');
+
+    function handleCookie(accepted) {
+      localStorage.setItem(cookieKey, accepted ? 'accepted' : 'declined');
+      if (cookieBanner) cookieBanner.classList.remove('active');
+    }
+
+    (function welcomeModal() {
       const modal = document.getElementById('langModal');
       if (!modal) return;
-      if (localStorage.getItem('preferredLang')) return; // già scelta
+      // Se l'utente ha già scelto la lingua, non mostra nulla
+      if (localStorage.getItem('preferredLang')) return;
 
-      function applyLang(lang) {
+      function applyChoice(lang) {
+        // Salva lingua + accetta cookie tecnici (unica scelta)
         localStorage.setItem('preferredLang', lang);
+        localStorage.setItem(cookieKey, 'accepted');
+        // Chiudi modal
         modal.classList.remove('active');
         document.body.style.overflow = '';
+        // Applica traduzione
         if (typeof setLang === 'function') setLang(lang);
         else if (typeof changeLanguage === 'function') changeLanguage(lang);
-        // dopo aver scelto la lingua, mostra il cookie banner (se applicabile)
-        if (typeof showCookieBanner === 'function') showCookieBanner();
       }
 
       function openModal() {
@@ -92,7 +103,7 @@ function vaiAPagina(percorso) {
         document.body.style.overflow = 'hidden';
         modal.querySelectorAll('[data-lang-pick]').forEach(btn => {
           btn.addEventListener('click', function() {
-            applyLang(this.getAttribute('data-lang-pick'));
+            applyChoice(this.getAttribute('data-lang-pick'));
           }, { once: true });
         });
       }
@@ -103,29 +114,6 @@ function vaiAPagina(percorso) {
         openModal();
       }
     })();
-
-    /* ==================== COOKIE BANNER ==================== */
-    const cookieBanner = document.getElementById('cookieBanner');
-    const cookieKey = 'vp_cookie_choice';
-
-    function showCookieBanner() {
-      if (!localStorage.getItem(cookieKey)) {
-        // Se il lang modal è ancora attivo, aspetta che venga chiuso
-        if (document.getElementById('langModal') && !localStorage.getItem('preferredLang')) {
-          return;
-        }
-        setTimeout(() => {
-          cookieBanner.classList.add('active');
-        }, 1000);
-      }
-    }
-
-    function handleCookie(accepted) {
-      localStorage.setItem(cookieKey, accepted ? 'accepted' : 'declined');
-      cookieBanner.classList.remove('active');
-    }
-
-    showCookieBanner();
 
     /* ==================== SMOOTH SCROLL ==================== */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

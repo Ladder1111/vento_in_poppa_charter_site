@@ -242,7 +242,7 @@
 
 <body>
 
-  <!-- LANGUAGE PICKER MODAL (mostrato solo al primo accesso) -->
+  <!-- WELCOME MODAL: lingua + cookie notice (mostrato solo al primo accesso) -->
   <div id="langModal" class="lang-modal" role="dialog" aria-labelledby="langModalTitle" aria-modal="true">
     <div class="lang-modal-content">
       <div class="lang-modal-icon" aria-hidden="true">
@@ -264,6 +264,10 @@
           <span>Español</span>
         </button>
       </div>
+      <p class="lang-modal-cookie">
+        <i class="bi bi-shield-lock-fill" aria-hidden="true"></i>
+        <span>Questo sito utilizza solo cookie tecnici per ricordare la lingua scelta. Continuando accetti questi cookie.</span>
+      </p>
     </div>
   </div>
 
@@ -1231,13 +1235,14 @@
       changeLanguage(savedLang);
     }
 
-    // ==================== LANGUAGE PICKER MODAL (Prima visita) ====================
+    // ==================== WELCOME MODAL (Lingua + Cookie unificati) ====================
     (function() {
       const modal = document.getElementById('langModal');
       if (!modal) return;
       if (localStorage.getItem('preferredLang')) return; // già scelta
-      function applyLang(lang) {
+      function applyChoice(lang) {
         localStorage.setItem('preferredLang', lang);
+        localStorage.setItem('vp_cookie_choice', 'accepted');
         modal.classList.remove('active');
         document.body.style.overflow = '';
         if (typeof changeLanguage === 'function') changeLanguage(lang);
@@ -1247,7 +1252,7 @@
         document.body.style.overflow = 'hidden';
         modal.querySelectorAll('[data-lang-pick]').forEach(btn => {
           btn.addEventListener('click', function() {
-            applyLang(this.getAttribute('data-lang-pick'));
+            applyChoice(this.getAttribute('data-lang-pick'));
           }, { once: true });
         });
       }
