@@ -76,6 +76,23 @@ const translationsData = {
     about_intro: "La storia di Vento In Poppa Charter inizia nel 2023, dalla felice intuizione di persone già inserite nella realtà marinaria sorrentina, appassionate del mare ed entusiaste del proprio lavoro.",
     about_full: "Il nostro equipaggio è composto da guide e capitani locali che conoscono profondamente la Penisola Sorrentina, Capri e la Costiera Amalfitana. Questa conoscenza approfondita ci consente di offrire esperienze autentiche e personalizzate, consentendo ai visitatori di scoprire i segreti nascosti e gli angoli più affascinanti del Golfo di Napoli. Offriamo itinerari flessibili che possono essere adattati alle preferenze dei nostri clienti: esplorare grotte marine, fare soste bagno in acque cristalline o semplicemente godersi il paesaggio mozzafiato.",
 
+    // --- Sezione Recensioni Homepage ---
+    reviews_home_title: "Cosa Dicono i Nostri Ospiti",
+    reviews_home_intro: "Le esperienze di chi ha navigato con noi nel Golfo di Napoli, a Capri e lungo la Costiera Amalfitana.",
+    reviews_google_verified: "Recensioni verificate da Google",
+    reviews_google_link: "Vedi su Google",
+    reviews_leave_prompt: "Hai navigato con noi? Raccontalo agli altri viaggiatori.",
+    reviews_leave_btn: "Lascia una recensione su Google",
+    reviews_leave_aria: "Lascia una recensione su Google",
+    review1_text: "Abbiamo trascorso una giornata magica in acqua con Andrea insieme alle nostre due bambine. È stato il momento clou del nostro viaggio di 10 giorni. Le nostre figlie sono rimaste affascinate dai panorami e dalle scoperte sul mondo marino. Abbiamo persino avvistato una manta! Consigliatissimo!",
+    review1_tour: "Tour Privato",
+    review2_text: "Andrea è stato fantastico. Conosceva benissimo la zona e ha condiviso con noi le sue esperienze. È stato molto accogliente e ci ha portato in posti meravigliosi per pranzare e nuotare (anche se faceva freddo), ci siamo divertiti un mondo. Lo consiglio vivamente a chiunque e lo contatteremo sicuramente la prossima volta.",
+    review2_tour: "Tour Privato",
+    review3_text: "Abbiamo fatto una splendida gita di un giorno a Capri. Il nostro capitano, Andrea, ha fatto un lavoro fantastico. Ci ha mostrato diversi luoghi d'interesse e abbiamo imparato molto sull'isola.",
+    review3_tour: "Tour Capri",
+    review4_text: "Abbiamo prenotato due escursioni private in barca di un'intera giornata, una a Capri e una ad Amalfi/Positano, tramite il nostro concierge Sorrento Vibes con questa compagnia di charter. Entrambe sono state fantastiche. Andrea, il nostro skipper, ha reso l'esperienza davvero speciale. Chiedete di lui. La sua competenza e abilità ci hanno garantito un divertimento assicurato. Eravamo una famiglia di 5 adulti. Non ci siamo mai sentiti di fretta e ci ha fatto sentire come in famiglia, offrendoci il limoncello della nonna alla fine di ogni giornata. È stata la migliore esperienza che abbiamo vissuto durante le nostre due settimane in Italia. Grazie ad Andrea!",
+    review4_tour: "Tour Capri & Costiera Amalfitana",
+
     // --- Sezione FAQ ---
     faq_title: "Domande Frequenti sui Tour in Barca da Sorrento",
     faq_intro: "Risposte alle domande più comuni sui nostri tour in barca da Sorrento verso Capri, Costiera Amalfitana e Penisola Sorrentina.",
@@ -360,6 +377,23 @@ const translationsData = {
     about_intro: "The story of Vento In Poppa Charter begins in 2023, from the happy intuition of people already immersed in the Sorrento maritime world, passionate about the sea and enthusiastic about their work.",
     about_full: "Our crew is made up of local guides and captains who know the Sorrento Peninsula, Capri and the Amalfi Coast inside and out. This in-depth knowledge allows us to offer authentic and personalised experiences, enabling visitors to discover hidden secrets and the most fascinating corners of the Gulf of Naples. We offer flexible itineraries that can be tailored to our guests' preferences: exploring sea caves, swimming in crystal-clear waters or simply soaking in the breathtaking scenery.",
 
+    // --- Sezione Recensioni Homepage ---
+    reviews_home_title: "What Our Guests Say",
+    reviews_home_intro: "Stories from those who have sailed with us in the Gulf of Naples, around Capri and along the Amalfi Coast.",
+    reviews_google_verified: "Verified reviews on Google",
+    reviews_google_link: "See on Google",
+    reviews_leave_prompt: "Have you sailed with us? Share your experience with other travellers.",
+    reviews_leave_btn: "Leave a review on Google",
+    reviews_leave_aria: "Leave a review on Google",
+    review1_text: "We spent a magical day on the water with Andrea together with our two little girls. It was the highlight of our 10-day trip. Our daughters were fascinated by the views and the discoveries about marine life. We even spotted a manta ray! Highly recommended!",
+    review1_tour: "Private Tour",
+    review2_text: "Andrea was fantastic. He knew the area really well and shared his experiences with us. He was very welcoming and took us to wonderful spots to have lunch and swim (even though it was cold), we had a great time. I highly recommend him to anyone and we will definitely contact him next time.",
+    review2_tour: "Private Tour",
+    review3_text: "We had a wonderful day trip to Capri. Our captain, Andrea, did a fantastic job. He showed us several points of interest and we learned a lot about the island.",
+    review3_tour: "Capri Tour",
+    review4_text: "We booked two full-day private boat trips, one to Capri and one to Amalfi/Positano, through our concierge Sorrento Vibes with this charter company. Both were fantastic. Andrea, our skipper, made the experience truly special. Ask for him. His knowledge and skill guaranteed us a great time. We were a family of 5 adults. We never felt rushed and he made us feel like family, offering us his grandmother's limoncello at the end of each day. It was the best experience we had during our two weeks in Italy. Thank you, Andrea!",
+    review4_tour: "Capri & Amalfi Coast Tour",
+
     // --- Sezione FAQ ---
     faq_title: "Frequently Asked Questions about Boat Tours from Sorrento",
     faq_intro: "Answers to the most common questions about our boat tours from Sorrento to Capri, the Amalfi Coast and the Sorrento Peninsula.",
@@ -627,6 +661,23 @@ const translationsData = {
     about_title: "Pasión por el Mar desde 2023 – Patrones Locales Expertos",
     about_intro: "La historia de Vento In Poppa Charter comienza en 2023, de la feliz intuición de personas ya inmersas en la realidad marítima de Sorrento, apasionadas por el mar y entusiastas de su trabajo.",
     about_full: "Nuestro equipo está compuesto por guías y capitanes locales que conocen a la perfección la Península de Sorrento, Capri y la Costa Amalfitana. Este conocimiento profundo nos permite ofrecer experiencias auténticas y personalizadas, permitiendo a los visitantes descubrir los secretos ocultos y los rincones más fascinantes del Golfo de Nápoles. Ofrecemos itinerarios flexibles que se pueden adaptar a las preferencias de nuestros clientes: explorar cuevas marinas, hacer paradas para nadar en aguas cristalinas o simplemente disfrutar del impresionante paisaje.",
+
+    // --- Sezione Recensioni Homepage ---
+    reviews_home_title: "Lo Que Dicen Nuestros Huéspedes",
+    reviews_home_intro: "Las experiencias de quienes han navegado con nosotros en el Golfo de Nápoles, en Capri y a lo largo de la Costa Amalfitana.",
+    reviews_google_verified: "Reseñas verificadas en Google",
+    reviews_google_link: "Ver en Google",
+    reviews_leave_prompt: "¿Has navegado con nosotros? Cuéntaselo a otros viajeros.",
+    reviews_leave_btn: "Deja una reseña en Google",
+    reviews_leave_aria: "Deja una reseña en Google",
+    review1_text: "Pasamos un día mágico en el agua con Andrea junto a nuestras dos hijas pequeñas. Fue el punto culminante de nuestro viaje de 10 días. Nuestras hijas quedaron fascinadas por los paisajes y los descubrimientos sobre el mundo marino. ¡Incluso avistamos una mantarraya! ¡Muy recomendable!",
+    review1_tour: "Tour Privado",
+    review2_text: "Andrea fue fantástico. Conocía muy bien la zona y compartió con nosotros sus experiencias. Fue muy acogedor y nos llevó a lugares maravillosos para comer y nadar (aunque hacía frío), nos divertimos muchísimo. Lo recomiendo encarecidamente a cualquiera y sin duda lo contactaremos la próxima vez.",
+    review2_tour: "Tour Privado",
+    review3_text: "Hicimos una espléndida excursión de un día a Capri. Nuestro capitán, Andrea, hizo un trabajo fantástico. Nos mostró varios lugares de interés y aprendimos mucho sobre la isla.",
+    review3_tour: "Tour Capri",
+    review4_text: "Reservamos dos excursiones privadas en barco de día completo, una a Capri y otra a Amalfi/Positano, a través de nuestro concierge Sorrento Vibes con esta compañía de chárter. Ambas fueron fantásticas. Andrea, nuestro patrón, hizo que la experiencia fuera realmente especial. Pregunten por él. Su competencia y habilidad nos garantizaron diversión asegurada. Éramos una familia de 5 adultos. Nunca nos sentimos apurados y nos hizo sentir como en familia, ofreciéndonos el limoncello de su abuela al final de cada día. Fue la mejor experiencia que vivimos durante nuestras dos semanas en Italia. ¡Gracias, Andrea!",
+    review4_tour: "Tour Capri y Costa Amalfitana",
 
     // --- Sezione FAQ ---
     faq_title: "Preguntas Frecuentes sobre Tours en Barco desde Sorrento",
@@ -898,6 +949,10 @@ const translationKeyMap = {
   "aboutMainTitle":           "about_title",         // ← corretto (era aboutTitle)
   "aboutIntro":               "about_intro",
   "aboutFull":                "about_full",
+
+  // --- Sezione Recensioni Homepage ---
+  "reviewsHomeTitle":         "reviews_home_title",
+  "reviewsHomeIntro":         "reviews_home_intro",
 
   // --- Sezione FAQ ---
   "faqTitle":                 "faq_title",
